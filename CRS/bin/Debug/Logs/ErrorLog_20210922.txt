@@ -1,0 +1,13 @@
+
+Log Entry : 15:38:56 22 sentyabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  CalculatedLeasingTotal
+  
+   ShowMessage: Lizinq Portfeli hesablanmadı.
+   Exception Message: ORA-04063: package body "CRS_USER.TOTALS" has errors
+ORA-06512: at "CRS_USER.PROC_LEASING_TOTAL", line 19
+ORA-06512: at line 1
+   SQL Text      :  PROC_LEASING_TOTAL
+-------------------------------------------------

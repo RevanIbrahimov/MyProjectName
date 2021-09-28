@@ -1,0 +1,76 @@
+
+Log Entry : 13:13:29 6 avqust 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : UpdateCustomerPayment (s3)
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "PEYED_PENALTY": invalid identifier
+   SQL Text      :  SELECT *
+                                    FROM (SELECT TO_CHAR (PAYMENT_DATE, 'DD/MM/YYYY') PAYMENT_DATE,
+                                                 ID,
+                                                 CUSTOMER_ID,
+                                                 CONTRACT_ID,
+                                                 PAYED_AMOUNT,
+                                                 PAYED_AMOUNT_AZN,
+                                                 PAYMENT_INTEREST_DEBT,
+                                                 IS_PENALTY,
+                                                 PEYED_PENALTY,
+                                                 PENALTY_DEBT,  
+                                                 PENALTY_AMOUNT,
+                                                 CURRENCY_RATE,
+                                                 BANK_CASH,
+                                                 CHANGED_PAY_INTEREST_AMOUNT,
+                                                 IS_CHANGED_INTEREST,
+                                                 ROW_NUMBER () OVER (ORDER BY PAYMENT_DATE, ID) ORDER_ID,
+                                                 NOTE,
+                                                 INSURANCE_CHECK,
+                                                 INSURANCE_AMOUNT,
+                                                 CONTRACT_PERCENT,
+                                                 TO_CHAR (CLEARING_DATE, 'DD/MM/YYYY') OPERATION_DATE
+                                            FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP
+                                           WHERE     CONTRACT_ID = 11
+                                                 AND USED_USER_ID = 11
+                                                 AND IS_CHANGE IN (0, 1))
+                                   WHERE ORDER_ID >= 1
+                                ORDER BY ORDER_ID
+-------------------------------------------------
+
+Log Entry : 13:13:32 6 avqust 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  UpdateCustomerPayment
+  
+   ShowMessage: Lizinq ödənişinin parametrləri tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT *
+                                    FROM (SELECT TO_CHAR (PAYMENT_DATE, 'DD/MM/YYYY') PAYMENT_DATE,
+                                                 ID,
+                                                 CUSTOMER_ID,
+                                                 CONTRACT_ID,
+                                                 PAYED_AMOUNT,
+                                                 PAYED_AMOUNT_AZN,
+                                                 PAYMENT_INTEREST_DEBT,
+                                                 IS_PENALTY,
+                                                 PEYED_PENALTY,
+                                                 PENALTY_DEBT,  
+                                                 PENALTY_AMOUNT,
+                                                 CURRENCY_RATE,
+                                                 BANK_CASH,
+                                                 CHANGED_PAY_INTEREST_AMOUNT,
+                                                 IS_CHANGED_INTEREST,
+                                                 ROW_NUMBER () OVER (ORDER BY PAYMENT_DATE, ID) ORDER_ID,
+                                                 NOTE,
+                                                 INSURANCE_CHECK,
+                                                 INSURANCE_AMOUNT,
+                                                 CONTRACT_PERCENT,
+                                                 TO_CHAR (CLEARING_DATE, 'DD/MM/YYYY') OPERATION_DATE
+                                            FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP
+                                           WHERE     CONTRACT_ID = 11
+                                                 AND USED_USER_ID = 11
+                                                 AND IS_CHANGE IN (0, 1))
+                                   WHERE ORDER_ID >= 1
+                                ORDER BY ORDER_ID
+-------------------------------------------------

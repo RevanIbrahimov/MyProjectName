@@ -1,0 +1,3888 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D0D0F29-A6BF-468E-B1EE-7B287F92CF68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRS</RootNamespace>
+    <AssemblyName>LRS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\DESKTOP-A697JJ9\Publish\LRS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\DESKTOP-A697JJ9\LRS\</InstallUrl>
+    <UpdateUrl>\\DESKTOP-A697JJ9\LRS\</UpdateUrl>
+    <SupportUrl>\\DESKTOP-A697JJ9\Publish\LRS\</SupportUrl>
+    <TargetCulture>az-Latn-AZ</TargetCulture>
+    <ProductName>LRS</ProductName>
+    <PublisherName>LRS publish</PublisherName>
+    <MinimumRequiredVersion>1.0.3.7</MinimumRequiredVersion>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>4</ApplicationRevision>
+    <ApplicationVersion>1.0.5.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsUrl>D:\Publish\LRS</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>yellow_leasing.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0F1337E9B8DC1290719B323D2E583995EDEC4BDD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CRS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bytescout.Document, Version=1.0.0.90, Culture=neutral, PublicKeyToken=f7dd1bd9d40a50eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMS v1.0.0.1\EMS\EMS\bin\Debug\Bytescout.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Export, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v17.1.Wizard, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Reporting.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Hyak.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hyak.Common.1.1.3\lib\net45\Hyak.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files\Microsoft Office\Office16\ADDINS\Microsoft Power Query for Excel Integrated\bin\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WebForms.10.0.40219.1\lib\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.022\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tulpep.NotificationWindow, Version=1.1.25.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tulpep.NotificationWindow.1.1.25\lib\net40\Tulpep.NotificationWindow.dll</HintPath>
+    </Reference>
+    <Reference Include="WordToPDF">
+      <HintPath>..\..\C# components\WordToPDF\WordToPDF.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Attributes.cs" />
+    <Compile Include="Class\Buttons\ColorTable.cs" />
+    <Compile Include="Class\Buttons\XButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\ComponentLocalization.cs" />
+    <Compile Include="Class\ConnectToSharedFolder.cs" />
+    <Compile Include="Class\DataAccess\AcceptorBankDAL.cs" />
+    <Compile Include="Class\DataAccess\AcceptorDAL.cs" />
+    <Compile Include="Class\DataAccess\AccountingPlanDAL.cs" />
+    <Compile Include="Class\DataAccess\BankOperationsDAL.cs" />
+    <Compile Include="Class\DataAccess\BanksDAL.cs" />
+    <Compile Include="Class\DataAccess\BranchesDAL.cs" />
+    <Compile Include="Class\DataAccess\CardIssuingDAL.cs" />
+    <Compile Include="Class\DataAccess\CardSeriesDAL.cs" />
+    <Compile Include="Class\DataAccess\CashOperationsDAL.cs" />
+    <Compile Include="Class\DataAccess\CommitmentsDAL.cs" />
+    <Compile Include="Class\DataAccess\ContractCodeTempDAL.cs" />
+    <Compile Include="Class\DataAccess\ContractDAL.cs" />
+    <Compile Include="Class\DataAccess\ContractExtendDAL.cs" />
+    <Compile Include="Class\DataAccess\ContractLawsViewDAL.cs" />
+    <Compile Include="Class\DataAccess\CountriesDAL.cs" />
+    <Compile Include="Class\DataAccess\CreditNameDAL.cs" />
+    <Compile Include="Class\DataAccess\CurrencyDAL.cs" />
+    <Compile Include="Class\DataAccess\CurrencyRatesDAL.cs" />
+    <Compile Include="Class\DataAccess\CustomerCodeTempDAL.cs" />
+    <Compile Include="Class\DataAccess\CustomersDAL.cs" />
+    <Compile Include="Class\DataAccess\DelaysListDAL.cs" />
+    <Compile Include="Class\DataAccess\DimTimeDAL.cs" />
+    <Compile Include="Class\DataAccess\FundContractPercentDAL.cs" />
+    <Compile Include="Class\DataAccess\FundContractsDAL.cs" />
+    <Compile Include="Class\DataAccess\FundPaymentDAL.cs" />
+    <Compile Include="Class\DataAccess\HostagesViewDAL.cs" />
+    <Compile Include="Class\DataAccess\InsuranceRateDAL.cs" />
+    <Compile Include="Class\DataAccess\JuridicalPersonsDAL.cs" />
+    <Compile Include="Class\DataAccess\LastPaymentDAL.cs" />
+    <Compile Include="Class\DataAccess\LeasingTotalDAL.cs" />
+    <Compile Include="Class\DataAccess\LrsColorsDAL.cs" />
+    <Compile Include="Class\DataAccess\LrsUsersDAL.cs" />
+    <Compile Include="Class\DataAccess\OperationDebtDAL.cs" />
+    <Compile Include="Class\DataAccess\OperationJournalDAL.cs" />
+    <Compile Include="Class\DataAccess\PaymentSchedulesDAL.cs" />
+    <Compile Include="Class\DataAccess\PaymentsDAL.cs" />
+    <Compile Include="Class\DataAccess\PaymentsViewDAL.cs" />
+    <Compile Include="Class\DataAccess\PhonePrefixsDAL.cs" />
+    <Compile Include="Class\DataAccess\PhonesViewDAL.cs" />
+    <Compile Include="Class\DataAccess\PowerOfAttorneyCodeTempDAL.cs" />
+    <Compile Include="Class\DataAccess\TaskCodeTempDAL.cs" />
+    <Compile Include="Class\DataAccess\TaskTypeDAL.cs" />
+    <Compile Include="Class\DataAccess\TomorrowPaymentDataViewDAL.cs" />
+    <Compile Include="Class\Extensions.cs" />
+    <Compile Include="Class\GlobalFunctions.cs" />
+    <Compile Include="Class\GlobalProcedures.cs" />
+    <Compile Include="Class\GlobalVariables.cs" />
+    <Compile Include="Class\ManagementObjectSearcher.cs" />
+    <Compile Include="Class\RegexUtilities.cs" />
+    <Compile Include="Class\Tables\Acceptor.cs" />
+    <Compile Include="Class\Tables\AcceptorBank.cs" />
+    <Compile Include="Class\Tables\AccountingPlan.cs" />
+    <Compile Include="Class\Tables\BankOperations.cs" />
+    <Compile Include="Class\Tables\Banks.cs" />
+    <Compile Include="Class\Tables\Branches.cs" />
+    <Compile Include="Class\Tables\CardIssuing.cs" />
+    <Compile Include="Class\Tables\CardSeries.cs" />
+    <Compile Include="Class\Tables\CashOperations.cs" />
+    <Compile Include="Class\Tables\ColumnPrintable.cs" />
+    <Compile Include="Class\Tables\Commitments.cs" />
+    <Compile Include="Class\Tables\Contract.cs" />
+    <Compile Include="Class\Tables\ContractCodeTemp.cs" />
+    <Compile Include="Class\Tables\ContractCommitment.cs" />
+    <Compile Include="Class\Tables\ContractExtend.cs" />
+    <Compile Include="Class\Tables\Countries.cs" />
+    <Compile Include="Class\Tables\CreditName.cs" />
+    <Compile Include="Class\Tables\Currency.cs" />
+    <Compile Include="Class\Tables\CurrencyRates.cs" />
+    <Compile Include="Class\Tables\CustomerCodeTemp.cs" />
+    <Compile Include="Class\Tables\Customers.cs" />
+    <Compile Include="Class\Tables\DimTime.cs" />
+    <Compile Include="Class\Tables\FundContractPercent.cs" />
+    <Compile Include="Class\Tables\FundContracts.cs" />
+    <Compile Include="Class\Tables\FundPayment.cs" />
+    <Compile Include="Class\Tables\InsuranceRate.cs" />
+    <Compile Include="Class\Tables\InsuranceTransfer.cs" />
+    <Compile Include="Class\Tables\JuridicalPersons.cs" />
+    <Compile Include="Class\Tables\LeasingTotal.cs" />
+    <Compile Include="Class\Tables\LrsColors.cs" />
+    <Compile Include="Class\Tables\LrsUsers.cs" />
+    <Compile Include="Class\Tables\OperationDebt.cs" />
+    <Compile Include="Class\Tables\OperationJournal.cs" />
+    <Compile Include="Class\Tables\Payments.cs" />
+    <Compile Include="Class\Tables\PaymentSchedules.cs" />
+    <Compile Include="Class\Tables\PhonePrefixs.cs" />
+    <Compile Include="Class\Tables\PowerOfAttorneyCodeTemp.cs" />
+    <Compile Include="Class\Tables\TaskCodeTemp.cs" />
+    <Compile Include="Class\Tables\TaskType.cs" />
+    <Compile Include="Class\Views\ContractLawsView.cs" />
+    <Compile Include="Class\Views\DelaysListView.cs" />
+    <Compile Include="Class\Views\HostagesView.cs" />
+    <Compile Include="Class\Views\LastPayment.cs" />
+    <Compile Include="Class\Views\PaymentsView.cs" />
+    <Compile Include="Class\Views\PhonesView.cs" />
+    <Compile Include="Class\Views\TomorrowPaymentDataView.cs" />
+    <Compile Include="FConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConnect.Designer.cs">
+      <DependentUpon>FConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLicense.Designer.cs">
+      <DependentUpon>FLicense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FAttractedFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FAttractedFunds.Designer.cs">
+      <DependentUpon>FAttractedFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FBuyAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FBuyAmount.Designer.cs">
+      <DependentUpon>FBuyAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContract.Designer.cs">
+      <DependentUpon>FFundContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContractAddEdit.Designer.cs">
+      <DependentUpon>FFundContractAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFunds.Designer.cs">
+      <DependentUpon>FFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentAmountAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentAmountAddEdit.Designer.cs">
+      <DependentUpon>FPaymentAmountAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentPercentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentPercentAddEdit.Designer.cs">
+      <DependentUpon>FPaymentPercentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPercentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPercentAddEdit.Designer.cs">
+      <DependentUpon>FPercentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBank.Designer.cs">
+      <DependentUpon>FBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccountAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccountAddEdit.Designer.cs">
+      <DependentUpon>FBankAccountAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccounts.Designer.cs">
+      <DependentUpon>FBankAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperation.Designer.cs">
+      <DependentUpon>FBankOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperationAddEdit.Designer.cs">
+      <DependentUpon>FBankOperationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankRepeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankRepeat.Designer.cs">
+      <DependentUpon>FBankRepeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebt.Designer.cs">
+      <DependentUpon>FAccountDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebtAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebtAddEdit.Designer.cs">
+      <DependentUpon>FAccountDebtAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingAddEdit.Designer.cs">
+      <DependentUpon>FAccountingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingOperationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingOperationAddEdit.Designer.cs">
+      <DependentUpon>FAccountingOperationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingPlan.Designer.cs">
+      <DependentUpon>FAccountingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FBookkeeping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FBookkeeping.Designer.cs">
+      <DependentUpon>FBookkeeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCalcAgainPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCalcAgainPayments.Designer.cs">
+      <DependentUpon>FCalcAgainPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCompareInterest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCompareInterest.Designer.cs">
+      <DependentUpon>FCompareInterest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCustomerNormalPercent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCustomerNormalPercent.Designer.cs">
+      <DependentUpon>FCustomerNormalPercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournal.Designer.cs">
+      <DependentUpon>FJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournalLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournalLog.Designer.cs">
+      <DependentUpon>FJournalLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJurnalChangeDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJurnalChangeDate.Designer.cs">
+      <DependentUpon>FJurnalChangeDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FOperationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FOperationDetails.Designer.cs">
+      <DependentUpon>FOperationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonnelVacation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonnelVacation.Designer.cs">
+      <DependentUpon>FPersonnelVacation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonnelVacationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonnelVacationAddEdit.Designer.cs">
+      <DependentUpon>FPersonnelVacationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonneıVacationDates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FPersonneıVacationDates.Designer.cs">
+      <DependentUpon>FPersonneıVacationDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FProfits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FProfits.Designer.cs">
+      <DependentUpon>FProfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FShowPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FShowPayments.Designer.cs">
+      <DependentUpon>FShowPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FCash.Designer.cs">
+      <DependentUpon>FCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FExpensesAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FExpensesAddEdit.Designer.cs">
+      <DependentUpon>FExpensesAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FIncomeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FIncomeAddEdit.Designer.cs">
+      <DependentUpon>FIncomeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Commons\FCommons.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Commons\FCommons.Designer.cs">
+      <DependentUpon>FCommons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Commons\FOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Commons\FOrder.Designer.cs">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Commons\FOrderAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Commons\FOrderAddEdit.Designer.cs">
+      <DependentUpon>FOrderAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FAgainPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FAgainPerson.Designer.cs">
+      <DependentUpon>FAgainPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FChangeContractExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FChangeContractExchange.Designer.cs">
+      <DependentUpon>FChangeContractExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentLetterDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentLetterDetails.Designer.cs">
+      <DependentUpon>FCommitmentLetterDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommon.Designer.cs">
+      <DependentUpon>FCommon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractAddEdit.Designer.cs">
+      <DependentUpon>FContractAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractExtend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractExtend.Designer.cs">
+      <DependentUpon>FContractExtend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractLaws.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractLaws.Designer.cs">
+      <DependentUpon>FContractLaws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractPowerOfAttorney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractPowerOfAttorney.Designer.cs">
+      <DependentUpon>FContractPowerOfAttorney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContracts.Designer.cs">
+      <DependentUpon>FContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.Designer.cs">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractStatusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractStatusEdit.Designer.cs">
+      <DependentUpon>FContractStatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FExtendTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FExtendTime.Designer.cs">
+      <DependentUpon>FExtendTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FFinishedContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FFinishedContracts.Designer.cs">
+      <DependentUpon>FFinishedContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurance.Designer.cs">
+      <DependentUpon>FInsurance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceAddEdit.Designer.cs">
+      <DependentUpon>FInsuranceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceCompensationEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceCompensationEdit.Designer.cs">
+      <DependentUpon>FInsuranceCompensationEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceCompensationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceCompensationList.Designer.cs">
+      <DependentUpon>FInsuranceCompensationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceDebitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceDebitor.Designer.cs">
+      <DependentUpon>FInsuranceDebitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePayment.Designer.cs">
+      <DependentUpon>FInsurancePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePaymentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePaymentAddEdit.Designer.cs">
+      <DependentUpon>FInsurancePaymentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePaymentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePaymentList.Designer.cs">
+      <DependentUpon>FInsurancePaymentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePoliceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsurancePoliceEdit.Designer.cs">
+      <DependentUpon>FInsurancePoliceEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransfer.Designer.cs">
+      <DependentUpon>FInsuranceTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransferEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransferEdit.Designer.cs">
+      <DependentUpon>FInsuranceTransferEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransferList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceTransferList.Designer.cs">
+      <DependentUpon>FInsuranceTransferList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInterestAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInterestAddEdit.Designer.cs">
+      <DependentUpon>FInterestAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FJuridicalCommitmentTransmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FJuridicalCommitmentTransmission.Designer.cs">
+      <DependentUpon>FJuridicalCommitmentTransmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawAddEdit.Designer.cs">
+      <DependentUpon>FLawAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetailAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetailAddEdit.Designer.cs">
+      <DependentUpon>FLawDetailAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetails.Designer.cs">
+      <DependentUpon>FLawDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLaws.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLaws.Designer.cs">
+      <DependentUpon>FLaws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawSchedules.Designer.cs">
+      <DependentUpon>FLawSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatus.Designer.cs">
+      <DependentUpon>FLawStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatusAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatusAddEdit.Designer.cs">
+      <DependentUpon>FLawStatusAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNoPowerOfAttorneyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNoPowerOfAttorneyList.Designer.cs">
+      <DependentUpon>FNoPowerOfAttorneyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNote.Designer.cs">
+      <DependentUpon>FNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPolice.Designer.cs">
+      <DependentUpon>FPolice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorney.Designer.cs">
+      <DependentUpon>FPowerOfAttorney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorneyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorneyList.Designer.cs">
+      <DependentUpon>FPowerOfAttorneyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FProsecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FProsecute.Designer.cs">
+      <DependentUpon>FProsecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FSeller.Designer.cs">
+      <DependentUpon>FSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FSpecialWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FSpecialWarning.Designer.cs">
+      <DependentUpon>FSpecialWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FStatistic.Designer.cs">
+      <DependentUpon>FStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCardAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCardAddEdit.Designer.cs">
+      <DependentUpon>FCardAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FChangeCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FChangeCode.Designer.cs">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCommitments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCommitments.Designer.cs">
+      <DependentUpon>FCommitments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomerAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomerAddEdit.Designer.cs">
+      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomers.Designer.cs">
+      <DependentUpon>FCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FJuridicalPersonAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FJuridicalPersonAddEdit.Designer.cs">
+      <DependentUpon>FJuridicalPersonAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FVoenPaymentCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FVoenPaymentCalc.Designer.cs">
+      <DependentUpon>FVoenPaymentCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FVoenPaymentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FVoenPaymentDetails.Designer.cs">
+      <DependentUpon>FVoenPaymentDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FWorkAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FWorkAddEdit.Designer.cs">
+      <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankAddEdit.Designer.cs">
+      <DependentUpon>FBankAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankBranchAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankBranchAddEdit.Designer.cs">
+      <DependentUpon>FBankBranchAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBanks.Designer.cs">
+      <DependentUpon>FBanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBirthplaceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBirthplaceAddEdit.Designer.cs">
+      <DependentUpon>FBirthplaceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBanTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBanTypeAddEdit.Designer.cs">
+      <DependentUpon>FCarBanTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBrandAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBrandAddEdit.Designer.cs">
+      <DependentUpon>FCarBrandAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarColorAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarColorAddEdit.Designer.cs">
+      <DependentUpon>FCarColorAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardIssuingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardIssuingAddEdit.Designer.cs">
+      <DependentUpon>FCardIssuingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardSeriesAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardSeriesAddEdit.Designer.cs">
+      <DependentUpon>FCardSeriesAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarModelAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarModelAddEdit.Designer.cs">
+      <DependentUpon>FCarModelAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarTypeAddEdit.Designer.cs">
+      <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FContractEvaluateAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FContractEvaluateAddEdit.Designer.cs">
+      <DependentUpon>FContractEvaluateAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCountryAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCountryAddEdit.Designer.cs">
+      <DependentUpon>FCountryAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditNameAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditNameAddEdit.Designer.cs">
+      <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeAddEdit.Designer.cs">
+      <DependentUpon>FCreditTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeFormat.Designer.cs">
+      <DependentUpon>FCreditTypeFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCurrencyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCurrencyAddEdit.Designer.cs">
+      <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FDictionaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FDictionaries.Designer.cs">
+      <DependentUpon>FDictionaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFounderAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFounderAddEdit.Designer.cs">
+      <DependentUpon>FFounderAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceAddEdit.Designer.cs">
+      <DependentUpon>FFundsSourceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceNameAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceNameAddEdit.Designer.cs">
+      <DependentUpon>FFundsSourceNameAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.Designer.cs">
+      <DependentUpon>FInsuranceCompanyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceRateAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceRateAddEdit.Designer.cs">
+      <DependentUpon>FInsuranceRateAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FKindShipAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FKindShipAddEdit.Designer.cs">
+      <DependentUpon>FKindShipAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelAddEdit.Designer.cs">
+      <DependentUpon>FPersonnelAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelPositionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelPositionAddEdit.Designer.cs">
+      <DependentUpon>FPersonnelPositionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.Designer.cs">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.Designer.cs">
+      <DependentUpon>FPhoneDescriptionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhonePrefixAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhonePrefixAddEdit.Designer.cs">
+      <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FStatusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FStatusEdit.Designer.cs">
+      <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FChangePassword.Designer.cs">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCreditCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCreditCalculator.Designer.cs">
+      <DependentUpon>FCreditCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDateCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDateCalculator.Designer.cs">
+      <DependentUpon>FDateCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FExchangeCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FExchangeCalculator.Designer.cs">
+      <DependentUpon>FExchangeCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FForgetPassword.Designer.cs">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FImageCrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FImageCrop.Designer.cs">
+      <DependentUpon>FImageCrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLawDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLawDetails.Designer.cs">
+      <DependentUpon>FLawDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FListOfAutomaticAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FListOfAutomaticAdd.Designer.cs">
+      <DependentUpon>FListOfAutomaticAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMailAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMailAddEdit.Designer.cs">
+      <DependentUpon>FMailAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMyAccount.Designer.cs">
+      <DependentUpon>FMyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPermissionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPermissionAddEdit.Designer.cs">
+      <DependentUpon>FPermissionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPhoneAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPhoneAddEdit.Designer.cs">
+      <DependentUpon>FPhoneAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSendMail.Designer.cs">
+      <DependentUpon>FSendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSendSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSendSms.Designer.cs">
+      <DependentUpon>FSendSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUserAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUserAddEdit.Designer.cs">
+      <DependentUpon>FUserAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUserGroupAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUserGroupAddEdit.Designer.cs">
+      <DependentUpon>FUserGroupAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUsers.Designer.cs">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUsersGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUsersGroups.Designer.cs">
+      <DependentUpon>FUsersGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FExchangeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FExchangeAddEdit.Designer.cs">
+      <DependentUpon>FExchangeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FExchanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FExchanges.Designer.cs">
+      <DependentUpon>FExchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FRateAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FRateAnalysis.Designer.cs">
+      <DependentUpon>FRateAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LRSSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LRSSplashScreen.Designer.cs">
+      <DependentUpon>LRSSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\FColorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\FColorEdit.Designer.cs">
+      <DependentUpon>FColorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\FEditTemplateFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\FEditTemplateFile.Designer.cs">
+      <DependentUpon>FEditTemplateFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\FOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\FOptions.Designer.cs">
+      <DependentUpon>FOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\FOtherUserColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\FOtherUserColors.Designer.cs">
+      <DependentUpon>FOtherUserColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCColors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCColors.Designer.cs">
+      <DependentUpon>UCColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCStart.Designer.cs">
+      <DependentUpon>UCStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCTemplateFiles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCTemplateFiles.Designer.cs">
+      <DependentUpon>UCTemplateFiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorAddEdit.Designer.cs">
+      <DependentUpon>FAcceptorAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankAccountAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankAccountAddEdit.Designer.cs">
+      <DependentUpon>FAcceptorBankAccountAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankAddEdit.Designer.cs">
+      <DependentUpon>FAcceptorBankAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankBranchAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptorBankBranchAddEdit.Designer.cs">
+      <DependentUpon>FAcceptorBankBranchAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FAcceptors.Designer.cs">
+      <DependentUpon>FAcceptors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FChangeCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FChangeCode.Designer.cs">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FPaymentTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FPaymentTask.Designer.cs">
+      <DependentUpon>FPaymentTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskAddEdit.Designer.cs">
+      <DependentUpon>FTaskAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskType.Designer.cs">
+      <DependentUpon>FTaskType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTaskTypeAddEdit.Designer.cs">
+      <DependentUpon>FTaskTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTemplateAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTemplateAddEdit.Designer.cs">
+      <DependentUpon>FTemplateAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTemplates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FTemplates.Designer.cs">
+      <DependentUpon>FTemplates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FVat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\FVat.Designer.cs">
+      <DependentUpon>FVat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\Task.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\Task.Designer.cs">
+      <DependentUpon>Task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\TaskWithEDV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\PaymentTask\TaskWithEDV.Designer.cs">
+      <DependentUpon>TaskWithEDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\DelaysList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\DelaysList.Designer.cs">
+      <DependentUpon>DelaysList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\PaymentSchedules.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PaymentSchedules.Designer.cs">
+      <DependentUpon>PaymentSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\PaymentsReportUSD.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\PaymentsReportUSD.Designer.cs">
+      <DependentUpon>PaymentsReportUSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sms\FSms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sms\FSms.Designer.cs">
+      <DependentUpon>FSms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FAttentionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FAttentionAddEdit.Designer.cs">
+      <DependentUpon>FAttentionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FAttentions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FAttentions.Designer.cs">
+      <DependentUpon>FAttentions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyAddEdit.Designer.cs">
+      <DependentUpon>FBalancePenaltyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyDetail.Designer.cs">
+      <DependentUpon>FBalancePenaltyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBankToCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBankToCash.Designer.cs">
+      <DependentUpon>FBankToCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCashToBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCashToBank.Designer.cs">
+      <DependentUpon>FCashToBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCommitmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCommitmentInfo.Designer.cs">
+      <DependentUpon>FCommitmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormatting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormatting.Designer.cs">
+      <DependentUpon>FConditionalFormatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormattingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormattingAddEdit.Designer.cs">
+      <DependentUpon>FConditionalFormattingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FContractGroupAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FContractGroupAddEdit.Designer.cs">
+      <DependentUpon>FContractGroupAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FContractGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FContractGroups.Designer.cs">
+      <DependentUpon>FContractGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FContractImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FContractImages.Designer.cs">
+      <DependentUpon>FContractImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FContractWarningLetters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FContractWarningLetters.Designer.cs">
+      <DependentUpon>FContractWarningLetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCurrentPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCurrentPayments.Designer.cs">
+      <DependentUpon>FCurrentPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FDeletePenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FDeletePenalty.Designer.cs">
+      <DependentUpon>FDeletePenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FInsuranceWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FInsuranceWarning.Designer.cs">
+      <DependentUpon>FInsuranceWarning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FJuridicalCommitmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FJuridicalCommitmentInfo.Designer.cs">
+      <DependentUpon>FJuridicalCommitmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPayment.Designer.cs">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentAddEdit.Designer.cs">
+      <DependentUpon>FPaymentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentBankAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentBankAddEdit.Designer.cs">
+      <DependentUpon>FPaymentBankAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentSchedules.Designer.cs">
+      <DependentUpon>FPaymentSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPenalty.Designer.cs">
+      <DependentUpon>FPenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPenaltyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPenaltyAddEdit.Designer.cs">
+      <DependentUpon>FPenaltyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPortfelReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPortfelReports.Designer.cs">
+      <DependentUpon>FPortfelReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FStartPercentAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FStartPercentAdd.Designer.cs">
+      <DependentUpon>FStartPercentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FTemporaryPaymentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FTemporaryPaymentAddEdit.Designer.cs">
+      <DependentUpon>FTemporaryPaymentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FTemporaryPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FTemporaryPayments.Designer.cs">
+      <DependentUpon>FTemporaryPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FTotal.Designer.cs">
+      <DependentUpon>FTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FWarningLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FWarningLetter.Designer.cs">
+      <DependentUpon>FWarningLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FPrintableCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FPrintableCheck.Designer.cs">
+      <DependentUpon>FPrintableCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FServiceStartMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FServiceStartMessage.Designer.cs">
+      <DependentUpon>FServiceStartMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="WaitForms\FCalculatedWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FCalculatedWait.Designer.cs">
+      <DependentUpon>FCalculatedWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FCommitmentFileWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FCommitmentFileWait.Designer.cs">
+      <DependentUpon>FCommitmentFileWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FCustomerSaveWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FCustomerSaveWait.Designer.cs">
+      <DependentUpon>FCustomerSaveWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FPrintDocumentWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FPrintDocumentWait.Designer.cs">
+      <DependentUpon>FPrintDocumentWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FContractSaveWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FContractSaveWait.Designer.cs">
+      <DependentUpon>FContractSaveWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FContractShowWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FContractShowWait.Designer.cs">
+      <DependentUpon>FContractShowWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FJournalShowWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FJournalShowWait.Designer.cs">
+      <DependentUpon>FJournalShowWait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WaitForms\FWait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WaitForms\FWait.Designer.cs">
+      <DependentUpon>FWait.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FConnect.resx">
+      <DependentUpon>FConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FLicense.resx">
+      <DependentUpon>FLicense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FAttractedFunds.resx">
+      <DependentUpon>FAttractedFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FBuyAmount.resx">
+      <DependentUpon>FBuyAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFundContract.resx">
+      <DependentUpon>FFundContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFundContractAddEdit.resx">
+      <DependentUpon>FFundContractAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFunds.resx">
+      <DependentUpon>FFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FPaymentAmountAddEdit.resx">
+      <DependentUpon>FPaymentAmountAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FPaymentPercentAddEdit.resx">
+      <DependentUpon>FPaymentPercentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FPercentAddEdit.resx">
+      <DependentUpon>FPercentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBank.resx">
+      <DependentUpon>FBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankAccountAddEdit.resx">
+      <DependentUpon>FBankAccountAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankAccounts.resx">
+      <DependentUpon>FBankAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankOperation.resx">
+      <DependentUpon>FBankOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankOperationAddEdit.resx">
+      <DependentUpon>FBankOperationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankRepeat.resx">
+      <DependentUpon>FBankRepeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountDebt.resx">
+      <DependentUpon>FAccountDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountDebtAddEdit.resx">
+      <DependentUpon>FAccountDebtAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingAddEdit.resx">
+      <DependentUpon>FAccountingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingOperationAddEdit.resx">
+      <DependentUpon>FAccountingOperationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingPlan.resx">
+      <DependentUpon>FAccountingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FBookkeeping.resx">
+      <DependentUpon>FBookkeeping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FCalcAgainPayments.resx">
+      <DependentUpon>FCalcAgainPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FCompareInterest.resx">
+      <DependentUpon>FCompareInterest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FCustomerNormalPercent.resx">
+      <DependentUpon>FCustomerNormalPercent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FJournal.resx">
+      <DependentUpon>FJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FJournalLog.resx">
+      <DependentUpon>FJournalLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FJurnalChangeDate.resx">
+      <DependentUpon>FJurnalChangeDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FOperationDetails.resx">
+      <DependentUpon>FOperationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FPersonnelVacation.resx">
+      <DependentUpon>FPersonnelVacation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FPersonnelVacationAddEdit.resx">
+      <DependentUpon>FPersonnelVacationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FPersonneıVacationDates.resx">
+      <DependentUpon>FPersonneıVacationDates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FProfits.resx">
+      <DependentUpon>FProfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FShowPayments.resx">
+      <DependentUpon>FShowPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FCash.resx">
+      <DependentUpon>FCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FExpensesAddEdit.resx">
+      <DependentUpon>FExpensesAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FIncomeAddEdit.resx">
+      <DependentUpon>FIncomeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Commons\FCommons.resx">
+      <DependentUpon>FCommons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Commons\FOrder.resx">
+      <DependentUpon>FOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Commons\FOrderAddEdit.resx">
+      <DependentUpon>FOrderAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\ExtendPaymentSchedulesReport.rdlc" />
+    <EmbeddedResource Include="Forms\Contracts\FAgainPerson.resx">
+      <DependentUpon>FAgainPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FChangeContractExchange.resx">
+      <DependentUpon>FChangeContractExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCommitmentLetterDetails.resx">
+      <DependentUpon>FCommitmentLetterDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCommon.resx">
+      <DependentUpon>FCommon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractExtend.resx">
+      <DependentUpon>FContractExtend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractLaws.resx">
+      <DependentUpon>FContractLaws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractPowerOfAttorney.resx">
+      <DependentUpon>FContractPowerOfAttorney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractStatusEdit.resx">
+      <DependentUpon>FContractStatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FExtendTime.resx">
+      <DependentUpon>FExtendTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FFinishedContracts.resx">
+      <DependentUpon>FFinishedContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsurance.resx">
+      <DependentUpon>FInsurance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceAddEdit.resx">
+      <DependentUpon>FInsuranceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceCompensationEdit.resx">
+      <DependentUpon>FInsuranceCompensationEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceCompensationList.resx">
+      <DependentUpon>FInsuranceCompensationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceDebitor.resx">
+      <DependentUpon>FInsuranceDebitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsurancePayment.resx">
+      <DependentUpon>FInsurancePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsurancePaymentAddEdit.resx">
+      <DependentUpon>FInsurancePaymentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsurancePaymentList.resx">
+      <DependentUpon>FInsurancePaymentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsurancePoliceEdit.resx">
+      <DependentUpon>FInsurancePoliceEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceTransfer.resx">
+      <DependentUpon>FInsuranceTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceTransferEdit.resx">
+      <DependentUpon>FInsuranceTransferEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceTransferList.resx">
+      <DependentUpon>FInsuranceTransferList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInterestAddEdit.resx">
+      <DependentUpon>FInterestAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FJuridicalCommitmentTransmission.resx">
+      <DependentUpon>FJuridicalCommitmentTransmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawAddEdit.resx">
+      <DependentUpon>FLawAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawDetailAddEdit.resx">
+      <DependentUpon>FLawDetailAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawDetails.resx">
+      <DependentUpon>FLawDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLaws.resx">
+      <DependentUpon>FLaws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawSchedules.resx">
+      <DependentUpon>FLawSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawStatus.resx">
+      <DependentUpon>FLawStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawStatusAddEdit.resx">
+      <DependentUpon>FLawStatusAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FNoPowerOfAttorneyList.resx">
+      <DependentUpon>FNoPowerOfAttorneyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPolice.resx">
+      <DependentUpon>FPolice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractAddEdit.resx">
+      <DependentUpon>FContractAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContracts.resx">
+      <DependentUpon>FContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCommitmentTransmission.resx">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FNote.resx">
+      <DependentUpon>FNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPowerOfAttorney.resx">
+      <DependentUpon>FPowerOfAttorney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPowerOfAttorneyList.resx">
+      <DependentUpon>FPowerOfAttorneyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FProsecute.resx">
+      <DependentUpon>FProsecute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FSeller.resx">
+      <DependentUpon>FSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FSpecialWarning.resx">
+      <DependentUpon>FSpecialWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FStatistic.resx">
+      <DependentUpon>FStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCardAddEdit.resx">
+      <DependentUpon>FCardAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FChangeCode.resx">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCommitments.resx">
+      <DependentUpon>FCommitments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCustomerAddEdit.resx">
+      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCustomers.resx">
+      <DependentUpon>FCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FJuridicalPersonAddEdit.resx">
+      <DependentUpon>FJuridicalPersonAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FVoenPaymentCalc.resx">
+      <DependentUpon>FVoenPaymentCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FVoenPaymentDetails.resx">
+      <DependentUpon>FVoenPaymentDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FWorkAddEdit.resx">
+      <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBankAddEdit.resx">
+      <DependentUpon>FBankAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBankBranchAddEdit.resx">
+      <DependentUpon>FBankBranchAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBanks.resx">
+      <DependentUpon>FBanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBirthplaceAddEdit.resx">
+      <DependentUpon>FBirthplaceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarBanTypeAddEdit.resx">
+      <DependentUpon>FCarBanTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarBrandAddEdit.resx">
+      <DependentUpon>FCarBrandAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarColorAddEdit.resx">
+      <DependentUpon>FCarColorAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCardIssuingAddEdit.resx">
+      <DependentUpon>FCardIssuingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCardSeriesAddEdit.resx">
+      <DependentUpon>FCardSeriesAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarModelAddEdit.resx">
+      <DependentUpon>FCarModelAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarTypeAddEdit.resx">
+      <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FContractEvaluateAddEdit.resx">
+      <DependentUpon>FContractEvaluateAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCountryAddEdit.resx">
+      <DependentUpon>FCountryAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditNameAddEdit.resx">
+      <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditTypeAddEdit.resx">
+      <DependentUpon>FCreditTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditTypeFormat.resx">
+      <DependentUpon>FCreditTypeFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCurrencyAddEdit.resx">
+      <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FDictionaries.resx">
+      <DependentUpon>FDictionaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FAppointmentAddEdit.resx">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFounderAddEdit.resx">
+      <DependentUpon>FFounderAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFundsSourceAddEdit.resx">
+      <DependentUpon>FFundsSourceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFundsSourceNameAddEdit.resx">
+      <DependentUpon>FFundsSourceNameAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.resx">
+      <DependentUpon>FInsuranceCompanyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FInsuranceRateAddEdit.resx">
+      <DependentUpon>FInsuranceRateAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FKindShipAddEdit.resx">
+      <DependentUpon>FKindShipAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPersonnelAddEdit.resx">
+      <DependentUpon>FPersonnelAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPersonnelPositionAddEdit.resx">
+      <DependentUpon>FPersonnelPositionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPositionAddEdit.resx">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.resx">
+      <DependentUpon>FPhoneDescriptionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPhonePrefixAddEdit.resx">
+      <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.resx">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FStatusEdit.resx">
+      <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FChangePassword.resx">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCreditCalculator.resx">
+      <DependentUpon>FCreditCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDateCalculator.resx">
+      <DependentUpon>FDateCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FExchangeCalculator.resx">
+      <DependentUpon>FExchangeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FForgetPassword.resx">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FImageCrop.resx">
+      <DependentUpon>FImageCrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FListOfAutomaticAdd.resx">
+      <DependentUpon>FListOfAutomaticAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMailAddEdit.resx">
+      <DependentUpon>FMailAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMyAccount.resx">
+      <DependentUpon>FMyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPermissionAddEdit.resx">
+      <DependentUpon>FPermissionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPhoneAddEdit.resx">
+      <DependentUpon>FPhoneAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSendMail.resx">
+      <DependentUpon>FSendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSendSms.resx">
+      <DependentUpon>FSendSms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUserAddEdit.resx">
+      <DependentUpon>FUserAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUserGroupAddEdit.resx">
+      <DependentUpon>FUserGroupAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUsers.resx">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUsersGroups.resx">
+      <DependentUpon>FUsersGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FExchangeAddEdit.resx">
+      <DependentUpon>FExchangeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FExchanges.resx">
+      <DependentUpon>FExchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FRateAnalysis.resx">
+      <DependentUpon>FRateAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LRSSplashScreen.resx">
+      <DependentUpon>LRSSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\FColorEdit.resx">
+      <DependentUpon>FColorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\FEditTemplateFile.resx">
+      <DependentUpon>FEditTemplateFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\FOptions.resx">
+      <DependentUpon>FOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\FOtherUserColors.resx">
+      <DependentUpon>FOtherUserColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCColors.resx">
+      <DependentUpon>UCColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCStart.resx">
+      <DependentUpon>UCStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCTemplateFiles.resx">
+      <DependentUpon>UCTemplateFiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FAcceptorAddEdit.resx">
+      <DependentUpon>FAcceptorAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FAcceptorBankAccountAddEdit.resx">
+      <DependentUpon>FAcceptorBankAccountAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FAcceptorBankAddEdit.resx">
+      <DependentUpon>FAcceptorBankAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FAcceptorBankBranchAddEdit.resx">
+      <DependentUpon>FAcceptorBankBranchAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FAcceptors.resx">
+      <DependentUpon>FAcceptors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FChangeCode.resx">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FPaymentTask.resx">
+      <DependentUpon>FPaymentTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FTaskAddEdit.resx">
+      <DependentUpon>FTaskAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FTaskType.resx">
+      <DependentUpon>FTaskType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FTaskTypeAddEdit.resx">
+      <DependentUpon>FTaskTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FTemplateAddEdit.resx">
+      <DependentUpon>FTemplateAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FTemplates.resx">
+      <DependentUpon>FTemplates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\FVat.resx">
+      <DependentUpon>FVat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\Task.resx">
+      <DependentUpon>Task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PaymentTask\TaskWithEDV.resx">
+      <DependentUpon>TaskWithEDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\DelaysList.resx">
+      <DependentUpon>DelaysList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PaymentSchedules.resx">
+      <DependentUpon>PaymentSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\PaymentsReportUSD.resx">
+      <DependentUpon>PaymentsReportUSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sms\FSms.resx">
+      <DependentUpon>FSms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FAttentionAddEdit.resx">
+      <DependentUpon>FAttentionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FAttentions.resx">
+      <DependentUpon>FAttentions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBalancePenaltyAddEdit.resx">
+      <DependentUpon>FBalancePenaltyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBalancePenaltyDetail.resx">
+      <DependentUpon>FBalancePenaltyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBankToCash.resx">
+      <DependentUpon>FBankToCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCashToBank.resx">
+      <DependentUpon>FCashToBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCommitmentInfo.resx">
+      <DependentUpon>FCommitmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FConditionalFormatting.resx">
+      <DependentUpon>FConditionalFormatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FConditionalFormattingAddEdit.resx">
+      <DependentUpon>FConditionalFormattingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FContractGroupAddEdit.resx">
+      <DependentUpon>FContractGroupAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FContractGroups.resx">
+      <DependentUpon>FContractGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FContractImages.resx">
+      <DependentUpon>FContractImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FContractWarningLetters.resx">
+      <DependentUpon>FContractWarningLetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCurrentPayments.resx">
+      <DependentUpon>FCurrentPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FDeletePenalty.resx">
+      <DependentUpon>FDeletePenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FInsuranceWarning.resx">
+      <DependentUpon>FInsuranceWarning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FJuridicalCommitmentInfo.resx">
+      <DependentUpon>FJuridicalCommitmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPayment.resx">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentAddEdit.resx">
+      <DependentUpon>FPaymentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentBankAddEdit.resx">
+      <DependentUpon>FPaymentBankAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentSchedules.resx">
+      <DependentUpon>FPaymentSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPenalty.resx">
+      <DependentUpon>FPenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPenaltyAddEdit.resx">
+      <DependentUpon>FPenaltyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPortfelReports.resx">
+      <DependentUpon>FPortfelReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FStartPercentAdd.resx">
+      <DependentUpon>FStartPercentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FTemporaryPaymentAddEdit.resx">
+      <DependentUpon>FTemporaryPaymentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FTemporaryPayments.resx">
+      <DependentUpon>FTemporaryPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FTotal.resx">
+      <DependentUpon>FTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FWarningLetter.resx">
+      <DependentUpon>FWarningLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FPrintableCheck.resx">
+      <DependentUpon>FPrintableCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FServiceStartMessage.resx">
+      <DependentUpon>FServiceStartMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WaitForms\FCalculatedWait.resx">
+      <DependentUpon>FCalculatedWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FCommitmentFileWait.resx">
+      <DependentUpon>FCommitmentFileWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FCustomerSaveWait.resx">
+      <DependentUpon>FCustomerSaveWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FPrintDocumentWait.resx">
+      <DependentUpon>FPrintDocumentWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FContractSaveWait.resx">
+      <DependentUpon>FContractSaveWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FContractShowWait.resx">
+      <DependentUpon>FContractShowWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FJournalShowWait.resx">
+      <DependentUpon>FJournalShowWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WaitForms\FWait.resx">
+      <DependentUpon>FWait.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="CRS_TemporaryKey.pfx" />
+    <None Include="Forms\Contracts\Expenditure.rdlc" />
+    <None Include="Forms\Contracts\Insurance.rdlc" />
+    <None Include="Forms\Contracts\PaymentSchedulesReport.rdlc" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\CRS.Class.Tables.CreditName.datasource" />
+    <None Include="Properties\DataSources\CRS.Class.Tables.Currency.datasource" />
+    <None Include="Properties\DataSources\CRS.Class.Tables.Payments.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounting_icon.ico" />
+    <None Include="Resources\calculator-red-32.png" />
+    <None Include="Resources\calculator-red-24.png" />
+    <None Include="Resources\ok-16.png" />
+    <None Include="Resources\template-32.png" />
+    <None Include="Resources\folder-search-16.png" />
+    <None Include="Resources\type-32.png" />
+    <None Include="Resources\again.png" />
+    <None Include="Resources\check-16.png" />
+    <None Include="Resources\currency-dollar-16.png" />
+    <None Include="Resources\money-bag-dollar-16.png" />
+    <None Include="Resources\coins_in_hand-32.png" />
+    <None Include="Resources\word-16.png" />
+    <None Include="Resources\seller-32.png" />
+    <None Include="Resources\USB-32.png" />
+    <None Include="Resources\logout-32.png" />
+    <None Include="Resources\sign-out-32.png" />
+    <None Include="Resources\finish-32.png" />
+    <None Include="Resources\lock_open-32.png" />
+    <None Include="Resources\lock_close-32.png" />
+    <None Include="Resources\full_time.png" />
+    <None Include="Resources\search-contract-32.png" />
+    <None Include="Resources\search-16.png" />
+    <None Include="Resources\insurance-32.png" />
+    <None Include="Resources\insurance2-32.png" />
+    <None Include="Resources\attention-32.png" />
+    <None Include="Resources\attention-16.png" />
+    <None Include="Resources\again-32.png" />
+    <None Include="Resources\bullet-red-16.png" />
+    <None Include="Resources\bullet_white-16.png" />
+    <None Include="Resources\repeat-64.png" />
+    <None Include="Resources\repeat-24.png" />
+    <None Include="Resources\repeat-16.png" />
+    <None Include="Resources\control-repeat-blue-24.png" />
+    <None Include="Resources\control-repeat-blue-32.png" />
+    <None Include="Resources\controls-repeat-32.png" />
+    <None Include="Resources\lock-open-16.png" />
+    <None Include="Resources\lock-close-16.png" />
+    <None Include="Resources\cluster-32.png" />
+    <None Include="Resources\agreement_32.png" />
+    <None Include="Resources\insurance-blue-32.png" />
+    <None Include="Resources\money-bag-16.png" />
+    <None Include="Resources\start_percent-32.png" />
+    <None Include="Resources\info_32.png" />
+    <None Include="bin\Debug\income.ico" />
+    <None Include="bin\Debug\expenses.ico" />
+    <None Include="Resources\star-32.png" />
+    <None Include="Resources\database-save-321.png" />
+    <None Include="Resources\sms-24.png" />
+    <None Include="Resources\SMS-bubble-24.png" />
+    <None Include="Resources\file-warning-32.png" />
+    <None Include="Resources\file-warning-321.png" />
+    <None Include="Resources\attention-321.png" />
+    <None Include="Resources\attention-161.png" />
+    <None Include="Resources\signal-attention-32.png" />
+    <None Include="Resources\Signal-attention-16.png" />
+    <None Include="Resources\picture-16.png" />
+    <None Include="Resources\iconfinder_11_copy_5285826 %281%29.png" />
+    <None Include="Resources\sum-32.png" />
+    <None Include="Resources\apps-calc-32.png" />
+    <None Include="Resources\calendar-week-32.png" />
+    <None Include="Resources\app_chart_32.png" />
+    <None Include="Resources\bank-transfer-16.png" />
+    <None Include="Resources\money-pencil-16.png" />
+    <None Include="Resources\police-16.png" />
+    <None Include="Resources\invoice-32.png" />
+    <None Include="Resources\status-blue-16.png" />
+    <None Include="Resources\status-offline-16.png" />
+    <None Include="Resources\ProLizinqLogo.jpg" />
+    <Content Include="Resources\yellow_leasing.ico" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="yellow_leasing.ico" />
+    <None Include="Resources\License-Registration.jpg" />
+    <None Include="Resources\sync2-16.png" />
+    <None Include="Resources\license-key-16.png" />
+    <None Include="Resources\Lawyer-Briefcase-icon-32.png" />
+    <None Include="Resources\swap-horiz-16.png" />
+    <None Include="Resources\sexsiyyet_vesiqesi.png" />
+    <None Include="Resources\Passport.png" />
+    <None Include="Resources\cancel-32.png" />
+    <None Include="Resources\cancel-16.png" />
+    <None Include="Resources\close-law-32.png" />
+    <None Include="Resources\notary-32.png" />
+    <None Include="Resources\close-law-16.png" />
+    <None Include="Resources\notary-16.png" />
+    <None Include="Resources\meeting-32.png" />
+    <None Include="Resources\schedule-32.png" />
+    <None Include="Resources\law-32.png" />
+    <None Include="Resources\collapse-32.png" />
+    <None Include="Resources\expand-32.png" />
+    <None Include="Resources\webcamera-16.png" />
+    <None Include="Resources\debt-32.png" />
+    <None Include="Resources\balance-16.png" />
+    <None Include="Resources\receipt-32.png" />
+    <None Include="Resources\Left-right.png" />
+    <None Include="Resources\database-save-32.png" />
+    <None Include="Resources\profits-32.png" />
+    <None Include="Resources\journal-32.png" />
+    <None Include="Resources\view_detail-32.png" />
+    <None Include="Resources\balance-32.png" />
+    <None Include="Resources\notebook.png" />
+    <None Include="Resources\table-export-16.png" />
+    <None Include="Resources\csv-16.png" />
+    <None Include="Resources\txt-16.png" />
+    <None Include="Resources\html-16.png" />
+    <None Include="Resources\rtf-16.png" />
+    <None Include="Resources\pdf-16.png" />
+    <None Include="Resources\print_32x32.png" />
+    <None Include="Resources\print_16x16.png" />
+    <None Include="Resources\chart-161.png" />
+    <None Include="Resources\chart-16.png" />
+    <None Include="Resources\my-profile-32.png" />
+    <None Include="Resources\profile-24.png" />
+    <None Include="Resources\profile-32.png" />
+    <None Include="Resources\printer-32.png" />
+    <None Include="Resources\calendar-today.png" />
+    <None Include="Resources\export_excel-32.png" />
+    <None Include="Resources\unlock-32.png" />
+    <None Include="Resources\lock-32.png" />
+    <None Include="Resources\start-16.png" />
+    <None Include="Resources\color-16.png" />
+    <None Include="Resources\payment-16.png" />
+    <None Include="Resources\coins-in-hand-16.png" />
+    <None Include="Resources\money-arrow-16.png" />
+    <None Include="Resources\wallet-32.png" />
+    <None Include="Resources\calculator-date-32.png" />
+    <None Include="Resources\numbers-32.png" />
+    <None Include="Resources\font-color-16.png" />
+    <None Include="Resources\safe-16.png" />
+    <None Include="Resources\bank-16.png" />
+    <None Include="Resources\notes-16.png" />
+    <None Include="Resources\notes-32.png" />
+    <None Include="Resources\color-32.png" />
+    <None Include="Resources\safe-32.png" />
+    <None Include="Resources\table-sum-32.png" />
+    <None Include="Resources\merge-32.png" />
+    <None Include="Resources\plus-321.png" />
+    <None Include="Resources\expenses-16.png" />
+    <None Include="Resources\income-16.png" />
+    <None Include="Resources\bank-operation-32.png" />
+    <None Include="Resources\edit-32.png" />
+    <None Include="Resources\delete-32.png" />
+    <None Include="Resources\contract-32.png" />
+    <None Include="Resources\bank-32.png" />
+    <None Include="Resources\coins-32.png" />
+    <None Include="Resources\calendar-month-32.png" />
+    <None Include="Resources\calendar-quarter-32.png" />
+    <None Include="Resources\calendar-year-32.png" />
+    <None Include="Resources\explorer-16.png" />
+    <None Include="Resources\expenses-32.png" />
+    <None Include="Resources\income-32.png" />
+    <None Include="Resources\calendar-32.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\commitment.png" />
+    <None Include="Resources\payment-32.png" />
+    <None Include="Resources\calculator-241.png" />
+    <None Include="Resources\exchange2-32.png" />
+    <None Include="Resources\exchange-24.png" />
+    <None Include="Resources\equal-16.png" />
+    <None Include="Resources\excel-16.png" />
+    <None Include="Resources\exchange-321.png" />
+    <None Include="Resources\schedule-16.png" />
+    <None Include="Resources\schedule-24.png" />
+    <None Include="Resources\document-32.png" />
+    <None Include="Resources\credit-32.png" />
+    <None Include="Resources\credit-24.png" />
+    <None Include="Resources\document-pencil-24.png" />
+    <None Include="Resources\document-24.png" />
+    <None Include="Resources\calculator-24.png" />
+    <None Include="Resources\car-24.png" />
+    <None Include="Resources\meeting-24.png" />
+    <None Include="Resources\view-24.png" />
+    <None Include="Resources\word-24.png" />
+    <None Include="Resources\file-24.png" />
+    <None Include="Resources\network_add-32.png" />
+    <None Include="Resources\contract-delete-32.png" />
+    <None Include="Resources\contract-edit-32.png" />
+    <None Include="Resources\contract-add-321.png" />
+    <None Include="Resources\contract-plus-32.png" />
+    <None Include="Resources\contract-add-32.png" />
+    <None Include="Resources\show-16.png" />
+    <None Include="Resources\SMS-32.png" />
+    <None Include="Resources\filter_delete-32.png" />
+    <None Include="Resources\search-32.png" />
+    <None Include="Resources\customer-delete-32.png" />
+    <None Include="Resources\customer-edit-32.png" />
+    <None Include="Resources\customer-add-32.png" />
+    <None Include="Resources\user-32.png" />
+    <None Include="Resources\plus-32.png" />
+    <None Include="Resources\plus-16.png" />
+    <None Include="Resources\minus-16.png" />
+    <None Include="Resources\pencil-16.png" />
+    <None Include="Resources\edit-16.png" />
+    <None Include="Resources\add-32.png" />
+    <None Include="Resources\user-delete-16.png" />
+    <None Include="Resources\user-edit-16.png" />
+    <None Include="Resources\add-16.png" />
+    <None Include="Resources\user-add-16.png" />
+    <None Include="Resources\check-box-32.png" />
+    <None Include="Resources\check-box-16.png" />
+    <None Include="Resources\explorer-32.png" />
+    <None Include="Resources\csv-32.png" />
+    <None Include="Resources\txt-32.png" />
+    <None Include="Resources\html-32.png" />
+    <None Include="Resources\rtf-32.png" />
+    <None Include="Resources\pdf-32.png" />
+    <None Include="Resources\excel-32.png" />
+    <None Include="Resources\excel-24.png" />
+    <None Include="Resources\split-vertical.png" />
+    <None Include="Resources\user-group-delete-32.png" />
+    <None Include="Resources\user-group-edit-32.png" />
+    <None Include="Resources\user-group-add-32.png" />
+    <None Include="Resources\users-groups-32.png" />
+    <None Include="Resources\refresh-16.png" />
+    <None Include="Resources\mail-delete-16.png" />
+    <None Include="Resources\mail-edit-16.png" />
+    <None Include="Resources\mail-add-16.png" />
+    <None Include="Resources\phone-delete-16.png" />
+    <None Include="Resources\phone-edit-16.png" />
+    <None Include="Resources\phone-add-16.png" />
+    <None Include="Resources\phone-16.png" />
+    <None Include="Resources\user-group-32.png" />
+    <None Include="Resources\email-send-32.png" />
+    <None Include="Resources\table-export-32.png" />
+    <None Include="Resources\user-delete-32.png" />
+    <None Include="Resources\user-edit-32.png" />
+    <None Include="Resources\user-add-32.png" />
+    <None Include="Resources\exit-32.png" />
+    <None Include="Resources\dictionary-32.png" />
+    <None Include="Resources\people-group-32.png" />
+    <None Include="Resources\exchange-32.png" />
+    <None Include="Resources\calculator-32.png" />
+    <None Include="Resources\horizontal-32.png" />
+    <None Include="Resources\vertical-32.png" />
+    <None Include="Resources\cascade-32.png" />
+    <None Include="Resources\cascade-16.png" />
+    <None Include="Resources\vertical-16.png" />
+    <None Include="Resources\horizontal-16.png" />
+    <None Include="Resources\application_tile_horizontal.png" />
+    <None Include="Resources\Refresh-32.png" />
+    <None Include="Resources\Russion-Flag-48.png" />
+    <None Include="Resources\United-States-Flag-48.png" />
+    <None Include="Resources\Azerbaijan-Flag-48.png" />
+    <None Include="Resources\password-icon.png" />
+    <None Include="Resources\User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de\DevExpress.Data.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.DataAccess.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Diagram.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Office.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Pdf.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.PivotGrid.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Printing.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Sparkline.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Utils.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.Xpo.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraBars.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraCharts.v17.1.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraEditors.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGauges.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraLayout.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraNavBar.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraPrinting.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraReports.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraScheduler.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraScheduler.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraScheduler.v17.1.Reporting.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraScheduler.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraSpellChecker.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraTreeList.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Data.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.DataAccess.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Diagram.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Office.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Pdf.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.PivotGrid.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Printing.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Sparkline.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Utils.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.Xpo.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraBars.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraCharts.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraCharts.v17.1.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraEditors.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGauges.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraLayout.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraNavBar.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPivotGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraPrinting.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraReports.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraReports.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraRichEdit.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraScheduler.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraScheduler.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraScheduler.v17.1.Reporting.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraScheduler.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraSpellChecker.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraTreeList.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\DevExpress.XtraVerticalGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Data.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.DataAccess.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Diagram.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Office.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Pdf.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.PivotGrid.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Printing.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Sparkline.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Utils.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.Xpo.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraBars.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraCharts.v17.1.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraEditors.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGauges.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraLayout.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraNavBar.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraPrinting.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraReports.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraScheduler.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraScheduler.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraScheduler.v17.1.Reporting.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraScheduler.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraSpellChecker.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ja\DevExpress.XtraVerticalGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Data.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.DataAccess.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Diagram.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Office.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Pdf.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.PivotGrid.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Printing.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.RichEdit.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Sparkline.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Utils.v17.1.UI.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.Xpo.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraBars.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraCharts.v17.1.Wizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraEditors.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGauges.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraLayout.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraNavBar.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraPrinting.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraReports.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraScheduler.v17.1.Core.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraScheduler.v17.1.Extensions.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraScheduler.v17.1.Reporting.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraScheduler.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraSpellChecker.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\DevExpress.XtraVerticalGrid.v17.1.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

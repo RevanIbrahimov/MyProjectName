@@ -1,0 +1,20 @@
+
+Log Entry : 12:15:15 5 avqust 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ChangeStringToDate
+  
+   ShowMessage:  tarixi ddmmyyyy formatına çevirilmədi.
+   Exception Message: Object reference not set to an instance of an object.
+-------------------------------------------------
+
+Log Entry : 12:16:55 5 avqust 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ChangeStringToDate
+  
+   ShowMessage:  tarixi ddmmyyyy formatına çevirilmədi.
+   Exception Message: Object reference not set to an instance of an object.
+-------------------------------------------------

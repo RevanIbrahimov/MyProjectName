@@ -1,0 +1,380 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="GroupFooterShowMode">VisibleAlways</property>
+    <property name="AllowHtmlDrawHeaders">true</property>
+    <property name="ColumnAutoWidth">false</property>
+    <property name="ShowFooter">true</property>
+    <property name="ShowGroupPanel">false</property>
+    <property name="ShowIndicator">false</property>
+    <property name="EnableAppearanceEvenRow">true</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Columns" iskey="true" value="60">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Name">Totals_CustomerCode</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Name">Totals_CustomerName</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="Width">260</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">FULL_CUSTOMER_NAME</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat" />
+        </property>
+      </property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Name">Totals_ContractCode</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Visible">true</property>
+      <property name="Width">57</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">CONTRACT_CODE</property>
+          <property name="SummaryType">Count</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Name">Totals_Interest</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Visible">true</property>
+      <property name="Width">44</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Name">Totals_InterestValue</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Name">Totals_Period</property>
+      <property name="VisibleIndex">3</property>
+      <property name="Visible">true</property>
+      <property name="Width">44</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Name">Totals_PeriodValue</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Name">Totals_StartDate</property>
+      <property name="VisibleIndex">4</property>
+      <property name="Visible">true</property>
+      <property name="Width">67</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Name">Totals_EndDate</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Visible">true</property>
+      <property name="Width">67</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Name">Totals_Amount</property>
+      <property name="VisibleIndex">6</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">AMOUNT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Name">Totals_CurrencyCode</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Visible">true</property>
+      <property name="Width">40</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Name">Totals_PaymentAmount</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PAYMENT_AMOUNT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Name">Totals_BasicAmount</property>
+      <property name="VisibleIndex">8</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">BASIC_AMOUNT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Name">Totals_Debt</property>
+      <property name="VisibleIndex">9</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">DEBT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Name">Totals_DelaysDayCount</property>
+      <property name="VisibleIndex">10</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Name">Totals_InterestAmount</property>
+      <property name="VisibleIndex">11</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">INTEREST_AMOUNT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Name">Totals_PaymentInterestAmount</property>
+      <property name="VisibleIndex">12</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PAYMENT_INTEREST_AMOUNT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Name">Totals_PaymentInterestDebt</property>
+      <property name="VisibleIndex">13</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">PAYMENT_INTEREST_DEBT</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Name">Totals_Total</property>
+      <property name="VisibleIndex">14</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">TOTAL</property>
+          <property name="SummaryType">Custom</property>
+          <property name="DisplayFormat">{0:n2}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Name">Totals_Hostage</property>
+      <property name="VisibleIndex">15</property>
+      <property name="Visible">true</property>
+      <property name="Width">650</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Name">Totals_LiquidAmount</property>
+      <property name="VisibleIndex">16</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Name">Totals_SellerName</property>
+      <property name="VisibleIndex">17</property>
+      <property name="Visible">true</property>
+      <property name="Width">220</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Name">Totals_InsuranceDate</property>
+      <property name="VisibleIndex">18</property>
+      <property name="Visible">true</property>
+      <property name="Width">90</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Name">Totals_InsuranceStatus</property>
+      <property name="VisibleIndex">19</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Name">Totals_Phones</property>
+      <property name="VisibleIndex">20</property>
+      <property name="Visible">true</property>
+      <property name="Width">500</property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="Name">Totals_CommitmentName</property>
+      <property name="VisibleIndex">21</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="Name">Totals_Note</property>
+      <property name="VisibleIndex">22</property>
+      <property name="Visible">true</property>
+      <property name="Width">40</property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="Name">Totals_Required</property>
+      <property name="VisibleIndex">24</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="Name">Totals_Delays</property>
+      <property name="VisibleIndex">25</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="Name">Totals_FullMonthCount</property>
+      <property name="VisibleIndex">26</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="Name">Totals_PaymentDay</property>
+      <property name="VisibleIndex">27</property>
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="Name">Totals_MonthlyAmount</property>
+      <property name="VisibleIndex">28</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="Name">Totals_NormDebt</property>
+      <property name="VisibleIndex">29</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="Name">Totals_ContractEvaluateName</property>
+      <property name="VisibleIndex">30</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="Name">Totals_DayCount</property>
+      <property name="VisibleIndex">31</property>
+      <property name="Visible">true</property>
+      <property name="Width">46</property>
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="Name">Totals_ContractID</property>
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="Name">Totals_CustomerID</property>
+    </property>
+    <property name="Item38" isnull="true" iskey="true">
+      <property name="Name">Totals_CustomerTypeID</property>
+    </property>
+    <property name="Item39" isnull="true" iskey="true">
+      <property name="Name">Totals_SellerID</property>
+    </property>
+    <property name="Item40" isnull="true" iskey="true">
+      <property name="Name">Totals_SellerTypeID</property>
+    </property>
+    <property name="Item41" isnull="true" iskey="true">
+      <property name="Name">Totals_PaymentDate</property>
+      <property name="Width">60</property>
+    </property>
+    <property name="Item42" isnull="true" iskey="true">
+      <property name="Name">Totals_UsedUserID</property>
+    </property>
+    <property name="Item43" isnull="true" iskey="true">
+      <property name="Name">Totals_StatusID</property>
+    </property>
+    <property name="Item44" isnull="true" iskey="true">
+      <property name="Name">Totals_ContractNote</property>
+    </property>
+    <property name="Item45" isnull="true" iskey="true">
+      <property name="Name">Totals_NoteChangeUser</property>
+    </property>
+    <property name="Item46" isnull="true" iskey="true">
+      <property name="Name">Totals_NoteChangeDate</property>
+    </property>
+    <property name="Item47" isnull="true" iskey="true">
+      <property name="Name">Totals_ParentID</property>
+    </property>
+    <property name="Item48" isnull="true" iskey="true">
+      <property name="Name">Totals_CommitmentPersonTypeID</property>
+    </property>
+    <property name="Item49" isnull="true" iskey="true">
+      <property name="Name">Totals_ExtendMonthlyAmount</property>
+    </property>
+    <property name="Item50" isnull="true" iskey="true">
+      <property name="Name">Totals_IsOld</property>
+    </property>
+    <property name="Item51" isnull="true" iskey="true">
+      <property name="Name">Totals_ExtendMonthCount</property>
+    </property>
+    <property name="Item52" isnull="true" iskey="true">
+      <property name="Name">Totals_InsuranceDiffMonth</property>
+    </property>
+    <property name="Item53" isnull="true" iskey="true">
+      <property name="Name">Totals_IsSpecialAttention</property>
+    </property>
+    <property name="Item54" isnull="true" iskey="true">
+      <property name="Name">Totals_SpecialAttention</property>
+      <property name="VisibleIndex">32</property>
+      <property name="Visible">true</property>
+      <property name="Width">50</property>
+    </property>
+    <property name="Item55" isnull="true" iskey="true">
+      <property name="Name">Totals_EvaluateID</property>
+    </property>
+    <property name="Item56" isnull="true" iskey="true">
+      <property name="Name">Totals_HostageName</property>
+    </property>
+    <property name="Item57" isnull="true" iskey="true">
+      <property name="Name">Totals_ExtendStartDate</property>
+    </property>
+    <property name="Item58" isnull="true" iskey="true">
+      <property name="Name">Totals_ExtendDebt</property>
+    </property>
+    <property name="Item59" isnull="true" iskey="true">
+      <property name="Name">Total_CurrencyID</property>
+    </property>
+    <property name="Item60" isnull="true" iskey="true">
+      <property name="Name">Totals_OverduePercent</property>
+      <property name="VisibleIndex">23</property>
+      <property name="Visible">true</property>
+      <property name="Width">85</property>
+    </property>
+  </property>
+  <property name="ActiveFilterString">[STATUS_ID] = 5</property>
+  <property name="MRUFilters">~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF1EZXZFeHByZXNzLlh0cmFHcmlkLnYxNy4xLCBWZXJzaW9uPTE3LjEuMy4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFAQAAADZEZXZFeHByZXNzLlh0cmFHcmlkLlZpZXdzLkJhc2UuTVJVVmlld0ZpbHRlckNvbGxlY3Rpb24BAAAAE0NvbGxlY3Rpb25CYXNlK2xpc3QDHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QCAAAACQMAAAAEAwAAABxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24FAAAICAkEAAAAAQAAAAQAAAAQBAAAAAQAAAAJBQAAAA0DDAYAAABZRGV2RXhwcmVzcy5EYXRhLnYxNy4xLCBWZXJzaW9uPTE3LjEuMy4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFBQAAAClEZXZFeHByZXNzLlh0cmFHcmlkLlZpZXdzLkJhc2UuVmlld0ZpbHRlcgIAAAAYZk5vbkNvbHVtbkZpbHRlckNyaXRlcmlhE0NvbGxlY3Rpb25CYXNlK2xpc3QEAypEZXZFeHByZXNzLkRhdGEuRmlsdGVyaW5nLkNyaXRlcmlhT3BlcmF0b3IGAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QCAAAACgkHAAAAAQcAAAADAAAACQgAAAABAAAAAwAAABAIAAAABAAAAAkJAAAADQMMCgAAABlEZXZFeHByZXNzLlh0cmFHcmlkLnYxNy4xBQkAAAAzRGV2RXhwcmVzcy5YdHJhR3JpZC5WaWV3cy5CYXNlLlZpZXdDb2x1bW5GaWx0ZXJJbmZvAgAAAAZGaWx0ZXIGQ29sdW1uBAEsRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkNvbHVtbkZpbHRlckluZm8KAAAACgAAAAkLAAAABgwAAAAPVG90YWxzX1N0YXR1c0lEBQsAAAAsRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkNvbHVtbkZpbHRlckluZm8FAAAABFR5cGUES2luZAtEaXNwbGF5VGV4dAxGaWx0ZXJTdHJpbmcFVmFsdWUAAAEBAggICgAAAAEAAAAAAAAABg0AAAAABg4AAAAPW1NUQVRVU19JRF0gPSA1Cgs=</property>
+  <property name="SortInfo">~Xtra#Base64AAEAAAD/////AQAAAAAAAAAMAgAAAF1EZXZFeHByZXNzLlh0cmFHcmlkLnYxNy4xLCBWZXJzaW9uPTE3LjEuMy4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI4OGQxNzU0ZDcwMGU0OWEFAQAAADhEZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvQ29sbGVjdGlvbgQAAAAKZ3JvdXBDb3VudAVjbG9uZQ9jbG9uZUdyb3VwQ291bnQTQ29sbGVjdGlvbkJhc2UrbGlzdAADAAMIsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE3LjEsIFZlcnNpb249MTcuMS4zLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dCBxTeXN0ZW0uQ29sbGVjdGlvbnMuQXJyYXlMaXN0AgAAAAEAAAAJAwAAAAAAAAAJBAAAAAQDAAAAsgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5MaXN0YDFbW0RldkV4cHJlc3MuWHRyYUdyaWQuQ29sdW1ucy5HcmlkQ29sdW1uU29ydEluZm8sIERldkV4cHJlc3MuWHRyYUdyaWQudjE3LjEsIFZlcnNpb249MTcuMS4zLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjg4ZDE3NTRkNzAwZTQ5YV1dAwAAAAZfaXRlbXMFX3NpemUIX3ZlcnNpb24EAAAwRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mb1tdAgAAAAgICQUAAAAAAAAAAAAAAAQEAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5BcnJheUxpc3QDAAAABl9pdGVtcwVfc2l6ZQhfdmVyc2lvbgUAAAgICQYAAAABAAAABQAAAAcFAAAAAAEAAAAAAAAABC5EZXZFeHByZXNzLlh0cmFHcmlkLkNvbHVtbnMuR3JpZENvbHVtblNvcnRJbmZvAgAAABAGAAAABAAAAAkHAAAADQMMCAAAABlEZXZFeHByZXNzLlh0cmFHcmlkLnYxNy4xBQcAAAAuRGV2RXhwcmVzcy5YdHJhR3JpZC5Db2x1bW5zLkdyaWRDb2x1bW5Tb3J0SW5mbwIAAAAJU29ydE9yZGVyCkNvbHVtbk5hbWUAAQgIAAAAAQAAAAYJAAAAE1RvdGFsc19DdXJyZW5jeUNvZGUL</property>
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

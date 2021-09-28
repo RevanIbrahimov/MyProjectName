@@ -1,0 +1,192 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="ShowFooter">true</property>
+    <property name="ShowGroupPanel">false</property>
+    <property name="ShowIndicator">false</property>
+    <property name="EnableAppearanceEvenRow">true</property>
+    <property name="ShowViewCaption">true</property>
+  </property>
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Columns" iskey="true" value="41">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Name">Contract_SS</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Visible">true</property>
+      <property name="Width">45</property>
+      <property name="Summary" iskey="true" value="1">
+        <property name="Item1" isnull="true" iskey="true">
+          <property name="Tag" isnull="true" />
+          <property name="FieldName">SS</property>
+          <property name="SummaryType">Count</property>
+          <property name="DisplayFormat">{0}</property>
+        </property>
+      </property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Name">Contract_CustomerFullName</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Visible">true</property>
+      <property name="Width">221</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Name">Contract_Code</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Visible">true</property>
+      <property name="Width">70</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Name">Contract_CreditName</property>
+      <property name="VisibleIndex">3</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Name">Contract_Commitment</property>
+      <property name="VisibleIndex">4</property>
+      <property name="Visible">true</property>
+      <property name="Width">200</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Name">Contract_StartDate</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Name">Contract_EndDate</property>
+      <property name="VisibleIndex">6</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Name">Contract_Period</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Visible">true</property>
+      <property name="Width">50</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Name">Contract_Interest</property>
+      <property name="VisibleIndex">8</property>
+      <property name="Visible">true</property>
+      <property name="Width">50</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Name">Contract_Grace</property>
+      <property name="VisibleIndex">9</property>
+      <property name="Visible">true</property>
+      <property name="Width">85</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Name">Contract_Amount</property>
+      <property name="VisibleIndex">10</property>
+      <property name="Visible">true</property>
+      <property name="Width">100</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Name">Contract_CurrencyCode</property>
+      <property name="Width">55</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Name">Contract_StatusName</property>
+      <property name="VisibleIndex">11</property>
+      <property name="Visible">true</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Name">Contract_Notes</property>
+      <property name="VisibleIndex">12</property>
+      <property name="Visible">true</property>
+      <property name="Width">35</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Name">Contract_ExtendMountCount</property>
+      <property name="VisibleIndex">13</property>
+      <property name="Visible">true</property>
+      <property name="Width">60</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Name">Contract_Note</property>
+      <property name="Width">35</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Name">Contract_ID</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Name">Contract_UsedUserID</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Name">Contract_CustomerID</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Name">Contract_SellerID</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Name">Contract_IsCommit</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Name">Contract_StatusID</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Name">Contract_CreditNameID</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Name">Contract_NoteChangeUser</property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Name">Contract_NoteChangeDate</property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="Name">Contract_IntInterest</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="Name">Contract_IntPeriod</property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="Name">Contract_CreditTypeID</property>
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="Name">Contract_RowNumber</property>
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="Name">Contract_IsExpenses</property>
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="Name">Contract_SellerTypeID</property>
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="Name">Contract_CustomerTypeID</property>
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="Name">Contract_ParentID</property>
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="Name">Contract_CommitmentPersonTypeID</property>
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="Name">Contract_CustomerCode</property>
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="Name">Contract_CustomerName</property>
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="Name">Contract_CommitmentID</property>
+    </property>
+    <property name="Item38" isnull="true" iskey="true">
+      <property name="Name">Contract_CarNumber</property>
+    </property>
+    <property name="Item39" isnull="true" iskey="true">
+      <property name="Name">Contract_IntExtendMountCount</property>
+    </property>
+    <property name="Item40" isnull="true" iskey="true">
+      <property name="Name">Contract_IsSpecialAttention</property>
+    </property>
+    <property name="Item41" isnull="true" iskey="true">
+      <property name="Name">Contract_SpecialAttention</property>
+      <property name="VisibleIndex">14</property>
+      <property name="Visible">true</property>
+      <property name="Width">50</property>
+    </property>
+  </property>
+  <property name="ActiveFilterString" />
+  <property name="GroupSummarySortInfoState" />
+  <property name="FindFilterText" />
+  <property name="FindPanelVisible">false</property>
+</XtraSerializer>

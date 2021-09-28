@@ -1,0 +1,73 @@
+
+Log Entry : 16:31:24 7 avqust 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FCurrentPayments/LoadPaymentsDataGridView
+  
+   ShowMessage: Ödənişlər cədvələ yüklənmədi.
+   Exception Message: ORA-01789: query block has incorrect number of result columns
+   SQL Text      :  SELECT *
+                            FROM (SELECT NVL (COM.COMMITMENT_NAME, CUS.CUSTOMER_NAME) CUSTOMER_NAME,
+                                         CON.CONTRACT_CODE,
+                                         CP.PAYMENT_DATE,
+                                         CP.PAYED_AMOUNT,
+                                         CP.PAYED_AMOUNT_AZN,
+                                         CP.INSURANCE_AMOUNT,
+                                         CP.PAYMENT_AMOUNT,
+                                         CP.CURRENCY_RATE,
+                                         CP.PAYMENT_AMOUNT_AZN,
+                                         ROUND (CP.BASIC_AMOUNT * CP.CURRENCY_RATE, 2) BASIC_AMOUNT,
+                                         ROUND (CP.PAYMENT_INTEREST_AMOUNT * CP.CURRENCY_RATE, 2)
+                                            INTEREST_AMOUNT,
+                                         CON.CURRENCY_CODE,
+                                         DECODE (
+                                            CP.BANK_CASH,
+                                            'C', 'Kassa',
+                                               'Bank - '
+                                            || (SELECT B.SHORT_NAME
+                                                  FROM CRS_USER.BANKS B
+                                                 WHERE B.ID IN (SELECT BANK_ID
+                                                                  FROM CRS_USER.BANK_OPERATIONS
+                                                                 WHERE CONTRACT_PAYMENT_ID = CP.ID)))
+                                            PAYMENT_TYPE,
+                                         CP.INSERT_DATE,
+                                         CP.PAYED_PENALTY
+                                    FROM CRS_USER.CUSTOMER_PAYMENTS CP,
+                                         CRS_USER.V_CONTRACTS CON,
+                                         CRS_USER.V_CUSTOMERS CUS,
+                                         CRS_USER.V_CONTRACT_COMMITMENTS COM
+                                   WHERE     CUS.ID = CON.CUSTOMER_ID
+                                         AND CUS.PERSON_TYPE_ID = CON.CUSTOMER_TYPE_ID
+                                         AND CON.CONTRACT_ID = CP.CONTRACT_ID
+                                         AND CON.CONTRACT_ID = COM.CONTRACT_ID(+)
+                                  UNION ALL
+                                  SELECT NVL (COM.COMMITMENT_NAME, CUS.CUSTOMER_NAME) CUSTOMER_NAME,
+                                         CON.CONTRACT_CODE,
+                                         IP.PAY_DATE PAYMENT_DATE,
+                                         0 PAYED_AMOUNT,
+                                         0 PAYED_AMOUNT_AZN,
+                                         IP.PAYED_AMOUNT INSURANCE_AMOUNT,
+                                         0 PAYMENT_AMOUNT,
+                                         1 CURRENCY_RATE,
+                                         0 PAYMENT_AMOUNT_AZN,
+                                         0 BASIC_AMOUNT,
+                                         0 INTEREST_AMOUNT,
+                                         CON.CURRENCY_CODE,
+                                         NULL PAYMENT_TYPE,
+                                         IP.INSERT_DATE
+                                    FROM CRS_USER.INSURANCE_PAYMENT IP,
+                                         CRS_USER.INSURANCES I,
+                                         CRS_USER.V_CONTRACTS CON,
+                                         CRS_USER.V_CUSTOMERS CUS,
+                                         CRS_USER.V_CONTRACT_COMMITMENTS COM
+                                   WHERE     IP.INSURANCE_ID = I.ID
+                                         AND I.CONTRACT_ID = CON.CONTRACT_ID
+                                         AND CUS.ID = CON.CUSTOMER_ID
+                                         AND IP.CUSTOMER_PAYMENT_ID = 0
+                                         AND CUS.PERSON_TYPE_ID = CON.CUSTOMER_TYPE_ID
+                                         AND CON.CONTRACT_ID = COM.CONTRACT_ID(+))
+                           WHERE PAYMENT_DATE BETWEEN TO_DATE ('07.08.2021', 'DD/MM/YYYY')
+                                                  AND TO_DATE ('07.08.2021', 'DD/MM/YYYY')
+                        ORDER BY PAYMENT_DATE
+-------------------------------------------------

@@ -1,0 +1,1462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D0D0F29-A6BF-468E-B1EE-7B287F92CF68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CRS</RootNamespace>
+    <AssemblyName>LRS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dollar2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>057BC83D91DEB584D6094BD3635596490E71BF2B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CRS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bytescout.Document, Version=1.0.0.90, Culture=neutral, PublicKeyToken=f7dd1bd9d40a50eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\EMS v1.0.0.1\EMS\EMS\bin\Debug\Bytescout.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v14.2" />
+    <Reference Include="DevExpress.Charts.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v14.2" />
+    <Reference Include="DevExpress.PivotGrid.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v14.2" />
+    <Reference Include="DevExpress.Sparkline.v14.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.UI, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v14.2.Wizard, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v14.2" />
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v14.2.Core, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v14.2.Extensions, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v14.2, Version=14.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\Attributes.cs" />
+    <Compile Include="Class\Buttons\ColorTable.cs" />
+    <Compile Include="Class\Buttons\XButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\ComponentLocalization.cs" />
+    <Compile Include="Class\DataAccess\AccountingPlanDAL.cs" />
+    <Compile Include="Class\DataAccess\CashOperationsDAL.cs" />
+    <Compile Include="Class\DataAccess\ContractDAL.cs" />
+    <Compile Include="Class\DataAccess\CountriesDAL.cs" />
+    <Compile Include="Class\DataAccess\OperationDebtDAL.cs" />
+    <Compile Include="Class\DataAccess\OperationJournalDAL.cs" />
+    <Compile Include="Class\DataAccess\PhonePrefixsDAL.cs" />
+    <Compile Include="Class\Extensions.cs" />
+    <Compile Include="Class\GlobalFunctions.cs" />
+    <Compile Include="Class\GlobalProcedures.cs" />
+    <Compile Include="Class\GlobalVariables.cs" />
+    <Compile Include="Class\ManagementObjectSearcher.cs" />
+    <Compile Include="Class\RegexUtilities.cs" />
+    <Compile Include="Class\Tables\AccountingPlan.cs" />
+    <Compile Include="Class\Tables\CashOperations.cs" />
+    <Compile Include="Class\Tables\Contract.cs" />
+    <Compile Include="Class\Tables\Countries.cs" />
+    <Compile Include="Class\Tables\OperationDebt.cs" />
+    <Compile Include="Class\Tables\OperationJournal.cs" />
+    <Compile Include="Class\Tables\PhonePrefixs.cs" />
+    <Compile Include="FConnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FConnect.Designer.cs">
+      <DependentUpon>FConnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FAttractedFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FAttractedFunds.Designer.cs">
+      <DependentUpon>FAttractedFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FBuyAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FBuyAmount.Designer.cs">
+      <DependentUpon>FBuyAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContract.Designer.cs">
+      <DependentUpon>FFundContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFundContractAddEdit.Designer.cs">
+      <DependentUpon>FFundContractAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FFunds.Designer.cs">
+      <DependentUpon>FFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentAmountAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AttractedFunds\FPaymentAmountAddEdit.Designer.cs">
+      <DependentUpon>FPaymentAmountAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBank.Designer.cs">
+      <DependentUpon>FBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccountAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccountAddEdit.Designer.cs">
+      <DependentUpon>FBankAccountAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankAccounts.Designer.cs">
+      <DependentUpon>FBankAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperation.Designer.cs">
+      <DependentUpon>FBankOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bank\FBankOperationAddEdit.Designer.cs">
+      <DependentUpon>FBankOperationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebt.Designer.cs">
+      <DependentUpon>FAccountDebt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebtAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountDebtAddEdit.Designer.cs">
+      <DependentUpon>FAccountDebtAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingAddEdit.Designer.cs">
+      <DependentUpon>FAccountingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingOperationAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingOperationAddEdit.Designer.cs">
+      <DependentUpon>FAccountingOperationAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FAccountingPlan.Designer.cs">
+      <DependentUpon>FAccountingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FBookkeeping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FBookkeeping.Designer.cs">
+      <DependentUpon>FBookkeeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCompareInterest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FCompareInterest.Designer.cs">
+      <DependentUpon>FCompareInterest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FJournal.Designer.cs">
+      <DependentUpon>FJournal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FOperationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FOperationDetails.Designer.cs">
+      <DependentUpon>FOperationDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FProfits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FProfits.Designer.cs">
+      <DependentUpon>FProfits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FShowPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FShowPayments.Designer.cs">
+      <DependentUpon>FShowPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FCash.Designer.cs">
+      <DependentUpon>FCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FExpensesAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FExpensesAddEdit.Designer.cs">
+      <DependentUpon>FExpensesAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cash\FIncomeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cash\FIncomeAddEdit.Designer.cs">
+      <DependentUpon>FIncomeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FChangeContractExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FChangeContractExchange.Designer.cs">
+      <DependentUpon>FChangeContractExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractAddEdit.Designer.cs">
+      <DependentUpon>FContractAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractLaws.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContractLaws.Designer.cs">
+      <DependentUpon>FContractLaws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContracts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FContracts.Designer.cs">
+      <DependentUpon>FContracts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.Designer.cs">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInsuranceAddEdit.Designer.cs">
+      <DependentUpon>FInsuranceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInterestAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FInterestAddEdit.Designer.cs">
+      <DependentUpon>FInterestAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawAddEdit.Designer.cs">
+      <DependentUpon>FLawAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetailAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetailAddEdit.Designer.cs">
+      <DependentUpon>FLawDetailAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawDetails.Designer.cs">
+      <DependentUpon>FLawDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLaws.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLaws.Designer.cs">
+      <DependentUpon>FLaws.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawSchedules.Designer.cs">
+      <DependentUpon>FLawSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatus.Designer.cs">
+      <DependentUpon>FLawStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatusAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FLawStatusAddEdit.Designer.cs">
+      <DependentUpon>FLawStatusAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FNote.Designer.cs">
+      <DependentUpon>FNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPolice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPolice.Designer.cs">
+      <DependentUpon>FPolice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPowerOfAttorney.Designer.cs">
+      <DependentUpon>FPowerOfAttorney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FProsecute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FProsecute.Designer.cs">
+      <DependentUpon>FProsecute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCardAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCardAddEdit.Designer.cs">
+      <DependentUpon>FCardAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FChangeCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FChangeCode.Designer.cs">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCommitments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCommitments.Designer.cs">
+      <DependentUpon>FCommitments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomerAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomerAddEdit.Designer.cs">
+      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FCustomers.Designer.cs">
+      <DependentUpon>FCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\FWorkAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\FWorkAddEdit.Designer.cs">
+      <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankAddEdit.Designer.cs">
+      <DependentUpon>FBankAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankBranchAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBankBranchAddEdit.Designer.cs">
+      <DependentUpon>FBankBranchAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBirthplaceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FBirthplaceAddEdit.Designer.cs">
+      <DependentUpon>FBirthplaceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBanTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBanTypeAddEdit.Designer.cs">
+      <DependentUpon>FCarBanTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBrandAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarBrandAddEdit.Designer.cs">
+      <DependentUpon>FCarBrandAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarColorAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarColorAddEdit.Designer.cs">
+      <DependentUpon>FCarColorAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardIssuingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardIssuingAddEdit.Designer.cs">
+      <DependentUpon>FCardIssuingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardSeriesAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCardSeriesAddEdit.Designer.cs">
+      <DependentUpon>FCardSeriesAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarModelAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarModelAddEdit.Designer.cs">
+      <DependentUpon>FCarModelAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCarTypeAddEdit.Designer.cs">
+      <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCountryAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCountryAddEdit.Designer.cs">
+      <DependentUpon>FCountryAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditNameAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditNameAddEdit.Designer.cs">
+      <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeAddEdit.Designer.cs">
+      <DependentUpon>FCreditTypeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditTypeFormat.Designer.cs">
+      <DependentUpon>FCreditTypeFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCurrencyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCurrencyAddEdit.Designer.cs">
+      <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FDictionaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FDictionaries.Designer.cs">
+      <DependentUpon>FDictionaries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFounderAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFounderAddEdit.Designer.cs">
+      <DependentUpon>FFounderAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceAddEdit.Designer.cs">
+      <DependentUpon>FFundsSourceAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceNameAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FFundsSourceNameAddEdit.Designer.cs">
+      <DependentUpon>FFundsSourceNameAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.Designer.cs">
+      <DependentUpon>FInsuranceCompanyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPersonnelAddEdit.Designer.cs">
+      <DependentUpon>FPersonnelAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.Designer.cs">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.Designer.cs">
+      <DependentUpon>FPhoneDescriptionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhonePrefixAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPhonePrefixAddEdit.Designer.cs">
+      <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FStatusEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FStatusEdit.Designer.cs">
+      <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FAbout.Designer.cs">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FChangePassword.Designer.cs">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FCreditCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FCreditCalculator.Designer.cs">
+      <DependentUpon>FCreditCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FDateCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FDateCalculator.Designer.cs">
+      <DependentUpon>FDateCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FExchangeCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FExchangeCalculator.Designer.cs">
+      <DependentUpon>FExchangeCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FForgetPassword.Designer.cs">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FImageCrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FImageCrop.Designer.cs">
+      <DependentUpon>FImageCrop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FListOfAutomaticAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FListOfAutomaticAdd.Designer.cs">
+      <DependentUpon>FListOfAutomaticAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMailAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMailAddEdit.Designer.cs">
+      <DependentUpon>FMailAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMain.Designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FMyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FMyAccount.Designer.cs">
+      <DependentUpon>FMyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPermissionAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPermissionAddEdit.Designer.cs">
+      <DependentUpon>FPermissionAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FPhoneAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FPhoneAddEdit.Designer.cs">
+      <DependentUpon>FPhoneAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSendMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSendMail.Designer.cs">
+      <DependentUpon>FSendMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUserAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUserAddEdit.Designer.cs">
+      <DependentUpon>FUserAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUserGroupAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUserGroupAddEdit.Designer.cs">
+      <DependentUpon>FUserGroupAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUsers.Designer.cs">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FUsersGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FUsersGroups.Designer.cs">
+      <DependentUpon>FUsersGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FExchangeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FExchangeAddEdit.Designer.cs">
+      <DependentUpon>FExchangeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FExchanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FExchanges.Designer.cs">
+      <DependentUpon>FExchanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FInfo.Designer.cs">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Info\FRateAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Info\FRateAnalysis.Designer.cs">
+      <DependentUpon>FRateAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LRSSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LRSSplashScreen.Designer.cs">
+      <DependentUpon>LRSSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\FOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\FOptions.Designer.cs">
+      <DependentUpon>FOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCColors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCColors.Designer.cs">
+      <DependentUpon>UCColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCMailServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCMailServer.Designer.cs">
+      <DependentUpon>UCMailServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options\UCStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Options\UCStart.Designer.cs">
+      <DependentUpon>UCStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyAddEdit.Designer.cs">
+      <DependentUpon>FBalancePenaltyAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBalancePenaltyDetail.Designer.cs">
+      <DependentUpon>FBalancePenaltyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FBankToCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FBankToCash.Designer.cs">
+      <DependentUpon>FBankToCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCashToBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCashToBank.Designer.cs">
+      <DependentUpon>FCashToBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCommitmentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCommitmentInfo.Designer.cs">
+      <DependentUpon>FCommitmentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormatting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormatting.Designer.cs">
+      <DependentUpon>FConditionalFormatting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormattingAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FConditionalFormattingAddEdit.Designer.cs">
+      <DependentUpon>FConditionalFormattingAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FCurrentPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FCurrentPayments.Designer.cs">
+      <DependentUpon>FCurrentPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FDeletePenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FDeletePenalty.Designer.cs">
+      <DependentUpon>FDeletePenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPayment.Designer.cs">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentAddEdit.Designer.cs">
+      <DependentUpon>FPaymentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentBankAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentBankAddEdit.Designer.cs">
+      <DependentUpon>FPaymentBankAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentSchedules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPaymentSchedules.Designer.cs">
+      <DependentUpon>FPaymentSchedules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FPenalty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FPenalty.Designer.cs">
+      <DependentUpon>FPenalty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Total\FTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Total\FTotal.Designer.cs">
+      <DependentUpon>FTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FConnect.resx">
+      <DependentUpon>FConnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FAttractedFunds.resx">
+      <DependentUpon>FAttractedFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FBuyAmount.resx">
+      <DependentUpon>FBuyAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFundContract.resx">
+      <DependentUpon>FFundContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFundContractAddEdit.resx">
+      <DependentUpon>FFundContractAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FFunds.resx">
+      <DependentUpon>FFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AttractedFunds\FPaymentAmountAddEdit.resx">
+      <DependentUpon>FPaymentAmountAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBank.resx">
+      <DependentUpon>FBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankAccountAddEdit.resx">
+      <DependentUpon>FBankAccountAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankAccounts.resx">
+      <DependentUpon>FBankAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankOperation.resx">
+      <DependentUpon>FBankOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bank\FBankOperationAddEdit.resx">
+      <DependentUpon>FBankOperationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountDebt.resx">
+      <DependentUpon>FAccountDebt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountDebtAddEdit.resx">
+      <DependentUpon>FAccountDebtAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingAddEdit.resx">
+      <DependentUpon>FAccountingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingOperationAddEdit.resx">
+      <DependentUpon>FAccountingOperationAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FAccountingPlan.resx">
+      <DependentUpon>FAccountingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FBookkeeping.resx">
+      <DependentUpon>FBookkeeping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FCompareInterest.resx">
+      <DependentUpon>FCompareInterest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FJournal.resx">
+      <DependentUpon>FJournal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FOperationDetails.resx">
+      <DependentUpon>FOperationDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FProfits.resx">
+      <DependentUpon>FProfits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FShowPayments.resx">
+      <DependentUpon>FShowPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FCash.resx">
+      <DependentUpon>FCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FExpensesAddEdit.resx">
+      <DependentUpon>FExpensesAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cash\FIncomeAddEdit.resx">
+      <DependentUpon>FIncomeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FChangeContractExchange.resx">
+      <DependentUpon>FChangeContractExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContractLaws.resx">
+      <DependentUpon>FContractLaws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInsuranceAddEdit.resx">
+      <DependentUpon>FInsuranceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FInterestAddEdit.resx">
+      <DependentUpon>FInterestAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawAddEdit.resx">
+      <DependentUpon>FLawAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawDetailAddEdit.resx">
+      <DependentUpon>FLawDetailAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawDetails.resx">
+      <DependentUpon>FLawDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLaws.resx">
+      <DependentUpon>FLaws.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawSchedules.resx">
+      <DependentUpon>FLawSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawStatus.resx">
+      <DependentUpon>FLawStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FLawStatusAddEdit.resx">
+      <DependentUpon>FLawStatusAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPolice.resx">
+      <DependentUpon>FPolice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\Documents.rdlc" />
+    <EmbeddedResource Include="Forms\Contracts\Expenditure.rdlc" />
+    <EmbeddedResource Include="Forms\Contracts\FContractAddEdit.resx">
+      <DependentUpon>FContractAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContracts.resx">
+      <DependentUpon>FContracts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCommitmentTransmission.resx">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FNote.resx">
+      <DependentUpon>FNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPowerOfAttorney.resx">
+      <DependentUpon>FPowerOfAttorney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FProsecute.resx">
+      <DependentUpon>FProsecute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\Insurance.rdlc" />
+    <EmbeddedResource Include="Forms\Contracts\PaymentSchedulesReport.rdlc" />
+    <EmbeddedResource Include="Forms\Contracts\Commitment.rdlc" />
+    <EmbeddedResource Include="Forms\Customer\FCardAddEdit.resx">
+      <DependentUpon>FCardAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FChangeCode.resx">
+      <DependentUpon>FChangeCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCommitments.resx">
+      <DependentUpon>FCommitments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCustomerAddEdit.resx">
+      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FCustomers.resx">
+      <DependentUpon>FCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\FWorkAddEdit.resx">
+      <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBankAddEdit.resx">
+      <DependentUpon>FBankAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBankBranchAddEdit.resx">
+      <DependentUpon>FBankBranchAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FBirthplaceAddEdit.resx">
+      <DependentUpon>FBirthplaceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarBanTypeAddEdit.resx">
+      <DependentUpon>FCarBanTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarBrandAddEdit.resx">
+      <DependentUpon>FCarBrandAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarColorAddEdit.resx">
+      <DependentUpon>FCarColorAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCardIssuingAddEdit.resx">
+      <DependentUpon>FCardIssuingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCardSeriesAddEdit.resx">
+      <DependentUpon>FCardSeriesAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarModelAddEdit.resx">
+      <DependentUpon>FCarModelAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCarTypeAddEdit.resx">
+      <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCountryAddEdit.resx">
+      <DependentUpon>FCountryAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditNameAddEdit.resx">
+      <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditTypeAddEdit.resx">
+      <DependentUpon>FCreditTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditTypeFormat.resx">
+      <DependentUpon>FCreditTypeFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCurrencyAddEdit.resx">
+      <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FDictionaries.resx">
+      <DependentUpon>FDictionaries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FAppointmentAddEdit.resx">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFounderAddEdit.resx">
+      <DependentUpon>FFounderAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFundsSourceAddEdit.resx">
+      <DependentUpon>FFundsSourceAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FFundsSourceNameAddEdit.resx">
+      <DependentUpon>FFundsSourceNameAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FInsuranceCompanyAddEdit.resx">
+      <DependentUpon>FInsuranceCompanyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPersonnelAddEdit.resx">
+      <DependentUpon>FPersonnelAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPositionAddEdit.resx">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.resx">
+      <DependentUpon>FPhoneDescriptionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPhonePrefixAddEdit.resx">
+      <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.resx">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FStatusEdit.resx">
+      <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FAbout.resx">
+      <DependentUpon>FAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FChangePassword.resx">
+      <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FCreditCalculator.resx">
+      <DependentUpon>FCreditCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FDateCalculator.resx">
+      <DependentUpon>FDateCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FExchangeCalculator.resx">
+      <DependentUpon>FExchangeCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FForgetPassword.resx">
+      <DependentUpon>FForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FImageCrop.resx">
+      <DependentUpon>FImageCrop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FListOfAutomaticAdd.resx">
+      <DependentUpon>FListOfAutomaticAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMailAddEdit.resx">
+      <DependentUpon>FMailAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FMyAccount.resx">
+      <DependentUpon>FMyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPermissionAddEdit.resx">
+      <DependentUpon>FPermissionAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FPhoneAddEdit.resx">
+      <DependentUpon>FPhoneAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSendMail.resx">
+      <DependentUpon>FSendMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUserAddEdit.resx">
+      <DependentUpon>FUserAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUserGroupAddEdit.resx">
+      <DependentUpon>FUserGroupAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUsers.resx">
+      <DependentUpon>FUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FUsersGroups.resx">
+      <DependentUpon>FUsersGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FExchangeAddEdit.resx">
+      <DependentUpon>FExchangeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FExchanges.resx">
+      <DependentUpon>FExchanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FInfo.resx">
+      <DependentUpon>FInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Info\FRateAnalysis.resx">
+      <DependentUpon>FRateAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LRSSplashScreen.resx">
+      <DependentUpon>LRSSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\FOptions.resx">
+      <DependentUpon>FOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCColors.resx">
+      <DependentUpon>UCColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCMailServer.resx">
+      <DependentUpon>UCMailServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options\UCStart.resx">
+      <DependentUpon>UCStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBalancePenaltyAddEdit.resx">
+      <DependentUpon>FBalancePenaltyAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBalancePenaltyDetail.resx">
+      <DependentUpon>FBalancePenaltyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FBankToCash.resx">
+      <DependentUpon>FBankToCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCashToBank.resx">
+      <DependentUpon>FCashToBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCommitmentInfo.resx">
+      <DependentUpon>FCommitmentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FConditionalFormatting.resx">
+      <DependentUpon>FConditionalFormatting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FConditionalFormattingAddEdit.resx">
+      <DependentUpon>FConditionalFormattingAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FCurrentPayments.resx">
+      <DependentUpon>FCurrentPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FDeletePenalty.resx">
+      <DependentUpon>FDeletePenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPayment.resx">
+      <DependentUpon>FPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentAddEdit.resx">
+      <DependentUpon>FPaymentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentBankAddEdit.resx">
+      <DependentUpon>FPaymentBankAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPaymentSchedules.resx">
+      <DependentUpon>FPaymentSchedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FPenalty.resx">
+      <DependentUpon>FPenalty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Total\FTotal.resx">
+      <DependentUpon>FTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="CRS_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="accounting_icon.ico" />
+    <Content Include="Dollar2.ico" />
+    <None Include="Resources\sync2-16.png" />
+    <None Include="Resources\license-key-16.png" />
+    <None Include="Resources\Lawyer-Briefcase-icon-32.png" />
+    <None Include="Resources\swap-horiz-16.png" />
+    <None Include="Resources\sexsiyyet_vesiqesi.png" />
+    <None Include="Resources\Passport.png" />
+    <None Include="Resources\cancel-32.png" />
+    <None Include="Resources\cancel-16.png" />
+    <None Include="Resources\close-law-32.png" />
+    <None Include="Resources\notary-32.png" />
+    <None Include="Resources\close-law-16.png" />
+    <None Include="Resources\notary-16.png" />
+    <None Include="Resources\meeting-32.png" />
+    <None Include="Resources\schedule-32.png" />
+    <None Include="Resources\law-32.png" />
+    <None Include="Resources\collapse-32.png" />
+    <None Include="Resources\expand-32.png" />
+    <None Include="Resources\webcamera-16.png" />
+    <None Include="Resources\debt-32.png" />
+    <None Include="Resources\balance-16.png" />
+    <None Include="Resources\receipt-32.png" />
+    <None Include="Resources\Left-right.png" />
+    <None Include="Resources\database-save-32.png" />
+    <None Include="Resources\profits-32.png" />
+    <None Include="Resources\journal-32.png" />
+    <None Include="Resources\view_detail-32.png" />
+    <None Include="Resources\balance-32.png" />
+    <None Include="Resources\notebook.png" />
+    <None Include="Resources\table-export-16.png" />
+    <None Include="Resources\csv-16.png" />
+    <None Include="Resources\txt-16.png" />
+    <None Include="Resources\html-16.png" />
+    <None Include="Resources\rtf-16.png" />
+    <None Include="Resources\pdf-16.png" />
+    <None Include="Resources\print_32x32.png" />
+    <None Include="Resources\print_16x16.png" />
+    <None Include="Resources\chart-161.png" />
+    <None Include="Resources\chart-16.png" />
+    <None Include="Resources\my-profile-32.png" />
+    <None Include="Resources\profile-24.png" />
+    <None Include="Resources\profile-32.png" />
+    <None Include="Resources\printer-32.png" />
+    <None Include="Resources\calendar-today.png" />
+    <None Include="Resources\export_excel-32.png" />
+    <None Include="Resources\unlock-32.png" />
+    <None Include="Resources\lock-32.png" />
+    <None Include="Resources\start-16.png" />
+    <None Include="Resources\color-16.png" />
+    <None Include="Resources\payment-16.png" />
+    <None Include="Resources\coins-in-hand-16.png" />
+    <None Include="Resources\money-arrow-16.png" />
+    <None Include="Resources\wallet-32.png" />
+    <None Include="Resources\calculator-date-32.png" />
+    <None Include="Resources\numbers-32.png" />
+    <None Include="Resources\font-color-16.png" />
+    <None Include="Resources\safe-16.png" />
+    <None Include="Resources\bank-16.png" />
+    <None Include="Resources\notes-16.png" />
+    <None Include="Resources\notes-32.png" />
+    <None Include="Resources\color-32.png" />
+    <None Include="Resources\safe-32.png" />
+    <None Include="Resources\table-sum-32.png" />
+    <None Include="Resources\merge-32.png" />
+    <None Include="Resources\plus-321.png" />
+    <None Include="Resources\expenses-16.png" />
+    <None Include="Resources\income-16.png" />
+    <None Include="Resources\bank-operation-32.png" />
+    <None Include="Resources\edit-32.png" />
+    <None Include="Resources\delete-32.png" />
+    <None Include="Resources\contract-32.png" />
+    <None Include="Resources\bank-32.png" />
+    <None Include="Resources\coins-32.png" />
+    <None Include="Resources\calendar-month-32.png" />
+    <None Include="Resources\calendar-quarter-32.png" />
+    <None Include="Resources\calendar-year-32.png" />
+    <None Include="Resources\explorer-16.png" />
+    <None Include="Resources\expenses-32.png" />
+    <None Include="Resources\income-32.png" />
+    <None Include="Resources\calendar-32.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\commitment.png" />
+    <None Include="Resources\payment-32.png" />
+    <None Include="Resources\calculator-241.png" />
+    <None Include="Resources\exchange2-32.png" />
+    <None Include="Resources\exchange-24.png" />
+    <None Include="Resources\equal-16.png" />
+    <None Include="Resources\excel-16.png" />
+    <None Include="Resources\exchange-321.png" />
+    <None Include="Resources\schedule-16.png" />
+    <None Include="Resources\schedule-24.png" />
+    <None Include="Resources\document-32.png" />
+    <None Include="Resources\credit-32.png" />
+    <None Include="Resources\credit-24.png" />
+    <None Include="Resources\document-pencil-24.png" />
+    <None Include="Resources\document-24.png" />
+    <None Include="Resources\calculator-24.png" />
+    <None Include="Resources\car-24.png" />
+    <None Include="Resources\meeting-24.png" />
+    <None Include="Resources\view-24.png" />
+    <None Include="Resources\word-24.png" />
+    <None Include="Resources\file-24.png" />
+    <None Include="Resources\network_add-32.png" />
+    <None Include="Resources\contract-delete-32.png" />
+    <None Include="Resources\contract-edit-32.png" />
+    <None Include="Resources\contract-add-321.png" />
+    <None Include="Resources\contract-plus-32.png" />
+    <None Include="Resources\contract-add-32.png" />
+    <None Include="Resources\show-16.png" />
+    <None Include="Resources\SMS-32.png" />
+    <None Include="Resources\filter_delete-32.png" />
+    <None Include="Resources\search-32.png" />
+    <None Include="Resources\customer-delete-32.png" />
+    <None Include="Resources\customer-edit-32.png" />
+    <None Include="Resources\customer-add-32.png" />
+    <None Include="Resources\user-32.png" />
+    <None Include="Resources\plus-32.png" />
+    <None Include="Resources\plus-16.png" />
+    <None Include="Resources\minus-16.png" />
+    <None Include="Resources\pencil-16.png" />
+    <None Include="Resources\edit-16.png" />
+    <None Include="Resources\add-32.png" />
+    <None Include="Resources\user-delete-16.png" />
+    <None Include="Resources\user-edit-16.png" />
+    <None Include="Resources\add-16.png" />
+    <None Include="Resources\user-add-16.png" />
+    <None Include="Resources\check-box-32.png" />
+    <None Include="Resources\check-box-16.png" />
+    <None Include="Resources\explorer-32.png" />
+    <None Include="Resources\csv-32.png" />
+    <None Include="Resources\txt-32.png" />
+    <None Include="Resources\html-32.png" />
+    <None Include="Resources\rtf-32.png" />
+    <None Include="Resources\pdf-32.png" />
+    <None Include="Resources\excel-32.png" />
+    <None Include="Resources\excel-24.png" />
+    <None Include="Resources\split-vertical.png" />
+    <None Include="Resources\user-group-delete-32.png" />
+    <None Include="Resources\user-group-edit-32.png" />
+    <None Include="Resources\user-group-add-32.png" />
+    <None Include="Resources\users-groups-32.png" />
+    <None Include="Resources\refresh-16.png" />
+    <None Include="Resources\mail-delete-16.png" />
+    <None Include="Resources\mail-edit-16.png" />
+    <None Include="Resources\mail-add-16.png" />
+    <None Include="Resources\phone-delete-16.png" />
+    <None Include="Resources\phone-edit-16.png" />
+    <None Include="Resources\phone-add-16.png" />
+    <None Include="Resources\phone-16.png" />
+    <None Include="Resources\user-group-32.png" />
+    <None Include="Resources\email-send-32.png" />
+    <None Include="Resources\table-export-32.png" />
+    <None Include="Resources\user-delete-32.png" />
+    <None Include="Resources\user-edit-32.png" />
+    <None Include="Resources\user-add-32.png" />
+    <None Include="Resources\exit-32.png" />
+    <None Include="Resources\dictionary-32.png" />
+    <None Include="Resources\people-group-32.png" />
+    <None Include="Resources\exchange-32.png" />
+    <None Include="Resources\calculator-32.png" />
+    <None Include="Resources\horizontal-32.png" />
+    <None Include="Resources\vertical-32.png" />
+    <None Include="Resources\cascade-32.png" />
+    <None Include="Resources\cascade-16.png" />
+    <None Include="Resources\vertical-16.png" />
+    <None Include="Resources\horizontal-16.png" />
+    <None Include="Resources\application_tile_horizontal.png" />
+    <None Include="Resources\Refresh-32.png" />
+    <None Include="Resources\Russion-Flag-48.png" />
+    <None Include="Resources\United-States-Flag-48.png" />
+    <None Include="Resources\Azerbaijan-Flag-48.png" />
+    <None Include="Resources\password-icon.png" />
+    <None Include="Resources\User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

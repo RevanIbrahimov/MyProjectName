@@ -1,0 +1,3541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <Body>
+    <ReportItems>
+      <Textbox Name="PTitle1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PTitle1.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PTitle1</rd:DefaultName>
+        <Top>0.21542in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.28in</Height>
+        <Width>7.17648in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Bakı şəhəri</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.94736in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>1in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PDate">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PDate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PDate</rd:DefaultName>
+        <Top>0.94736in</Top>
+        <Left>5.12028in</Left>
+        <Height>0.22in</Height>
+        <Width>1.59375in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Əmlаkın vеrilmə və Аktın tərtib еdilmə yеri:   Bakı şəhəri.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>1.38063in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Bundan sonra Lizinq verən adlanadırılacaq, Azərbaycan Respublikasının qanunvericiliyi və öz Nizamnaməsi əsasında fəaliyyət göstərən "Faktor Lizinq" MMC, Alıyev Ruslan Nizami oğlu şəxsində və digər tərəfdən və bundan sonra Lizinq alan adlandırılacaq fiziki şəxs </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCommitment.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>, (bundan sonra birlikdə - Tərəflər) aşağıdakılar barədə bu aktı imzaladılar:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>1.79458in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.72431in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          1.  Satıcı aşağıda göstərilən, ümumi dəyəri </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PAmount.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> olan lizinq obyektini (bundan sonra - əmlak) Alıcıya təqdim edir, Alıcı isə qeyd olunan əmlakı, sonradan lizinq vermək məqsədi ilə öz mülkiyyətinə qəbul edir:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>2.58833in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.57291in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Line Name="Line1">
+            <Top>0.30208in</Top>
+            <Height>0in</Height>
+            <Width>7.17646in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>0.88333in</Top>
+            <Height>0in</Height>
+            <Width>7.17646in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line3">
+            <Left>1.68334in</Left>
+            <Height>1.19792in</Height>
+            <Width>0in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Lizinq obyekti</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.04042in</Top>
+            <Left>0.05556in</Left>
+            <Height>0.22in</Height>
+            <Width>1.55834in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObjectType">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObjectType.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObjectType</rd:DefaultName>
+            <Top>0.04042in</Top>
+            <Left>1.72778in</Left>
+            <Height>0.22in</Height>
+            <Width>5.34167in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox8">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Say</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox3</rd:DefaultName>
+            <Top>0.92778in</Top>
+            <Left>0.05556in</Left>
+            <Height>0.22in</Height>
+            <Width>1.55834in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObject">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObject.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObject</rd:DefaultName>
+            <Top>0.34375in</Top>
+            <Left>1.72778in</Left>
+            <Height>0.47014in</Height>
+            <Width>5.34167in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObjectCount">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObjectCount.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObjectCount</rd:DefaultName>
+            <Top>0.92778in</Top>
+            <Left>1.72778in</Left>
+            <Height>0.22in</Height>
+            <Width>5.34167in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObjectDescription">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObjectDescription.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObjectDescription</rd:DefaultName>
+            <Top>0.34375in</Top>
+            <Left>0.05556in</Left>
+            <Height>0.47014in</Height>
+            <Width>1.55834in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>3.27791in</Top>
+        <Left>0.16333in</Left>
+        <Height>1.19792in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           2.  Аlıcı təsdiq еdir ki, əmlаk оnun nümаyəndələri tərəfindən lаzımi qаydаdа yохlаnılmışdır və yохlаmа zаmаnı əmlаkdа hеç bir qüsur аşkаr еdilməmişdir.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>4.59896in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.39583in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           3.  Tərəflərin bir-birinə qаrşılıqlı tələbləri yохdur.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>5.02257in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.21875in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Lizinq verən</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>5.45771in</Top>
+        <Left>1.27604in</Left>
+        <Height>0.22in</Height>
+        <Width>1in</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Lizinq alan</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>5.45771in</Top>
+        <Left>5.28374in</Left>
+        <Height>0.22in</Height>
+        <Width>1in</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Təhvil-Təslim аktı</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>0.50708in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>İLTİZAM</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>10.07907in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Mən verirəm bu iltizamı ona görə ki, Faktor Lizinq MMC ilə mənim aramda bağlanmış olan </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> saylı Daxili Maliyyə Lizinqi Müqaviləsinə </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PDate.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> tarixli əlavə razılaşmaya əsasən lizinqə götürdüyüm lizinq obyekti lazımı qaydada yoxlanılmışdır və yoxlama zamanı əmlakda heç bir qüsur aşkar edilməmişdir.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>10.58281in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.57292in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Lizinq obyektinin istifadəsi zamanı lizinq obyektinə hər hansı qüsur aşkarlanarsa, mən, </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCommitment.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> bunu öz hesabıma aradan qaldıracağam, lizinq obyektini istismara yararlı vəziyyətdə saxlayacağam.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>11.15989in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.39584in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Faktor Lizinq MMC-yə məxsus olan əmlakı saz vəziyyətdə saxlanılmasını, Faktor Lizinq MMC tərəfindən avtomobilə baxış lazım olduğu halda dərhal həmin baxışa şərait yaradacağımı öhdəmə götürərəm. Əmlakın istifadəsinin heç bir halda heç bir şəxsə  verməyəcəyimi öhdəmə götürərək və bu halın lizinq vəsatinin məqsədli şəkildə başqa istiqamətə yönəldilməsi kimi başa düşürəm, bu halın dələduzluq faktı olmasını dərk edirəm. </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>11.5724in</Top>
+        <Left>0.16337in</Left>
+        <Height>0.75001in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox18">
+        <CanGrow>true</CanGrow>
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Lizinq müqaviləsinin qüvvədə olduğu müddətdə lizinq obyektinin sığortası üzrə ödənişləri vaxtlı-vaxtında ödəyəcəyəm. Əgər həmin müqavilə üzrə hər hansı sığorta ödənişini ödəməkdən imtina etsəm və ya sığorta ödənişini gecikdirsəm, lizinq müqaviləsinə əlavə olunan “Lizinq ödənişləri Qrafiki”nə əsasən mənim tərəfimdən ödənilmiş lizinq ödənişini tərəfindən Faktor Lizinq MMC sığorta ödənişlərinə silinməsinə heç bir etirazım yoxdur.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>12.35018in</Top>
+        <Left>0.16337in</Left>
+        <Height>0.69792in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox19">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>İltizamı öz imzamla təsdiq edirəm.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>13.93429in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>2.71875in</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox20">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>İmza _____________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>14.37179in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.31868in</Height>
+        <Width>2.71875in</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox21">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ad, soyad _____________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>14.37179in</Top>
+        <Left>2.92375in</Left>
+        <Height>0.31868in</Height>
+        <Width>4.41604in</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Tarix ______________________________ il</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>14.86302in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>3.40954in</Width>
+        <ZIndex>20</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox29">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>5.94693in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.25in</Height>
+        <Width>3.17709in</Width>
+        <ZIndex>21</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox30">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>5.94693in</Top>
+        <Left>4.1627in</Left>
+        <Height>0.25in</Height>
+        <Width>3.17709in</Width>
+        <ZIndex>22</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PTitle2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PTitle2.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PTitle2</rd:DefaultName>
+        <Top>20.11227in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.25in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>23</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Əlavə 3</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>20.44005in</Top>
+        <Left>0.16334in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17645in</Width>
+        <ZIndex>24</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox24">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Qəbul və istifadəyə verilmə protokolu</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>20.7295in</Top>
+        <Left>0.16334in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17645in</Width>
+        <ZIndex>25</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox25">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Bakı şəhəri</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>21.24933in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22in</Height>
+        <Width>1in</Width>
+        <ZIndex>26</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PDate2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PDate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PDate</rd:DefaultName>
+        <Top>21.24933in</Top>
+        <Left>5.74604in</Left>
+        <Height>0.22in</Height>
+        <Width>1.59375in</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Bu əlavədə aydın şəkildə digər məna nəzərdə tutulmadığı hallarda böyük hərflərlə yazılmış sözlər Müqavilədə onlara verilmiş mənaları ifadə edirlər.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>21.64606in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.40242in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox27">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Hazırkı Protokol Tərəflər və Satıcı tərəfindən Lizinq Obyektinin </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PAddress.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> ünvanında təhvil-təslimi və istifadəyə verilməsi üçün imzalanmışdır.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>22.11792in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.40242in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>      1. Lizinq Obyekti Müqavilə üzrə aşağıda göstərilən tərkibdə  </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PDate.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> tarixdə müvəffəqiyyətlə Lizinq verən istifadəyə təhvil verib, Lizinq alan qəbul edib</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>22.5884in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.40242in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>30</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Line Name="Line6">
+            <Top>0.48246in</Top>
+            <Height>0in</Height>
+            <Width>7.17646in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line7">
+            <Left>0.53053in</Left>
+            <Height>1.59211in</Height>
+            <Width>0in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line8">
+            <Left>2.00094in</Left>
+            <Height>1.59211in</Height>
+            <Width>0in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line9">
+            <Left>5.04167in</Left>
+            <Height>1.59211in</Height>
+            <Width>0in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line10">
+            <Left>6.42572in</Left>
+            <Height>1.59211in</Height>
+            <Width>0in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox39">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Sıra sayı</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox39</rd:DefaultName>
+            <Top>0.025in</Top>
+            <Left>0.06806in</Left>
+            <Height>0.41301in</Height>
+            <Width>0.43053in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox40">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Lizinq Obyektinin adı</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>0.10051in</Top>
+            <Left>0.58747in</Left>
+            <Height>0.25in</Height>
+            <Width>1.37041in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox41">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Göstərici</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox41</rd:DefaultName>
+            <Top>0.10051in</Top>
+            <Left>2.04261in</Left>
+            <Height>0.25in</Height>
+            <Width>2.92961in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox42">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Qiyməti</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox42</rd:DefaultName>
+            <Top>0.10051in</Top>
+            <Left>5.09445in</Left>
+            <Height>0.25in</Height>
+            <Width>1.27572in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox43">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1 ədədin miqdarı</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox43</rd:DefaultName>
+            <Top>0.025in</Top>
+            <Left>6.46599in</Left>
+            <Height>0.38801in</Height>
+            <Width>0.64721in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObject1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObject.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObject1</rd:DefaultName>
+            <Top>0.5519in</Top>
+            <Left>2.0565in</Left>
+            <Height>0.90789in</Height>
+            <Width>2.91572in</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObjectType1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObjectType.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObjectType1</rd:DefaultName>
+            <Top>0.5519in</Top>
+            <Left>0.57358in</Left>
+            <Height>0.90789in</Height>
+            <Width>1.3843in</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PAmount">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PAmount.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PAmount</rd:DefaultName>
+            <Top>0.5519in</Top>
+            <Left>5.08056in</Left>
+            <Height>0.90789in</Height>
+            <Width>1.28961in</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PObjectCount1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PObjectCount.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PObjectCount1</rd:DefaultName>
+            <Top>0.5519in</Top>
+            <Left>6.46599in</Left>
+            <Height>0.90789in</Height>
+            <Width>0.64721in</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox44">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>1</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox39</rd:DefaultName>
+            <Top>0.5519in</Top>
+            <Left>0.06806in</Left>
+            <Height>0.22661in</Height>
+            <Width>0.43053in</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>23.14531in</Top>
+        <Left>0.16333in</Left>
+        <Height>1.59211in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>31</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox31">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>      2. Müqavilə üzrə Lizinq Obyektinin qiyməti </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PAmountWithString.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>24.80687in</Top>
+        <Left>0.16333in</Left>
+        <Height>0.22534in</Height>
+        <Width>7.17646in</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox32">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>      3. Bununla təsdiq edilir ki:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          Lizinqin Obyekti Müqavilə şərtlərinə uyğundur.  Lizinq alan tərəfindən Lizinq Obyektinin tərkibi, komplektliliyi, miqdarı, keyfiyyəti haqqında heç bir iddia yoxdur, Lizinq Obyekti tam saz vəziyyətdədir və  onda heç bir çatışmazlıq aşkar edilməmişdir. Lizinq Obyekti üçüncü şəxslərin hər hansı bir hüquqi iddialardan azaddır.</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>25.10165in</Top>
+        <Left>0.16331in</Left>
+        <Height>0.86076in</Height>
+        <Width>7.17648in</Width>
+        <ZIndex>33</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Line Name="Line5">
+            <Left>1.63222in</Left>
+            <Height>1.33333in</Height>
+            <Width>0in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line11">
+            <Left>4.46431in</Left>
+            <Height>1.33333in</Height>
+            <Width>0in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox45">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Lizinq verən</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>0.03023in</Top>
+            <Left>0.05007in</Left>
+            <Height>0.20972in</Height>
+            <Width>1.5141in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox46">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Öhdəlik ötürən</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>0.03023in</Top>
+            <Left>1.68917in</Left>
+            <Height>0.20972in</Height>
+            <Width>2.70569in</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox47">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Öhdəlik götürən</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>0.05801in</Top>
+            <Left>4.53375in</Left>
+            <Height>0.20972in</Height>
+            <Width>2.55521in</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox48">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Faktor Lizinq MMC</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>0.3469in</Top>
+            <Left>0.05007in</Left>
+            <Height>0.20972in</Height>
+            <Width>1.5141in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox49">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>M.Y.</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox40</rd:DefaultName>
+            <Top>1.09861in</Top>
+            <Left>0.05007in</Left>
+            <Height>0.20972in</Height>
+            <Width>1.5141in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PSeller">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PSeller.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PSeller</rd:DefaultName>
+            <Top>0.3469in</Top>
+            <Left>4.53375in</Left>
+            <Height>0.96143in</Height>
+            <Width>2.55521in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="PCustomerName">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PCustomerName.Value</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>PCustomerName</rd:DefaultName>
+            <Top>0.3469in</Top>
+            <Left>1.68917in</Left>
+            <Height>0.96143in</Height>
+            <Width>2.70569in</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line12">
+            <Top>0.29551in</Top>
+            <Height>0in</Height>
+            <Width>7.15847in</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>26.03185in</Top>
+        <Left>0.18132in</Left>
+        <Height>1.33333in</Height>
+        <Width>7.15849in</Width>
+        <ZIndex>34</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="PTitle3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PTitle3.Value</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PTitle3</rd:DefaultName>
+        <Top>30.08685in</Top>
+        <Left>0.16331in</Left>
+        <Height>0.25in</Height>
+        <Width>7.1765in</Width>
+        <ZIndex>35</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox33">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ƏLAVƏ RAZILAŞMA</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>30.26185in</Top>
+        <Left>0.16331in</Left>
+        <Height>0.22in</Height>
+        <Width>7.1765in</Width>
+        <ZIndex>36</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox34">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>(Öhdəliyin ötürülməsi haqqında)</Value>
+                <Style>
+                  <FontStyle>Italic</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>30.43186in</Top>
+        <Left>0.16331in</Left>
+        <Height>0.22in</Height>
+        <Width>7.1765in</Width>
+        <ZIndex>37</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox35">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Bakı şəhəri</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>30.77123in</Top>
+        <Left>0.16332in</Left>
+        <Height>0.22in</Height>
+        <Width>1in</Width>
+        <ZIndex>38</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="PDate3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PDate.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>PDate</rd:DefaultName>
+        <Top>30.77123in</Top>
+        <Left>5.74606in</Left>
+        <Height>0.22in</Height>
+        <Width>1.59375in</Width>
+        <ZIndex>39</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox36">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">          </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>“Lizinq alan” bundan sonra “Öhdəlik ötürən” adlandırılacaq, fiziki şəxs </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCustomer.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> bir tərəfdən, bundan sonra “Lizinq verən” adlandırılacaq, direktor Alıyev Ruslan Nizami oğlu şəxsində “Faktor Lizinq” MMC ikinci tərəfdən və bundan sonra “Öhdəlik götürən” adlandırılacaq fiziki şəxs </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCommitment.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> digər tərəfdən, (birlikdə “Tərəflər”), bu Əlavə Razılaşmanı aşağıda göstərilən şərtlərlə bağladılar.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           1. </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>Bu razılaşma əsasən “Öhdəlik ötürən” “Lizinq verən”in razılığı ilə </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsi üzrə bütün hüquq və öhdəliklərini, borcunu “Öhdəlik götürən”ə verir və “Öhdəlik götürən” də bütünlüklə qəbul edir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           2.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Lizinq müddəti bitdikdən sonra “Öhdəlik götürən” üzərinə götürdüyü bütün öhdəlikləri yerinə yetirdikdə və ya müqavilə şərtlərini vaxtından əvvəl icra etdikdə, lizinq obyektinə mülkiyyət hüququ lizinq obyektinin müvafiq dövlət orqanlarında yenidən qeydiyyatı ilə bağlı bütün xərclərin “Öhdəlik götürən”in ödəməsi şərtilə “Öhdəlik götürən”ə keçir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">           </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>3.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Bu razılaşma imzalandığı anda </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsi üzrə “Öhdəlik ötürən”in qalıq borcu </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PDebt.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> təşkil edir və “Öhdəlik götürən” həmin məbləği aşağıdakı şərtlərlə ödəməyi öhdəsinə götürür.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>5pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Avans ödənişi -</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve"> </Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PAdvancePayment.Value</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">                                      </Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <ListStyle>Bulleted</ListStyle>
+            <ListLevel>3</ListLevel>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Lizinq müddəti - </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PPeriod.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <ListStyle>Bulleted</ListStyle>
+            <ListLevel>3</ListLevel>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Lizinq verənin mükafatı - </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PPrizeInterest.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <HangingIndent>-0.25in</HangingIndent>
+            <ListStyle>Bulleted</ListStyle>
+            <ListLevel>3</ListLevel>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>11pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Xidmət haqqı - </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PServiceAmount.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <HangingIndent>-0.25in</HangingIndent>
+            <ListStyle>Bulleted</ListStyle>
+            <ListLevel>3</ListLevel>
+            <Style>
+              <TextAlign>Left</TextAlign>
+              <LineHeight>11pt</LineHeight>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>5pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           4.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>“Öhdəlik ötürən” bu razılaşma imzalandığı andan </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsini, ona əlavə olunmuş Əlavə və qoşmaları və həmin müqavilə üzrə lizinq obyektini “Öhdəlik götürən”ə təhvil verməlidir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           5.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>“Öhdəlik ötürən” “Öhdəlik götürən”i </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsi ilə bağlı bütün informasiya ilə təmin etməlidir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           6.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>“Öhdəlik götürən” qəbul etdiyi hüquq və öhdəlikləri “Lizinq verən”in razılığı ilə üçüncü şəxsə verə bilər.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           7.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value> Tərəflər </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsi və bu Razılaşma üzrə öhdəliklərin icra edilməsi və ya lazımı qaydada icra edilməsinə görə Azərbaycan Respublikasının qanunvericiliyinə müvafiq olaraq məsuliyyət daşıyırlar.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>           8.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">   </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Bu Razılaşma imzalandığı andan qüvvəyə minir və tərəflərin bu Razılaşma və </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>=Parameters!PCode.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value> saylı daxili Lizinq Müqaviləsi üzrə öhdəliklər tam icra edilənədək qüvvədədir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>          9.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Hesablaşma qaydasını əks etdirən lizinq ödənişlərinin qrafiki bu Müqavilənin ayrılmaz hissəsi olan 1 saylı əlavəsində göstərilir.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value xml:space="preserve">          </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>10.</Value>
+                <Style />
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Bu Razılaşma azərbaycan dilində, eyni hüquqi qüvvəyə malik 3 (üç) nüsxədə tərtib edilib və hər bir nüsxəsi tərəflərdə saxlanılır.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>31.06068in</Top>
+        <Left>0.14536in</Left>
+        <Height>5.09254in</Height>
+        <Width>7.19445in</Width>
+        <ZIndex>40</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox37">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>11.</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value xml:space="preserve">  </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontFamily>Times New Roman</FontFamily>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Tərəflərin rekvizitləri</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>36.10461in</Top>
+        <Left>0.16334in</Left>
+        <Height>0.22in</Height>
+        <Width>7.17647in</Width>
+        <ZIndex>41</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox38">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Lizinq verən</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>36.26212in</Top>
+        <Left>0.16334in</Left>
+        <Height>0.22in</Height>
+        <Width>3.79515in</Width>
+        <ZIndex>42</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox50">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Öhdəlik ötürən</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>36.26212in</Top>
+        <Left>4.02793in</Left>
+        <Height>0.22in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>43</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox51">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>“Faktor Lizinq” MMC</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>, VÖEN: 19019965</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Ünvan: Bakı ş., Qara Çuxur ştq. Məhəllə 4042/4060. ev 7. m.38       </Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Telefon: +994 50 3670616, +994 55 260 2666</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PBankAccount1.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PBankAccount2.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>36.48211in</Top>
+        <Left>0.16337in</Left>
+        <Height>1.21071in</Height>
+        <Width>3.79512in</Width>
+        <ZIndex>44</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox52">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>________________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>37.69561in</Top>
+        <Left>0.16337in</Left>
+        <Height>0.25in</Height>
+        <Width>3.79512in</Width>
+        <ZIndex>45</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox53">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PCustomer1.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PSV1.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PAddress1.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PPhone1.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PAccount.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>36.48211in</Top>
+        <Left>4.02793in</Left>
+        <Height>1.21071in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>46</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox54">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>37.69561in</Top>
+        <Left>4.02793in</Left>
+        <Height>0.25in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>47</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox55">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Öhdəlik götürən</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>37.93311in</Top>
+        <Left>4.02793in</Left>
+        <Height>0.22in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>48</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox56">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PCustomer2.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PSV2.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value />
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PAddress2.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!PPhone2.Value</Value>
+                <Style>
+                  <FontStyle>Normal</FontStyle>
+                  <FontSize>7pt</FontSize>
+                  <TextDecoration>None</TextDecoration>
+                  <Color>#000000</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>38.1545in</Top>
+        <Left>4.02793in</Left>
+        <Height>0.78363in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>49</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox57">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________________________________</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox29</rd:DefaultName>
+        <Top>38.93813in</Top>
+        <Left>4.02793in</Left>
+        <Height>0.25in</Height>
+        <Width>3.31188in</Width>
+        <ZIndex>50</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>39.34234in</Height>
+    <Style />
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="PTitle1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PDate">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAmount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PObjectType">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PObject">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PObjectCount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PObjectDescription">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCode">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PTitle2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAddress">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAmountWithString">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PSeller">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCustomerName">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCreditAmount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PTitle3">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCommitment">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PDebt">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAdvancePayment">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPeriod">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPrizeInterest">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PServiceAmount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCustomer1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PSV1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAddress1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPhone1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAccount">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCustomer2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PSV2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PAddress2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PPhone2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PCustomer">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PBankAccount1">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PBankAccount2">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>7.53141in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>0.25in</TopMargin>
+    <BottomMargin>0.25in</BottomMargin>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="image004">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>9244d257-bb83-4582-a481-6836fe6d355e</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>

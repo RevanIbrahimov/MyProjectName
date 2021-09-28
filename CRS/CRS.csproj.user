@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishUrlHistory>\\DESKTOP-A697JJ9\Publish\LRS\|\\\Publish\LRS\|D:\Publish\LRS\|publish\</PublishUrlHistory>
+    <InstallUrlHistory>\\DESKTOP-A697JJ9\LRS\|\\DESKTOP-A697JJ9\Publish\LRS\|http://localhost:8080/</InstallUrlHistory>
+    <SupportUrlHistory>\\DESKTOP-A697JJ9\Publish\LRS\|\\Sadiq-PC\Publish</SupportUrlHistory>
+    <UpdateUrlHistory>\\DESKTOP-A697JJ9\Publish\LRS\|\\Sadiq-PC\Publish\|https://drive.google.com/drive/folders/1Sr7ckmjdBKZjPQGT54UZyXNKCg3FI_YK/</UpdateUrlHistory>
+    <BootstrapperUrlHistory>D:\Publish\LRS|\\Sadiq-PC\Publish</BootstrapperUrlHistory>
+    <ErrorReportUrlHistory />
+    <FallbackCulture>en-US</FallbackCulture>
+    <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <ProjectView>ShowAllFiles</ProjectView>
+  </PropertyGroup>
+  <PropertyGroup>
+    <EnableSecurityDebugging>false</EnableSecurityDebugging>
+  </PropertyGroup>
+</Project>

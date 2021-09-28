@@ -1,0 +1,105 @@
+
+Log Entry : 12:18:08 13 sentyabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FTotal/LoadTotalsDataGridView
+  
+   ShowMessage: Portfel yüklənmədi.
+   Exception Message: ORA-00904: "LT"."OVERDUE_PERCENT": invalid identifier
+   SQL Text      :  SELECT CUS.CODE CUSTOMER_CODE,
+                               CUS.FULLNAME FULL_CUSTOMER_NAME,
+                               CON.CONTRACT_CODE,
+                               NVL2 (CE.INTEREST, CE.INTEREST, CON.INTEREST) INTEREST,
+                               NVL2 (CE.MONTH_COUNT, CE.MONTH_COUNT, CON.PERIOD) PERIOD,
+                               NVL(CE.START_DATE, CON.START_DATE) START_DATE,
+                               NVL(CE.END_DATE, CON.END_DATE) END_DATE,
+                               CON.AMOUNT,
+                               CON.CURRENCY_CODE,
+                               CON.CURRENCY_ORDER,
+                               LT.PAYMENT_AMOUNT,
+                               LT.BASIC_AMOUNT,
+                               LT.DEBT,
+                               LT.DAY_COUNT,
+                               LT.INTEREST_AMOUNT,
+                               LT.PAYMENT_INTEREST_AMOUNT,
+                               LT.PAYMENT_INTEREST_DEBT,
+                               LT.TOTAL,
+                               H.HOSTAGE,
+                               H.LIQUID_AMOUNT,
+                               S.FULLNAME SELLER_NAME,
+                               COM.COMMITMENT_NAME,
+                               (CASE
+                                   WHEN COM.COMMITMENT_NAME IS NULL THEN CUS.PHONE
+                                   ELSE COM.PHONE
+                                END)
+                                  PHONES,
+                               LT.REQUIRED,
+                               LT.DELAYS,
+                               LT.FULL_MONTH_COUNT,
+                               NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, CON.MONTHLY_AMOUNT)
+                                        MONTHLY_AMOUNT,
+                               LT.NORM_DEBT,
+                               LT.MAX_PAYMENT_DATE,
+                               LT.ROW_NUM,
+                               CON.CONTRACT_NOTE,
+                               CON.NOTE_CHANGE_USER,
+                               CON.NOTE_CHANGE_DATE,
+                               CON.USED_USER_ID,
+                               LT.CONTRACT_ID,
+                               CON.CUSTOMER_ID,
+                               CON.CUSTOMER_TYPE_ID,
+                               CON.SELLER_ID,
+                               CON.SELLER_TYPE_ID,
+                               CON.STATUS_ID,
+                               CON.CREDIT_TYPE_ID,
+                               CON.CREDIT_NAME_ID,
+                               NVL (COM.ID, 0) COMMITMENT_ID,
+                               CUS.CUSTOMER_NAME CUSTOMER_NAME,
+                               CON.PARENT_ID,
+                               COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                               CON.CONTRACT_EVALUATE_NAME,
+                               EXTRACT (DAY FROM NVL2 (CE.START_DATE, CE.START_DATE, CON.START_DATE))
+                                        PAYMENT_DAY,
+                               CE.MONTHLY_AMOUNT EXTEND_MONTHLY_AMOUNT,
+                               (CASE WHEN CON.END_DATE < TRUNC(SYSDATE) THEN 1 ELSE 0 END) IS_OLD,
+                               NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MONTH_COUNT,
+                               INS.END_DATE INSURANCE_END_DATE,
+                               (CASE
+                                     WHEN INS.INSURANCE_PERIOD = CON.PERIOD AND INS.END_DATE < TRUNC(SYSDATE) THEN 103
+                                     WHEN INS.INSURANCE_PERIOD = CON.PERIOD AND INS.END_DATE >= TRUNC(SYSDATE) THEN 100
+                                     WHEN INS.IS_CANCEL = 1 THEN 101
+                                     WHEN INS.END_DATE < TRUNC(SYSDATE) THEN 102 
+                                     WHEN (INS.END_DATE - TRUNC(SYSDATE)) < 31  THEN 1
+                                     ELSE 0
+                                  END)
+                                    INSURANCE_DIFF_MONTH,
+                               CON.IS_SPECIAL_ATTENTION,
+                               CON.CONTRACT_EVALUATE_ID,
+                               H.HOSTAGE_NAME,
+                               CE.START_DATE EXTEND_START_DATE,
+                               NVL(CE.DEBT, 0) EXTEND_DEBT,
+                               LT.DELAYS_DAY_COUNT,
+                               CON.CURRENCY_ID,
+                               LT.OVERDUE_PERCENT
+                          FROM CRS_USER.LEASING_TOTAL LT,
+                               CRS_USER.V_CUSTOMERS CUS,
+                               CRS_USER.V_HOSTAGE H,
+                               CRS_USER.V_SELLERS S,
+                               CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                               CRS_USER.V_CONTRACTS CON,
+                               CRS_USER.V_LAST_CONTRACT_EXTEND CE,
+                               CRS_USER.V_LAST_INSURANCES INS
+                         WHERE     LT.CONTRACT_ID = CON.CONTRACT_ID
+                               AND CON.CUSTOMER_ID = CUS.ID
+                               AND CON.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                               AND CON.CONTRACT_ID = H.CONTRACT_ID(+)
+                               AND CON.SELLER_ID = S.ID(+)
+                               AND CON.SELLER_TYPE_ID = S.PERSON_TYPE_ID(+)
+                               AND CON.CONTRACT_ID = COM.CONTRACT_ID(+)
+                               AND CON.CONTRACT_ID = CE.CONTRACT_ID(+)
+                               AND CON.CONTRACT_ID = INS.CONTRACT_ID(+)
+                               AND CON.STATUS_ID IN (5, 6)
+                               AND CON.IS_COMMIT = 1                              
+                        ORDER BY CON.CONTRACT_CODE DESC
+-------------------------------------------------

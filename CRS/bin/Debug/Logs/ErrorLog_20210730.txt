@@ -1,0 +1,310 @@
+
+Log Entry : 15:44:27 30 iyul 2021, cümə
+  
+   UserName =  Admin
+   FormName =  FPaymentBankAddEdit
+   ProcedureName =  CRS.Forms.Total.FPaymentBankAddEdit.LoadPaymentDetails
+  
+   ShowMessage: Lizinq ödənişinin rekvizitləri tapılmadı.
+   Exception Message: Input string was not in a correct format.
+   SQL Text      :  SELECT C.CONTRACT_CODE,
+                                   TO_CHAR (C.START_DATE, 'DD.MM.YYYY') S_DATE,
+                                   CUS.CUSTOMER_NAME,
+                                   CP.PAYMENT_NAME,
+                                   CP.PAYMENT_DATE P_DATE,
+                                   CP.DAY_COUNT,
+                                   C.INTEREST,
+                                   CP.REQUIRED_CLOSE_AMOUNT,
+                                   CP.ONE_DAY_INTEREST_AMOUNT,
+                                   CP.INTEREST_AMOUNT,
+                                   NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, C.MONTHLY_AMOUNT)
+                                            MONTHLY_AMOUNT,
+                                   CP.REQUIRED_AMOUNT,
+                                   CP.PAYED_AMOUNT,
+                                   CP.PAYED_AMOUNT_AZN,
+                                   C.CURRENCY_ID,
+                                   C.CURRENCY_CODE,
+                                   CP.NOTE,
+                                   CP.CUSTOMER_ID,
+                                   CP.CONTRACT_ID,
+                                   C.AMOUNT,
+                                   CP.CURRENCY_RATE,
+                                   CP.PAYMENT_INTEREST_DEBT,
+                                   LP.LAST_PAYMENT_INTEREST_DEBT,
+                                   CP.PENALTY_DEBT,
+                                   CP.IS_PENALTY,
+                                   CP.PENALTY_AMOUNT,
+                                   BO.BANK_NAME,                                   
+                                   LP.LAST_DATE,
+                                   LP.LAST_CLEARING_DATE,
+                                   LP.LAST_DEBT,
+                                   CP.INSURANCE_CHECK,
+                                   CP.INSURANCE_AMOUNT,
+                                   CP.CONTRACT_PERCENT,
+                                   CP.CLEARING_DATE,
+                                   CP.IS_CLEARING,
+                                   CP.IS_CHANGED_INTEREST,
+                                   CP.CHANGED_PAY_INTEREST_AMOUNT
+                              FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP CP,
+                                   CRS_USER.V_CONTRACTS C,       
+                                   CRS_USER.V_CUSTOMERS CUS,
+                                   CRS_USER_TEMP.V_BANK_OPERATION_TEMP BO,
+                                   CRS_USER_TEMP.V_CONTRACT_LAST_PAYMENT_TEMP LP,
+                                   CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                             WHERE     C.CUSTOMER_ID = CUS.ID
+                                   AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                                   AND CP.CONTRACT_ID = C.CONTRACT_ID    
+                                   AND CP.CONTRACT_ID = CE.CONTRACT_ID(+)
+                                   AND CP.ID = BO.CONTRACT_PAYMENT_ID  
+                                   AND CP.ID = LP.ID      
+                                   AND BO.USED_USER_ID = 11    
+                                   AND CP.ID = 87
+-------------------------------------------------
+
+Log Entry : 15:46:10 30 iyul 2021, cümə
+  
+   UserName =  Admin
+   FormName =  FPaymentBankAddEdit
+   ProcedureName =  CRS.Forms.Total.FPaymentBankAddEdit.LoadPaymentDetails
+  
+   ShowMessage: Lizinq ödənişinin rekvizitləri tapılmadı.
+   Exception Message: Input string was not in a correct format.
+   SQL Text      :  SELECT C.CONTRACT_CODE,
+                                   TO_CHAR (C.START_DATE, 'DD.MM.YYYY') S_DATE,
+                                   CUS.CUSTOMER_NAME,
+                                   CP.PAYMENT_NAME,
+                                   CP.PAYMENT_DATE P_DATE,
+                                   CP.DAY_COUNT,
+                                   C.INTEREST,
+                                   CP.REQUIRED_CLOSE_AMOUNT,
+                                   CP.ONE_DAY_INTEREST_AMOUNT,
+                                   CP.INTEREST_AMOUNT,
+                                   NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, C.MONTHLY_AMOUNT)
+                                            MONTHLY_AMOUNT,
+                                   CP.REQUIRED_AMOUNT,
+                                   CP.PAYED_AMOUNT,
+                                   CP.PAYED_AMOUNT_AZN,
+                                   C.CURRENCY_ID,
+                                   C.CURRENCY_CODE,
+                                   CP.NOTE,
+                                   CP.CUSTOMER_ID,
+                                   CP.CONTRACT_ID,
+                                   C.AMOUNT,
+                                   CP.CURRENCY_RATE,
+                                   CP.PAYMENT_INTEREST_DEBT,
+                                   LP.LAST_PAYMENT_INTEREST_DEBT,
+                                   CP.PENALTY_DEBT,
+                                   CP.IS_PENALTY,
+                                   CP.PENALTY_AMOUNT,
+                                   BO.BANK_NAME,                                   
+                                   LP.LAST_DATE,
+                                   LP.LAST_CLEARING_DATE,
+                                   LP.LAST_DEBT,
+                                   CP.INSURANCE_CHECK,
+                                   CP.INSURANCE_AMOUNT,
+                                   CP.CONTRACT_PERCENT,
+                                   CP.CLEARING_DATE,
+                                   CP.IS_CLEARING,
+                                   CP.IS_CHANGED_INTEREST,
+                                   CP.CHANGED_PAY_INTEREST_AMOUNT
+                              FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP CP,
+                                   CRS_USER.V_CONTRACTS C,       
+                                   CRS_USER.V_CUSTOMERS CUS,
+                                   CRS_USER_TEMP.V_BANK_OPERATION_TEMP BO,
+                                   CRS_USER_TEMP.V_CONTRACT_LAST_PAYMENT_TEMP LP,
+                                   CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                             WHERE     C.CUSTOMER_ID = CUS.ID
+                                   AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                                   AND CP.CONTRACT_ID = C.CONTRACT_ID    
+                                   AND CP.CONTRACT_ID = CE.CONTRACT_ID(+)
+                                   AND CP.ID = BO.CONTRACT_PAYMENT_ID  
+                                   AND CP.ID = LP.ID      
+                                   AND BO.USED_USER_ID = 11    
+                                   AND CP.ID = 87
+-------------------------------------------------
+
+Log Entry : 15:46:16 30 iyul 2021, cümə
+  
+   UserName =  Admin
+   FormName =  FPaymentBankAddEdit
+   ProcedureName =  CRS.Forms.Total.FPaymentBankAddEdit.LoadPaymentDetails
+  
+   ShowMessage: Lizinq ödənişinin rekvizitləri tapılmadı.
+   Exception Message: Input string was not in a correct format.
+   SQL Text      :  SELECT C.CONTRACT_CODE,
+                                   TO_CHAR (C.START_DATE, 'DD.MM.YYYY') S_DATE,
+                                   CUS.CUSTOMER_NAME,
+                                   CP.PAYMENT_NAME,
+                                   CP.PAYMENT_DATE P_DATE,
+                                   CP.DAY_COUNT,
+                                   C.INTEREST,
+                                   CP.REQUIRED_CLOSE_AMOUNT,
+                                   CP.ONE_DAY_INTEREST_AMOUNT,
+                                   CP.INTEREST_AMOUNT,
+                                   NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, C.MONTHLY_AMOUNT)
+                                            MONTHLY_AMOUNT,
+                                   CP.REQUIRED_AMOUNT,
+                                   CP.PAYED_AMOUNT,
+                                   CP.PAYED_AMOUNT_AZN,
+                                   C.CURRENCY_ID,
+                                   C.CURRENCY_CODE,
+                                   CP.NOTE,
+                                   CP.CUSTOMER_ID,
+                                   CP.CONTRACT_ID,
+                                   C.AMOUNT,
+                                   CP.CURRENCY_RATE,
+                                   CP.PAYMENT_INTEREST_DEBT,
+                                   LP.LAST_PAYMENT_INTEREST_DEBT,
+                                   CP.PENALTY_DEBT,
+                                   CP.IS_PENALTY,
+                                   CP.PENALTY_AMOUNT,
+                                   BO.BANK_NAME,                                   
+                                   LP.LAST_DATE,
+                                   LP.LAST_CLEARING_DATE,
+                                   LP.LAST_DEBT,
+                                   CP.INSURANCE_CHECK,
+                                   CP.INSURANCE_AMOUNT,
+                                   CP.CONTRACT_PERCENT,
+                                   CP.CLEARING_DATE,
+                                   CP.IS_CLEARING,
+                                   CP.IS_CHANGED_INTEREST,
+                                   CP.CHANGED_PAY_INTEREST_AMOUNT
+                              FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP CP,
+                                   CRS_USER.V_CONTRACTS C,       
+                                   CRS_USER.V_CUSTOMERS CUS,
+                                   CRS_USER_TEMP.V_BANK_OPERATION_TEMP BO,
+                                   CRS_USER_TEMP.V_CONTRACT_LAST_PAYMENT_TEMP LP,
+                                   CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                             WHERE     C.CUSTOMER_ID = CUS.ID
+                                   AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                                   AND CP.CONTRACT_ID = C.CONTRACT_ID    
+                                   AND CP.CONTRACT_ID = CE.CONTRACT_ID(+)
+                                   AND CP.ID = BO.CONTRACT_PAYMENT_ID  
+                                   AND CP.ID = LP.ID      
+                                   AND BO.USED_USER_ID = 11    
+                                   AND CP.ID = 87
+-------------------------------------------------
+
+Log Entry : 15:48:39 30 iyul 2021, cümə
+  
+   UserName =  Admin
+   FormName =  FPaymentBankAddEdit
+   ProcedureName =  CRS.Forms.Total.FPaymentBankAddEdit.LoadPaymentDetails
+  
+   ShowMessage: Lizinq ödənişinin rekvizitləri tapılmadı.
+   Exception Message: Input string was not in a correct format.
+   SQL Text      :  SELECT C.CONTRACT_CODE,
+                                   TO_CHAR (C.START_DATE, 'DD.MM.YYYY') S_DATE,
+                                   CUS.CUSTOMER_NAME,
+                                   CP.PAYMENT_NAME,
+                                   CP.PAYMENT_DATE P_DATE,
+                                   CP.DAY_COUNT,
+                                   C.INTEREST,
+                                   CP.REQUIRED_CLOSE_AMOUNT,
+                                   CP.ONE_DAY_INTEREST_AMOUNT,
+                                   CP.INTEREST_AMOUNT,
+                                   NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, C.MONTHLY_AMOUNT)
+                                            MONTHLY_AMOUNT,
+                                   CP.REQUIRED_AMOUNT,
+                                   CP.PAYED_AMOUNT,
+                                   CP.PAYED_AMOUNT_AZN,
+                                   C.CURRENCY_ID,
+                                   C.CURRENCY_CODE,
+                                   CP.NOTE,
+                                   CP.CUSTOMER_ID,
+                                   CP.CONTRACT_ID,
+                                   C.AMOUNT,
+                                   CP.CURRENCY_RATE,
+                                   CP.PAYMENT_INTEREST_DEBT,
+                                   LP.LAST_PAYMENT_INTEREST_DEBT,
+                                   CP.PENALTY_DEBT,
+                                   CP.IS_PENALTY,
+                                   CP.PENALTY_AMOUNT,
+                                   BO.BANK_NAME,                                   
+                                   LP.LAST_DATE,
+                                   LP.LAST_CLEARING_DATE,
+                                   LP.LAST_DEBT,
+                                   CP.INSURANCE_CHECK,
+                                   CP.INSURANCE_AMOUNT,
+                                   CP.CONTRACT_PERCENT,
+                                   CP.CLEARING_DATE,
+                                   CP.IS_CLEARING,
+                                   CP.IS_CHANGED_INTEREST,
+                                   CP.CHANGED_PAY_INTEREST_AMOUNT
+                              FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP CP,
+                                   CRS_USER.V_CONTRACTS C,       
+                                   CRS_USER.V_CUSTOMERS CUS,
+                                   CRS_USER_TEMP.V_BANK_OPERATION_TEMP BO,
+                                   CRS_USER_TEMP.V_CONTRACT_LAST_PAYMENT_TEMP LP,
+                                   CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                             WHERE     C.CUSTOMER_ID = CUS.ID
+                                   AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                                   AND CP.CONTRACT_ID = C.CONTRACT_ID    
+                                   AND CP.CONTRACT_ID = CE.CONTRACT_ID(+)
+                                   AND CP.ID = BO.CONTRACT_PAYMENT_ID  
+                                   AND CP.ID = LP.ID      
+                                   AND BO.USED_USER_ID = 11    
+                                   AND CP.ID = 87
+-------------------------------------------------
+
+Log Entry : 15:50:17 30 iyul 2021, cümə
+  
+   UserName =  Admin
+   FormName =  FPaymentBankAddEdit
+   ProcedureName =  CRS.Forms.Total.FPaymentBankAddEdit.LoadPaymentDetails
+  
+   ShowMessage: Lizinq ödənişinin rekvizitləri tapılmadı.
+   Exception Message: Object cannot be cast from DBNull to other types.
+   SQL Text      :  SELECT C.CONTRACT_CODE,
+                                   TO_CHAR (C.START_DATE, 'DD.MM.YYYY') S_DATE,
+                                   CUS.CUSTOMER_NAME,
+                                   CP.PAYMENT_NAME,
+                                   CP.PAYMENT_DATE P_DATE,
+                                   CP.DAY_COUNT,
+                                   C.INTEREST,
+                                   CP.REQUIRED_CLOSE_AMOUNT,
+                                   CP.ONE_DAY_INTEREST_AMOUNT,
+                                   CP.INTEREST_AMOUNT,
+                                   NVL2 (CE.MONTHLY_AMOUNT, CE.MONTHLY_AMOUNT, C.MONTHLY_AMOUNT)
+                                            MONTHLY_AMOUNT,
+                                   CP.REQUIRED_AMOUNT,
+                                   CP.PAYED_AMOUNT,
+                                   CP.PAYED_AMOUNT_AZN,
+                                   C.CURRENCY_ID,
+                                   C.CURRENCY_CODE,
+                                   CP.NOTE,
+                                   CP.CUSTOMER_ID,
+                                   CP.CONTRACT_ID,
+                                   C.AMOUNT,
+                                   CP.CURRENCY_RATE,
+                                   CP.PAYMENT_INTEREST_DEBT,
+                                   LP.LAST_PAYMENT_INTEREST_DEBT,
+                                   CP.PENALTY_DEBT,
+                                   CP.IS_PENALTY,
+                                   CP.PENALTY_AMOUNT,
+                                   BO.BANK_NAME,                                   
+                                   LP.LAST_DATE,
+                                   LP.LAST_CLEARING_DATE,
+                                   LP.LAST_DEBT,
+                                   CP.INSURANCE_CHECK,
+                                   CP.INSURANCE_AMOUNT,
+                                   CP.CONTRACT_PERCENT,
+                                   CP.CLEARING_DATE,
+                                   CP.IS_CLEARING,
+                                   CP.IS_CHANGED_INTEREST,
+                                   CP.CHANGED_PAY_INTEREST_AMOUNT
+                              FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP CP,
+                                   CRS_USER.V_CONTRACTS C,       
+                                   CRS_USER.V_CUSTOMERS CUS,
+                                   CRS_USER_TEMP.V_BANK_OPERATION_TEMP BO,
+                                   CRS_USER_TEMP.V_CONTRACT_LAST_PAYMENT_TEMP LP,
+                                   CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                             WHERE     C.CUSTOMER_ID = CUS.ID
+                                   AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                                   AND CP.CONTRACT_ID = C.CONTRACT_ID    
+                                   AND CP.CONTRACT_ID = CE.CONTRACT_ID(+)
+                                   AND CP.ID = BO.CONTRACT_PAYMENT_ID  
+                                   AND CP.ID = LP.ID      
+                                   AND BO.USED_USER_ID = 11    
+                                   AND CP.ID = 87
+-------------------------------------------------
