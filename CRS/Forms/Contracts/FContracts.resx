@@ -191,7 +191,7 @@
         RSdedIyjtVEAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="toolTipItem10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="toolTipItem3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAABeNJREFUWEel
         V2tsk2UUJor+M/rDYUwUzYIahLErDDJY17W6yQL4QyWBKBcjiqIEBAUm7A4oKGqCZEgmCGXXdmWXbmPR
@@ -225,7 +225,7 @@
   <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>574, 17</value>
   </metadata>
-  <data name="toolTipTitleItem22.Text" xml:space="preserve">
+  <data name="toolTipTitleItem11.Text" xml:space="preserve">
     <value>Qeyd: &lt;i&gt;Müqavilənin razılaşdırmasını yaratmaq üçün aşağıdakı addımları ardıcıl yerinə yetirmək lazımdır:&lt;/i&gt;
 &lt;color=104,0,0&gt;
 1. Müqavilənin bu günə qədər olan qalıq faizləri ödənilməlidir. Yəni razılaşma üçün yalnız xalis qalıq borc olmalıdır. 
@@ -278,9 +278,6 @@
         K+d3Ar4PiFcz85dTbsmPYf7y+lPhPFw06woD/FF+/D+hj4XFfwDMAZq0MiI1FQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="popupMenu1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>574, 17</value>
-  </metadata>
   <metadata name="ToolTipController.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>299, 17</value>
   </metadata>

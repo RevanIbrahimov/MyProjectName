@@ -12,7 +12,12 @@ using System.Diagnostics;
 namespace CRS.Class
 {
     class GlobalVariables
-    {        
+    {
+        public static string V_CompanyPhone;
+        public static string V_CompanyAddress;
+        public static string V_CompanyDirector;
+        public static string V_CompanyVoen;
+        public static string V_CompanyName;
         public static string V_Version = "1.0.2.3";
         public static string SuperAdminPassword = "@q1LEAS!NGw22015e3LRSr4";
         public static string V_StyleName;

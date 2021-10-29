@@ -26,9 +26,9 @@ using System.Text.RegularExpressions;
 
 namespace CRS.Forms.Contracts
 {
-    public partial class FContractAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FCarOrObjectContractAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public FContractAddEdit()
+        public FCarOrObjectContractAddEdit()
         {
             InitializeComponent();
 

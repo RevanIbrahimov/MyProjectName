@@ -255,7 +255,7 @@ namespace CRS.Forms.Contracts
             }
             GlobalProcedures.SplashScreenShow(this, typeof(WaitForms.FContractShowWait));
 
-            FContractAddEdit fc = new FContractAddEdit();
+            FCarOrObjectContractAddEdit fc = new FCarOrObjectContractAddEdit();
             fc.TransactionName = transaction;
             fc.ContractID = contract_id;
             fc.CustomerID = customer_id;
@@ -264,6 +264,32 @@ namespace CRS.Forms.Contracts
             fc.Commit = commit;
             if (transaction == "EDIT")
                 fc.IsSpecialAttention = isSpecialAttention;
+            fc.RefreshContractsDataGridView += new FCarOrObjectContractAddEdit.DoEvent(RefreshContracts);
+            GlobalProcedures.SplashScreenClose();
+            fc.ShowDialog();
+
+            ContractsGridView.FocusedRowHandle = old_row_num;
+            if (!IsInsert)
+                ContractsGridView.TopRowIndex = topindex;
+
+        }
+
+        private void LoadFContractAddEdit(string transaction, string contract_id, string customer_id, int commit)
+        {
+            if (!IsInsert)
+            {
+                old_row_num = ContractsGridView.FocusedRowHandle;
+                topindex = ContractsGridView.TopRowIndex;
+            }
+            GlobalProcedures.SplashScreenShow(this, typeof(WaitForms.FContractShowWait));
+
+            FContractAddEdit fc = new FContractAddEdit();
+            fc.TransactionName = transaction;
+            fc.ContractID = contract_id;
+            fc.CustomerID = customer_id;
+            fc.IsExtend = isExtend;
+            fc.Commit = commit;
+            fc.IsSpecialAttention = isSpecialAttention;
             fc.RefreshContractsDataGridView += new FContractAddEdit.DoEvent(RefreshContracts);
             GlobalProcedures.SplashScreenClose();
             fc.ShowDialog();
@@ -276,8 +302,7 @@ namespace CRS.Forms.Contracts
 
         private void NewContractBarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            IsInsert = true;
-            LoadFContractAddEdit("INSERT", null, null, null, 0);
+            
         }
 
         private void ShowOrHideSellerBarButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -515,6 +540,19 @@ namespace CRS.Forms.Contracts
         private void HostageGridView_ColumnPositionChanged(object sender, EventArgs e)
         {
             GlobalProcedures.GridSaveLayout(HostageGridView, "Satıcı");
+        }
+        
+
+        private void NewCarOrObjectBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            IsInsert = true;
+            LoadFContractAddEdit("INSERT", null, null, null, 0);
+        }
+
+        private void NewPawnshopBarButton_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            IsInsert = true;
+            LoadFContractAddEdit("INSERT", null, null, 0);
         }
 
         private void FromEntendMountCount_EditValueChanged(object sender, EventArgs e)

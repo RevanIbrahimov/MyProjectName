@@ -1,6 +1,6 @@
 ﻿namespace CRS.Forms.Contracts
 {
-    partial class FContractAddEdit
+    partial class FCarOrObjectContractAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             ManiXButton.Office2010Green office2010Green1 = new ManiXButton.Office2010Green();
             ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
             ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FContractAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCarOrObjectContractAddEdit));
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();

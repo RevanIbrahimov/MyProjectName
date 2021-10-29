@@ -774,14 +774,14 @@ namespace CRS.Forms.Total
         {
             topindex = TotalsGridView.TopRowIndex;
             old_row_num = TotalsGridView.FocusedRowHandle;
-            Contracts.FContractAddEdit fcae = new Contracts.FContractAddEdit();
+            Contracts.FCarOrObjectContractAddEdit fcae = new Contracts.FCarOrObjectContractAddEdit();
             fcae.TransactionName = transaction;
             fcae.ContractID = contractid;
             fcae.CustomerID = customerid;
             fcae.SellerID = sellerid;
             fcae.Commit = 1;
             fcae.IsExtend = isExtend;
-            fcae.RefreshContractsDataGridView += new Contracts.FContractAddEdit.DoEvent(RefreshContracts);
+            fcae.RefreshContractsDataGridView += new Contracts.FCarOrObjectContractAddEdit.DoEvent(RefreshContracts);
             fcae.ShowDialog();
             TotalsGridView.FocusedRowHandle = old_row_num;
             TotalsGridView.TopRowIndex = topindex;
