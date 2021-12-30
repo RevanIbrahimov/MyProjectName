@@ -414,6 +414,16 @@ namespace CRS.Forms.Bank
             GlobalProcedures.GridSaveLayout(BankGridView, BankRibbonPage.Text);
         }
 
+        private void NewCarOrObjectBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadFBankOperationAddEdit("INSERT", null, null, null, null);
+        }
+
+        private void NewPawnShopBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadFBankOperationAddEdit("INSERT", null, null, null, null);
+        }
+
         private void BankGridView_MouseUp(object sender, MouseEventArgs e)
         {
             GlobalProcedures.GridMouseUpForPopupMenu(BankGridView, PopupMenu, e);

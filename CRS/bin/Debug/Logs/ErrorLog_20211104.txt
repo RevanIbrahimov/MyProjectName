@@ -1,0 +1,68 @@
+
+Log Entry : 15:11:41 4 noyabr 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 15:11:45 4 noyabr 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContractAddEdit/LoadContractDetails
+  
+   ShowMessage: Müqavilənin məlumatları açılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT  C.CODE CONTRACT_CODE,
+                               C.START_DATE,
+                               C.END_DATE,
+                               CT.TERM PERIOD,
+                               CT.INTEREST,
+                               C.GRACE_PERIOD,
+                               C.AMOUNT,
+                               C.FIFD,
+                               C.COMMISSION,
+                               CUR.CODE,                              
+                               C.CHECK_END_DATE,
+                               C.PAYMENT_TYPE,
+                               C.MONTHLY_AMOUNT,
+                               C.CHECK_INTEREST,
+                               CT.ID CREDIT_TYPE_ID,                             
+                               C.CHECK_PERIOD,
+                               C.CURRENCY_RATE,
+                               C.CUSTOMER_TYPE_ID,
+                               CUS.CODE CUSTOMER_CODE,                               
+                               C.USED_USER_ID,
+                               C.STATUS_ID,
+                               C.PARENT_ID,
+                               (SELECT COUNT (*)
+                                      FROM (SELECT CONTRACT_ID FROM CRS_USER.CUSTOMER_PAYMENTS
+                                            UNION ALL
+                                            SELECT CONTRACT_ID FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP)
+                                     WHERE CONTRACT_ID = C.ID)
+                                      PAY_COUNT,
+                               A.NAME APPRAISER_NAME,
+                               (SELECT SUB_ACCOUNT||' - '||SUB_ACCOUNT_NAME FROM CRS_USER.ACCOUNTING_PLAN WHERE SUB_ACCOUNT = C.COMMISSION_ACCOUNT) COMMISSION_ACOUNT,
+                               (SELECT SUB_ACCOUNT||' - '||SUB_ACCOUNT_NAME FROM CRS_USER.ACCOUNTING_PLAN WHERE SUB_ACCOUNT = C.AMOUNT_ACCOUNT) AMOUNT_ACOUNT,
+                               C.CUSTOMER_CONTRACT_NUMBER,
+                               C.CONTRACT_ACCOUNT,
+                               LO.NAME LOAN_OFFICER
+                          FROM CRS_USER.CONTRACTS C,
+                               CRS_USER.CREDIT_TYPE CT,
+                               CRS_USER.CURRENCY CUR,
+                               CRS_USER.V_CUSTOMERS CUS,
+                               CRS_USER.APPRAISER A,
+                               CRS_USER.LOAN_OFFICER LO
+                         WHERE     C.CREDIT_TYPE_ID = CT.ID
+                               AND C.CURRENCY_ID = CUR.ID
+                               AND C.CUSTOMER_ID = CUS.ID
+                               AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                               AND C.APPRAISER_ID = A.ID
+                               AND C.LOAN_OFFICER_ID = LO.ID
+                               AND C.ID = 316
+-------------------------------------------------

@@ -1,0 +1,62 @@
+
+Log Entry : 22:23:33 25 dekabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContractAddEdit/LoadFilesDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT 1 SS,
+                                 CD.ID,
+                                 DT.TYPE_NAME,
+                                 CD.CODE || ' - ' || CD.FILE_NAME FILE_NAME,
+                                 CD.ETL_DT_TM ETL_DATE
+                            FROM CRS_USER.CONTRACT_DOCUMENTS CD, CRS_USER.CONTRACT_DOCUMENT_TYPE DT
+                           WHERE CD.CONTRACT_DOCUMENT_TYPE_ID = DT.ID AND CD.CONTRACT_ID = 406
+                        ORDER BY DT.ID, CD.CODE
+-------------------------------------------------
+
+Log Entry : 22:24:01 25 dekabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 22:24:03 25 dekabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 22:24:09 25 dekabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------
+
+Log Entry : 22:24:10 25 dekabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID/FChangeCode / FChangeCode_Load
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------

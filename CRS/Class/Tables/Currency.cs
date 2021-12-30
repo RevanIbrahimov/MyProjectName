@@ -15,5 +15,7 @@ namespace CRS.Class.Tables
         public string SHORT_NAME { get; set; }
         public string SMALL_NAME { get; set; }
         public string NOTE { get; set; }
+
+        public string ALPHA3CODE { get; set; }
     }
 }

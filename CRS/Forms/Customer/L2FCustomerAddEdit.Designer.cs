@@ -1,6 +1,6 @@
 ﻿namespace CRS.Forms.Customer
 {
-    partial class FCustomerAddEdit
+    partial class L2FCustomerAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -32,49 +32,43 @@
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCustomerAddEdit));
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(L2FCustomerAddEdit));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
             ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
             ManiXButton.Office2010Red office2010Red1 = new ManiXButton.Office2010Red();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.PersonalDetailsGroupBox = new DevExpress.XtraEditors.GroupControl();
-            this.AccountLengthLabel = new DevExpress.XtraEditors.LabelControl();
-            this.AccountText = new DevExpress.XtraEditors.TextEdit();
-            this.AccountLabel = new DevExpress.XtraEditors.LabelControl();
             this.VoenLengthLabel = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.VoenText = new DevExpress.XtraEditors.TextEdit();
@@ -216,7 +210,6 @@
             this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonalDetailsGroupBox)).BeginInit();
             this.PersonalDetailsGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountText.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoenText.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SexLookUp.Properties)).BeginInit();
@@ -267,9 +260,6 @@
             this.PersonalDetailsGroupBox.AppearanceCaption.ForeColor = System.Drawing.Color.Maroon;
             this.PersonalDetailsGroupBox.AppearanceCaption.Options.UseFont = true;
             this.PersonalDetailsGroupBox.AppearanceCaption.Options.UseForeColor = true;
-            this.PersonalDetailsGroupBox.Controls.Add(this.AccountLengthLabel);
-            this.PersonalDetailsGroupBox.Controls.Add(this.AccountText);
-            this.PersonalDetailsGroupBox.Controls.Add(this.AccountLabel);
             this.PersonalDetailsGroupBox.Controls.Add(this.VoenLengthLabel);
             this.PersonalDetailsGroupBox.Controls.Add(this.separatorControl1);
             this.PersonalDetailsGroupBox.Controls.Add(this.VoenText);
@@ -302,41 +292,44 @@
             this.PersonalDetailsGroupBox.Controls.Add(this.BDeletePicture);
             this.PersonalDetailsGroupBox.Controls.Add(this.BLoadPicture);
             this.PersonalDetailsGroupBox.Controls.Add(this.CustomerPictureBox);
-            this.PersonalDetailsGroupBox.Location = new System.Drawing.Point(14, 15);
-            this.PersonalDetailsGroupBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PersonalDetailsGroupBox.Location = new System.Drawing.Point(12, 12);
             this.PersonalDetailsGroupBox.Name = "PersonalDetailsGroupBox";
-            this.PersonalDetailsGroupBox.Size = new System.Drawing.Size(1002, 289);
+            this.PersonalDetailsGroupBox.Size = new System.Drawing.Size(859, 235);
             this.PersonalDetailsGroupBox.TabIndex = 1;
             this.PersonalDetailsGroupBox.Text = "Şəxsi məlumatlar";
             // 
-            // AccountLengthLabel
+            // VoenLengthLabel
             // 
-            this.AccountLengthLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
-            this.AccountLengthLabel.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.AccountLengthLabel.Appearance.Options.UseFont = true;
-            this.AccountLengthLabel.Appearance.Options.UseForeColor = true;
-            this.AccountLengthLabel.Location = new System.Drawing.Point(799, 96);
-            this.AccountLengthLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AccountLengthLabel.Name = "AccountLengthLabel";
-            this.AccountLengthLabel.Size = new System.Drawing.Size(19, 17);
-            this.AccountLengthLabel.TabIndex = 245;
-            this.AccountLengthLabel.Text = "28";
-            this.AccountLengthLabel.Visible = false;
+            this.VoenLengthLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
+            this.VoenLengthLabel.Appearance.ForeColor = System.Drawing.Color.Maroon;
+            this.VoenLengthLabel.Appearance.Options.UseFont = true;
+            this.VoenLengthLabel.Appearance.Options.UseForeColor = true;
+            this.VoenLengthLabel.Location = new System.Drawing.Point(684, 52);
+            this.VoenLengthLabel.Name = "VoenLengthLabel";
+            this.VoenLengthLabel.Size = new System.Drawing.Size(7, 13);
+            this.VoenLengthLabel.TabIndex = 241;
+            this.VoenLengthLabel.Text = "0";
+            this.VoenLengthLabel.Visible = false;
             // 
-            // AccountText
+            // separatorControl1
             // 
-            this.AccountText.Location = new System.Drawing.Point(554, 93);
-            this.AccountText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AccountText.Name = "AccountText";
-            this.AccountText.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountText.Properties.Appearance.Options.UseFont = true;
-            this.AccountText.Properties.Mask.EditMask = "(\\p{Lu}|\\d)+";
-            this.AccountText.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.AccountText.Properties.NullValuePrompt = "Hesabı daxil edin";
-            this.AccountText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.AccountText.Size = new System.Drawing.Size(238, 24);
+            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.separatorControl1.Location = new System.Drawing.Point(698, 27);
+            this.separatorControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.separatorControl1.Size = new System.Drawing.Size(20, 200);
+            this.separatorControl1.TabIndex = 183;
+            // 
+            // VoenText
+            // 
+            this.VoenText.Location = new System.Drawing.Point(552, 50);
+            this.VoenText.Name = "VoenText";
+            this.VoenText.Properties.NullValuePrompt = "Vöen-ni daxil edin";
+            this.VoenText.Properties.NullValuePromptShowForEmptyValue = true;
+            this.VoenText.Size = new System.Drawing.Size(127, 20);
             superToolTip1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem1.Text = "<color=255,0,0>Müştərinin bankda olan hesabı</color>";
+            toolTipTitleItem1.Text = "<color=255,0,0>Vöen</color>";
             toolTipItem1.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             toolTipItem1.Appearance.Options.UseImage = true;
             toolTipItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem1.Image")));
@@ -345,77 +338,22 @@
     "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
             superToolTip1.Items.Add(toolTipTitleItem1);
             superToolTip1.Items.Add(toolTipItem1);
-            this.AccountText.SuperTip = superToolTip1;
-            this.AccountText.TabIndex = 8;
-            this.AccountText.EditValueChanged += new System.EventHandler(this.AccountText_EditValueChanged);
-            // 
-            // AccountLabel
-            // 
-            this.AccountLabel.Location = new System.Drawing.Point(502, 97);
-            this.AccountLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.AccountLabel.Name = "AccountLabel";
-            this.AccountLabel.Size = new System.Drawing.Size(35, 16);
-            this.AccountLabel.TabIndex = 243;
-            this.AccountLabel.Text = "Hesab";
-            // 
-            // VoenLengthLabel
-            // 
-            this.VoenLengthLabel.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
-            this.VoenLengthLabel.Appearance.ForeColor = System.Drawing.Color.Maroon;
-            this.VoenLengthLabel.Appearance.Options.UseFont = true;
-            this.VoenLengthLabel.Appearance.Options.UseForeColor = true;
-            this.VoenLengthLabel.Location = new System.Drawing.Point(798, 64);
-            this.VoenLengthLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.VoenLengthLabel.Name = "VoenLengthLabel";
-            this.VoenLengthLabel.Size = new System.Drawing.Size(10, 17);
-            this.VoenLengthLabel.TabIndex = 241;
-            this.VoenLengthLabel.Text = "0";
-            this.VoenLengthLabel.Visible = false;
-            // 
-            // separatorControl1
-            // 
-            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl1.Location = new System.Drawing.Point(814, 33);
-            this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(23, 246);
-            this.separatorControl1.TabIndex = 183;
-            // 
-            // VoenText
-            // 
-            this.VoenText.Location = new System.Drawing.Point(554, 62);
-            this.VoenText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.VoenText.Name = "VoenText";
-            this.VoenText.Properties.NullValuePrompt = "Vöen-ni daxil edin";
-            this.VoenText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.VoenText.Size = new System.Drawing.Size(238, 22);
-            superToolTip2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem2.Text = "<color=255,0,0>Vöen</color>";
-            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipItem2.Appearance.Options.UseImage = true;
-            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
-    "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.VoenText.SuperTip = superToolTip2;
+            this.VoenText.SuperTip = superToolTip1;
             this.VoenText.TabIndex = 7;
             this.VoenText.EditValueChanged += new System.EventHandler(this.VoenText_EditValueChanged);
             // 
             // VoenLabel
             // 
-            this.VoenLabel.Location = new System.Drawing.Point(502, 65);
-            this.VoenLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.VoenLabel.Location = new System.Drawing.Point(502, 53);
             this.VoenLabel.Name = "VoenLabel";
-            this.VoenLabel.Size = new System.Drawing.Size(32, 16);
+            this.VoenLabel.Size = new System.Drawing.Size(27, 13);
             this.VoenLabel.TabIndex = 182;
             this.VoenLabel.Text = "VÖEN";
             // 
             // SexLookUp
             // 
             this.SexLookUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SexLookUp.Location = new System.Drawing.Point(185, 158);
-            this.SexLookUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SexLookUp.Location = new System.Drawing.Point(159, 128);
             this.SexLookUp.Name = "SexLookUp";
             this.SexLookUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç")});
@@ -428,15 +366,14 @@
             this.SexLookUp.Properties.ShowHeader = false;
             this.SexLookUp.Properties.ThrowExceptionOnInvalidLookUpEditValueType = true;
             this.SexLookUp.Properties.ValidateOnEnterKey = true;
-            this.SexLookUp.Size = new System.Drawing.Size(117, 22);
+            this.SexLookUp.Size = new System.Drawing.Size(100, 20);
             this.SexLookUp.TabIndex = 3;
             this.SexLookUp.EditValueChanged += new System.EventHandler(this.SexLookUp_EditValueChanged);
             // 
             // BirthplaceLookUp
             // 
             this.BirthplaceLookUp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BirthplaceLookUp.Location = new System.Drawing.Point(185, 222);
-            this.BirthplaceLookUp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BirthplaceLookUp.Location = new System.Drawing.Point(159, 180);
             this.BirthplaceLookUp.Name = "BirthplaceLookUp";
             this.BirthplaceLookUp.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç"),
@@ -450,7 +387,7 @@
             this.BirthplaceLookUp.Properties.ShowHeader = false;
             this.BirthplaceLookUp.Properties.ThrowExceptionOnInvalidLookUpEditValueType = true;
             this.BirthplaceLookUp.Properties.ValidateOnEnterKey = true;
-            this.BirthplaceLookUp.Size = new System.Drawing.Size(623, 22);
+            this.BirthplaceLookUp.Size = new System.Drawing.Size(534, 20);
             this.BirthplaceLookUp.TabIndex = 5;
             this.BirthplaceLookUp.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.BirthplaceLookUp_ButtonClick);
             this.BirthplaceLookUp.EditValueChanged += new System.EventHandler(this.BirthplaceLookUp_EditValueChanged);
@@ -459,20 +396,19 @@
             // 
             this.BChangeCode.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BChangeCode.ImageOptions.Image = global::CRS.Properties.Resources.edit_16;
-            this.BChangeCode.Location = new System.Drawing.Point(309, 28);
-            this.BChangeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BChangeCode.Location = new System.Drawing.Point(265, 23);
             this.BChangeCode.Name = "BChangeCode";
-            this.BChangeCode.Size = new System.Drawing.Size(24, 26);
-            superToolTip3.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem3.Text = "<color=255,0,0>Qeydiyyat nömrəsini dəyişdir</color>";
-            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            toolTipItem3.Appearance.Options.UseImage = true;
-            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Müştərinin qeydiyyat nömrəsini manual olaraq dəyişdirmək üçün nəzərdə tutulub.";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.BChangeCode.SuperTip = superToolTip3;
+            this.BChangeCode.Size = new System.Drawing.Size(21, 21);
+            superToolTip2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem2.Text = "<color=255,0,0>Qeydiyyat nömrəsini dəyişdir</color>";
+            toolTipItem2.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            toolTipItem2.Appearance.Options.UseImage = true;
+            toolTipItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem2.Image")));
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Müştərinin qeydiyyat nömrəsini manual olaraq dəyişdirmək üçün nəzərdə tutulub.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.BChangeCode.SuperTip = superToolTip2;
             this.BChangeCode.TabIndex = 178;
             this.BChangeCode.Visible = false;
             this.BChangeCode.Click += new System.EventHandler(this.BChangeCode_Click);
@@ -481,10 +417,9 @@
             // 
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(171, 193);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Location = new System.Drawing.Point(147, 157);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(8, 16);
+            this.labelControl6.Size = new System.Drawing.Size(6, 13);
             this.labelControl6.TabIndex = 177;
             this.labelControl6.Text = "*";
             // 
@@ -492,10 +427,9 @@
             // 
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(171, 225);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Location = new System.Drawing.Point(147, 183);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(8, 16);
+            this.labelControl5.Size = new System.Drawing.Size(6, 13);
             this.labelControl5.TabIndex = 176;
             this.labelControl5.Text = "*";
             // 
@@ -503,10 +437,9 @@
             // 
             this.labelControl3.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl3.Appearance.Options.UseForeColor = true;
-            this.labelControl3.Location = new System.Drawing.Point(171, 161);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl3.Location = new System.Drawing.Point(147, 131);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(8, 16);
+            this.labelControl3.Size = new System.Drawing.Size(6, 13);
             this.labelControl3.TabIndex = 175;
             this.labelControl3.Text = "*";
             // 
@@ -514,10 +447,9 @@
             // 
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(171, 129);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(147, 105);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(8, 16);
+            this.labelControl2.Size = new System.Drawing.Size(6, 13);
             this.labelControl2.TabIndex = 174;
             this.labelControl2.Text = "*";
             // 
@@ -525,10 +457,9 @@
             // 
             this.labelControl1.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(171, 97);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(147, 79);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(8, 16);
+            this.labelControl1.Size = new System.Drawing.Size(6, 13);
             this.labelControl1.TabIndex = 173;
             this.labelControl1.Text = "*";
             // 
@@ -536,10 +467,9 @@
             // 
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(171, 65);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Location = new System.Drawing.Point(147, 53);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(8, 16);
+            this.labelControl4.Size = new System.Drawing.Size(6, 13);
             this.labelControl4.TabIndex = 172;
             this.labelControl4.Text = "*";
             // 
@@ -547,8 +477,7 @@
             // 
             this.BirthdayDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BirthdayDate.EditValue = null;
-            this.BirthdayDate.Location = new System.Drawing.Point(185, 190);
-            this.BirthdayDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BirthdayDate.Location = new System.Drawing.Point(159, 154);
             this.BirthdayDate.Name = "BirthdayDate";
             this.BirthdayDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalendarı aç")});
@@ -560,7 +489,7 @@
             this.BirthdayDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.BirthdayDate.Properties.NullValuePrompt = "dd.mm.yyyy";
             this.BirthdayDate.Properties.NullValuePromptShowForEmptyValue = true;
-            this.BirthdayDate.Size = new System.Drawing.Size(117, 22);
+            this.BirthdayDate.Size = new System.Drawing.Size(100, 20);
             this.BirthdayDate.TabIndex = 4;
             this.BirthdayDate.EditValueChanged += new System.EventHandler(this.BirthdayDate_EditValueChanged);
             // 
@@ -570,28 +499,25 @@
             this.AgeLabel.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.AgeLabel.Appearance.Options.UseFont = true;
             this.AgeLabel.Appearance.Options.UseForeColor = true;
-            this.AgeLabel.Location = new System.Drawing.Point(334, 193);
-            this.AgeLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AgeLabel.Location = new System.Drawing.Point(286, 157);
             this.AgeLabel.Name = "AgeLabel";
-            this.AgeLabel.Size = new System.Drawing.Size(36, 17);
+            this.AgeLabel.Size = new System.Drawing.Size(30, 13);
             this.AgeLabel.TabIndex = 70;
             this.AgeLabel.Text = "0 yaş";
             // 
             // BirthdayLabel
             // 
-            this.BirthdayLabel.Location = new System.Drawing.Point(24, 193);
-            this.BirthdayLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BirthdayLabel.Location = new System.Drawing.Point(21, 157);
             this.BirthdayLabel.Name = "BirthdayLabel";
-            this.BirthdayLabel.Size = new System.Drawing.Size(72, 16);
+            this.BirthdayLabel.Size = new System.Drawing.Size(60, 13);
             this.BirthdayLabel.TabIndex = 68;
             this.BirthdayLabel.Text = "Doğum tarixi";
             // 
             // BirthplaceLabel
             // 
-            this.BirthplaceLabel.Location = new System.Drawing.Point(24, 225);
-            this.BirthplaceLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BirthplaceLabel.Location = new System.Drawing.Point(21, 183);
             this.BirthplaceLabel.Name = "BirthplaceLabel";
-            this.BirthplaceLabel.Size = new System.Drawing.Size(82, 16);
+            this.BirthplaceLabel.Size = new System.Drawing.Size(70, 13);
             this.BirthplaceLabel.TabIndex = 76;
             this.BirthplaceLabel.Text = "Doğulduğu yer";
             // 
@@ -601,79 +527,95 @@
             this.CodeDescriptionLabel.Appearance.ForeColor = System.Drawing.Color.Red;
             this.CodeDescriptionLabel.Appearance.Options.UseFont = true;
             this.CodeDescriptionLabel.Appearance.Options.UseForeColor = true;
-            this.CodeDescriptionLabel.Location = new System.Drawing.Point(339, 33);
-            this.CodeDescriptionLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CodeDescriptionLabel.Location = new System.Drawing.Point(291, 27);
             this.CodeDescriptionLabel.Name = "CodeDescriptionLabel";
-            this.CodeDescriptionLabel.Size = new System.Drawing.Size(221, 17);
+            this.CodeDescriptionLabel.Size = new System.Drawing.Size(174, 13);
             this.CodeDescriptionLabel.TabIndex = 50;
             this.CodeDescriptionLabel.Text = "Bu nömrə ardıcıllığa görə dəyişə bilər";
             // 
             // NoteLabel
             // 
-            this.NoteLabel.Location = new System.Drawing.Point(24, 257);
-            this.NoteLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NoteLabel.Location = new System.Drawing.Point(21, 209);
             this.NoteLabel.Name = "NoteLabel";
-            this.NoteLabel.Size = new System.Drawing.Size(29, 16);
+            this.NoteLabel.Size = new System.Drawing.Size(26, 13);
             this.NoteLabel.TabIndex = 28;
             this.NoteLabel.Text = "Qeyd";
             // 
             // NoteText
             // 
-            this.NoteText.Location = new System.Drawing.Point(185, 254);
-            this.NoteText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NoteText.Location = new System.Drawing.Point(159, 206);
             this.NoteText.Name = "NoteText";
-            this.NoteText.Size = new System.Drawing.Size(623, 22);
+            this.NoteText.Size = new System.Drawing.Size(534, 20);
+            superToolTip3.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem3.Text = "<color=255,0,0>Qeyd</color>";
+            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
+    "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.NoteText.SuperTip = superToolTip3;
+            this.NoteText.TabIndex = 6;
+            // 
+            // PatronymicText
+            // 
+            this.PatronymicText.Location = new System.Drawing.Point(159, 102);
+            this.PatronymicText.Name = "PatronymicText";
+            this.PatronymicText.Properties.NullValuePrompt = "Ata adını daxil edin";
+            this.PatronymicText.Properties.NullValuePromptShowForEmptyValue = true;
+            this.PatronymicText.Size = new System.Drawing.Size(203, 20);
             superToolTip4.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem4.Text = "<color=255,0,0>Qeyd</color>";
+            toolTipTitleItem4.Text = "<color=255,0,0>Müştərinin atasının adı</color>";
             toolTipItem4.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             toolTipItem4.Appearance.Options.UseImage = true;
             toolTipItem4.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem4.Image")));
             toolTipItem4.LeftIndent = 6;
             toolTipItem4.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
     "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
+            toolTipTitleItem5.LeftIndent = 6;
+            toolTipTitleItem5.Text = "Qeyd: <i>Ata adı sənədlərdə istifadə olunduğu üçün bu adın sonuna uyğun olaraq</i" +
+    "><b><color=104,6,6> oğlu və ya qızı</color></b> <i>sözləri yazılmalıdır.</i>";
             superToolTip4.Items.Add(toolTipTitleItem4);
             superToolTip4.Items.Add(toolTipItem4);
-            this.NoteText.SuperTip = superToolTip4;
-            this.NoteText.TabIndex = 6;
-            // 
-            // PatronymicText
-            // 
-            this.PatronymicText.Location = new System.Drawing.Point(185, 126);
-            this.PatronymicText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PatronymicText.Name = "PatronymicText";
-            this.PatronymicText.Properties.NullValuePrompt = "Ata adını daxil edin";
-            this.PatronymicText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.PatronymicText.Size = new System.Drawing.Size(237, 22);
-            superToolTip5.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem5.Text = "<color=255,0,0>Müştərinin atasının adı</color>";
-            toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            toolTipItem5.Appearance.Options.UseImage = true;
-            toolTipItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem5.Image")));
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
-    "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
-            toolTipTitleItem6.LeftIndent = 6;
-            toolTipTitleItem6.Text = "Qeyd: <i>Ata adı sənədlərdə istifadə olunduğu üçün bu adın sonuna uyğun olaraq</i" +
-    "><b><color=104,6,6> oğlu və ya qızı</color></b> <i>sözləri yazılmalıdır.</i>";
-            superToolTip5.Items.Add(toolTipTitleItem5);
-            superToolTip5.Items.Add(toolTipItem5);
-            superToolTip5.Items.Add(toolTipSeparatorItem1);
-            superToolTip5.Items.Add(toolTipTitleItem6);
-            this.PatronymicText.SuperTip = superToolTip5;
+            superToolTip4.Items.Add(toolTipSeparatorItem1);
+            superToolTip4.Items.Add(toolTipTitleItem5);
+            this.PatronymicText.SuperTip = superToolTip4;
             this.PatronymicText.TabIndex = 2;
             this.PatronymicText.ToolTip = "Yalnız hərf yazmağınız tövsiyə olunur.";
             this.PatronymicText.EditValueChanged += new System.EventHandler(this.PatronymicText_EditValueChanged);
             // 
             // NameText
             // 
-            this.NameText.Location = new System.Drawing.Point(185, 94);
-            this.NameText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NameText.Location = new System.Drawing.Point(159, 76);
             this.NameText.Name = "NameText";
             this.NameText.Properties.NullValuePrompt = "Adı daxil edin";
             this.NameText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.NameText.Size = new System.Drawing.Size(237, 22);
+            this.NameText.Size = new System.Drawing.Size(203, 20);
+            superToolTip5.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem6.Text = "<color=255,0,0>Müştərinin adı</color>";
+            toolTipItem5.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            toolTipItem5.Appearance.Options.UseImage = true;
+            toolTipItem5.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem5.Image")));
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
+    "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
+            superToolTip5.Items.Add(toolTipTitleItem6);
+            superToolTip5.Items.Add(toolTipItem5);
+            this.NameText.SuperTip = superToolTip5;
+            this.NameText.TabIndex = 1;
+            this.NameText.ToolTip = "Yalnız hərf yazmağınız tövsiyə olunur.";
+            // 
+            // SurnameText
+            // 
+            this.SurnameText.Location = new System.Drawing.Point(159, 50);
+            this.SurnameText.Name = "SurnameText";
+            this.SurnameText.Properties.NullValuePrompt = "Soyadı daxil edin";
+            this.SurnameText.Properties.NullValuePromptShowForEmptyValue = true;
+            this.SurnameText.Size = new System.Drawing.Size(203, 20);
             superToolTip6.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem7.Text = "<color=255,0,0>Müştərinin adı</color>";
+            toolTipTitleItem7.Text = "<color=255,0,0>Müştərinin soyadı</color>";
             toolTipItem6.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             toolTipItem6.Appearance.Options.UseImage = true;
             toolTipItem6.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem6.Image")));
@@ -682,102 +624,75 @@
     "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
             superToolTip6.Items.Add(toolTipTitleItem7);
             superToolTip6.Items.Add(toolTipItem6);
-            this.NameText.SuperTip = superToolTip6;
-            this.NameText.TabIndex = 1;
-            this.NameText.ToolTip = "Yalnız hərf yazmağınız tövsiyə olunur.";
-            // 
-            // SurnameText
-            // 
-            this.SurnameText.Location = new System.Drawing.Point(185, 62);
-            this.SurnameText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.SurnameText.Name = "SurnameText";
-            this.SurnameText.Properties.NullValuePrompt = "Soyadı daxil edin";
-            this.SurnameText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.SurnameText.Size = new System.Drawing.Size(237, 22);
-            superToolTip7.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem8.Text = "<color=255,0,0>Müştərinin soyadı</color>";
-            toolTipItem7.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            toolTipItem7.Appearance.Options.UseImage = true;
-            toolTipItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem7.Image")));
-            toolTipItem7.LeftIndent = 6;
-            toolTipItem7.Text = "Bu xanaya dırnaq işarəsi daxil etmək olmaz. Əgər daxil etsəz, müştərinin məlumatl" +
-    "arı <b><color=104,6,6>bazada saxlanılmayacaq</b></color>.";
-            superToolTip7.Items.Add(toolTipTitleItem8);
-            superToolTip7.Items.Add(toolTipItem7);
-            this.SurnameText.SuperTip = superToolTip7;
+            this.SurnameText.SuperTip = superToolTip6;
             this.SurnameText.TabIndex = 0;
             this.SurnameText.ToolTip = "Yalnız hərf yazmağınız tövsiyə olunur.";
             // 
             // RegistrationCodeText
             // 
-            this.RegistrationCodeText.Location = new System.Drawing.Point(185, 30);
-            this.RegistrationCodeText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RegistrationCodeText.Location = new System.Drawing.Point(159, 24);
             this.RegistrationCodeText.Name = "RegistrationCodeText";
             this.RegistrationCodeText.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.RegistrationCodeText.Properties.Appearance.Options.UseFont = true;
             this.RegistrationCodeText.Properties.ReadOnly = true;
-            this.RegistrationCodeText.Size = new System.Drawing.Size(117, 24);
-            superToolTip8.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem9.Text = "<color=255,0,0>Qeydiyyat nömrəsi</color>";
-            toolTipItem8.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            toolTipItem8.Appearance.Options.UseImage = true;
-            toolTipItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem8.Image")));
-            toolTipItem8.LeftIndent = 6;
-            toolTipItem8.Text = "Bu nömrə sistem tərəfindən avtomatik olaraq ardıcıl təyin edilir.";
-            toolTipTitleItem10.LeftIndent = 6;
-            toolTipTitleItem10.Text = "Qeyd: <i>Əgər digər istifadəçilərdə eyni anda bazaya müştəri daxil edərlərsə, bu " +
+            this.RegistrationCodeText.Size = new System.Drawing.Size(100, 20);
+            superToolTip7.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem8.Text = "<color=255,0,0>Qeydiyyat nömrəsi</color>";
+            toolTipItem7.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            toolTipItem7.Appearance.Options.UseImage = true;
+            toolTipItem7.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem7.Image")));
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Bu nömrə sistem tərəfindən avtomatik olaraq ardıcıl təyin edilir.";
+            toolTipTitleItem9.LeftIndent = 6;
+            toolTipTitleItem9.Text = "Qeyd: <i>Əgər digər istifadəçilərdə eyni anda bazaya müştəri daxil edərlərsə, bu " +
     "zaman bu nömrə daxil olma</i><b><color=104,6,6> ardıcıllığına görə dəyişə bilər." +
     "</color></b>";
-            superToolTip8.Items.Add(toolTipTitleItem9);
-            superToolTip8.Items.Add(toolTipItem8);
-            superToolTip8.Items.Add(toolTipSeparatorItem2);
-            superToolTip8.Items.Add(toolTipTitleItem10);
-            this.RegistrationCodeText.SuperTip = superToolTip8;
+            superToolTip7.Items.Add(toolTipTitleItem8);
+            superToolTip7.Items.Add(toolTipItem7);
+            superToolTip7.Items.Add(toolTipSeparatorItem2);
+            superToolTip7.Items.Add(toolTipTitleItem9);
+            this.RegistrationCodeText.SuperTip = superToolTip7;
             this.RegistrationCodeText.TabIndex = 13;
             this.RegistrationCodeText.TabStop = false;
+            this.RegistrationCodeText.EditValueChanged += new System.EventHandler(this.RegistrationCodeText_EditValueChanged);
             // 
             // SexLabel
             // 
-            this.SexLabel.Location = new System.Drawing.Point(24, 161);
-            this.SexLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SexLabel.Location = new System.Drawing.Point(21, 131);
             this.SexLabel.Name = "SexLabel";
-            this.SexLabel.Size = new System.Drawing.Size(27, 16);
+            this.SexLabel.Size = new System.Drawing.Size(22, 13);
             this.SexLabel.TabIndex = 8;
             this.SexLabel.Text = "Cinsi";
             // 
             // PatronymicLabel
             // 
-            this.PatronymicLabel.Location = new System.Drawing.Point(24, 129);
-            this.PatronymicLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PatronymicLabel.Location = new System.Drawing.Point(21, 105);
             this.PatronymicLabel.Name = "PatronymicLabel";
-            this.PatronymicLabel.Size = new System.Drawing.Size(66, 16);
+            this.PatronymicLabel.Size = new System.Drawing.Size(55, 13);
             this.PatronymicLabel.TabIndex = 7;
             this.PatronymicLabel.Text = "Atasının adı";
             // 
             // NameLabel
             // 
-            this.NameLabel.Location = new System.Drawing.Point(24, 97);
-            this.NameLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NameLabel.Location = new System.Drawing.Point(21, 79);
             this.NameLabel.Name = "NameLabel";
-            this.NameLabel.Size = new System.Drawing.Size(18, 16);
+            this.NameLabel.Size = new System.Drawing.Size(15, 13);
             this.NameLabel.TabIndex = 6;
             this.NameLabel.Text = "Adı";
             // 
             // SurnameLabel
             // 
-            this.SurnameLabel.Location = new System.Drawing.Point(24, 65);
-            this.SurnameLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SurnameLabel.Location = new System.Drawing.Point(21, 53);
             this.SurnameLabel.Name = "SurnameLabel";
-            this.SurnameLabel.Size = new System.Drawing.Size(38, 16);
+            this.SurnameLabel.Size = new System.Drawing.Size(32, 13);
             this.SurnameLabel.TabIndex = 5;
             this.SurnameLabel.Text = "Soyadı";
             // 
             // RegistrationLabel
             // 
-            this.RegistrationLabel.Location = new System.Drawing.Point(24, 33);
-            this.RegistrationLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.RegistrationLabel.Location = new System.Drawing.Point(21, 27);
             this.RegistrationLabel.Name = "RegistrationLabel";
-            this.RegistrationLabel.Size = new System.Drawing.Size(105, 16);
+            this.RegistrationLabel.Size = new System.Drawing.Size(90, 13);
             this.RegistrationLabel.TabIndex = 4;
             this.RegistrationLabel.Text = "Qeydiyyat nömrəsi";
             // 
@@ -785,10 +700,9 @@
             // 
             this.BDeletePicture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BDeletePicture.Enabled = false;
-            this.BDeletePicture.Location = new System.Drawing.Point(924, 219);
-            this.BDeletePicture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BDeletePicture.Location = new System.Drawing.Point(792, 178);
             this.BDeletePicture.Name = "BDeletePicture";
-            this.BDeletePicture.Size = new System.Drawing.Size(69, 28);
+            this.BDeletePicture.Size = new System.Drawing.Size(59, 23);
             this.BDeletePicture.TabIndex = 3;
             this.BDeletePicture.TabStop = false;
             this.BDeletePicture.Text = "Sil";
@@ -797,10 +711,9 @@
             // BLoadPicture
             // 
             this.BLoadPicture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BLoadPicture.Location = new System.Drawing.Point(843, 219);
-            this.BLoadPicture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BLoadPicture.Location = new System.Drawing.Point(723, 178);
             this.BLoadPicture.Name = "BLoadPicture";
-            this.BLoadPicture.Size = new System.Drawing.Size(69, 28);
+            this.BLoadPicture.Size = new System.Drawing.Size(59, 23);
             this.BLoadPicture.TabIndex = 2;
             this.BLoadPicture.TabStop = false;
             this.BLoadPicture.Text = "Yüklə";
@@ -809,27 +722,26 @@
             // CustomerPictureBox
             // 
             this.CustomerPictureBox.Cursor = System.Windows.Forms.Cursors.Default;
-            this.CustomerPictureBox.Location = new System.Drawing.Point(843, 32);
-            this.CustomerPictureBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CustomerPictureBox.Location = new System.Drawing.Point(723, 26);
             this.CustomerPictureBox.Name = "CustomerPictureBox";
             this.CustomerPictureBox.Properties.NullText = "Müştərinin şəkli";
             this.CustomerPictureBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
             this.CustomerPictureBox.Properties.ZoomAccelerationFactor = 1D;
-            this.CustomerPictureBox.Size = new System.Drawing.Size(149, 182);
-            superToolTip9.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem11.Text = "<color=255,0,0>Müştərinin şəkili</color>";
-            toolTipItem9.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
-            toolTipItem9.Appearance.Options.UseImage = true;
-            toolTipItem9.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem9.Image")));
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Müştərinin şəkilini göstərmək üçün nəzərdə tutulub.";
-            toolTipTitleItem12.LeftIndent = 6;
-            toolTipTitleItem12.Text = resources.GetString("toolTipTitleItem12.Text");
-            superToolTip9.Items.Add(toolTipTitleItem11);
-            superToolTip9.Items.Add(toolTipItem9);
-            superToolTip9.Items.Add(toolTipSeparatorItem3);
-            superToolTip9.Items.Add(toolTipTitleItem12);
-            this.CustomerPictureBox.SuperTip = superToolTip9;
+            this.CustomerPictureBox.Size = new System.Drawing.Size(128, 148);
+            superToolTip8.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem10.Text = "<color=255,0,0>Müştərinin şəkili</color>";
+            toolTipItem8.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            toolTipItem8.Appearance.Options.UseImage = true;
+            toolTipItem8.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem8.Image")));
+            toolTipItem8.LeftIndent = 6;
+            toolTipItem8.Text = "Müştərinin şəkilini göstərmək üçün nəzərdə tutulub.";
+            toolTipTitleItem11.LeftIndent = 6;
+            toolTipTitleItem11.Text = resources.GetString("toolTipTitleItem11.Text");
+            superToolTip8.Items.Add(toolTipTitleItem10);
+            superToolTip8.Items.Add(toolTipItem8);
+            superToolTip8.Items.Add(toolTipSeparatorItem3);
+            superToolTip8.Items.Add(toolTipTitleItem11);
+            this.CustomerPictureBox.SuperTip = superToolTip8;
             this.CustomerPictureBox.TabIndex = 0;
             this.CustomerPictureBox.DoubleClick += new System.EventHandler(this.CustomerPictureBox_DoubleClick);
             // 
@@ -979,11 +891,10 @@
             // 
             this.PhoneStandaloneBarDockControl.CausesValidation = false;
             this.PhoneStandaloneBarDockControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PhoneStandaloneBarDockControl.Location = new System.Drawing.Point(2, 25);
+            this.PhoneStandaloneBarDockControl.Location = new System.Drawing.Point(2, 20);
             this.PhoneStandaloneBarDockControl.Manager = this.PhoneBarManager;
-            this.PhoneStandaloneBarDockControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhoneStandaloneBarDockControl.Name = "PhoneStandaloneBarDockControl";
-            this.PhoneStandaloneBarDockControl.Size = new System.Drawing.Size(37, 229);
+            this.PhoneStandaloneBarDockControl.Size = new System.Drawing.Size(32, 186);
             this.PhoneStandaloneBarDockControl.Text = "standaloneBarDockControl1";
             // 
             // barDockControlTop
@@ -992,17 +903,15 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.PhoneBarManager;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControlTop.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 740);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 601);
             this.barDockControlBottom.Manager = this.PhoneBarManager;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControlBottom.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControlLeft
             // 
@@ -1010,27 +919,24 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
             this.barDockControlLeft.Manager = this.PhoneBarManager;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 740);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1032, 0);
+            this.barDockControlRight.Location = new System.Drawing.Point(885, 0);
             this.barDockControlRight.Manager = this.PhoneBarManager;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 740);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 601);
             // 
             // MailStandaloneBarDockControl
             // 
             this.MailStandaloneBarDockControl.CausesValidation = false;
             this.MailStandaloneBarDockControl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.MailStandaloneBarDockControl.Location = new System.Drawing.Point(2, 25);
+            this.MailStandaloneBarDockControl.Location = new System.Drawing.Point(2, 20);
             this.MailStandaloneBarDockControl.Manager = this.PhoneBarManager;
-            this.MailStandaloneBarDockControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MailStandaloneBarDockControl.Name = "MailStandaloneBarDockControl";
-            this.MailStandaloneBarDockControl.Size = new System.Drawing.Size(37, 227);
+            this.MailStandaloneBarDockControl.Size = new System.Drawing.Size(32, 184);
             this.MailStandaloneBarDockControl.Text = "standaloneBarDockControl1";
             // 
             // WorkStandaloneBarDockControl
@@ -1039,9 +945,8 @@
             this.WorkStandaloneBarDockControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.WorkStandaloneBarDockControl.Location = new System.Drawing.Point(0, 0);
             this.WorkStandaloneBarDockControl.Manager = this.PhoneBarManager;
-            this.WorkStandaloneBarDockControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkStandaloneBarDockControl.Name = "WorkStandaloneBarDockControl";
-            this.WorkStandaloneBarDockControl.Size = new System.Drawing.Size(37, 298);
+            this.WorkStandaloneBarDockControl.Size = new System.Drawing.Size(32, 246);
             this.WorkStandaloneBarDockControl.Text = "standaloneBarDockControl2";
             // 
             // CardStandaloneBarDockControl
@@ -1050,9 +955,8 @@
             this.CardStandaloneBarDockControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.CardStandaloneBarDockControl.Location = new System.Drawing.Point(0, 0);
             this.CardStandaloneBarDockControl.Manager = this.PhoneBarManager;
-            this.CardStandaloneBarDockControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CardStandaloneBarDockControl.Name = "CardStandaloneBarDockControl";
-            this.CardStandaloneBarDockControl.Size = new System.Drawing.Size(37, 298);
+            this.CardStandaloneBarDockControl.Size = new System.Drawing.Size(32, 242);
             this.CardStandaloneBarDockControl.Text = "standaloneBarDockControl1";
             // 
             // ExportCardBarButton
@@ -1112,10 +1016,9 @@
             this.PanelOption.Controls.Add(this.BOK);
             this.PanelOption.Controls.Add(this.BCancel);
             this.PanelOption.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelOption.Location = new System.Drawing.Point(0, 678);
-            this.PanelOption.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PanelOption.Location = new System.Drawing.Point(0, 551);
             this.PanelOption.Name = "PanelOption";
-            this.PanelOption.Size = new System.Drawing.Size(1032, 62);
+            this.PanelOption.Size = new System.Drawing.Size(885, 50);
             this.PanelOption.TabIndex = 48;
             // 
             // labelControl15
@@ -1123,10 +1026,9 @@
             this.labelControl15.AllowHtmlString = true;
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Italic);
             this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(14, 23);
-            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl15.Location = new System.Drawing.Point(12, 19);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(222, 17);
+            this.labelControl15.Size = new System.Drawing.Size(172, 13);
             this.labelControl15.TabIndex = 135;
             this.labelControl15.Text = "<color=104,0,0>*</color> - lu xanalar mütləq doldurulmalıdır";
             // 
@@ -1152,10 +1054,9 @@
             office2010Blue1.TextColor = System.Drawing.Color.White;
             this.BOK.ColorTable = office2010Blue1;
             this.BOK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BOK.Location = new System.Drawing.Point(834, 16);
-            this.BOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BOK.Location = new System.Drawing.Point(715, 13);
             this.BOK.Name = "BOK";
-            this.BOK.Size = new System.Drawing.Size(87, 31);
+            this.BOK.Size = new System.Drawing.Size(75, 25);
             this.BOK.TabIndex = 4;
             this.BOK.TabStop = false;
             this.BOK.Text = "Yadda saxla";
@@ -1186,10 +1087,9 @@
             this.BCancel.ColorTable = office2010Red1;
             this.BCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BCancel.Location = new System.Drawing.Point(929, 16);
-            this.BCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BCancel.Location = new System.Drawing.Point(796, 13);
             this.BCancel.Name = "BCancel";
-            this.BCancel.Size = new System.Drawing.Size(87, 31);
+            this.BCancel.Size = new System.Drawing.Size(75, 25);
             this.BCancel.TabIndex = 5;
             this.BCancel.TabStop = false;
             this.BCancel.Text = "İmtina et";
@@ -1203,10 +1103,9 @@
             this.OtherGroupControl.AppearanceCaption.Options.UseFont = true;
             this.OtherGroupControl.AppearanceCaption.Options.UseForeColor = true;
             this.OtherGroupControl.Controls.Add(this.OtherInfoTabControl);
-            this.OtherGroupControl.Location = new System.Drawing.Point(14, 311);
-            this.OtherGroupControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OtherGroupControl.Location = new System.Drawing.Point(12, 253);
             this.OtherGroupControl.Name = "OtherGroupControl";
-            this.OtherGroupControl.Size = new System.Drawing.Size(1002, 359);
+            this.OtherGroupControl.Size = new System.Drawing.Size(859, 292);
             this.OtherGroupControl.TabIndex = 100;
             this.OtherGroupControl.Text = "Digər məlumatlar";
             // 
@@ -1216,12 +1115,11 @@
             this.OtherInfoTabControl.AppearancePage.HeaderActive.Options.UseFont = true;
             this.OtherInfoTabControl.Cursor = System.Windows.Forms.Cursors.Hand;
             this.OtherInfoTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.OtherInfoTabControl.Location = new System.Drawing.Point(2, 25);
-            this.OtherInfoTabControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OtherInfoTabControl.Location = new System.Drawing.Point(2, 20);
             this.OtherInfoTabControl.MultiLine = DevExpress.Utils.DefaultBoolean.True;
             this.OtherInfoTabControl.Name = "OtherInfoTabControl";
             this.OtherInfoTabControl.SelectedTabPage = this.IDCardTab;
-            this.OtherInfoTabControl.Size = new System.Drawing.Size(998, 332);
+            this.OtherInfoTabControl.Size = new System.Drawing.Size(855, 270);
             this.OtherInfoTabControl.TabIndex = 1;
             this.OtherInfoTabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.IDCardTab,
@@ -1234,20 +1132,17 @@
             // 
             this.IDCardTab.Controls.Add(this.CardsGridControl);
             this.IDCardTab.Controls.Add(this.CardStandaloneBarDockControl);
-            this.IDCardTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.IDCardTab.Name = "IDCardTab";
-            this.IDCardTab.Size = new System.Drawing.Size(991, 298);
+            this.IDCardTab.Size = new System.Drawing.Size(849, 242);
             this.IDCardTab.Text = "Şəxsiyyəti təsdiq edən sənədlər";
             // 
             // CardsGridControl
             // 
             this.CardsGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CardsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.CardsGridControl.Location = new System.Drawing.Point(37, 0);
+            this.CardsGridControl.Location = new System.Drawing.Point(32, 0);
             this.CardsGridControl.MainView = this.CardsGridView;
-            this.CardsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CardsGridControl.Name = "CardsGridControl";
-            this.CardsGridControl.Size = new System.Drawing.Size(954, 298);
+            this.CardsGridControl.Size = new System.Drawing.Size(817, 242);
             this.CardsGridControl.TabIndex = 92;
             this.CardsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CardsGridView});
@@ -1380,9 +1275,8 @@
             this.ContactTab.Controls.Add(this.MailGroupControl);
             this.ContactTab.Controls.Add(this.PhoneDescriptionLabel);
             this.ContactTab.Controls.Add(this.PhoneGroupControl);
-            this.ContactTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ContactTab.Name = "ContactTab";
-            this.ContactTab.Size = new System.Drawing.Size(991, 298);
+            this.ContactTab.Size = new System.Drawing.Size(849, 246);
             this.ContactTab.Text = "Əlaqə vasitələri";
             // 
             // MailDescriptionLabel
@@ -1391,10 +1285,9 @@
             this.MailDescriptionLabel.Appearance.ForeColor = System.Drawing.Color.Red;
             this.MailDescriptionLabel.Appearance.Options.UseFont = true;
             this.MailDescriptionLabel.Appearance.Options.UseForeColor = true;
-            this.MailDescriptionLabel.Location = new System.Drawing.Point(559, 277);
-            this.MailDescriptionLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MailDescriptionLabel.Location = new System.Drawing.Point(479, 225);
             this.MailDescriptionLabel.Name = "MailDescriptionLabel";
-            this.MailDescriptionLabel.Size = new System.Drawing.Size(278, 17);
+            this.MailDescriptionLabel.Size = new System.Drawing.Size(217, 13);
             this.MailDescriptionLabel.TabIndex = 6;
             this.MailDescriptionLabel.Text = "Mail göndərmək üçün elektron ünvanları seçin";
             // 
@@ -1402,22 +1295,19 @@
             // 
             this.MailGroupControl.Controls.Add(this.MailGridControl);
             this.MailGroupControl.Controls.Add(this.MailStandaloneBarDockControl);
-            this.MailGroupControl.Location = new System.Drawing.Point(519, 14);
-            this.MailGroupControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MailGroupControl.Location = new System.Drawing.Point(445, 11);
             this.MailGroupControl.Name = "MailGroupControl";
-            this.MailGroupControl.Size = new System.Drawing.Size(465, 254);
+            this.MailGroupControl.Size = new System.Drawing.Size(399, 206);
             this.MailGroupControl.TabIndex = 5;
             this.MailGroupControl.Text = "Elektron ünvanlar";
             // 
             // MailGridControl
             // 
             this.MailGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MailGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MailGridControl.Location = new System.Drawing.Point(39, 25);
+            this.MailGridControl.Location = new System.Drawing.Point(34, 20);
             this.MailGridControl.MainView = this.MailGridView;
-            this.MailGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MailGridControl.Name = "MailGridControl";
-            this.MailGridControl.Size = new System.Drawing.Size(424, 227);
+            this.MailGridControl.Size = new System.Drawing.Size(363, 184);
             this.MailGridControl.TabIndex = 58;
             this.MailGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MailGridView});
@@ -1519,10 +1409,9 @@
             this.PhoneDescriptionLabel.Appearance.ForeColor = System.Drawing.Color.Red;
             this.PhoneDescriptionLabel.Appearance.Options.UseFont = true;
             this.PhoneDescriptionLabel.Appearance.Options.UseForeColor = true;
-            this.PhoneDescriptionLabel.Location = new System.Drawing.Point(50, 277);
-            this.PhoneDescriptionLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PhoneDescriptionLabel.Location = new System.Drawing.Point(43, 225);
             this.PhoneDescriptionLabel.Name = "PhoneDescriptionLabel";
-            this.PhoneDescriptionLabel.Size = new System.Drawing.Size(231, 17);
+            this.PhoneDescriptionLabel.Size = new System.Drawing.Size(176, 13);
             this.PhoneDescriptionLabel.TabIndex = 4;
             this.PhoneDescriptionLabel.Text = "Sms göndərmək üçün nömrələri seçin";
             // 
@@ -1530,22 +1419,19 @@
             // 
             this.PhoneGroupControl.Controls.Add(this.PhoneGridControl);
             this.PhoneGroupControl.Controls.Add(this.PhoneStandaloneBarDockControl);
-            this.PhoneGroupControl.Location = new System.Drawing.Point(10, 14);
-            this.PhoneGroupControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PhoneGroupControl.Location = new System.Drawing.Point(9, 11);
             this.PhoneGroupControl.Name = "PhoneGroupControl";
-            this.PhoneGroupControl.Size = new System.Drawing.Size(465, 256);
+            this.PhoneGroupControl.Size = new System.Drawing.Size(399, 208);
             this.PhoneGroupControl.TabIndex = 3;
             this.PhoneGroupControl.Text = "Telefon nömrələri";
             // 
             // PhoneGridControl
             // 
             this.PhoneGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PhoneGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.PhoneGridControl.Location = new System.Drawing.Point(39, 25);
+            this.PhoneGridControl.Location = new System.Drawing.Point(34, 20);
             this.PhoneGridControl.MainView = this.PhoneGridView;
-            this.PhoneGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PhoneGridControl.Name = "PhoneGridControl";
-            this.PhoneGridControl.Size = new System.Drawing.Size(424, 229);
+            this.PhoneGridControl.Size = new System.Drawing.Size(363, 186);
             this.PhoneGridControl.TabIndex = 59;
             this.PhoneGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.PhoneGridView});
@@ -1658,20 +1544,17 @@
             // 
             this.WorkTab.Controls.Add(this.WorkGridControl);
             this.WorkTab.Controls.Add(this.WorkStandaloneBarDockControl);
-            this.WorkTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkTab.Name = "WorkTab";
-            this.WorkTab.Size = new System.Drawing.Size(991, 298);
+            this.WorkTab.Size = new System.Drawing.Size(849, 246);
             this.WorkTab.Text = "İş yeri";
             // 
             // WorkGridControl
             // 
             this.WorkGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.WorkGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.WorkGridControl.Location = new System.Drawing.Point(37, 0);
+            this.WorkGridControl.Location = new System.Drawing.Point(32, 0);
             this.WorkGridControl.MainView = this.WorkGridView;
-            this.WorkGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkGridControl.Name = "WorkGridControl";
-            this.WorkGridControl.Size = new System.Drawing.Size(954, 298);
+            this.WorkGridControl.Size = new System.Drawing.Size(817, 246);
             this.WorkGridControl.TabIndex = 4;
             this.WorkGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.WorkGridView});
@@ -1863,17 +1746,15 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl1.Location = new System.Drawing.Point(0, 0);
             this.barDockControl1.Manager = this.MailBarManager;
-            this.barDockControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl1.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl1.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(0, 740);
+            this.barDockControl2.Location = new System.Drawing.Point(0, 601);
             this.barDockControl2.Manager = this.MailBarManager;
-            this.barDockControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl2.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl2.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl3
             // 
@@ -1881,17 +1762,15 @@
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl3.Location = new System.Drawing.Point(0, 0);
             this.barDockControl3.Manager = this.MailBarManager;
-            this.barDockControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(1032, 0);
+            this.barDockControl4.Location = new System.Drawing.Point(885, 0);
             this.barDockControl4.Manager = this.MailBarManager;
-            this.barDockControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 601);
             // 
             // PhonePopupMenu
             // 
@@ -1971,7 +1850,8 @@
             // 
             this.DeleteWorkBarButton.Caption = "Sil";
             this.DeleteWorkBarButton.Id = 2;
-            this.DeleteWorkBarButton.ImageOptions.Image = global::CRS.Properties.Resources.minus_16;
+            this.DeleteWorkBarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DeleteWorkBarButton.ImageOptions.Image")));
+            this.DeleteWorkBarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DeleteWorkBarButton.ImageOptions.LargeImage")));
             this.DeleteWorkBarButton.Name = "DeleteWorkBarButton";
             this.DeleteWorkBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteWorkBarButton_ItemClick);
             // 
@@ -1990,17 +1870,15 @@
             this.barDockControl5.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl5.Location = new System.Drawing.Point(0, 0);
             this.barDockControl5.Manager = this.WorkBarManager;
-            this.barDockControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl5.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl5.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl6
             // 
             this.barDockControl6.CausesValidation = false;
             this.barDockControl6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl6.Location = new System.Drawing.Point(0, 740);
+            this.barDockControl6.Location = new System.Drawing.Point(0, 601);
             this.barDockControl6.Manager = this.WorkBarManager;
-            this.barDockControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl6.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl6.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl7
             // 
@@ -2008,17 +1886,15 @@
             this.barDockControl7.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl7.Location = new System.Drawing.Point(0, 0);
             this.barDockControl7.Manager = this.WorkBarManager;
-            this.barDockControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl7.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl7.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControl8
             // 
             this.barDockControl8.CausesValidation = false;
             this.barDockControl8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl8.Location = new System.Drawing.Point(1032, 0);
+            this.barDockControl8.Location = new System.Drawing.Point(885, 0);
             this.barDockControl8.Manager = this.WorkBarManager;
-            this.barDockControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl8.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl8.Size = new System.Drawing.Size(0, 601);
             // 
             // WorkPopupMenu
             // 
@@ -2093,7 +1969,8 @@
             // 
             this.DeleteCardBarButton.Caption = "Sil";
             this.DeleteCardBarButton.Id = 2;
-            this.DeleteCardBarButton.ImageOptions.Image = global::CRS.Properties.Resources.minus_16;
+            this.DeleteCardBarButton.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("DeleteCardBarButton.ImageOptions.Image")));
+            this.DeleteCardBarButton.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("DeleteCardBarButton.ImageOptions.LargeImage")));
             this.DeleteCardBarButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Delete));
             this.DeleteCardBarButton.Name = "DeleteCardBarButton";
             this.DeleteCardBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
@@ -2116,17 +1993,15 @@
             this.barDockControl9.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControl9.Location = new System.Drawing.Point(0, 0);
             this.barDockControl9.Manager = this.CardBarManager;
-            this.barDockControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl9.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl9.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl10
             // 
             this.barDockControl10.CausesValidation = false;
             this.barDockControl10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl10.Location = new System.Drawing.Point(0, 740);
+            this.barDockControl10.Location = new System.Drawing.Point(0, 601);
             this.barDockControl10.Manager = this.CardBarManager;
-            this.barDockControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl10.Size = new System.Drawing.Size(1032, 0);
+            this.barDockControl10.Size = new System.Drawing.Size(885, 0);
             // 
             // barDockControl11
             // 
@@ -2134,17 +2009,15 @@
             this.barDockControl11.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl11.Location = new System.Drawing.Point(0, 0);
             this.barDockControl11.Manager = this.CardBarManager;
-            this.barDockControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl11.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl11.Size = new System.Drawing.Size(0, 601);
             // 
             // barDockControl12
             // 
             this.barDockControl12.CausesValidation = false;
             this.barDockControl12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl12.Location = new System.Drawing.Point(1032, 0);
+            this.barDockControl12.Location = new System.Drawing.Point(885, 0);
             this.barDockControl12.Manager = this.CardBarManager;
-            this.barDockControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControl12.Size = new System.Drawing.Size(0, 740);
+            this.barDockControl12.Size = new System.Drawing.Size(0, 601);
             // 
             // CardPopupMenu
             // 
@@ -2176,13 +2049,13 @@
             this.lookUpEdit1.Size = new System.Drawing.Size(534, 20);
             this.lookUpEdit1.TabIndex = 5;
             // 
-            // FCustomerAddEdit
+            // L2FCustomerAddEdit
             // 
             this.AcceptButton = this.BOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BCancel;
-            this.ClientSize = new System.Drawing.Size(1032, 740);
+            this.ClientSize = new System.Drawing.Size(885, 601);
             this.Controls.Add(this.OtherGroupControl);
             this.Controls.Add(this.PanelOption);
             this.Controls.Add(this.PersonalDetailsGroupBox);
@@ -2204,12 +2077,11 @@
             this.Controls.Add(this.barDockControl9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1050, 787);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(1050, 787);
-            this.Name = "FCustomerAddEdit";
+            this.MinimumSize = new System.Drawing.Size(1048, 726);
+            this.Name = "L2FCustomerAddEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fiziki şəxsin əlavə/düzəliş edilməsi";
@@ -2218,7 +2090,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PersonalDetailsGroupBox)).EndInit();
             this.PersonalDetailsGroupBox.ResumeLayout(false);
             this.PersonalDetailsGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountText.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.VoenText.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SexLookUp.Properties)).EndInit();
@@ -2412,8 +2283,5 @@
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.LabelControl VoenLengthLabel;
         private DevExpress.XtraGrid.Columns.GridColumn CustomerPhone_KindShipRate;
-        private DevExpress.XtraEditors.LabelControl AccountLengthLabel;
-        private DevExpress.XtraEditors.TextEdit AccountText;
-        private DevExpress.XtraEditors.LabelControl AccountLabel;
     }
 }

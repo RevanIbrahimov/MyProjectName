@@ -1,0 +1,105 @@
+
+Log Entry : 16:13:01 16 noyabr 2021, çərşənbə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ExecuteFourQuery
+  
+   ShowMessage: Müqavilə bazaya daxil edilmədi.
+   Exception Message: ORA-02091: transaction rolled back
+ORA-02291: integrity constraint (CRS_USER.FK_CONS_C_SELLER_TYPE_ID) violated - parent key not found
+   SQL Text      :  sql_text1 = INSERT INTO CRS_USER.CONTRACTS(ID,
+                                                                                  CODE,
+                                                                                  CUSTOMER_ID,
+                                                                                  CREDIT_TYPE_ID,
+                                                                                  START_DATE,
+                                                                                  END_DATE,
+                                                                                  GRACE_PERIOD,
+                                                                                  AMOUNT,
+                                                                                  FIFD,
+                                                                                  COMMISSION,
+                                                                                  CURRENCY_ID,   
+                                                                                  CUSTOMER_CARDS_ID,
+                                                                                  MONTHLY_AMOUNT,
+                                                                                  CHECK_PERIOD,
+                                                                                  PAYMENT_TYPE,
+                                                                                  CHECK_INTEREST,  
+                                                                                  CURRENCY_RATE,
+                                                                                  CUSTOMER_TYPE_ID,
+                                                                                  PARENT_ID,
+                                                                                  APPRAISER_ID,
+                                                                                  LOAN_OFFICER_ID,
+                                                                                  CONTRACT_ACCOUNT,
+                                                                                  CUSTOMER_CONTRACT_NUMBER,
+                                                                                  COMMISSION_ACCOUNT,
+                                                                                  AMOUNT_ACCOUNT,
+                                                                                  INSERT_USER)
+                                                    VALUES(394,
+                                                            '00163/21',
+                                                            279,
+                                                            1,
+                                                            TO_DATE('16.11.2021','DD/MM/YYYY'),
+                                                            TO_DATE('16.11.2024','DD/MM/YYYY'),
+                                                            0,
+                                                            100,                  
+                                                            28.00,
+                                                            0,
+                                                            1,                                                                                                                      
+                                                            262,
+                                                            4.14,
+                                                            0,
+                                                            0,
+                                                            -1,                                                         
+                                                            0,                                                            
+                                                            1,
+                                                            NULL,
+                                                            1,
+                                                            1,
+                                                            '100168001',
+                                                            1,
+                                                            '15010100000000',
+                                                            '10010100000000',
+                                                            11),
+ sql_text2 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21110,
+                                                                         'Ssuda hesabı',
+                                                                         21110 || 100168001,
+                                                                            'Ssuda hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00163/21'
+                                                                         || ')'),
+ sql_text3 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21112,
+                                                                         'Faiz hesabı',
+                                                                         21112 || 100168001,
+                                                                            'Faiz hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00163/21'
+                                                                         || ')'),
+ sql_text4 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         41010,
+                                                                         'Cari hesab',
+                                                                         41010 || 100168001,
+                                                                            'Cari hesab - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00163/21'
+                                                                         || ')')
+-------------------------------------------------

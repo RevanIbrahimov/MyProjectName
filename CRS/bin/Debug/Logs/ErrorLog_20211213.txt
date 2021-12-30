@@ -1,0 +1,218 @@
+
+Log Entry : 00:09:01 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ExecuteQuery/FCarOrObjectContractAddEdit/InsertContract
+  
+   ShowMessage: Müqavilə bazaya daxil edilmədi.
+   Exception Message: ORA-02291: integrity constraint (CRS_USER.FK_CONS_C_CREDIT_NAME_ID) violated - parent key not found
+   SQL Text      :  INSERT INTO CRS_USER.CONTRACTS(
+                                                                                ID,
+                                                                                CODE,
+                                                                                CUSTOMER_ID,
+                                                                                SELLER_ID,
+                                                                                CREDIT_TYPE_ID,
+                                                                                START_DATE,
+                                                                                END_DATE,
+                                                                                GRACE_PERIOD,
+                                                                                AMOUNT,
+                                                                                CURRENCY_ID,
+                                                                                CUSTOMER_ACCOUNT,
+                                                                                LEASING_ACCOUNT,
+                                                                                LEASING_INTEREST_ACCOUNT,
+                                                                                CHECK_END_DATE,
+                                                                                CUSTOMER_CARDS_ID,
+                                                                                MONTHLY_AMOUNT,
+                                                                                CHECK_PERIOD,
+                                                                                PAYMENT_TYPE,
+                                                                                CHECK_INTEREST,
+                                                                                SELLER_ACCOUNT,
+                                                                                LIQUID_TYPE,
+                                                                                CURRENCY_RATE,
+                                                                                SELLER_TYPE_ID,
+                                                                                CUSTOMER_TYPE_ID,
+                                                                                IS_EXPENSES
+                                                                            )
+                                                VALUES(
+                                                            409,
+                                                            '163/L',
+                                                            258,
+                                                            224,
+                                                            1,
+                                                            TO_DATE('13.12.2021','DD/MM/YYYY'),
+                                                            TO_DATE('13.12.2024','DD/MM/YYYY'),
+                                                            0,
+                                                            2000,                  
+                                                            1,
+                                                            '33163M0155',
+                                                            '11163M0155',
+                                                            '22163M0155',
+                                                            0,
+                                                            250,
+                                                            82.73,
+                                                            0,
+                                                            0,
+                                                            -1,
+                                                            '44163M224',
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            1,
+                                                            0
+                                                        )
+-------------------------------------------------
+
+Log Entry : 00:32:32 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:32:35 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:32:59 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:33:02 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:33:16 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:33:18 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:33:22 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------
+
+Log Entry : 00:33:24 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID/FChangeCode / FChangeCode_Load
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------
+
+Log Entry : 00:42:23 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------
+
+Log Entry : 00:42:25 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID/FChangeCode / FChangeCode_Load
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT TO_NUMBER(NVL(MAX(C.CODE),'000')) FROM CRS_USER.CONTRACTS C,CRS_USER.CREDIT_TYPE CT WHERE C.CREDIT_TYPE_ID = CT.ID AND CT.NAME_ID = 7
+-------------------------------------------------
+
+Log Entry : 00:48:43 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:48:46 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR(C.CODE,1,5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:50:16 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetMax
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-01722: invalid number
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR (C.CODE, 1, 5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------
+
+Log Entry : 00:50:18 13 dekabr 2021, bazar ertəsi
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetMax
+  
+   ShowMessage: Ən böyük ədəd tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT NVL(MAX(TO_NUMBER(SUBSTR (C.CODE, 1, 5))),0) FROM CRS_USER.CONTRACTS C WHERE C.IS_USED_FOR_CODE = 1
+-------------------------------------------------

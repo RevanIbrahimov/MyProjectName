@@ -20,6 +20,10 @@ namespace CRS.Forms.Customer
 {
     public partial class FCustomers : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        public delegate void DoEvent(string a);
+        public string TransactionName;
+        public event DoEvent RefreshDataGridView;
+
         public FCustomers()
         {
             InitializeComponent();
@@ -84,11 +88,11 @@ namespace CRS.Forms.Customer
                 topindex = CustomersGridView.TopRowIndex;
             }
 
-            FCustomerAddEdit fcae = new FCustomerAddEdit();
+            L2FCustomerAddEdit fcae = new L2FCustomerAddEdit();
             fcae.TransactionName = transaction;
             fcae.CustomerID = customer_id;
             fcae.CustomerFullName = fullname;
-            fcae.RefreshCustomersDataGridView += new FCustomerAddEdit.DoEvent(RefreshCustomers);
+            fcae.RefreshCustomersDataGridView += new L2FCustomerAddEdit.DoEvent(RefreshCustomers);
             fcae.ShowDialog();
 
             CustomersGridView.FocusedRowHandle = old_row_num;
@@ -240,13 +244,13 @@ namespace CRS.Forms.Customer
 
         private void LoadFContractAddEdit(string transaction, string contract_id, string customer_id, string seller_id)
         {
-            Contracts.FContractAddEdit fcae = new Contracts.FContractAddEdit();
+            Contracts.FCarOrObjectContractAddEdit fcae = new Contracts.FCarOrObjectContractAddEdit();
             fcae.TransactionName = transaction;
             fcae.ContractID = contract_id;
             fcae.CustomerID = customer_id;
             fcae.Commit = commit;
             fcae.SellerID = seller_id;
-            fcae.RefreshContractsDataGridView += new Contracts.FContractAddEdit.DoEvent(RefreshContracts);
+            fcae.RefreshContractsDataGridView += new Contracts.FCarOrObjectContractAddEdit.DoEvent(RefreshContracts);
             fcae.ShowDialog();
         }
 
@@ -409,10 +413,10 @@ namespace CRS.Forms.Customer
             topindex = CustomersGridView.TopRowIndex;
             old_row_num = CustomersGridView.FocusedRowHandle;
             GlobalProcedures.SplashScreenShow(this, typeof(WaitForms.FContractShowWait));
-            Contracts.FContractAddEdit fcae = new Contracts.FContractAddEdit();
+            Contracts.FCarOrObjectContractAddEdit fcae = new Contracts.FCarOrObjectContractAddEdit();
             fcae.TransactionName = transaction;
             fcae.CustomerCode = customer_code;
-            fcae.RefreshContractsDataGridView += new Contracts.FContractAddEdit.DoEvent(RefreshContract);
+            fcae.RefreshContractsDataGridView += new Contracts.FCarOrObjectContractAddEdit.DoEvent(RefreshContract);
             GlobalProcedures.SplashScreenClose();
             fcae.ShowDialog();
             CustomersGridView.TopRowIndex = topindex;

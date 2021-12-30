@@ -1,0 +1,38 @@
+
+Log Entry : 18:35:51 24 noyabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FDictionaries/LoadAppointmentDataGridView
+  
+   ShowMessage: Kassa təyinatlarının siyahısı yüklənmədi.
+   Exception Message: ORA-00904: "CA"."OPERATION_TYPE_ID": invalid identifier
+   SQL Text      :  SELECT CA.ID,
+                               CA.NAME,
+                               OT.TYPE_AZ OPERATION_TYPE_NAME,
+                               CA.ORDER_ID,
+                               CA.NOTE,
+                               CA.USED_USER_ID
+                          FROM CRS_USER.CASH_APPOINTMENTS CA, CRS_USER.OPERATION_TYPES OT
+                         WHERE CA.OPERATION_TYPE_ID = OT.ID
+                        ORDER BY CA.NAME
+-------------------------------------------------
+
+Log Entry : 18:38:29 24 noyabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FDictionaries/LoadAppointmentDataGridView
+  
+   ShowMessage: Kassa təyinatlarının siyahısı yüklənmədi.
+   Exception Message: ORA-00904: "CA"."OPERATION_TYPE_ID": invalid identifier
+   SQL Text      :  SELECT CA.ID,
+                               CA.NAME,
+                               OT.TYPE_AZ OPERATION_TYPE_NAME,
+                               CA.ORDER_ID,
+                               CA.NOTE,
+                               CA.USED_USER_ID
+                          FROM CRS_USER.CASH_APPOINTMENTS CA, CRS_USER.OPERATION_TYPES OT
+                         WHERE CA.OPERATION_TYPE_ID = OT.ID
+                        ORDER BY CA.NAME
+-------------------------------------------------

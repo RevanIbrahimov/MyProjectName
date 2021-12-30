@@ -17,13 +17,14 @@ namespace CRS.Forms.Dictionaries
         {
             InitializeComponent();
         }
-        public string TransactionName, AppointmentID;
+        public string TransactionName, AppointmentID , ID;
         bool CurrentStatus = false, AppointmentUsed = false;
 
         int AppointmentUsedUserID = -1, operation_type_id = 0, appointment_type_id = 0;
 
         public delegate void DoEvent();
         public event DoEvent RefreshAppointmentsDataGridView;
+        public event DoEvent RefreshDataGridView;
 
         private void FAppointmentAddEdit_Load(object sender, EventArgs e)
         {

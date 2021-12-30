@@ -17,9 +17,9 @@ using CRS.Class;
 
 namespace CRS.Forms.Customer
 {
-    public partial class FCustomerAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class L2FCustomerAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public FCustomerAddEdit()
+        public L2FCustomerAddEdit()
         {
             InitializeComponent();
         }
@@ -63,16 +63,6 @@ namespace CRS.Forms.Customer
 
             GlobalProcedures.FillLookUpEdit(SexLookUp, "SEX", "ID", "NAME", "1 = 1 ORDER BY ID");
             GlobalProcedures.FillLookUpEdit(BirthplaceLookUp, "BIRTHPLACE", "ID", "NAME", "1 = 1 ORDER BY ORDER_ID");
-
-            switch (GlobalVariables.SelectedLanguage)
-            {
-                case "RU":
-                    CustomerPictureBox.Properties.NullText = "Фотография клиентов";
-                    break;
-                case "EN":
-                    CustomerPictureBox.Properties.NullText = "Customer picture";
-                    break;
-            }
 
             if (TransactionName == "EDIT")
             {
@@ -307,11 +297,11 @@ namespace CRS.Forms.Customer
             for (int i = 0; i < rows.Count; i++)
             {
                 DataRow row = rows[i] as DataRow;
-                listID += row["ID"] + ",";
+                listID += row["ID"] + ",";                
             }
 
             listID = listID.TrimEnd(',');
-            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER_TEMP.PHONES_TEMP SET IS_SEND_SMS = 1 WHERE IS_CHANGE <> 2 AND OWNER_TYPE = 'C' AND ID IN ({listID}) AND USED_USER_ID = {GlobalVariables.V_UserID}",
+            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER_TEMP.PHONES_TEMP SET IS_SEND_SMS = 1 WHERE ID IN ({listID}) AND OWNER_TYPE = 'C' AND USED_USER_ID = {GlobalVariables.V_UserID}",
                                                 "Telefon nömrələrinə sms göndərmək üçün olan seçimlər yadda saxlanmadı.",
                                                 this.Name + "/UpdatePhoneSendSms");
         }
@@ -332,7 +322,7 @@ namespace CRS.Forms.Customer
             if (rows.Count == 0)
                 return;
 
-            string listID = null;
+            string listID = null;   
             for (int i = 0; i < rows.Count; i++)
             {
                 DataRow row = rows[i] as DataRow;
@@ -340,8 +330,8 @@ namespace CRS.Forms.Customer
             }
 
             listID = listID.TrimEnd(',');
-            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER_TEMP.MAILS_TEMP SET IS_SEND = 1 WHERE IS_CHANGE <> 2 AND OWNER_TYPE = 'C' AND ID IN ({listID}) AND USED_USER_ID = {GlobalVariables.V_UserID}",
-                                                    "Telefon nömrələrinə sms göndərmək üçün olan seçimlər yadda saxlanmadı.",
+            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER_TEMP.MAILS_TEMP SET IS_SEND = 1 WHERE ID IN ({listID}) AND USED_USER_ID = {GlobalVariables.V_UserID}",
+                                                    "Mail göndərmək üçün olan seçimlər yadda saxlanmadı.",
                                               this.Name + "/UpdateMailSend");
         }
 
@@ -674,17 +664,6 @@ namespace CRS.Forms.Customer
             else
                 b = true;
 
-            if (AccountText.Text.Length > 0 && AccountText.Text.Length != 28)
-            {
-                AccountText.BackColor = Color.Red;
-                GlobalProcedures.ShowErrorMessage("Hesab <b><color=104,0,0>28</color></b> simvol olmalıdır.");
-                AccountText.Focus();
-                AccountText.BackColor = GlobalFunctions.ElementColor(); ;
-                return false;
-            }
-            else
-                b = true;
-
             if (CardsGridView.RowCount == 0)
             {
                 OtherInfoTabControl.SelectedTabPageIndex = 0;
@@ -751,9 +730,10 @@ namespace CRS.Forms.Customer
             if (changecode)
                 code = RegistrationCodeText.Text;
             else
-                code = max_code_number.ToString().PadLeft(4, '0').Trim();
+                code = max_code_number.ToString().PadLeft(5, '0').Trim();
 
-            sql = $@"INSERT INTO CRS_USER.CUSTOMERS(ID,
+            sql = $@"INSERT INTO CRS_USER.CUSTOMERS(
+                                                        ID,
                                                         CODE,
                                                         SURNAME, 
                                                         NAME, 
@@ -762,9 +742,10 @@ namespace CRS.Forms.Customer
                                                         NOTE,
                                                         BIRTHDAY,
                                                         BIRTHPLACE_ID,
-                                                        VOEN,
-                                                        ACCOUNT_NUMBER)
-                        VALUES({CustomerID},
+                                                        VOEN
+                                                    )
+                        VALUES(
+                                {CustomerID},
                                 '{code}',
                                 '{GlobalFunctions.FirstCharToUpper(SurnameText.Text.Trim())}',
                                 '{GlobalFunctions.FirstCharToUpper(NameText.Text.Trim())}',
@@ -773,8 +754,7 @@ namespace CRS.Forms.Customer
                                 '{NoteText.Text.Trim()}',
                                 TO_DATE('{BirthdayDate.Text}','DD/MM/YYYY'),
                                 {birthplace_id},
-                                '{VoenText.Text}',
-                                '{AccountText.Text.Trim()}')";
+                                '{VoenText.Text}')";
 
             GlobalFunctions.ExecuteQuery(sql, "Müştərinin məlumatları sistemə daxil edilmədi.", this.Name + "/InsertCustomer");
         }
@@ -794,8 +774,7 @@ namespace CRS.Forms.Customer
                                                 NOTE = '{NoteText.Text.Trim()}',
                                                 BIRTHDAY = TO_DATE('{BirthdayDate.Text}','DD/MM/YYYY'),
                                                 BIRTHPLACE_ID = {birthplace_id},
-                                                VOEN = '{VoenText.Text}',
-                                                ACCOUNT_NUMBER = '{AccountText.Text.Trim()}'
+                                                VOEN = '{VoenText.Text}'
                                 WHERE ID = {CustomerID}";
             GlobalProcedures.ExecuteQuery(sql, "Müştərinin məlumatları sistemdə dəyişdirilmədi.", this.Name + "/UpdateCustomer");
         }
@@ -853,8 +832,7 @@ namespace CRS.Forms.Customer
                        C.NOTE,
                        CI.IMAGE,
                        C.USED_USER_ID,
-                       C.VOEN,
-                       C.ACCOUNT_NUMBER
+                       C.VOEN
                   FROM CRS_USER.CUSTOMERS C,
                        CRS_USER.BIRTHPLACE B,
                        CRS_USER.SEX S,
@@ -878,7 +856,6 @@ namespace CRS.Forms.Customer
                     BirthplaceLookUp.EditValue = BirthplaceLookUp.Properties.GetKeyValueByDisplayText(dr["BIRTHPLACE_NAME"].ToString());
                     NoteText.Text = dr["NOTE"].ToString();
                     VoenText.Text = dr["VOEN"].ToString();
-                    AccountText.Text = dr["ACCOUNT_NUMBER"].ToString();
                     CustomerUsedUserID = Convert.ToInt32(dr["USED_USER_ID"]);
 
                     if (!DBNull.Value.Equals(dr["IMAGE"]))
@@ -1070,20 +1047,17 @@ namespace CRS.Forms.Customer
             GlobalProcedures.TextEditCharCount(VoenText, VoenLengthLabel);
         }
 
-        private void AccountText_EditValueChanged(object sender, EventArgs e)
-        {
-            GlobalProcedures.TextEditCharCount(AccountText, AccountLengthLabel);
-        }
-
         private void PatronymicText_EditValueChanged(object sender, EventArgs e)
         {
-            if (PatronymicText.EditorContainsFocus)
-                if (PatronymicText.Text.IndexOf("oğlu") > -1)
-                    GlobalProcedures.LookUpEditValue(SexLookUp, "Kişi");
-                else if (PatronymicText.Text.IndexOf("qızı") > -1)
-                    GlobalProcedures.LookUpEditValue(SexLookUp, "Qadın");
-                else
-                    GlobalProcedures.LookUpEditValue(SexLookUp, null);
+            if (PatronymicText.Text.IndexOf("oğlu") > -1)
+                GlobalProcedures.LookUpEditValue(SexLookUp, "Kişi");
+            else if (PatronymicText.Text.IndexOf("qızı") > -1)
+                GlobalProcedures.LookUpEditValue(SexLookUp, "Qadın");
+        }
+
+        private void RegistrationCodeText_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void SexLookUp_EditValueChanged(object sender, EventArgs e)

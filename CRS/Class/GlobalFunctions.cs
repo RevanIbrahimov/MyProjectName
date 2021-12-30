@@ -1894,5 +1894,231 @@ namespace CRS.Class
         {
             return view.GetRowCellValue(view.FocusedRowHandle, columnName);
         }
+
+        public static DateTime GetDate(string sql, string procedure_name = null)
+        {
+            DateTime date = DateTime.Today;
+            DataTable dt = GenerateDataTable(sql, "GetDate", "Tarix tapılmadı.");
+            if (dt.Rows[0][0] != DBNull.Value)
+                date = Convert.ToDateTime(dt.Rows[0][0]);
+
+            return date;
+        }
+
+        public static DateTime LastClosedDay()
+        {
+            return GetDate("SELECT MAX(CLOSED_DAY) FROM CRS_USER.CLOSED_DAYS");
+        }
+
+        public static string RightString(string input, int count)
+        {
+            return input.Substring(Math.Max(input.Length - count, 0), Math.Min(count, input.Length));
+        }
+
+        public static string LeftString(string input, int count)
+        {
+            return input.Substring(0, Math.Min(input.Length, count));
+        }
+
+        public static string DayWithSuffix1(int d)
+        {
+            string result = null, s, f = null;
+            try
+            {
+                s = RightString(d.ToString(), 1);
+                f = LeftString(d.ToString(), 1);
+                if (s != "0")
+                    switch (s)
+                    {
+                        case "1":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "2":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "3":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "4":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "5":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "6":
+                            result = d.ToString() + "-na";
+                            break;
+                        case "7":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "8":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "9":
+                            result = d.ToString() + "-na";
+                            break;
+                    }
+                else
+                    switch (f)
+                    {
+                        case "1":
+                            result = d.ToString() + "-na";
+                            break;
+                        case "2":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "3":
+                            result = d.ToString() + "-na";
+                            break;
+                        case "4":
+                            result = d.ToString() + "-na";
+                            break;
+                        case "5":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "6":
+                            result = d.ToString() + "-na";
+                            break;
+                        case "7":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "8":
+                            result = d.ToString() + "-nə";
+                            break;
+                        case "9":
+                            result = d.ToString() + "-na";
+                            break;
+                    }
+            }
+            catch (Exception exx)
+            {
+                GlobalProcedures.LogWrite("Günün sonuna şəkilçi əlavə olunmadı.", d.ToString(), GlobalVariables.V_UserName, "GlobalFunctions", System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
+            }
+
+            return result;
+        }
+
+        public static string DayWithSuffix2(int d)
+        {
+            string result = null, s, f = null;
+            try
+            {
+                s = RightString(d.ToString(), 1);
+                f = LeftString(d.ToString(), 1);
+                if (s != "0")
+                    switch (s)
+                    {
+                        case "1":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "2":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "3":
+                            result = d.ToString() + "-ü";
+                            break;
+                        case "4":
+                            result = d.ToString() + "-ü";
+                            break;
+                        case "5":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "6":
+                            result = d.ToString() + "-ı";
+                            break;
+                        case "7":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "8":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "9":
+                            result = d.ToString() + "-u";
+                            break;
+                    }
+                else
+                    switch (f)
+                    {
+                        case "1":
+                            result = d.ToString() + "-nu";
+                            break;
+                        case "2":
+                            result = d.ToString() + "-si";
+                            break;
+                        case "3":
+                            result = d.ToString() + "-u";
+                            break;
+                        case "4":
+                            result = d.ToString() + "-ı";
+                            break;
+                        case "5":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "6":
+                            result = d.ToString() + "-ı";
+                            break;
+                        case "7":
+                            result = d.ToString() + "-i";
+                            break;
+                        case "8":
+                            result = d.ToString() + "-ni";
+                            break;
+                        case "9":
+                            result = d.ToString() + "-nı";
+                            break;
+                    }
+            }
+            catch (Exception exx)
+            {
+                GlobalProcedures.LogWrite("Günün sonuna şəkilçi əlavə olunmadı.", d.ToString(), GlobalVariables.V_UserName, "GlobalFunctions", System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
+            }
+
+            return result;
+        }
+
+        public static int ExecuteFourQuery(string sql_text1, string sql_text2, string sql_text3, string sql_text4, string message_text, string procedure_name = null)
+        {
+            int execute_row_count;
+            using (OracleConnection connection = new OracleConnection())
+            {
+                OracleTransaction transaction = null;
+                OracleCommand commond = null;
+                try
+                {
+                    if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
+                    {
+                        connection.ConnectionString = GetConnectionString();
+                        connection.Open();
+                    }
+                    transaction = connection.BeginTransaction();
+                    commond = connection.CreateCommand();
+                    commond.Transaction = transaction;
+                    commond.CommandText = sql_text1;
+                    execute_row_count = commond.ExecuteNonQuery();
+                    commond.CommandText = sql_text2;
+                    execute_row_count = commond.ExecuteNonQuery();
+                    commond.CommandText = sql_text3;
+                    execute_row_count = commond.ExecuteNonQuery();
+                    commond.CommandText = sql_text4;
+                    execute_row_count = commond.ExecuteNonQuery();
+                    transaction.Commit();
+                    return execute_row_count;
+                }
+                catch (Exception exx)
+                {
+                    GlobalProcedures.LogWrite(message_text, "sql_text1 = " + sql_text1 + ",\r\n sql_text2 = " + sql_text2 + ",\r\n sql_text3 = " + sql_text3 + ",\r\n sql_text4 = " + sql_text4, GlobalVariables.V_UserName, "GlobalFunctions", System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
+                    transaction.Rollback();
+                    return -1;
+                }
+                finally
+                {
+                    commond.Dispose();
+                    connection.Dispose();
+                }
+            }
+        }
+
+
+
     }
 }

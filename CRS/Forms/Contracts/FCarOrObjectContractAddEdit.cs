@@ -26,9 +26,9 @@ using System.Text.RegularExpressions;
 
 namespace CRS.Forms.Contracts
 {
-    public partial class FContractAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FCarOrObjectContractAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public FContractAddEdit()
+        public FCarOrObjectContractAddEdit()
         {
             InitializeComponent();
 
@@ -1254,7 +1254,7 @@ namespace CRS.Forms.Contracts
                 {
                     if (CreditNameLookUp.EditValue != null)
                     {
-                        s = $@"SELECT CT.ID,CT.CODE,CT.TERM,CT.INTEREST FROM CRS_USER.CREDIT_TYPE CT WHERE CT.NAME_ID = {credit_name_id} AND CT.CALC_DATE = (SELECT MAX(CALC_DATE) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = CT.NAME_ID AND CALC_DATE <= TO_DATE('{ContractStartDate.Text}','DD/MM/YYYY'))";
+                        s = $@"SELECT CT.ID,CT.TERM,CT.INTEREST FROM CRS_USER.CREDIT_TYPE CT WHERE CT.NAME_ID = {credit_name_id} AND CT.CALC_DATE = (SELECT MAX(CALC_DATE) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = CT.NAME_ID AND CALC_DATE <= TO_DATE('{ContractStartDate.Text}','DD/MM/YYYY'))";
 
                         DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/CreditTypeParametr");
 
@@ -1263,13 +1263,12 @@ namespace CRS.Forms.Contracts
                             foreach (DataRow dr in dt.Rows)
                             {
                                 GlobalProcedures.Lock_or_UnLock_UserID("CRS_USER.CREDIT_TYPE", -1, "WHERE USED_USER_ID = " + GlobalVariables.V_UserID);
-                                credit_type_id = Convert.ToInt32(dr[0].ToString());
-                                //credit_type_code = dr[1].ToString();
-                                PeriodText.Text = dr[2].ToString();
+                                credit_type_id = Convert.ToInt32(dr["ID"]);
+                                PeriodText.Text = dr["TERM"].ToString();
 
                                 if (!InterestCheckEdit.Checked)
                                 {
-                                    InterestText.Text = dr[3].ToString();
+                                    InterestText.Text = dr["INTEREST"].ToString();
                                     default_interest = Convert.ToInt32(dr[3].ToString());
                                 }
 
@@ -2654,7 +2653,7 @@ namespace CRS.Forms.Contracts
         private void BrandComboBox_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (e.Button.Index == 1)
-                LoadHostageDictionaries("E", 8, 0);
+                LoadHostageDictionaries("E", 14, 1);
         }
 
         private void TypeComboBox_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
@@ -2689,7 +2688,7 @@ namespace CRS.Forms.Contracts
                 if (changecode)
                     code = GlobalFunctions.StringRight(ContractCodeText.Text, 3);
                 else
-                    code = max_code_number.ToString().PadLeft(3, '0').Trim();
+                    code = max_code_number.ToString().PadLeft(3, '0').Trim() + "/" +"L";
             }
             else
             {
@@ -4119,11 +4118,11 @@ namespace CRS.Forms.Contracts
 
         private void LoadFCustomerAddEdit(string transaction, string customer_id, string fullname)
         {
-            Customer.FCustomerAddEdit fcae = new Customer.FCustomerAddEdit();
+            Customer.L1FCustomerAddEdit fcae = new Customer.L1FCustomerAddEdit();
             fcae.TransactionName = transaction;
             fcae.CustomerID = customer_id;
             fcae.CustomerFullName = fullname;
-            fcae.RefreshCustomersDataGridView += new Customer.FCustomerAddEdit.DoEvent(RefreshCustomers);
+            fcae.RefreshCustomersDataGridView += new Customer.L1FCustomerAddEdit.DoEvent(RefreshCustomers);
             fcae.ShowDialog();
         }
 
@@ -5448,6 +5447,11 @@ namespace CRS.Forms.Contracts
                 PowerPinCodeLengthLabel.Visible = true;
                 PowerPinCodeLengthLabel.Text = SellerPowerPinCodeText.Text.Trim().Length.ToString();
             }
+        }
+
+        private void NewCustomerDropDownButton_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void CancelInsuranceFileBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -6804,7 +6808,7 @@ namespace CRS.Forms.Contracts
         private string DocumentCode(int type_id)
         {
             string s = "01";
-            int max_code = GlobalFunctions.GetMax($@"SELECT NVL(MAX(LTRIM(CODE,'0')),0) + 1 MAXCODE FROM CRS_USER.CONTRACT_DOCUMENTS WHERE DOCUMENT_TYPE_ID = {type_id} AND CONTRACT_ID = {ContractID}");
+            int max_code = GlobalFunctions.GetMax($@"SELECT NVL(MAX(LTRIM(CODE,'0')),0) + 1 MAXCODE FROM CRS_USER.CONTRACT_DOCUMENTS WHERE CONTRACT_DOCUMENT_TYPE_ID = {type_id} AND CONTRACT_ID = {ContractID}");
             s = max_code.ToString().PadLeft(2, '0');
             return s;
         }
@@ -6829,7 +6833,7 @@ namespace CRS.Forms.Contracts
                 file_name = Path.GetFileName(GlobalVariables.V_ExecutingFolder + "\\TEMP\\Documents\\" + code_number + "_Müqavilə.docx");
                 code = DocumentCode(1);
                 sql = $@"INSERT INTO CRS_USER.CONTRACT_DOCUMENTS(CONTRACT_ID,
-                                                                 DOCUMENT_TYPE_ID,
+                                                                 CONTRACT_DOCUMENT_TYPE_ID,
                                                                  DOCUMENT_FILE,
                                                                  CODE,
                                                                  FILE_NAME) 
@@ -6851,7 +6855,7 @@ namespace CRS.Forms.Contracts
                 file_name = Path.GetFileName(GlobalVariables.V_ExecutingFolder + "\\TEMP\\Documents\\" + code_number + "_Alqı-satqı.docx");
                 code = DocumentCode(2);
                 sql = $@"INSERT INTO CRS_USER.CONTRACT_DOCUMENTS(CONTRACT_ID,
-                                                                 DOCUMENT_TYPE_ID,
+                                                                 CONTRACT_DOCUMENT_TYPE_ID,
                                                                  DOCUMENT_FILE,
                                                                  CODE,
                                                                  FILE_NAME) 
@@ -6868,7 +6872,7 @@ namespace CRS.Forms.Contracts
                 file_name = Path.GetFileName(GlobalVariables.V_ExecutingFolder + "\\TEMP\\Documents\\" + code_number + "_Daimi_Sənədlər.doc");
                 code = DocumentCode(2);
                 sql = $@"INSERT INTO CRS_USER.CONTRACT_DOCUMENTS(CONTRACT_ID,
-                                                                 DOCUMENT_TYPE_ID,
+                                                                 CONTRACT_DOCUMENT_TYPE_ID,
                                                                  DOCUMENT_FILE,
                                                                  CODE,
                                                                  FILE_NAME) 
@@ -6884,7 +6888,7 @@ namespace CRS.Forms.Contracts
                 file_name = Path.GetFileName(GlobalVariables.V_ExecutingFolder + "\\TEMP\\Documents\\" + code_number + "_Daşınmaz Əmlak.docx");
                 code = DocumentCode(6);
                 sql = $@"INSERT INTO CRS_USER.CONTRACT_DOCUMENTS(CONTRACT_ID,
-                                                                 DOCUMENT_TYPE_ID,
+                                                                 CONTRACT_DOCUMENT_TYPE_ID,
                                                                  DOCUMENT_FILE,
                                                                  CODE,
                                                                  FILE_NAME) 
@@ -6902,8 +6906,8 @@ namespace CRS.Forms.Contracts
                                  DT.TYPE_NAME,
                                  CD.CODE || ' - ' || CD.FILE_NAME FILE_NAME,
                                  CD.ETL_DT_TM ETL_DATE
-                            FROM CRS_USER.CONTRACT_DOCUMENTS CD, CRS_USER.DOCUMENT_TYPE DT
-                           WHERE CD.DOCUMENT_TYPE_ID = DT.ID AND CD.CONTRACT_ID = {ContractID}
+                            FROM CRS_USER.CONTRACT_DOCUMENTS CD, CRS_USER.CONTRACT_DOCUMENT_TYPE DT
+                           WHERE CD.CONTRACT_DOCUMENT_TYPE_ID = DT.ID AND CD.CONTRACT_ID = {ContractID}
                         ORDER BY DT.ID, CD.CODE";
             FilesGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadFilesDataGridView");
 

@@ -58,6 +58,9 @@
             this.CurBarStatic = new DevExpress.XtraBars.BarStaticItem();
             this.CalcDebtBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.RepeatBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.NewCarOrObjectBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.NewPawnShopBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.BankRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.InfoRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.OutRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -90,6 +93,9 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.PopupMenu = new DevExpress.XtraBars.PopupMenu(this.components);
             this.ProgressPanel = new DevExpress.XtraWaitForm.ProgressPanel();
+            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.Ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BankGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BankGridView)).BeginInit();
@@ -124,17 +130,22 @@
             this.DeleteBarButton,
             this.CurBarStatic,
             this.CalcDebtBarButton,
-            this.RepeatBarButton});
+            this.RepeatBarButton,
+            this.barSubItem1,
+            this.NewCarOrObjectBarButton,
+            this.NewPawnShopBarButton,
+            this.barSubItem2,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.Ribbon.Location = new System.Drawing.Point(0, 0);
-            this.Ribbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Ribbon.MaxItemId = 1;
+            this.Ribbon.MaxItemId = 8;
             this.Ribbon.Name = "Ribbon";
             this.Ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.BankRibbonPage});
             this.Ribbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.Ribbon.ShowQatLocationSelector = false;
             this.Ribbon.ShowToolbarCustomizeItem = false;
-            this.Ribbon.Size = new System.Drawing.Size(1459, 179);
+            this.Ribbon.Size = new System.Drawing.Size(1179, 143);
             this.Ribbon.StatusBar = this.ribbonStatusBar;
             this.Ribbon.Toolbar.ShowCustomizeItem = false;
             this.Ribbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
@@ -351,6 +362,31 @@
             this.RepeatBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.RepeatBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.RepeatBarButton_ItemClick);
             // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Yeni";
+            this.barSubItem1.Id = 1;
+            this.barSubItem1.ImageOptions.Image = global::CRS.Properties.Resources.plus_321;
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.NewCarOrObjectBarButton),
+            new DevExpress.XtraBars.LinkPersistInfo(this.NewPawnShopBarButton)});
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // NewCarOrObjectBarButton
+            // 
+            this.NewCarOrObjectBarButton.Caption = "Avtomobil və Daşınmaz əmlak krediti";
+            this.NewCarOrObjectBarButton.Id = 2;
+            this.NewCarOrObjectBarButton.Name = "NewCarOrObjectBarButton";
+            this.NewCarOrObjectBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewCarOrObjectBarButton_ItemClick);
+            // 
+            // NewPawnShopBarButton
+            // 
+            this.NewPawnShopBarButton.Caption = "Lombard krediti";
+            this.NewPawnShopBarButton.Id = 3;
+            this.NewPawnShopBarButton.Name = "NewPawnShopBarButton";
+            this.NewPawnShopBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewPawnShopBarButton_ItemClick);
+            // 
             // BankRibbonPage
             // 
             this.BankRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -362,13 +398,14 @@
             // 
             // InfoRibbonPageGroup
             // 
-            this.InfoRibbonPageGroup.ItemLinks.Add(this.OperationsBarButton);
+            this.InfoRibbonPageGroup.ItemLinks.Add(this.barSubItem1);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.EditBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.DeleteBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.BankAccountBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.RefreshBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.CalcDebtBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.RepeatBarButton);
+            this.InfoRibbonPageGroup.ItemLinks.Add(this.barSubItem2);
             this.InfoRibbonPageGroup.Name = "InfoRibbonPageGroup";
             this.InfoRibbonPageGroup.Text = "Məlumat";
             // 
@@ -389,21 +426,18 @@
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.ItemLinks.Add(this.CurBarStatic);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 824);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 608);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.Ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1459, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1179, 31);
             // 
             // BankGridControl
             // 
             this.BankGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BankGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BankGridControl.Location = new System.Drawing.Point(0, 179);
+            this.BankGridControl.Location = new System.Drawing.Point(0, 143);
             this.BankGridControl.MainView = this.BankGridView;
-            this.BankGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BankGridControl.Name = "BankGridControl";
-            this.BankGridControl.Size = new System.Drawing.Size(1079, 645);
+            this.BankGridControl.Size = new System.Drawing.Size(1179, 465);
             this.BankGridControl.TabIndex = 70;
             this.BankGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BankGridView});
@@ -654,7 +688,7 @@
             // DockManager
             // 
             this.DockManager.Form = this;
-            this.DockManager.RootPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
+            this.DockManager.HiddenPanels.AddRange(new DevExpress.XtraBars.Docking.DockPanel[] {
             this.SearchDockPanel});
             this.DockManager.TopZIndexControls.AddRange(new string[] {
             "DevExpress.XtraBars.BarDockControl",
@@ -673,44 +707,43 @@
             this.SearchDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.SearchDockPanel.ID = new System.Guid("3f286121-a69c-466b-8033-e486607e1477");
             this.SearchDockPanel.Image = ((System.Drawing.Image)(resources.GetObject("SearchDockPanel.Image")));
-            this.SearchDockPanel.Location = new System.Drawing.Point(1079, 179);
-            this.SearchDockPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SearchDockPanel.Location = new System.Drawing.Point(799, 143);
             this.SearchDockPanel.Name = "SearchDockPanel";
             this.SearchDockPanel.OriginalSize = new System.Drawing.Size(380, 200);
-            this.SearchDockPanel.Size = new System.Drawing.Size(380, 645);
+            this.SearchDockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Right;
+            this.SearchDockPanel.SavedIndex = 0;
+            this.SearchDockPanel.Size = new System.Drawing.Size(380, 465);
             this.SearchDockPanel.Text = "Ətraflı axtar";
+            this.SearchDockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.Hidden;
             this.SearchDockPanel.ClosedPanel += new DevExpress.XtraBars.Docking.DockPanelEventHandler(this.SearchDockPanel_ClosedPanel);
             // 
             // dockPanel1_Container
             // 
             this.dockPanel1_Container.Controls.Add(this.OperationTypeComboBox);
             this.dockPanel1_Container.Controls.Add(this.labelControl4);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 27);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(368, 613);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(371, 438);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // OperationTypeComboBox
             // 
             this.OperationTypeComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.OperationTypeComboBox.Location = new System.Drawing.Point(125, 18);
-            this.OperationTypeComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OperationTypeComboBox.Location = new System.Drawing.Point(107, 15);
             this.OperationTypeComboBox.Name = "OperationTypeComboBox";
             this.OperationTypeComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç (F4)")});
             this.OperationTypeComboBox.Properties.NullValuePrompt = "Əməliyyatı seç";
             this.OperationTypeComboBox.Properties.NullValuePromptShowForEmptyValue = true;
-            this.OperationTypeComboBox.Size = new System.Drawing.Size(299, 22);
+            this.OperationTypeComboBox.Size = new System.Drawing.Size(256, 20);
             this.OperationTypeComboBox.TabIndex = 5;
             this.OperationTypeComboBox.EditValueChanged += new System.EventHandler(this.OperationTypeComboBox_EditValueChanged);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(6, 22);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Location = new System.Drawing.Point(5, 18);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(97, 16);
+            this.labelControl4.Size = new System.Drawing.Size(83, 13);
             this.labelControl4.TabIndex = 224;
             this.labelControl4.Text = "Əməliyyatın növü";
             // 
@@ -745,26 +778,46 @@
             this.ProgressPanel.BarAnimationElementThickness = 2;
             this.ProgressPanel.Caption = "Gözləyin...";
             this.ProgressPanel.Description = "Qalıqlar hesablanır ...";
-            this.ProgressPanel.Location = new System.Drawing.Point(482, 250);
-            this.ProgressPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ProgressPanel.Location = new System.Drawing.Point(413, 203);
             this.ProgressPanel.Name = "ProgressPanel";
-            this.ProgressPanel.Size = new System.Drawing.Size(580, 81);
+            this.ProgressPanel.Size = new System.Drawing.Size(497, 66);
             this.ProgressPanel.TabIndex = 276;
             this.ProgressPanel.Text = "progressPanel1";
             this.ProgressPanel.WaitAnimationType = DevExpress.Utils.Animation.WaitingAnimatorType.Ring;
             // 
+            // barSubItem2
+            // 
+            this.barSubItem2.Caption = "Dəyiş";
+            this.barSubItem2.Id = 5;
+            this.barSubItem2.ImageOptions.Image = global::CRS.Properties.Resources.edit_32;
+            this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.barSubItem2.Name = "barSubItem2";
+            this.barSubItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Avtomobil və Daşınmaz əmlak krediti";
+            this.barButtonItem1.Id = 6;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Lombard krediti";
+            this.barButtonItem2.Id = 7;
+            this.barButtonItem2.Name = "barButtonItem2";
+            // 
             // FBank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1459, 864);
+            this.ClientSize = new System.Drawing.Size(1179, 639);
             this.Controls.Add(this.ProgressPanel);
             this.Controls.Add(this.BankGridControl);
-            this.Controls.Add(this.SearchDockPanel);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.Ribbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FBank";
             this.Ribbon = this.Ribbon;
             this.ShowInTaskbar = false;
@@ -840,5 +893,11 @@
         private DevExpress.XtraWaitForm.ProgressPanel ProgressPanel;
         private DevExpress.XtraBars.BarButtonItem RepeatBarButton;
         private DevExpress.XtraGrid.Columns.GridColumn BankOperations_ContractCode;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem NewCarOrObjectBarButton;
+        private DevExpress.XtraBars.BarButtonItem NewPawnShopBarButton;
+        private DevExpress.XtraBars.BarSubItem barSubItem2;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

@@ -583,14 +583,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LRS.exe" size="15249408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LRS.exe" size="16152064">
       <assemblyIdentity name="LRS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Gz1WruVjYVlvFbxIbo1KhY531XtJppILkRvJZ9X1EkI=</dsig:DigestValue>
+        <dsig:DigestValue>plymx+0FghyoojVXCIxZFxbvB9Q13lrQb7H0VV2Znb8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

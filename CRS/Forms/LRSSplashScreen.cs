@@ -29,7 +29,7 @@ namespace CRS.Forms
 
         #region Overrides
 
-        public override void ProcessCommand(Enum cmd, object arg)
+        public override void ProcessCommand(System.Enum cmd, object arg)
         {
             base.ProcessCommand(cmd, arg);
         }

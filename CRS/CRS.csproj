@@ -221,6 +221,7 @@
     <Compile Include="Class\DataAccess\CardIssuingDAL.cs" />
     <Compile Include="Class\DataAccess\CardSeriesDAL.cs" />
     <Compile Include="Class\DataAccess\CashOperationsDAL.cs" />
+    <Compile Include="Class\DataAccess\CollateralTypeDAL.cs" />
     <Compile Include="Class\DataAccess\CommitmentsDAL.cs" />
     <Compile Include="Class\DataAccess\ContractCodeTempDAL.cs" />
     <Compile Include="Class\DataAccess\ContractDAL.cs" />
@@ -228,15 +229,21 @@
     <Compile Include="Class\DataAccess\ContractLawsViewDAL.cs" />
     <Compile Include="Class\DataAccess\CountriesDAL.cs" />
     <Compile Include="Class\DataAccess\CreditNameDAL.cs" />
+    <Compile Include="Class\DataAccess\CreditPurposeDAL.cs" />
+    <Compile Include="Class\DataAccess\CreditStatusDAL.cs" />
     <Compile Include="Class\DataAccess\CurrencyDAL.cs" />
     <Compile Include="Class\DataAccess\CurrencyRatesDAL.cs" />
     <Compile Include="Class\DataAccess\CustomerCodeTempDAL.cs" />
     <Compile Include="Class\DataAccess\CustomersDAL.cs" />
     <Compile Include="Class\DataAccess\DelaysListDAL.cs" />
     <Compile Include="Class\DataAccess\DimTimeDAL.cs" />
+    <Compile Include="Class\DataAccess\DocumentGroupDAL.cs" />
+    <Compile Include="Class\DataAccess\EyebrowDAL.cs" />
     <Compile Include="Class\DataAccess\FundContractPercentDAL.cs" />
     <Compile Include="Class\DataAccess\FundContractsDAL.cs" />
     <Compile Include="Class\DataAccess\FundPaymentDAL.cs" />
+    <Compile Include="Class\DataAccess\CreditClassDAL.cs" />
+    <Compile Include="Class\DataAccess\GoldTypeDAL.cs" />
     <Compile Include="Class\DataAccess\HostagesViewDAL.cs" />
     <Compile Include="Class\DataAccess\InsuranceRateDAL.cs" />
     <Compile Include="Class\DataAccess\JuridicalPersonsDAL.cs" />
@@ -249,12 +256,17 @@
     <Compile Include="Class\DataAccess\PaymentSchedulesDAL.cs" />
     <Compile Include="Class\DataAccess\PaymentsDAL.cs" />
     <Compile Include="Class\DataAccess\PaymentsViewDAL.cs" />
+    <Compile Include="Class\DataAccess\PenaltyDAL.cs" />
     <Compile Include="Class\DataAccess\PhonePrefixsDAL.cs" />
     <Compile Include="Class\DataAccess\PhonesViewDAL.cs" />
     <Compile Include="Class\DataAccess\PowerOfAttorneyCodeTempDAL.cs" />
     <Compile Include="Class\DataAccess\TaskCodeTempDAL.cs" />
     <Compile Include="Class\DataAccess\TaskTypeDAL.cs" />
     <Compile Include="Class\DataAccess\TomorrowPaymentDataViewDAL.cs" />
+    <Compile Include="Class\DataAccess\TypeCreditDAL.cs" />
+    <Compile Include="Class\DataAccess\TypeDocumentDAL.cs" />
+    <Compile Include="Class\DataAccess\TypePersonDAL.cs" />
+    <Compile Include="Class\Enum.cs" />
     <Compile Include="Class\Extensions.cs" />
     <Compile Include="Class\GlobalFunctions.cs" />
     <Compile Include="Class\GlobalProcedures.cs" />
@@ -270,22 +282,31 @@
     <Compile Include="Class\Tables\CardIssuing.cs" />
     <Compile Include="Class\Tables\CardSeries.cs" />
     <Compile Include="Class\Tables\CashOperations.cs" />
+    <Compile Include="Class\Tables\CollateralType.cs" />
     <Compile Include="Class\Tables\ColumnPrintable.cs" />
+    <Compile Include="Class\Tables\CommitmentALL.cs" />
     <Compile Include="Class\Tables\Commitments.cs" />
     <Compile Include="Class\Tables\Contract.cs" />
     <Compile Include="Class\Tables\ContractCodeTemp.cs" />
     <Compile Include="Class\Tables\ContractCommitment.cs" />
     <Compile Include="Class\Tables\ContractExtend.cs" />
     <Compile Include="Class\Tables\Countries.cs" />
+    <Compile Include="Class\Tables\Credit1Class.cs" />
     <Compile Include="Class\Tables\CreditName.cs" />
+    <Compile Include="Class\Tables\CreditPurpose.cs" />
+    <Compile Include="Class\Tables\CreditStatus.cs" />
     <Compile Include="Class\Tables\Currency.cs" />
     <Compile Include="Class\Tables\CurrencyRates.cs" />
     <Compile Include="Class\Tables\CustomerCodeTemp.cs" />
     <Compile Include="Class\Tables\Customers.cs" />
     <Compile Include="Class\Tables\DimTime.cs" />
+    <Compile Include="Class\Tables\DocumentGroup.cs" />
+    <Compile Include="Class\Tables\Eyebrow.cs" />
     <Compile Include="Class\Tables\FundContractPercent.cs" />
     <Compile Include="Class\Tables\FundContracts.cs" />
     <Compile Include="Class\Tables\FundPayment.cs" />
+    <Compile Include="Class\Tables\CreditClass.cs" />
+    <Compile Include="Class\Tables\GoldType.cs" />
     <Compile Include="Class\Tables\InsuranceRate.cs" />
     <Compile Include="Class\Tables\InsuranceTransfer.cs" />
     <Compile Include="Class\Tables\JuridicalPersons.cs" />
@@ -296,10 +317,14 @@
     <Compile Include="Class\Tables\OperationJournal.cs" />
     <Compile Include="Class\Tables\Payments.cs" />
     <Compile Include="Class\Tables\PaymentSchedules.cs" />
+    <Compile Include="Class\Tables\Penalty.cs" />
     <Compile Include="Class\Tables\PhonePrefixs.cs" />
     <Compile Include="Class\Tables\PowerOfAttorneyCodeTemp.cs" />
     <Compile Include="Class\Tables\TaskCodeTemp.cs" />
     <Compile Include="Class\Tables\TaskType.cs" />
+    <Compile Include="Class\Tables\TypeCredit.cs" />
+    <Compile Include="Class\Tables\TypeDocument.cs" />
+    <Compile Include="Class\Tables\TypePerson.cs" />
     <Compile Include="Class\Views\ContractLawsView.cs" />
     <Compile Include="Class\Views\DelaysListView.cs" />
     <Compile Include="Class\Views\HostagesView.cs" />
@@ -445,6 +470,12 @@
     <Compile Include="Forms\Bookkeeping\FCalcAgainPayments.Designer.cs">
       <DependentUpon>FCalcAgainPayments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Bookkeeping\FClosedDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bookkeeping\FClosedDay.Designer.cs">
+      <DependentUpon>FClosedDay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Bookkeeping\FCompareInterest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -553,6 +584,12 @@
     <Compile Include="Forms\Contracts\FAgainPerson.Designer.cs">
       <DependentUpon>FAgainPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Contracts\FCarOrObjectContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCarOrObjectContractAddEdit.Designer.cs">
+      <DependentUpon>FCarOrObjectContractAddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Contracts\FChangeContractExchange.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -565,17 +602,17 @@
     <Compile Include="Forms\Contracts\FCommitmentLetterDetails.Designer.cs">
       <DependentUpon>FCommitmentLetterDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FCommitmentTransmission.Designer.cs">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Contracts\FCommon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Contracts\FCommon.Designer.cs">
       <DependentUpon>FCommon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Contracts\FContractAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Contracts\FContractAddEdit.Designer.cs">
-      <DependentUpon>FContractAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Contracts\FContractExtend.cs">
       <SubType>Form</SubType>
@@ -600,12 +637,6 @@
     </Compile>
     <Compile Include="Forms\Contracts\FContracts.Designer.cs">
       <DependentUpon>FContracts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Contracts\FCommitmentTransmission.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Contracts\FCommitmentTransmission.Designer.cs">
-      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Contracts\FContractStatusEdit.cs">
       <SubType>Form</SubType>
@@ -763,6 +794,18 @@
     <Compile Include="Forms\Contracts\FNote.Designer.cs">
       <DependentUpon>FNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Contracts\FPawnAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPawnAddEdit.Designer.cs">
+      <DependentUpon>FPawnAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPawnshopContractAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\FPawnshopContractAddEdit.designer.cs">
+      <DependentUpon>FPawnshopContractAddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Contracts\FPolice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -805,6 +848,12 @@
     <Compile Include="Forms\Contracts\FStatistic.Designer.cs">
       <DependentUpon>FStatistic.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Contracts\XtraForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contracts\XtraForm1.Designer.cs">
+      <DependentUpon>XtraForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Customer\FCardAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -823,11 +872,11 @@
     <Compile Include="Forms\Customer\FCommitments.Designer.cs">
       <DependentUpon>FCommitments.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Customer\FCustomerAddEdit.cs">
+    <Compile Include="Forms\Customer\L2FCustomerAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Customer\FCustomerAddEdit.Designer.cs">
-      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    <Compile Include="Forms\Customer\L2FCustomerAddEdit.Designer.cs">
+      <DependentUpon>L2FCustomerAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Customer\FCustomers.cs">
       <SubType>Form</SubType>
@@ -858,6 +907,24 @@
     </Compile>
     <Compile Include="Forms\Customer\FWorkAddEdit.Designer.cs">
       <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Customer\L1FCustomerAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Customer\L1FCustomerAddEdit.Designer.cs">
+      <DependentUpon>L1FCustomerAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppraiserAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FAppraiserAddEdit.Designer.cs">
+      <DependentUpon>FAppraiserAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionaries\FBankAddEdit.cs">
       <SubType>Form</SubType>
@@ -925,6 +992,18 @@
     <Compile Include="Forms\Dictionaries\FCarTypeAddEdit.Designer.cs">
       <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.Designer.cs">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCollateralTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCollateralTypeAddEdit.Designer.cs">
+      <DependentUpon>FCollateralTypeAddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dictionaries\FContractEvaluateAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -942,6 +1021,18 @@
     </Compile>
     <Compile Include="Forms\Dictionaries\FCreditNameAddEdit.Designer.cs">
       <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditPurposeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditPurposeAddEdit.Designer.cs">
+      <DependentUpon>FCreditPurposeAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditStatusAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditStatusAddEdit.Designer.cs">
+      <DependentUpon>FCreditStatusAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionaries\FCreditTypeAddEdit.cs">
       <SubType>Form</SubType>
@@ -961,17 +1052,41 @@
     <Compile Include="Forms\Dictionaries\FCurrencyAddEdit.Designer.cs">
       <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Dictionaries\FGoldTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FGoldTypeAddEdit.Designer.cs">
+      <DependentUpon>FGoldTypeAddEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Dictionaries\FDictionaries.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dictionaries\FDictionaries.Designer.cs">
       <DependentUpon>FDictionaries.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.cs">
+    <Compile Include="Forms\Dictionaries\FEyebrowsAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionaries\FAppointmentAddEdit.Designer.cs">
-      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    <Compile Include="Forms\Dictionaries\FEyebrowsAddEdit.Designer.cs">
+      <DependentUpon>FEyebrowsAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditClassAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FCreditClassAddEdit.Designer.cs">
+      <DependentUpon>FCreditClassAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FLoanOfficerAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FLoanOfficerAddEdit.Designer.cs">
+      <DependentUpon>FLoanOfficerAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPawnTypeAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FPawnTypeAddEdit.Designer.cs">
+      <DependentUpon>FPawnTypeAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionaries\FFounderAddEdit.cs">
       <SubType>Form</SubType>
@@ -1021,12 +1136,6 @@
     <Compile Include="Forms\Dictionaries\FPersonnelPositionAddEdit.Designer.cs">
       <DependentUpon>FPersonnelPositionAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\FPositionAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Dictionaries\FPositionAddEdit.Designer.cs">
-      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1039,17 +1148,29 @@
     <Compile Include="Forms\Dictionaries\FPhonePrefixAddEdit.Designer.cs">
       <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.cs">
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.Designer.cs">
-      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    <Compile Include="Forms\Dictionaries\FPositionAddEdit.Designer.cs">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dictionaries\FStatusEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Dictionaries\FStatusEdit.Designer.cs">
       <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FTypeCreditAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FTypeCreditAddEdit.Designer.cs">
+      <DependentUpon>FTypeCreditAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FTypeDocumentAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Dictionaries\FTypeDocumentAddEdit.Designer.cs">
+      <DependentUpon>FTypeDocumentAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FAbout.cs">
       <SubType>Form</SubType>
@@ -1062,6 +1183,12 @@
     </Compile>
     <Compile Include="Forms\FChangePassword.Designer.cs">
       <DependentUpon>FChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FClosedDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FClosedDay.Designer.cs">
+      <DependentUpon>FClosedDay.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FCreditCalculator.cs">
       <SubType>Form</SubType>
@@ -1663,6 +1790,9 @@
     <EmbeddedResource Include="Forms\Bookkeeping\FCalcAgainPayments.resx">
       <DependentUpon>FCalcAgainPayments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bookkeeping\FClosedDay.resx">
+      <DependentUpon>FClosedDay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Bookkeeping\FCompareInterest.resx">
       <DependentUpon>FCompareInterest.cs</DependentUpon>
     </EmbeddedResource>
@@ -1714,15 +1844,20 @@
     <EmbeddedResource Include="Forms\Commons\FOrderAddEdit.resx">
       <DependentUpon>FOrderAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts\ExtendPaymentSchedulesReport.rdlc" />
     <EmbeddedResource Include="Forms\Contracts\FAgainPerson.resx">
       <DependentUpon>FAgainPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCarOrObjectContractAddEdit.resx">
+      <DependentUpon>FCarOrObjectContractAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FChangeContractExchange.resx">
       <DependentUpon>FChangeContractExchange.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FCommitmentLetterDetails.resx">
       <DependentUpon>FCommitmentLetterDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FCommitmentTransmission.resx">
+      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FCommon.resx">
       <DependentUpon>FCommon.cs</DependentUpon>
@@ -1735,6 +1870,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FContractPowerOfAttorney.resx">
       <DependentUpon>FContractPowerOfAttorney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FContracts.resx">
+      <DependentUpon>FContracts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FContractStatusEdit.resx">
       <DependentUpon>FContractStatusEdit.cs</DependentUpon>
@@ -1811,20 +1949,17 @@
     <EmbeddedResource Include="Forms\Contracts\FNoPowerOfAttorneyList.resx">
       <DependentUpon>FNoPowerOfAttorneyList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts\FPolice.resx">
-      <DependentUpon>FPolice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts\FContractAddEdit.resx">
-      <DependentUpon>FContractAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts\FContracts.resx">
-      <DependentUpon>FContracts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Contracts\FCommitmentTransmission.resx">
-      <DependentUpon>FCommitmentTransmission.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FNote.resx">
       <DependentUpon>FNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPawnAddEdit.resx">
+      <DependentUpon>FPawnAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPawnshopContractAddEdit.resx">
+      <DependentUpon>FPawnshopContractAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contracts\FPolice.resx">
+      <DependentUpon>FPolice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Contracts\FPowerOfAttorney.resx">
       <DependentUpon>FPowerOfAttorney.cs</DependentUpon>
@@ -1853,8 +1988,8 @@
     <EmbeddedResource Include="Forms\Customer\FCommitments.resx">
       <DependentUpon>FCommitments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Customer\FCustomerAddEdit.resx">
-      <DependentUpon>FCustomerAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Customer\L2FCustomerAddEdit.resx">
+      <DependentUpon>L2FCustomerAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\FCustomers.resx">
       <DependentUpon>FCustomers.cs</DependentUpon>
@@ -1870,6 +2005,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Customer\FWorkAddEdit.resx">
       <DependentUpon>FWorkAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Customer\L1FCustomerAddEdit.resx">
+      <DependentUpon>L1FCustomerAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FAppointmentAddEdit.resx">
+      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FAppraiserAddEdit.resx">
+      <DependentUpon>FAppraiserAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FBankAddEdit.resx">
       <DependentUpon>FBankAddEdit.cs</DependentUpon>
@@ -1904,6 +2048,12 @@
     <EmbeddedResource Include="Forms\Dictionaries\FCarTypeAddEdit.resx">
       <DependentUpon>FCarTypeAddEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.resx">
+      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCollateralTypeAddEdit.resx">
+      <DependentUpon>FCollateralTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FContractEvaluateAddEdit.resx">
       <DependentUpon>FContractEvaluateAddEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -1912,6 +2062,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FCreditNameAddEdit.resx">
       <DependentUpon>FCreditNameAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditPurposeAddEdit.resx">
+      <DependentUpon>FCreditPurposeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditStatusAddEdit.resx">
+      <DependentUpon>FCreditStatusAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FCreditTypeAddEdit.resx">
       <DependentUpon>FCreditTypeAddEdit.cs</DependentUpon>
@@ -1922,11 +2078,24 @@
     <EmbeddedResource Include="Forms\Dictionaries\FCurrencyAddEdit.resx">
       <DependentUpon>FCurrencyAddEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FGoldTypeAddEdit.resx">
+      <DependentUpon>FGoldTypeAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FDictionaries.resx">
       <DependentUpon>FDictionaries.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dictionaries\FAppointmentAddEdit.resx">
-      <DependentUpon>FAppointmentAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dictionaries\FEyebrowsAddEdit.resx">
+      <DependentUpon>FEyebrowsAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FCreditClassAddEdit.resx">
+      <DependentUpon>FCreditClassAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FLoanOfficerAddEdit.resx">
+      <DependentUpon>FLoanOfficerAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FPawnTypeAddEdit.resx">
+      <DependentUpon>FPawnTypeAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FFounderAddEdit.resx">
       <DependentUpon>FFounderAddEdit.cs</DependentUpon>
@@ -1952,26 +2121,32 @@
     <EmbeddedResource Include="Forms\Dictionaries\FPersonnelPositionAddEdit.resx">
       <DependentUpon>FPersonnelPositionAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dictionaries\FPositionAddEdit.resx">
-      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FPhoneDescriptionAddEdit.resx">
       <DependentUpon>FPhoneDescriptionAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FPhonePrefixAddEdit.resx">
       <DependentUpon>FPhonePrefixAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Dictionaries\FCashOtherAppointmentAddEdit.resx">
-      <DependentUpon>FCashOtherAppointmentAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Dictionaries\FPositionAddEdit.resx">
+      <DependentUpon>FPositionAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dictionaries\FStatusEdit.resx">
       <DependentUpon>FStatusEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FTypeCreditAddEdit.resx">
+      <DependentUpon>FTypeCreditAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Dictionaries\FTypeDocumentAddEdit.resx">
+      <DependentUpon>FTypeDocumentAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FAbout.resx">
       <DependentUpon>FAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FChangePassword.resx">
       <DependentUpon>FChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FClosedDay.resx">
+      <DependentUpon>FClosedDay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FCreditCalculator.resx">
       <DependentUpon>FCreditCalculator.cs</DependentUpon>
@@ -2210,6 +2385,7 @@
     <EmbeddedResource Include="FServiceStartMessage.resx">
       <DependentUpon>FServiceStartMessage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -2249,7 +2425,10 @@
     </None>
     <None Include="ClassDiagram1.cd" />
     <None Include="CRS_TemporaryKey.pfx" />
+    <None Include="Forms\Contracts\Commitment.rdlc" />
+    <None Include="Forms\Contracts\Documents.rdlc" />
     <None Include="Forms\Contracts\Expenditure.rdlc" />
+    <None Include="Forms\Contracts\ExtendPaymentSchedulesReport.rdlc" />
     <None Include="Forms\Contracts\Insurance.rdlc" />
     <None Include="Forms\Contracts\PaymentSchedulesReport.rdlc" />
     <None Include="packages.config">
@@ -3877,6 +4056,7 @@
       <FileType>Satellite</FileType>
     </PublishFile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

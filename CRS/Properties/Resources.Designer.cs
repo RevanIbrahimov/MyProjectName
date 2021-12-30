@@ -2349,5 +2349,14 @@ namespace CRS.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+
+        internal static System.Drawing.Bitmap calendar__2_
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("calendar (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

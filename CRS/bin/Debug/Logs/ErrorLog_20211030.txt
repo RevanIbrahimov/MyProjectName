@@ -1,0 +1,22 @@
+
+Log Entry : 22:20:41 30 oktyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.APPRAISER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 22:20:47 30 oktyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------

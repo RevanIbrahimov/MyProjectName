@@ -19,15 +19,15 @@ namespace CRS.Forms.Dictionaries
         }
         public string TransactionName, TypeID;
         bool CurrentStatus = false, TypeUsed = false;
-        int TypeUsedUserID = -1, name_id;
+        int TypeUsedUserID = -1, nameID, categoryID;
 
         public delegate void DoEvent();
         public event DoEvent RefreshCreditTypeDataGridView;
 
         private void FCreditTypeAddEdit_Load(object sender, EventArgs e)
-        {         
-            CalcDate.EditValue = DateTime.Today;
-            RefreshDictionaries(6);
+        {
+            GlobalProcedures.FillLookUpEdit(CreditCategoryLookUp, "CREDIT_CATEGORY", "ID", "NAME", "1 = 1 ORDER BY ID");
+            CalcDate.EditValue = DateTime.Today;            
 
             if (TransactionName == "INSERT")            
                 TypeID = GlobalFunctions.GetOracleSequenceValue("CREDIT_TYPE_SEQUENCE").ToString();   
@@ -61,6 +61,9 @@ namespace CRS.Forms.Dictionaries
                         CalcDate.Enabled =                
                         TermValue.Enabled = 
                         InterestValue.Enabled = 
+                        CreditCategoryLookUp.Enabled =
+                        PenaltyPercentValue.Enabled = 
+                        CommissionPercentValue.Enabled =                        
                         NoteText.Enabled = false;
 
                     BFont.Visible = 
@@ -83,6 +86,9 @@ namespace CRS.Forms.Dictionaries
                 InterestValue.Enabled = 
                 NoteText.Enabled = 
                 BFont.Visible = 
+                CreditCategoryLookUp.Enabled =
+                PenaltyPercentValue.Enabled =
+                CommissionPercentValue.Enabled =
                 BOK.Visible = !status;
         }
 
@@ -92,22 +98,26 @@ namespace CRS.Forms.Dictionaries
                                    CN.NAME_EN,
                                    CN.NAME_RU,
                                    CT.NOTE,
-                                   CT.CODE,
                                    CT.CALC_DATE,
                                    CT.TERM,
                                    CT.INTEREST,
-                                   CT.USED_USER_ID
-                              FROM CRS_USER.CREDIT_TYPE CT, CRS_USER.CREDIT_NAMES CN
-                             WHERE CT.NAME_ID = CN.ID AND CT.ID = {TypeID}";
+                                   CT.USED_USER_ID,
+                                   CC.NAME CATEGORY_NAME,
+                                   CT.PENALTY_PERCENT,
+                                   CT.COMMISSION
+                              FROM CRS_USER.CREDIT_TYPE CT, CRS_USER.CREDIT_NAMES CN, CRS_USER.CREDIT_CATEGORY CC
+                             WHERE CT.NAME_ID = CN.ID AND CN.CREDIT_CATEGORY_ID = CC.ID AND CT.ID = {TypeID}";
             DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadTypeDetails", "Kreditin növü açılmadı.");
             if(dt.Rows.Count > 0)
             {
+                CreditCategoryLookUp.EditValue = CreditCategoryLookUp.Properties.GetKeyValueByDisplayText(dt.Rows[0]["CATEGORY_NAME"].ToString());
                 CreditNameLookUp.EditValue = CreditNameLookUp.Properties.GetKeyValueByDisplayText(dt.Rows[0]["NAME"].ToString());
                 NoteText.Text = dt.Rows[0]["NOTE"].ToString();
-                CodeText.Text = dt.Rows[0]["CODE"].ToString();
                 CalcDate.EditValue = DateTime.Parse(dt.Rows[0]["CALC_DATE"].ToString());
                 TermValue.Value = Convert.ToInt32(dt.Rows[0]["TERM"]);
-                InterestValue.Value = Convert.ToInt32(dt.Rows[0]["INTEREST"]);
+                InterestValue.Value = Convert.ToDecimal(dt.Rows[0]["INTEREST"]);
+                PenaltyPercentValue.Value = Convert.ToDecimal(dt.Rows[0]["PENALTY_PERCENT"]);
+                CommissionPercentValue.Value = Convert.ToDecimal(dt.Rows[0]["COMMISSION"]);
                 TypeUsedUserID = Convert.ToInt32(dt.Rows[0]["USED_USER_ID"]);
             }            
         }
@@ -129,10 +139,21 @@ namespace CRS.Forms.Dictionaries
         {
             bool b = false;
 
+            if (CreditCategoryLookUp.EditValue == null)
+            {
+                CreditCategoryLookUp.BackColor = Color.Red;
+                GlobalProcedures.ShowErrorMessage("Kateqoriya seçilməyib.");
+                CreditCategoryLookUp.Focus();
+                CreditCategoryLookUp.BackColor = GlobalFunctions.ElementColor();
+                return false;
+            }
+            else
+                b = true;
+
             if (CreditNameLookUp.EditValue == null)
             {
                 CreditNameLookUp.BackColor = Color.Red;
-                GlobalProcedures.ShowErrorMessage("Növün adı daxil edilməyib.");               
+                GlobalProcedures.ShowErrorMessage("Kreditin növü seçilməyib.");               
                 CreditNameLookUp.Focus();
                 CreditNameLookUp.BackColor = GlobalFunctions.ElementColor();
                 return false;
@@ -150,17 +171,6 @@ namespace CRS.Forms.Dictionaries
             }
             else
                 b = true;
-
-            //if (CodeText.Text.Length == 0)
-            //{
-            //    CodeText.BackColor = Color.Red;
-            //    GlobalProcedures.ShowErrorMessage("Kod daxil edilməyib.");                
-            //    CodeText.Focus();
-            //    RefreshFont();
-            //    return false;
-            //}
-            //else
-            //    b = true;
 
             if (TermValue.Value <= 0)
             {
@@ -182,7 +192,18 @@ namespace CRS.Forms.Dictionaries
                 return false;
             }
             else
-                b = true;            
+                b = true;
+
+            if (PenaltyPercentValue.Value < 0)
+            {
+                PenaltyPercentValue.BackColor = Color.Red;
+                GlobalProcedures.ShowErrorMessage("Cərimə faizi mənfi ədəd ola bilməz.");
+                PenaltyPercentValue.Focus();
+                PenaltyPercentValue.BackColor = GlobalFunctions.ElementColor();
+                return false;
+            }
+            else
+                b = true;
 
             return b;
         }
@@ -192,29 +213,36 @@ namespace CRS.Forms.Dictionaries
             GlobalProcedures.ExecuteQuery($@"INSERT INTO CRS_USER.CREDIT_TYPE(ID,
                                                                                 NAME_ID,
                                                                                 NOTE,
-                                                                                CODE,
                                                                                 CALC_DATE,
                                                                                 TERM,
-                                                                                INTEREST)
+                                                                                INTEREST,
+                                                                                PENALTY_PERCENT,
+                                                                                COMMISSION,
+                                                                                INSERT_USER)
                                              VALUES({TypeID},
-                                                    {name_id},
+                                                    {nameID},
                                                     '{NoteText.Text.Trim()}',
-                                                    '{CodeText.Text.Trim()}',
                                                     TO_DATE('{CalcDate.Text}','DD/MM/YYYY'),
                                                     {TermValue.Value},
-                                                    {InterestValue.Value})",
+                                                    {InterestValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                    {PenaltyPercentValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                    {CommissionPercentValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                    {GlobalVariables.V_UserID})",
                                               "Kreditin növü daxil edilmədi.",
                                               this.Name + "/InsertType");
         }
 
         private void UpdateType()
         {                    
-            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER.CREDIT_TYPE SET NAME_ID = {name_id},
+            GlobalProcedures.ExecuteQuery($@"UPDATE CRS_USER.CREDIT_TYPE SET NAME_ID = {nameID},
                                                                                 NOTE = '{NoteText.Text.Trim()}',
-                                                                                CODE = '{CodeText.Text.Trim()}',
                                                                                 CALC_DATE = TO_DATE('{CalcDate.Text}','DD/MM/YYYY'),
                                                                                 TERM = {TermValue.Value},
-                                                                                INTEREST = {InterestValue.Value} 
+                                                                                INTEREST = {InterestValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                                                PENALTY_PERCENT = {PenaltyPercentValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                                                COMMISSION = {CommissionPercentValue.Value.ToString(GlobalVariables.V_CultureInfoEN)},
+                                                                                UPDATE_USER = {GlobalVariables.V_UserID},
+                                                                                UPDATE_DATE = SYSDATE
                                                     WHERE ID = {TypeID}",
                                                 "Kreditin növü dəyişdirilmədi.",
                                                 this.Name + "/UpdateType");
@@ -250,7 +278,7 @@ namespace CRS.Forms.Dictionaries
 
         void RefreshDictionaries(int index)
         {
-            GlobalProcedures.FillLookUpEdit(CreditNameLookUp, "CREDIT_NAMES", "ID", "NAME", "ID IN (1,5) ORDER BY ID");
+            GlobalProcedures.FillLookUpEdit(CreditNameLookUp, "CREDIT_NAMES", "ID", "NAME", $@"CREDIT_CATEGORY_ID = {categoryID} ORDER BY ID");
         }
 
         private void LoadDictionaries(string transaction, int index)
@@ -262,12 +290,21 @@ namespace CRS.Forms.Dictionaries
             fc.ShowDialog();
         }
 
+        private void CreditCategoryLookUp_EditValueChanged(object sender, EventArgs e)
+        {
+            if (CreditCategoryLookUp.EditValue == null)
+                return;
+
+            categoryID = Convert.ToInt32(CreditCategoryLookUp.EditValue);
+            RefreshDictionaries(6);
+        }
+
         private void CreditNameLookUp_EditValueChanged(object sender, EventArgs e)
         {
             if (CreditNameLookUp.EditValue == null)
                 return;
 
-            name_id = Convert.ToInt32(CreditNameLookUp.EditValue);
+            nameID = Convert.ToInt32(CreditNameLookUp.EditValue);
                         
             if (TransactionName == "INSERT" && !String.IsNullOrEmpty(TypeID))
             {                
@@ -314,7 +351,7 @@ namespace CRS.Forms.Dictionaries
                                                              FROM CRS_USER.CREDIT_TYPE_FONTS
                                                             WHERE CREDIT_TYPE_ID = (SELECT NVL (MAX (ID), 0)
                                                                                       FROM CRS_USER.CREDIT_TYPE
-                                                                                     WHERE NAME_ID = {name_id})",                                                 
+                                                                                     WHERE NAME_ID = {nameID})",                                                 
                                                         "Kodun fontları temp cədvələ daxil edilmədi.",
                                                         this.Name + "/CreditNameLookUp_EditValueChanged");
                 RefreshFont();

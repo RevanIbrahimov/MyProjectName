@@ -1,0 +1,1161 @@
+
+Log Entry : 00:03:39 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:03:46 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:03:56 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FJDictionaries/LoadCreditTypeDataGridView
+  
+   ShowMessage: Kreditin rekvizitləri yüklənmədi.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT CT.ID,
+                                 CN.NAME,
+                                 CT.CALC_DATE,
+                                 CT.CODE,
+                                 CT.TERM,
+                                 CT.INTEREST,
+                                 CT.NOTE,
+                                 CT.USED_USER_ID
+                            FROM CRS_USER.CREDIT_TYPE CT, CRS_USER.CREDIT_NAMES CN
+                           WHERE CT.NAME_ID = CN.ID
+                        ORDER BY CN.NAME, CT.CALC_DATE DESC
+-------------------------------------------------
+
+Log Entry : 00:05:09 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FJDictionaries/LoadCreditTypeDataGridView
+  
+   ShowMessage: Kreditin rekvizitləri yüklənmədi.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT CT.ID,
+                                 CN.NAME,
+                                 CT.CALC_DATE,
+                                 CT.CODE,
+                                 CT.TERM,
+                                 CT.INTEREST,
+                                 CT.NOTE,
+                                 CT.USED_USER_ID
+                            FROM CRS_USER.CREDIT_TYPE CT, CRS_USER.CREDIT_NAMES CN
+                           WHERE CT.NAME_ID = CN.ID
+                        ORDER BY CN.NAME, CT.CALC_DATE DESC
+-------------------------------------------------
+
+Log Entry : 00:14:08 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:14:12 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:39:10 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:39:12 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:39:47 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/FCreditTypeAddEdit/InsertType
+  
+   ShowMessage: Kreditin növü daxil edilmədi.
+   Exception Message: ORA-00904: "CODE": invalid identifier
+   SQL Text      :  INSERT INTO CRS_USER.CREDIT_TYPE(ID,
+                                                                                NAME_ID,
+                                                                                NOTE,
+                                                                                CODE,
+                                                                                CALC_DATE,
+                                                                                TERM,
+                                                                                INTEREST,
+                                                                                PENALTY_PERCENT,
+                                                                                COMMISSION,
+                                                                                INSERT_USER)
+                                             VALUES(8,
+                                                    1,
+                                                    '',
+                                                    '',
+                                                    TO_DATE('19.12.2021','DD/MM/YYYY'),
+                                                    12,
+                                                    0,
+                                                    0,
+                                                    0,
+                                                    11)
+-------------------------------------------------
+
+Log Entry : 00:43:35 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:43:39 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:49:12 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:49:14 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:50:27 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT , 
+                             CRS_USER.CONTRACTS C ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE    C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.CREDIT_TYPE_ID = CT.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 00:51:05 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FCarOrObjectContractAddEdit/CreditTypeParametr
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT CT.ID,CT.CODE,CT.TERM,CT.INTEREST FROM CRS_USER.CREDIT_TYPE CT WHERE CT.NAME_ID = 1 AND CT.CALC_DATE = (SELECT MAX(CALC_DATE) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = CT.NAME_ID AND CALC_DATE <= TO_DATE('19.12.2021','DD/MM/YYYY'))
+-------------------------------------------------
+
+Log Entry : 00:51:07 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  FCarOrObjectContractAddEdit
+   ProcedureName =  CRS.Forms.Contracts.FCarOrObjectContractAddEdit/CreditTypeParametr
+  
+   ShowMessage: Kredit növünün parametrləri açılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT CT.ID,CT.CODE,CT.TERM,CT.INTEREST FROM CRS_USER.CREDIT_TYPE CT WHERE CT.NAME_ID = 1 AND CT.CALC_DATE = (SELECT MAX(CALC_DATE) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = CT.NAME_ID AND CALC_DATE <= TO_DATE('19.12.2021','DD/MM/YYYY'))
+-------------------------------------------------
+
+Log Entry : 00:51:47 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT ROW_NUM - 1
+                                                                      FROM (  SELECT ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                                                                                     C.ID
+                                                                                FROM CRS_USER.CONTRACTS C, CRS_USER.CREDIT_TYPE CT
+                                                                               WHERE C.CREDIT_TYPE_ID = CT.ID  AND C.STATUS_ID = 5
+                                                                            ORDER BY CT.CODE || C.CODE DESC)
+                                                                     WHERE ID = 414
+-------------------------------------------------
+
+Log Entry : 00:51:48 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT ROW_NUM - 1
+                                                                      FROM (  SELECT ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                                                                                     C.ID
+                                                                                FROM CRS_USER.CONTRACTS C, CRS_USER.CREDIT_TYPE CT
+                                                                               WHERE C.CREDIT_TYPE_ID = CT.ID  AND C.STATUS_ID = 5
+                                                                            ORDER BY CT.CODE || C.CODE DESC)
+                                                                     WHERE ID = 414
+-------------------------------------------------
+
+Log Entry : 00:51:49 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT , 
+                             CRS_USER.CONTRACTS C ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE    C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.CREDIT_TYPE_ID = CT.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 01:01:04 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 1
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 01:01:06 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                                 C.ID,
+                                 CT.CODE || C.CODE CONTRACT_CODE,
+                                 ST.STATUS_NAME,
+                                 CN.NAME CREDIT_NAME,
+                                 COM.COMMITMENT_NAME COMMITMENT,
+                                 H.HOSTAGE,
+                                    TO_CHAR (C.START_DATE, 'DD.MM.YYYY')
+                                 || ' - '
+                                 || TO_CHAR (C.END_DATE, 'DD.MM.YYYY')
+                                    CONTRACT_DATE,
+                                 (CASE
+                                     WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                     ELSE CT.TERM || ' ay'
+                                  END)
+                                    PERIOD,
+                                 (CASE
+                                     WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                     ELSE CT.INTEREST || ' %'
+                                  END)
+                                    INTEREST,
+                                 C.GRACE_PERIOD || ' ay' GRACE,
+                                 C.AMOUNT||' '||CUR.CODE AMOUNT,         
+                                 C.SELLER_ID,         
+                                 C.STATUS_ID,         
+                                 C.SELLER_TYPE_ID,
+                                 C.CUSTOMER_TYPE_ID,
+                                 C.IS_COMMIT
+                            FROM CRS_USER.CONTRACTS C,
+                                 CRS_USER.CREDIT_TYPE CT,
+                                 CRS_USER.CREDIT_NAMES CN,
+                                 CRS_USER.CURRENCY CUR,
+                                 CRS_USER.STATUS ST,
+                                 CRS_USER.V_COMMITMENTS COM,
+                                 CRS_USER.V_HOSTAGE H
+                           WHERE     C.CREDIT_TYPE_ID = CT.ID
+                                 AND C.ID = COM.CONTRACT_ID(+)
+                                 AND CT.NAME_ID = CN.ID
+                                 AND C.CURRENCY_ID = CUR.ID
+                                 AND C.STATUS_ID = ST.ID
+                                 AND C.ID = H.CONTRACT_ID
+                                 AND C.CUSTOMER_ID = 282
+                                 AND C.CUSTOMER_TYPE_ID = 1
+                        ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 01:01:09 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT , 
+                             CRS_USER.CONTRACTS C ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE    C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.CREDIT_TYPE_ID = CT.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 01:01:21 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  FCarOrObjectContractAddEdit
+   ProcedureName =  CRS.Forms.Contracts.FCarOrObjectContractAddEdit/CreditTypeParametr
+  
+   ShowMessage: Kredit növünün parametrləri açılmadı.
+   Exception Message: Cannot find column 3.
+   SQL Text      :  SELECT CT.ID,CT.TERM,CT.INTEREST FROM CRS_USER.CREDIT_TYPE CT WHERE CT.NAME_ID = 1 AND CT.CALC_DATE = (SELECT MAX(CALC_DATE) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = CT.NAME_ID AND CALC_DATE <= TO_DATE('19.12.2021','DD/MM/YYYY'))
+-------------------------------------------------
+
+Log Entry : 01:02:36 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT ROW_NUM - 1
+                                                                      FROM (  SELECT ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                                                                                     C.ID
+                                                                                FROM CRS_USER.CONTRACTS C, CRS_USER.CREDIT_TYPE CT
+                                                                               WHERE C.CREDIT_TYPE_ID = CT.ID  AND C.STATUS_ID = 5
+                                                                            ORDER BY CT.CODE || C.CODE DESC)
+                                                                     WHERE ID = 415
+-------------------------------------------------
+
+Log Entry : 01:02:39 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT ROW_NUM - 1
+                                                                      FROM (  SELECT ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                                                                                     C.ID
+                                                                                FROM CRS_USER.CONTRACTS C, CRS_USER.CREDIT_TYPE CT
+                                                                               WHERE C.CREDIT_TYPE_ID = CT.ID  AND C.STATUS_ID = 5
+                                                                            ORDER BY CT.CODE || C.CODE DESC)
+                                                                     WHERE ID = 415
+-------------------------------------------------
+
+Log Entry : 01:02:40 19 dekabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CT"."CODE": invalid identifier
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT , 
+                             CRS_USER.CONTRACTS C ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE    C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.CREDIT_TYPE_ID = CT.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------

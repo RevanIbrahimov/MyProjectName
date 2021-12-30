@@ -1,0 +1,78 @@
+
+Log Entry : 17:24:06 12 noyabr 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContractAddEdit/LoadCustomerDetails
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CUSTOMER_CONTRACT_NUMBER": invalid identifier
+   SQL Text      :  SELECT C.CODE CUSTOMER_CODE,
+                               C.CUSTOMER_NAME,
+                               CC.CARD_DESCRIPTION,
+                               DECODE(C.PERSON_TYPE_ID,1,CC.REGISTRATION_ADDRESS,2,CC.ADDRESS) ADDRESS,
+                               TO_CHAR (CC.ISSUE_DATE, 'DD.MM.YYYY') ISSUE_DATE,
+                               TO_CHAR (CC.RELIABLE_DATE, 'DD.MM.YYYY') RELIABLE_DATE,
+                               CC.CARD_ISSUING_NAME,
+                               C.ID CUSTOMER_ID,
+                               CC.CARD_ID,
+                               CIM.IMAGE,
+                               C.PERSON_TYPE_ID,
+                               CC.CARD_SERIES,
+                               CC.CARD_NUMBER,
+                               TP.NAME PERSON_TYPE_NAME,
+                               DECODE(C.PERSON_TYPE_ID,1,'C',2,'JP') PERSON_DESCRIPTION,
+                               C.VOEN,
+                               (SELECT NVL(MAX (CUSTOMER_CONTRACT_NUMBER), 0)
+                                  FROM CRS_USER.CONTRACTS
+                                 WHERE CUSTOMER_ID = C.ID)
+                                  CUSTOMER_CONTRACT_NUMBER
+                          FROM CRS_USER.V_CUSTOMERS C,
+                               CRS_USER.V_CUSTOMER_CARDS_DETAILS CC,
+                               CRS_USER.CUSTOMER_IMAGE CIM,
+                               CRS_USER.PERSON_TYPE TP
+                         WHERE     C.ID = CC.CUSTOMER_ID
+                               AND C.PERSON_TYPE_ID = CC.PERSON_TYPE_ID
+                               AND C.PERSON_TYPE_ID = TP.ID
+                               AND C.ID = CIM.CUSTOMER_ID(+)
+                               AND C.CODE ='00167'
+-------------------------------------------------
+
+Log Entry : 18:50:29 12 noyabr 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContractAddEdit/LoadCustomerDetails
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00904: "CUSTOMER_CONTRACT_NUMBER": invalid identifier
+   SQL Text      :  SELECT C.CODE CUSTOMER_CODE,
+                               C.CUSTOMER_NAME,
+                               CC.CARD_DESCRIPTION,
+                               DECODE(C.PERSON_TYPE_ID,1,CC.REGISTRATION_ADDRESS,2,CC.ADDRESS) ADDRESS,
+                               TO_CHAR (CC.ISSUE_DATE, 'DD.MM.YYYY') ISSUE_DATE,
+                               TO_CHAR (CC.RELIABLE_DATE, 'DD.MM.YYYY') RELIABLE_DATE,
+                               CC.CARD_ISSUING_NAME,
+                               C.ID CUSTOMER_ID,
+                               CC.CARD_ID,
+                               CIM.IMAGE,
+                               C.PERSON_TYPE_ID,
+                               CC.CARD_SERIES,
+                               CC.CARD_NUMBER,
+                               TP.NAME PERSON_TYPE_NAME,
+                               DECODE(C.PERSON_TYPE_ID,1,'C',2,'JP') PERSON_DESCRIPTION,
+                               C.VOEN,
+                               (SELECT NVL(MAX (CUSTOMER_CONTRACT_NUMBER), 0)
+                                  FROM CRS_USER.CONTRACTS
+                                 WHERE CUSTOMER_ID = C.ID)
+                                  CUSTOMER_CONTRACT_NUMBER
+                          FROM CRS_USER.V_CUSTOMERS C,
+                               CRS_USER.V_CUSTOMER_CARDS_DETAILS CC,
+                               CRS_USER.CUSTOMER_IMAGE CIM,
+                               CRS_USER.PERSON_TYPE TP
+                         WHERE     C.ID = CC.CUSTOMER_ID
+                               AND C.PERSON_TYPE_ID = CC.PERSON_TYPE_ID
+                               AND C.PERSON_TYPE_ID = TP.ID
+                               AND C.ID = CIM.CUSTOMER_ID(+)
+                               AND C.CODE ='00168'
+-------------------------------------------------

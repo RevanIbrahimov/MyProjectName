@@ -24,6 +24,7 @@ using CRS.Class.DataAccess;
 using CRS.Class.Tables;
 using DevExpress.XtraSplashScreen;
 using CRS.Class.Views;
+using static CRS.Class.Enum;
 
 namespace CRS.Forms.Contracts
 {
@@ -64,6 +65,7 @@ namespace CRS.Forms.Contracts
             period,
             commitmentID = 0,
             isSpecialAttention = 0;
+            
 
         double amount;
 
@@ -122,7 +124,7 @@ namespace CRS.Forms.Contracts
             s = $@"SELECT 1 SS,
                              C.ID,
                              CU.FULLNAME CUSTOMERFULLNAME,
-                             CT.CODE || C.CODE CONTRACT_CODE,
+                             C.CODE CONTRACT_CODE,
                              CN.NAME CREDIT_NAME,
                              COM.COMMITMENT_NAME COMMITMENT,
                              C.START_DATE,
@@ -174,8 +176,8 @@ namespace CRS.Forms.Contracts
                              NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
                              NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
                              C.IS_SPECIAL_ATTENTION
-                        FROM CRS_USER.CONTRACTS C,
-                             CRS_USER.CREDIT_TYPE CT,
+                        FROM CRS_USER.CREDIT_TYPE CT , 
+                             CRS_USER.CONTRACTS C ,
                              CRS_USER.CREDIT_NAMES CN,
                              CRS_USER.CURRENCY CUR,
                              CRS_USER.STATUS ST,
@@ -183,13 +185,13 @@ namespace CRS.Forms.Contracts
                              CRS_USER.V_CONTRACT_COMMITMENTS COM,
                              CRS_USER.HOSTAGE_CAR H,
                              CRS_USER.V_LAST_CONTRACT_EXTEND CE
-                       WHERE     C.CREDIT_TYPE_ID = CT.ID
-                             AND C.CUSTOMER_ID = CU.ID
+                       WHERE    C.CUSTOMER_ID = CU.ID
                              AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
                              AND C.ID = COM.CONTRACT_ID(+)
                              AND CT.NAME_ID = CN.ID
                              AND C.CURRENCY_ID = CUR.ID
                              AND C.STATUS_ID = ST.ID
+                             AND C.CREDIT_TYPE_ID = CT.ID
                              AND C.ID = H.CONTRACT_ID(+)
                              AND C.ID = CE.CONTRACT_ID(+)
                              {status}{is_commit}{agreement}{note}{commitment}
@@ -255,7 +257,7 @@ namespace CRS.Forms.Contracts
             }
             GlobalProcedures.SplashScreenShow(this, typeof(WaitForms.FContractShowWait));
 
-            FContractAddEdit fc = new FContractAddEdit();
+            FCarOrObjectContractAddEdit fc = new FCarOrObjectContractAddEdit();
             fc.TransactionName = transaction;
             fc.ContractID = contract_id;
             fc.CustomerID = customer_id;
@@ -264,6 +266,32 @@ namespace CRS.Forms.Contracts
             fc.Commit = commit;
             if (transaction == "EDIT")
                 fc.IsSpecialAttention = isSpecialAttention;
+            fc.RefreshContractsDataGridView += new FCarOrObjectContractAddEdit.DoEvent(RefreshContracts);
+            GlobalProcedures.SplashScreenClose();
+            fc.ShowDialog();
+
+            ContractsGridView.FocusedRowHandle = old_row_num;
+            if (!IsInsert)
+                ContractsGridView.TopRowIndex = topindex;
+
+        }
+
+        private void LoadFContractAddEdit(string transaction, string contract_id, string customer_id, int commit)
+        {
+            if (!IsInsert)
+            {
+                old_row_num = ContractsGridView.FocusedRowHandle;
+                topindex = ContractsGridView.TopRowIndex;
+            }
+            GlobalProcedures.SplashScreenShow(this, typeof(WaitForms.FContractShowWait));
+
+            FContractAddEdit fc = new FContractAddEdit();
+            fc.TransactionName = transaction;
+            fc.ContractID = contract_id;
+            fc.CustomerID = customer_id;
+            fc.IsExtend = isExtend;
+            fc.Commit = commit;
+            fc.IsSpecialAttention = isSpecialAttention;
             fc.RefreshContractsDataGridView += new FContractAddEdit.DoEvent(RefreshContracts);
             GlobalProcedures.SplashScreenClose();
             fc.ShowDialog();
@@ -276,8 +304,7 @@ namespace CRS.Forms.Contracts
 
         private void NewContractBarButton_ItemClick(object sender, ItemClickEventArgs e)
         {
-            IsInsert = true;
-            LoadFContractAddEdit("INSERT", null, null, null, 0);
+            
         }
 
         private void ShowOrHideSellerBarButton_ItemClick(object sender, ItemClickEventArgs e)
@@ -352,10 +379,18 @@ namespace CRS.Forms.Contracts
             }
         }
 
-        private void EditContractBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        private void EditContractBarButto_ItemClick(object sender, ItemClickEventArgs e)
         {
             IsInsert = false;
-            LoadFContractAddEdit("EDIT", ContractID, CustomerID, SellerID, Commit);
+            Edit();
+        }
+
+        private void Edit()
+        {
+            if (credit_name_id == (int)CreditNameEnum.Avtomobil || credit_name_id == (int)CreditNameEnum.DaşınmazEmlak)
+                LoadFContractAddEdit("EDIT", ContractID, CustomerID, SellerID, Commit);
+            else if (credit_name_id == (int)CreditNameEnum.Lombard)
+                LoadFContractAddEdit("EDIT", ContractID, CustomerID, Commit);
         }
 
         private void ContractsGridView_DoubleClick(object sender, EventArgs e)
@@ -363,7 +398,7 @@ namespace CRS.Forms.Contracts
             if (EditContractBarButton.Enabled)
             {
                 IsInsert = false;
-                LoadFContractAddEdit("EDIT", ContractID, CustomerID, SellerID, Commit);
+                Edit();
             }
         }
 
@@ -435,7 +470,8 @@ namespace CRS.Forms.Contracts
             GridView currentView = sender as GridView;
 
             if ((e.RowHandle >= 0) && (int.Parse(ContractsGridView.GetRowCellDisplayText(e.RowHandle, ContractsGridView.Columns["USED_USER_ID"])) < 0)
-                     && (int.Parse(ContractsGridView.GetRowCellDisplayText(e.RowHandle, ContractsGridView.Columns["STATUS_ID"])) == 5))
+                     && int.Parse(ContractsGridView.GetRowCellDisplayText(e.RowHandle, ContractsGridView.Columns["STATUS_ID"])) == 5
+                     && int.Parse(ContractsGridView.GetRowCellDisplayText(e.RowHandle, ContractsGridView.Columns["CREDIT_NAME_ID"])) != (int)CreditNameEnum.Lombard)
             {
                 GlobalProcedures.GridRowCellStyleForNotCommit(ContractsGridView, e);
 
@@ -515,6 +551,56 @@ namespace CRS.Forms.Contracts
         private void HostageGridView_ColumnPositionChanged(object sender, EventArgs e)
         {
             GlobalProcedures.GridSaveLayout(HostageGridView, "Satıcı");
+        }
+        
+
+        private void NewCarOrObjectBarButton_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            IsInsert = true;
+            LoadFContractAddEdit("INSERT", null, null, null, 0);
+        }
+
+        private void NewPawnshopBarButton_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            IsInsert = true;
+            LoadFContractAddEdit("INSERT", null, null, 0);
+        }
+
+        
+
+        private void DeleteContractBarButton1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void DeleteContractBarButton2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void DeleteContractBarButto_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            old_row_num = ContractsGridView.FocusedRowHandle;
+            topindex = ContractsGridView.TopRowIndex;
+            List<Contract> lstContract = ContractDAL.SelectContract(int.Parse(ContractID)).ToList<Contract>();
+            var contract = lstContract.First();
+            if (contract.STATUS_ID == 6)
+                XtraMessageBox.Show("Seçilmiş " + ContractCode + " saylı Lizinq Müqaviləsi bağlanılıb. Statistika üçün bu müqavilənin məlumatlarını bazadan silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                int ContractUsedUserID = contract.USED_USER_ID;
+                if ((ContractUsedUserID == -1) || (GlobalVariables.V_UserID == ContractUsedUserID))
+                    DeleteContract();
+                else
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == ContractUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Silmək istədiyiniz " + ContractCode + " saylı Lizinq Müqaviləsinin məlumatları " + used_user_name + " tərəfindən istifadə edilir. Bu müqavilənin məlumatlarını silmək olmaz.", "Seçilmiş müqavilənin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            LoadContractsDataGridView();
+            LoadHostageDataGridView();
+            ContractsGridView.FocusedRowHandle = old_row_num;
+            ContractsGridView.TopRowIndex = topindex;
         }
 
         private void FromEntendMountCount_EditValueChanged(object sender, EventArgs e)
@@ -945,7 +1031,7 @@ namespace CRS.Forms.Contracts
         {
             InterestValue.Value =
                 PeriodValue.Value = 0;
-            CustomerNameText.Text =
+                CustomerNameText.Text =
                 ContractCodeText.Text =
                 CurrencyComboBox.Text =
                 CreditNameComboBox.Text =

@@ -1,0 +1,187 @@
+
+Log Entry : 17:28:35 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/Lock_or_UnLock_UserID
+  
+   ShowMessage: CRS_USER.EYEBROWS_TYPE cədvəli bloka düşmədi.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  UPDATE CRS_USER.EYEBROWS_TYPE SET USED_USER_ID = 11 WHERE ID =  AND USED_USER_ID = -1
+-------------------------------------------------
+
+Log Entry : 17:28:43 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FEyebrowsAddEdit/LoadDetails
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT NAME,NOTE,IS_DEDUCTION,USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 18:02:35 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/Lock_or_UnLock_UserID
+  
+   ShowMessage: CRS_USER.EYEBROWS_TYPE cədvəli bloka düşmədi.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  UPDATE CRS_USER.EYEBROWS_TYPE SET USED_USER_ID = 11 WHERE ID =  AND USED_USER_ID = -1
+-------------------------------------------------
+
+Log Entry : 18:02:41 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FEyebrowsAddEdit/LoadDetails
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT NAME,NOTE,IS_DEDUCTION,USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:09:03 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:09:06 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:10:54 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:10:56 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:40:25 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/Lock_or_UnLock_UserID
+  
+   ShowMessage: CRS_USER.GOLD_TYPE cədvəli bloka düşmədi.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  UPDATE CRS_USER.GOLD_TYPE SET USED_USER_ID = 11 WHERE ID =  AND USED_USER_ID = -1
+-------------------------------------------------
+
+Log Entry : 19:40:29 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FGoldTypeAddEdit/LoadDetails
+  
+   ShowMessage: Əyyarın adı açılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT NAME,NOTE,COEFFICIENT,AMOUNT,USED_USER_ID FROM CRS_USER.GOLD_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:42:37 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetCount
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT COUNT(*) FROM CRS_USER.PAWN WHERE PAWN_TYPE_ID = 
+-------------------------------------------------
+
+Log Entry : 19:42:40 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetCount
+  
+   ShowMessage: Say tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT COUNT(*) FROM CRS_USER.PAWN WHERE PAWN_TYPE_ID = 
+-------------------------------------------------
+
+Log Entry : 19:42:46 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/FJDictionaries/DeletePawnTypeBarButton_ItemClick
+  
+   ShowMessage: Əşya silinmədi.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  DELETE FROM CRS_USER.PAWN_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 19:42:59 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/Lock_or_UnLock_UserID
+  
+   ShowMessage: CRS_USER.PAWN_TYPE cədvəli bloka düşmədi.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  UPDATE CRS_USER.PAWN_TYPE SET USED_USER_ID = 11 WHERE ID =  AND USED_USER_ID = -1
+-------------------------------------------------
+
+Log Entry : 19:43:01 2 dekabr 2021, çərşənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FPawnTypeAddEdit/LoadDetails
+  
+   ShowMessage: Əşyanın adı açılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT NAME,NOTE,USED_USER_ID FROM CRS_USER.PAWN_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 23:33:15 2 dekabr 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetID
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00936: missing expression
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------
+
+Log Entry : 23:34:04 2 dekabr 2021, cümə axşamı
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GetID
+  
+   ShowMessage: ID tapılmadı.
+   Exception Message: Object reference not set to an instance of an object.
+   SQL Text      :  SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = 
+-------------------------------------------------

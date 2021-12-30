@@ -73,6 +73,8 @@
             this.barStaticItem4 = new DevExpress.XtraBars.BarStaticItem();
             this.CurrentDayBarStatic = new DevExpress.XtraBars.BarStaticItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
+            this.VersionBarStatic = new DevExpress.XtraBars.BarStaticItem();
             this.InfoRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.CustomerRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ContractRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -89,8 +91,6 @@
             this.CRSNotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.AlertControl = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             this.VersionTimer = new System.Windows.Forms.Timer(this.components);
-            this.barStaticItem5 = new DevExpress.XtraBars.BarStaticItem();
-            this.VersionBarStatic = new DevExpress.XtraBars.BarStaticItem();
             ((System.ComponentModel.ISupportInitialize)(this.MainRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MenuBackstageViewControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GalleryDropDown)).BeginInit();
@@ -119,7 +119,6 @@
             this.barStaticItem5,
             this.VersionBarStatic});
             this.MainRibbon.Location = new System.Drawing.Point(0, 0);
-            this.MainRibbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MainRibbon.MaxItemId = 28;
             this.MainRibbon.Name = "MainRibbon";
             this.MainRibbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
@@ -135,7 +134,7 @@
             this.SmsRibbonPage,
             this.CommonRibbonPage});
             this.MainRibbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.MainRibbon.Size = new System.Drawing.Size(1471, 179);
+            this.MainRibbon.Size = new System.Drawing.Size(1179, 143);
             this.MainRibbon.StatusBar = this.ribbonStatusBar;
             this.MainRibbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             this.MainRibbon.SelectedPageChanged += new System.EventHandler(this.MainRibbon_SelectedPageChanged);
@@ -160,11 +159,10 @@
             this.MenuBackstageViewControl.Items.Add(this.BackupViewButton);
             this.MenuBackstageViewControl.Items.Add(this.backstageViewItemSeparator5);
             this.MenuBackstageViewControl.Items.Add(this.CloseBackstageViewButton);
-            this.MenuBackstageViewControl.Location = new System.Drawing.Point(131, 174);
-            this.MenuBackstageViewControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MenuBackstageViewControl.Location = new System.Drawing.Point(113, 141);
             this.MenuBackstageViewControl.Name = "MenuBackstageViewControl";
             this.MenuBackstageViewControl.OwnerControl = this.MainRibbon;
-            this.MenuBackstageViewControl.Size = new System.Drawing.Size(1303, 735);
+            this.MenuBackstageViewControl.Size = new System.Drawing.Size(1117, 597);
             this.MenuBackstageViewControl.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013;
             this.MenuBackstageViewControl.TabIndex = 3;
             this.MenuBackstageViewControl.Text = "backstageViewControl1";
@@ -424,6 +422,20 @@
             this.barButtonItem1.Name = "barButtonItem1";
             this.barButtonItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
+            // barStaticItem5
+            // 
+            this.barStaticItem5.Caption = "|";
+            this.barStaticItem5.Id = 26;
+            this.barStaticItem5.Name = "barStaticItem5";
+            // 
+            // VersionBarStatic
+            // 
+            this.VersionBarStatic.Caption = "Version";
+            this.VersionBarStatic.Id = 27;
+            this.VersionBarStatic.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
+            this.VersionBarStatic.ItemAppearance.Normal.Options.UseFont = true;
+            this.VersionBarStatic.Name = "VersionBarStatic";
+            // 
             // InfoRibbonPage
             // 
             this.InfoRibbonPage.Name = "InfoRibbonPage";
@@ -496,11 +508,10 @@
             this.ribbonStatusBar.ItemLinks.Add(this.CurrentDayBarStatic);
             this.ribbonStatusBar.ItemLinks.Add(this.barStaticItem5);
             this.ribbonStatusBar.ItemLinks.Add(this.VersionBarStatic);
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 904);
-            this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 608);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.MainRibbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1471, 40);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1179, 31);
             // 
             // MainTimer
             // 
@@ -530,31 +541,16 @@
             this.VersionTimer.Interval = 180000;
             this.VersionTimer.Tick += new System.EventHandler(this.VersionTimer_Tick);
             // 
-            // barStaticItem5
-            // 
-            this.barStaticItem5.Caption = "|";
-            this.barStaticItem5.Id = 26;
-            this.barStaticItem5.Name = "barStaticItem5";
-            // 
-            // VersionBarStatic
-            // 
-            this.VersionBarStatic.Caption = "Version";
-            this.VersionBarStatic.Id = 27;
-            this.VersionBarStatic.ItemAppearance.Normal.FontStyleDelta = System.Drawing.FontStyle.Bold;
-            this.VersionBarStatic.ItemAppearance.Normal.Options.UseFont = true;
-            this.VersionBarStatic.Name = "VersionBarStatic";
-            // 
             // FMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1471, 944);
+            this.ClientSize = new System.Drawing.Size(1179, 639);
             this.Controls.Add(this.MenuBackstageViewControl);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.MainRibbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FMain";
             this.Ribbon = this.MainRibbon;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

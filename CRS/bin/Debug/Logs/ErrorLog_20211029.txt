@@ -1,0 +1,22 @@
+
+Log Entry : 18:39:34 29 oktyabr 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetDate
+  
+   ShowMessage: Tarix tapılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT MAX(CLOSED_DAY) FROM CRS_USER.CLOSED_DAYS
+-------------------------------------------------
+
+Log Entry : 19:31:35 29 oktyabr 2021, cümə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : GetDate
+  
+   ShowMessage: Tarix tapılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT MAX(CLOSED_DAY) FROM CRS_USER.CLOSED_DAYS
+-------------------------------------------------

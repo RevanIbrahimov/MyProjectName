@@ -7,6 +7,8 @@ namespace CRS.Class.Tables
 {
     public class Contract
     {
+        public DateTime INSERT_DATE { get; set; }
+        public decimal FIFD { get; set; }
         public int ID { get; set; }
         public string CODE { get; set; }
         public int CUSTOMER_ID { get; set; }

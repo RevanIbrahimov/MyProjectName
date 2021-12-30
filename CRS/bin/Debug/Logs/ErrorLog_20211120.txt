@@ -1,0 +1,171 @@
+
+Log Entry : 11:38:18 20 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  FCarOrObjectContractAddEdit
+   ProcedureName =  CRS.Forms.Contracts.FCarOrObjectContractAddEdit/LoadContractDetails
+  
+   ShowMessage: Müqavilənin məlumatları tapılmadı.
+   Exception Message: Object cannot be cast from DBNull to other types.
+   SQL Text      :  SELECT CT.CODE || C.CODE CONTRACT_CODE,
+                               CN.NAME CREDIT_NAME,
+                               C.START_DATE,
+                               C.END_DATE,
+                               CT.TERM PERIOD,
+                               CT.INTEREST,
+                               C.GRACE_PERIOD,
+                               C.AMOUNT,
+                               CUR.CODE,
+                               C.CUSTOMER_ACCOUNT,
+                               C.LEASING_ACCOUNT,
+                               C.LEASING_INTEREST_ACCOUNT,
+                               C.CHECK_END_DATE,
+                               C.PAYMENT_TYPE,
+                               C.MONTHLY_AMOUNT,
+                               C.CHECK_INTEREST,
+                               CT.ID CREDIT_TYPE_ID,
+                               CT.NAME_ID CREDIT_NAME_ID,
+                               C.SELLER_ACCOUNT,
+                               C.CHECK_PERIOD,
+                               C.CURRENCY_RATE,
+                               DECODE(C.SELLER_TYPE_ID,1,0,2,1) SELLER_INDEX,
+                               C.CUSTOMER_TYPE_ID,
+                               CUS.CODE CUSTOMER_CODE,
+                               C.SELLER_ID,
+                               C.SELLER_TYPE_ID,
+                               C.USED_USER_ID,
+                               C.STATUS_ID,
+                               C.PARENT_ID,
+                               (SELECT COUNT (*)
+                                      FROM (SELECT CONTRACT_ID FROM CRS_USER.CUSTOMER_PAYMENTS
+                                            UNION ALL
+                                            SELECT CONTRACT_ID FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP)
+                                     WHERE CONTRACT_ID = C.ID)
+                                      PAY_COUNT,
+                               (SELECT COUNT(*) FROM CRS_USER.POWER_OF_ATTORNEY WHERE CONTRACT_ID = C.ID) POWER_COUNT
+                          FROM CRS_USER.CONTRACTS C,
+                               CRS_USER.CREDIT_TYPE CT,
+                               CRS_USER.CREDIT_NAMES CN,
+                               CRS_USER.CURRENCY CUR,
+                               CRS_USER.V_CUSTOMERS CUS
+                         WHERE     C.CREDIT_TYPE_ID = CT.ID
+                               AND CT.NAME_ID = CN.ID
+                               AND C.CURRENCY_ID = CUR.ID
+                               AND C.CUSTOMER_ID = CUS.ID
+                               AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                               AND C.ID = 398
+-------------------------------------------------
+
+Log Entry : 12:03:06 20 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  FCarOrObjectContractAddEdit
+   ProcedureName =  CRS.Forms.Contracts.FCarOrObjectContractAddEdit/LoadContractDetails
+  
+   ShowMessage: Müqavilənin məlumatları tapılmadı.
+   Exception Message: Object cannot be cast from DBNull to other types.
+   SQL Text      :  SELECT CT.CODE || C.CODE CONTRACT_CODE,
+                               CN.NAME CREDIT_NAME,
+                               C.START_DATE,
+                               C.END_DATE,
+                               CT.TERM PERIOD,
+                               CT.INTEREST,
+                               C.GRACE_PERIOD,
+                               C.AMOUNT,
+                               CUR.CODE,
+                               C.CUSTOMER_ACCOUNT,
+                               C.LEASING_ACCOUNT,
+                               C.LEASING_INTEREST_ACCOUNT,
+                               C.CHECK_END_DATE,
+                               C.PAYMENT_TYPE,
+                               C.MONTHLY_AMOUNT,
+                               C.CHECK_INTEREST,
+                               CT.ID CREDIT_TYPE_ID,
+                               CT.NAME_ID CREDIT_NAME_ID,
+                               C.SELLER_ACCOUNT,
+                               C.CHECK_PERIOD,
+                               C.CURRENCY_RATE,
+                               DECODE(C.SELLER_TYPE_ID,1,0,2,1) SELLER_INDEX,
+                               C.CUSTOMER_TYPE_ID,
+                               CUS.CODE CUSTOMER_CODE,
+                               C.SELLER_ID,
+                               C.SELLER_TYPE_ID,
+                               C.USED_USER_ID,
+                               C.STATUS_ID,
+                               C.PARENT_ID,
+                               (SELECT COUNT (*)
+                                      FROM (SELECT CONTRACT_ID FROM CRS_USER.CUSTOMER_PAYMENTS
+                                            UNION ALL
+                                            SELECT CONTRACT_ID FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP)
+                                     WHERE CONTRACT_ID = C.ID)
+                                      PAY_COUNT,
+                               (SELECT COUNT(*) FROM CRS_USER.POWER_OF_ATTORNEY WHERE CONTRACT_ID = C.ID) POWER_COUNT
+                          FROM CRS_USER.CONTRACTS C,
+                               CRS_USER.CREDIT_TYPE CT,
+                               CRS_USER.CREDIT_NAMES CN,
+                               CRS_USER.CURRENCY CUR,
+                               CRS_USER.V_CUSTOMERS CUS
+                         WHERE     C.CREDIT_TYPE_ID = CT.ID
+                               AND CT.NAME_ID = CN.ID
+                               AND C.CURRENCY_ID = CUR.ID
+                               AND C.CUSTOMER_ID = CUS.ID
+                               AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                               AND C.ID = 398
+-------------------------------------------------
+
+Log Entry : 12:03:55 20 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  FCarOrObjectContractAddEdit
+   ProcedureName =  CRS.Forms.Contracts.FCarOrObjectContractAddEdit/LoadContractDetails
+  
+   ShowMessage: Müqavilənin məlumatları tapılmadı.
+   Exception Message: Object cannot be cast from DBNull to other types.
+   SQL Text      :  SELECT CT.CODE || C.CODE CONTRACT_CODE,
+                               CN.NAME CREDIT_NAME,
+                               C.START_DATE,
+                               C.END_DATE,
+                               CT.TERM PERIOD,
+                               CT.INTEREST,
+                               C.GRACE_PERIOD,
+                               C.AMOUNT,
+                               CUR.CODE,
+                               C.CUSTOMER_ACCOUNT,
+                               C.LEASING_ACCOUNT,
+                               C.LEASING_INTEREST_ACCOUNT,
+                               C.CHECK_END_DATE,
+                               C.PAYMENT_TYPE,
+                               C.MONTHLY_AMOUNT,
+                               C.CHECK_INTEREST,
+                               CT.ID CREDIT_TYPE_ID,
+                               CT.NAME_ID CREDIT_NAME_ID,
+                               C.SELLER_ACCOUNT,
+                               C.CHECK_PERIOD,
+                               C.CURRENCY_RATE,
+                               DECODE(C.SELLER_TYPE_ID,1,0,2,1) SELLER_INDEX,
+                               C.CUSTOMER_TYPE_ID,
+                               CUS.CODE CUSTOMER_CODE,
+                               C.SELLER_ID,
+                               C.SELLER_TYPE_ID,
+                               C.USED_USER_ID,
+                               C.STATUS_ID,
+                               C.PARENT_ID,
+                               (SELECT COUNT (*)
+                                      FROM (SELECT CONTRACT_ID FROM CRS_USER.CUSTOMER_PAYMENTS
+                                            UNION ALL
+                                            SELECT CONTRACT_ID FROM CRS_USER_TEMP.CUSTOMER_PAYMENTS_TEMP)
+                                     WHERE CONTRACT_ID = C.ID)
+                                      PAY_COUNT,
+                               (SELECT COUNT(*) FROM CRS_USER.POWER_OF_ATTORNEY WHERE CONTRACT_ID = C.ID) POWER_COUNT
+                          FROM CRS_USER.CONTRACTS C,
+                               CRS_USER.CREDIT_TYPE CT,
+                               CRS_USER.CREDIT_NAMES CN,
+                               CRS_USER.CURRENCY CUR,
+                               CRS_USER.V_CUSTOMERS CUS
+                         WHERE     C.CREDIT_TYPE_ID = CT.ID
+                               AND CT.NAME_ID = CN.ID
+                               AND C.CURRENCY_ID = CUR.ID
+                               AND C.CUSTOMER_ID = CUS.ID
+                               AND C.CUSTOMER_TYPE_ID = CUS.PERSON_TYPE_ID
+                               AND C.ID = 398
+-------------------------------------------------

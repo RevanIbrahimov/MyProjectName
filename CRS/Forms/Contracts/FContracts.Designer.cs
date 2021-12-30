@@ -30,42 +30,41 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FContracts));
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem4 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem5 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem6 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions7 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem2 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem3 = new DevExpress.Utils.ToolTipSeparatorItem();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions6 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             this.ContractRibbon = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.NewContractBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.EditContractBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.DeleteContractBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.RefreshContractBarButton = new DevExpress.XtraBars.BarButtonItem();
@@ -106,6 +105,17 @@
             this.NorPowerOfAttorneyBarButton = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.CancelBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.NewBarSubItem = new DevExpress.XtraBars.BarSubItem();
+            this.NewCarOrObjectBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.NewPawnshopBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.EditBarSubItem = new DevExpress.XtraBars.BarSubItem();
+            this.EditCarOrObjectBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.EditPawnshopBarButton = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.DeleteContractBarButton1 = new DevExpress.XtraBars.BarButtonItem();
+            this.DeleteContractBarButton2 = new DevExpress.XtraBars.BarButtonItem();
+            this.DeleteContractBarButto = new DevExpress.XtraBars.BarButtonItem();
+            this.EditContractBarButto = new DevExpress.XtraBars.BarButtonItem();
             this.ContractRibbonPage = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.InfoRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.OutRibbonPageGroup = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -156,6 +166,7 @@
             this.Contract_IntExtendMountCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Contract_IsSpecialAttention = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Contract_SpecialAttention = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Contract_Category_Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ToolTipController = new DevExpress.Utils.ToolTipController(this.components);
             this.CustomerSplitter = new DevExpress.XtraEditors.SplitterControl();
             this.HostageGridControl = new DevExpress.XtraGrid.GridControl();
@@ -209,6 +220,7 @@
             this.InterestLabel = new DevExpress.XtraEditors.LabelControl();
             this.PeriodValue = new DevExpress.XtraEditors.SpinEdit();
             this.PeriodLabel = new DevExpress.XtraEditors.LabelControl();
+            this.NewContractBarButton = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ContractRibbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
@@ -250,7 +262,6 @@
             this.ContractRibbon.ExpandCollapseItem.Id = 0;
             this.ContractRibbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ContractRibbon.ExpandCollapseItem,
-            this.NewContractBarButton,
             this.EditContractBarButton,
             this.DeleteContractBarButton,
             this.RefreshContractBarButton,
@@ -289,10 +300,20 @@
             this.PaymentBarButton,
             this.NorPowerOfAttorneyBarButton,
             this.barButtonItem1,
-            this.CancelBarButton});
+            this.CancelBarButton,
+            this.NewBarSubItem,
+            this.NewCarOrObjectBarButton,
+            this.NewPawnshopBarButton,
+            this.EditBarSubItem,
+            this.EditCarOrObjectBarButton,
+            this.EditPawnshopBarButton,
+            this.barSubItem1,
+            this.DeleteContractBarButton1,
+            this.DeleteContractBarButton2,
+            this.DeleteContractBarButto,
+            this.EditContractBarButto});
             this.ContractRibbon.Location = new System.Drawing.Point(0, 0);
-            this.ContractRibbon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ContractRibbon.MaxItemId = 4;
+            this.ContractRibbon.MaxItemId = 25;
             this.ContractRibbon.Name = "ContractRibbon";
             this.ContractRibbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ContractRibbonPage});
@@ -301,33 +322,14 @@
             this.ContractRibbon.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ContractRibbon.ShowQatLocationSelector = false;
             this.ContractRibbon.ShowToolbarCustomizeItem = false;
-            this.ContractRibbon.Size = new System.Drawing.Size(1779, 179);
+            this.ContractRibbon.Size = new System.Drawing.Size(1376, 143);
             this.ContractRibbon.Toolbar.ShowCustomizeItem = false;
             this.ContractRibbon.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
-            // NewContractBarButton
-            // 
-            this.NewContractBarButton.Caption = "Yeni";
-            this.NewContractBarButton.CloseRadialMenuOnItemClick = true;
-            this.NewContractBarButton.Id = 1;
-            this.NewContractBarButton.ImageOptions.Image = global::CRS.Properties.Resources.contract_add_32;
-            this.NewContractBarButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
-            this.NewContractBarButton.Name = "NewContractBarButton";
-            this.NewContractBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.NewContractBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            this.NewContractBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewContractBarButton_ItemClick);
-            // 
             // EditContractBarButton
             // 
-            this.EditContractBarButton.Caption = "Dəyiş";
-            this.EditContractBarButton.CloseRadialMenuOnItemClick = true;
-            this.EditContractBarButton.Id = 2;
-            this.EditContractBarButton.ImageOptions.Image = global::CRS.Properties.Resources.contract_edit_32;
-            this.EditContractBarButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.EditContractBarButton.Id = 22;
             this.EditContractBarButton.Name = "EditContractBarButton";
-            this.EditContractBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.EditContractBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            this.EditContractBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.EditContractBarButton_ItemClick);
             // 
             // DeleteContractBarButton
             // 
@@ -515,17 +517,17 @@
             this.NotCommitBarCheck.ItemAppearance.Normal.ForeColor = System.Drawing.Color.Red;
             this.NotCommitBarCheck.ItemAppearance.Normal.Options.UseForeColor = true;
             this.NotCommitBarCheck.Name = "NotCommitBarCheck";
-            superToolTip8.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem12.Text = "<color=255,0,0>Təsdiqlənməmiş müqavilələr</color>";
-            toolTipItem8.LeftIndent = 6;
-            toolTipItem8.Text = "Təsdiqlənməmiş müqavilələri göstərmək üçün nəzərdə tutulub.";
-            toolTipTitleItem13.LeftIndent = 6;
-            toolTipTitleItem13.Text = "Qeyd: <i>Belə müqavilələr siyahıda</i> <b><color=250,229,7>sarı</color></b> <i>rə" +
+            superToolTip1.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem1.Text = "<color=255,0,0>Təsdiqlənməmiş müqavilələr</color>";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Təsdiqlənməmiş müqavilələri göstərmək üçün nəzərdə tutulub.";
+            toolTipTitleItem2.LeftIndent = 6;
+            toolTipTitleItem2.Text = "Qeyd: <i>Belə müqavilələr siyahıda</i> <b><color=250,229,7>sarı</color></b> <i>rə" +
     "ngdə göstərilib.</i>";
-            superToolTip8.Items.Add(toolTipTitleItem12);
-            superToolTip8.Items.Add(toolTipItem8);
-            superToolTip8.Items.Add(toolTipTitleItem13);
-            this.NotCommitBarCheck.SuperTip = superToolTip8;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            superToolTip1.Items.Add(toolTipTitleItem2);
+            this.NotCommitBarCheck.SuperTip = superToolTip1;
             this.NotCommitBarCheck.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NotCommitBarCheck_ItemClick);
             // 
             // CommitBarCheck
@@ -536,18 +538,18 @@
             this.CommitBarCheck.Checked = true;
             this.CommitBarCheck.Id = 18;
             this.CommitBarCheck.Name = "CommitBarCheck";
-            superToolTip9.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem14.Text = "<color=255,0,0>Təsdiq edilmiş müqavilələr</color>";
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Təsdiq edilmiş müqavilələri göstərmək üçün nəzərdə tutulub.";
-            toolTipTitleItem15.LeftIndent = 6;
-            toolTipTitleItem15.Text = "Qeyd: <i>Belə müqavilələr siyahıda</i> <b><color=13,12,1>qara</color></b> <i>rəng" +
+            superToolTip2.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem3.Text = "<color=255,0,0>Təsdiq edilmiş müqavilələr</color>";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Təsdiq edilmiş müqavilələri göstərmək üçün nəzərdə tutulub.";
+            toolTipTitleItem4.LeftIndent = 6;
+            toolTipTitleItem4.Text = "Qeyd: <i>Belə müqavilələr siyahıda</i> <b><color=13,12,1>qara</color></b> <i>rəng" +
     "də göstərilib.</i>";
-            superToolTip9.Items.Add(toolTipTitleItem14);
-            superToolTip9.Items.Add(toolTipItem9);
-            superToolTip9.Items.Add(toolTipSeparatorItem4);
-            superToolTip9.Items.Add(toolTipTitleItem15);
-            this.CommitBarCheck.SuperTip = superToolTip9;
+            superToolTip2.Items.Add(toolTipTitleItem3);
+            superToolTip2.Items.Add(toolTipItem2);
+            superToolTip2.Items.Add(toolTipSeparatorItem1);
+            superToolTip2.Items.Add(toolTipTitleItem4);
+            this.CommitBarCheck.SuperTip = superToolTip2;
             this.CommitBarCheck.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NotCommitBarCheck_ItemClick);
             // 
             // CloseBarCheck
@@ -581,16 +583,16 @@
             this.SpecialInfoExportBarButton.Name = "SpecialInfoExportBarButton";
             this.SpecialInfoExportBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.SpecialInfoExportBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            superToolTip10.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem16.Text = "<color=255,0,0>Məlumatların ixracı</color>";
-            toolTipItem10.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipItem10.Appearance.Options.UseImage = true;
-            toolTipItem10.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem10.Image")));
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Müqavilənin xüsusi məlumatlarını excelə ixrac etmək üçün nəzərdə tutulub.";
-            superToolTip10.Items.Add(toolTipTitleItem16);
-            superToolTip10.Items.Add(toolTipItem10);
-            this.SpecialInfoExportBarButton.SuperTip = superToolTip10;
+            superToolTip3.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem5.Text = "<color=255,0,0>Məlumatların ixracı</color>";
+            toolTipItem3.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            toolTipItem3.Appearance.Options.UseImage = true;
+            toolTipItem3.Image = ((System.Drawing.Image)(resources.GetObject("toolTipItem3.Image")));
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Müqavilənin xüsusi məlumatlarını excelə ixrac etmək üçün nəzərdə tutulub.";
+            superToolTip3.Items.Add(toolTipTitleItem5);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.SpecialInfoExportBarButton.SuperTip = superToolTip3;
             this.SpecialInfoExportBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.SpecialInfoExportBarButton_ItemClick);
             // 
             // LawBarButton
@@ -665,16 +667,16 @@
             this.FinishedContractsBarButton.ImageOptions.Image = global::CRS.Properties.Resources.finish_32;
             this.FinishedContractsBarButton.Name = "FinishedContractsBarButton";
             this.FinishedContractsBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            superToolTip11.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem17.Text = "<color=255,0,0>Bağlanmış müqavilələrin siyahısı</color>";
-            toolTipItem11.Appearance.Image = global::CRS.Properties.Resources.finish_32;
-            toolTipItem11.Appearance.Options.UseImage = true;
-            toolTipItem11.Image = global::CRS.Properties.Resources.finish_32;
-            toolTipItem11.LeftIndent = 6;
-            toolTipItem11.Text = "Yalnız bağlanmış müqavilələrin siyahısını göstərmək üçün nəzərdə tutulub.";
-            superToolTip11.Items.Add(toolTipTitleItem17);
-            superToolTip11.Items.Add(toolTipItem11);
-            this.FinishedContractsBarButton.SuperTip = superToolTip11;
+            superToolTip4.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem6.Text = "<color=255,0,0>Bağlanmış müqavilələrin siyahısı</color>";
+            toolTipItem4.Appearance.Image = global::CRS.Properties.Resources.finish_32;
+            toolTipItem4.Appearance.Options.UseImage = true;
+            toolTipItem4.Image = global::CRS.Properties.Resources.finish_32;
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Yalnız bağlanmış müqavilələrin siyahısını göstərmək üçün nəzərdə tutulub.";
+            superToolTip4.Items.Add(toolTipTitleItem6);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.FinishedContractsBarButton.SuperTip = superToolTip4;
             this.FinishedContractsBarButton.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.FinishedContractsBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.FinishedContractsBarButton_ItemClick);
             // 
@@ -688,21 +690,21 @@
             this.OpenContractBarButton.Name = "OpenContractBarButton";
             this.OpenContractBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.OpenContractBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            superToolTip12.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem18.Text = "<color=255,0,0>Müqaviləni aç</color>";
-            toolTipItem12.Appearance.Image = global::CRS.Properties.Resources.lock_open_32;
-            toolTipItem12.Appearance.Options.UseImage = true;
-            toolTipItem12.Image = global::CRS.Properties.Resources.lock_open_32;
-            toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Bağlanmış müqaviləni yenidən açmaq üçün nəzərdə tulub.";
-            toolTipTitleItem19.LeftIndent = 6;
-            toolTipTitleItem19.Text = "Qeyd: <i>Əgər müqavilə yenidən açılırsa, bu zaman hər hansı bir əməliyyat aparıld" +
+            superToolTip5.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem7.Text = "<color=255,0,0>Müqaviləni aç</color>";
+            toolTipItem5.Appearance.Image = global::CRS.Properties.Resources.lock_open_32;
+            toolTipItem5.Appearance.Options.UseImage = true;
+            toolTipItem5.Image = global::CRS.Properties.Resources.lock_open_32;
+            toolTipItem5.LeftIndent = 6;
+            toolTipItem5.Text = "Bağlanmış müqaviləni yenidən açmaq üçün nəzərdə tulub.";
+            toolTipTitleItem8.LeftIndent = 6;
+            toolTipTitleItem8.Text = "Qeyd: <i>Əgər müqavilə yenidən açılırsa, bu zaman hər hansı bir əməliyyat aparıld" +
     "ıqdan sonra mütləq təkrar bağlanılmalıdır.</i>";
-            superToolTip12.Items.Add(toolTipTitleItem18);
-            superToolTip12.Items.Add(toolTipItem12);
-            superToolTip12.Items.Add(toolTipSeparatorItem5);
-            superToolTip12.Items.Add(toolTipTitleItem19);
-            this.OpenContractBarButton.SuperTip = superToolTip12;
+            superToolTip5.Items.Add(toolTipTitleItem7);
+            superToolTip5.Items.Add(toolTipItem5);
+            superToolTip5.Items.Add(toolTipSeparatorItem2);
+            superToolTip5.Items.Add(toolTipTitleItem8);
+            this.OpenContractBarButton.SuperTip = superToolTip5;
             this.OpenContractBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.OpenContractBarButton_ItemClick);
             // 
             // CloseContractBarButton
@@ -715,16 +717,16 @@
             this.CloseContractBarButton.Name = "CloseContractBarButton";
             this.CloseContractBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.CloseContractBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            superToolTip13.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem20.Text = "<color=255,0,0>Müqaviləni bağla</color>";
-            toolTipItem13.Appearance.Image = global::CRS.Properties.Resources.lock_close_32;
-            toolTipItem13.Appearance.Options.UseImage = true;
-            toolTipItem13.Image = global::CRS.Properties.Resources.lock_close_32;
-            toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Açıq olan müqaviləni bağlamaq üçün nəzərdə tutulub.";
-            superToolTip13.Items.Add(toolTipTitleItem20);
-            superToolTip13.Items.Add(toolTipItem13);
-            this.CloseContractBarButton.SuperTip = superToolTip13;
+            superToolTip6.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem9.Text = "<color=255,0,0>Müqaviləni bağla</color>";
+            toolTipItem6.Appearance.Image = global::CRS.Properties.Resources.lock_close_32;
+            toolTipItem6.Appearance.Options.UseImage = true;
+            toolTipItem6.Image = global::CRS.Properties.Resources.lock_close_32;
+            toolTipItem6.LeftIndent = 6;
+            toolTipItem6.Text = "Açıq olan müqaviləni bağlamaq üçün nəzərdə tutulub.";
+            superToolTip6.Items.Add(toolTipTitleItem9);
+            superToolTip6.Items.Add(toolTipItem6);
+            this.CloseContractBarButton.SuperTip = superToolTip6;
             this.CloseContractBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CloseContractBarButton_ItemClick);
             // 
             // BStatisticBarButton
@@ -754,21 +756,21 @@
             this.AgreementBarButton.Name = "AgreementBarButton";
             this.AgreementBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.AgreementBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
-            superToolTip14.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
-            toolTipTitleItem21.Text = "<color=255,0,0>Müqavilənin razılaşdırılması</color>";
-            toolTipItem14.Appearance.Image = global::CRS.Properties.Resources.agreement_32;
-            toolTipItem14.Appearance.Options.UseImage = true;
-            toolTipItem14.Image = global::CRS.Properties.Resources.agreement_32;
-            toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Hər hansı bir müqaviləni bağlayandan sonra onu başqa şərtlər daxilində yenidən ya" +
+            superToolTip7.AllowHtmlText = DevExpress.Utils.DefaultBoolean.True;
+            toolTipTitleItem10.Text = "<color=255,0,0>Müqavilənin razılaşdırılması</color>";
+            toolTipItem7.Appearance.Image = global::CRS.Properties.Resources.agreement_32;
+            toolTipItem7.Appearance.Options.UseImage = true;
+            toolTipItem7.Image = global::CRS.Properties.Resources.agreement_32;
+            toolTipItem7.LeftIndent = 6;
+            toolTipItem7.Text = "Hər hansı bir müqaviləni bağlayandan sonra onu başqa şərtlər daxilində yenidən ya" +
     "ratmaq üçün nəzərdə tutulub.";
-            toolTipTitleItem22.LeftIndent = 6;
-            toolTipTitleItem22.Text = resources.GetString("toolTipTitleItem22.Text");
-            superToolTip14.Items.Add(toolTipTitleItem21);
-            superToolTip14.Items.Add(toolTipItem14);
-            superToolTip14.Items.Add(toolTipSeparatorItem6);
-            superToolTip14.Items.Add(toolTipTitleItem22);
-            this.AgreementBarButton.SuperTip = superToolTip14;
+            toolTipTitleItem11.LeftIndent = 6;
+            toolTipTitleItem11.Text = resources.GetString("toolTipTitleItem11.Text");
+            superToolTip7.Items.Add(toolTipTitleItem10);
+            superToolTip7.Items.Add(toolTipItem7);
+            superToolTip7.Items.Add(toolTipSeparatorItem3);
+            superToolTip7.Items.Add(toolTipTitleItem11);
+            this.AgreementBarButton.SuperTip = superToolTip7;
             this.AgreementBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.AgreementBarButton_ItemClick);
             // 
             // AgreementBarCheck
@@ -832,6 +834,95 @@
             this.CancelBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.CancelBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.CancelBarButton_ItemClick);
             // 
+            // NewBarSubItem
+            // 
+            this.NewBarSubItem.Caption = "Yeni";
+            this.NewBarSubItem.Id = 4;
+            this.NewBarSubItem.ImageOptions.Image = global::CRS.Properties.Resources.contract_add_32;
+            this.NewBarSubItem.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.NewCarOrObjectBarButton),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.NewPawnshopBarButton, "Lombard krediti")});
+            this.NewBarSubItem.Name = "NewBarSubItem";
+            this.NewBarSubItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // NewCarOrObjectBarButton
+            // 
+            this.NewCarOrObjectBarButton.Caption = "Avtomobil və Daşınmaz əmlak krediti";
+            this.NewCarOrObjectBarButton.Id = 5;
+            this.NewCarOrObjectBarButton.Name = "NewCarOrObjectBarButton";
+            this.NewCarOrObjectBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewCarOrObjectBarButton_ItemClick);
+            // 
+            // NewPawnshopBarButton
+            // 
+            this.NewPawnshopBarButton.Caption = "Lombard krediti";
+            this.NewPawnshopBarButton.Id = 6;
+            this.NewPawnshopBarButton.Name = "NewPawnshopBarButton";
+            this.NewPawnshopBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewPawnshopBarButton_ItemClick_1);
+            // 
+            // EditBarSubItem
+            // 
+            this.EditBarSubItem.Caption = "Dəyiş";
+            this.EditBarSubItem.Id = 12;
+            this.EditBarSubItem.ImageOptions.Image = global::CRS.Properties.Resources.contract_edit_32;
+            this.EditBarSubItem.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.Caption, this.EditCarOrObjectBarButton, "Avtomobil və Daşınmaz əmlak kredit"),
+            new DevExpress.XtraBars.LinkPersistInfo(this.EditPawnshopBarButton)});
+            this.EditBarSubItem.Name = "EditBarSubItem";
+            this.EditBarSubItem.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // EditCarOrObjectBarButton
+            // 
+            this.EditCarOrObjectBarButton.Id = 23;
+            this.EditCarOrObjectBarButton.Name = "EditCarOrObjectBarButton";
+            // 
+            // EditPawnshopBarButton
+            // 
+            this.EditPawnshopBarButton.Id = 24;
+            this.EditPawnshopBarButton.Name = "EditPawnshopBarButton";
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Sil";
+            this.barSubItem1.Id = 16;
+            this.barSubItem1.ImageOptions.Image = global::CRS.Properties.Resources.contract_delete_32;
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // DeleteContractBarButton1
+            // 
+            this.DeleteContractBarButton1.Caption = "Avtomobil və Daşınmaz əmlak krediti";
+            this.DeleteContractBarButton1.Id = 17;
+            this.DeleteContractBarButton1.Name = "DeleteContractBarButton1";
+            this.DeleteContractBarButton1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteContractBarButton1_ItemClick);
+            // 
+            // DeleteContractBarButton2
+            // 
+            this.DeleteContractBarButton2.Caption = "Lombard krediti";
+            this.DeleteContractBarButton2.Id = 18;
+            this.DeleteContractBarButton2.Name = "DeleteContractBarButton2";
+            this.DeleteContractBarButton2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteContractBarButton2_ItemClick);
+            // 
+            // DeleteContractBarButto
+            // 
+            this.DeleteContractBarButto.Caption = "Sil";
+            this.DeleteContractBarButto.Id = 20;
+            this.DeleteContractBarButto.ImageOptions.Image = global::CRS.Properties.Resources.contract_delete_32;
+            this.DeleteContractBarButto.Name = "DeleteContractBarButto";
+            this.DeleteContractBarButto.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.DeleteContractBarButto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteContractBarButto_ItemClick);
+            // 
+            // EditContractBarButto
+            // 
+            this.EditContractBarButto.Caption = "Dəyiş";
+            this.EditContractBarButto.CloseRadialMenuOnItemClick = true;
+            this.EditContractBarButto.Id = 21;
+            this.EditContractBarButto.ImageOptions.Image = global::CRS.Properties.Resources.contract_edit_32;
+            this.EditContractBarButto.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E));
+            this.EditContractBarButto.Name = "EditContractBarButto";
+            this.EditContractBarButto.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.EditContractBarButto.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
+            this.EditContractBarButto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.EditContractBarButto_ItemClick);
+            // 
             // ContractRibbonPage
             // 
             this.ContractRibbonPage.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -844,9 +935,9 @@
             // 
             // InfoRibbonPageGroup
             // 
-            this.InfoRibbonPageGroup.ItemLinks.Add(this.NewContractBarButton);
-            this.InfoRibbonPageGroup.ItemLinks.Add(this.EditContractBarButton);
-            this.InfoRibbonPageGroup.ItemLinks.Add(this.DeleteContractBarButton);
+            this.InfoRibbonPageGroup.ItemLinks.Add(this.NewBarSubItem);
+            this.InfoRibbonPageGroup.ItemLinks.Add(this.EditContractBarButto);
+            this.InfoRibbonPageGroup.ItemLinks.Add(this.DeleteContractBarButto);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.AgreementBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.RefreshContractBarButton);
             this.InfoRibbonPageGroup.ItemLinks.Add(this.NoteBarButton);
@@ -904,14 +995,12 @@
             // ContractsGridControl
             // 
             this.ContractsGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ContractsGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ContractsGridControl.Location = new System.Drawing.Point(0, 179);
+            this.ContractsGridControl.Location = new System.Drawing.Point(0, 143);
             this.ContractsGridControl.MainView = this.ContractsGridView;
-            this.ContractsGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ContractsGridControl.Name = "ContractsGridControl";
             this.ContractsGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.RepositoryItemPictureEdit});
-            this.ContractsGridControl.Size = new System.Drawing.Size(1457, 160);
+            this.ContractsGridControl.Size = new System.Drawing.Size(1054, 188);
             this.ContractsGridControl.TabIndex = 55;
             this.ContractsGridControl.ToolTipController = this.ToolTipController;
             this.ContractsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -972,7 +1061,8 @@
             this.Contract_CarNumber,
             this.Contract_IntExtendMountCount,
             this.Contract_IsSpecialAttention,
-            this.Contract_SpecialAttention});
+            this.Contract_SpecialAttention,
+            this.Contract_Category_Id});
             this.ContractsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFullFocus;
             this.ContractsGridView.GridControl = this.ContractsGridControl;
             this.ContractsGridView.Name = "ContractsGridView";
@@ -1022,7 +1112,7 @@
             this.Contract_CustomerFullName.Name = "Contract_CustomerFullName";
             this.Contract_CustomerFullName.Visible = true;
             this.Contract_CustomerFullName.VisibleIndex = 1;
-            this.Contract_CustomerFullName.Width = 221;
+            this.Contract_CustomerFullName.Width = 20;
             // 
             // Contract_Code
             // 
@@ -1039,7 +1129,7 @@
             // 
             // Contract_CreditName
             // 
-            this.Contract_CreditName.Caption = "Lizinqin növü";
+            this.Contract_CreditName.Caption = "Kreditin növü";
             this.Contract_CreditName.FieldName = "CREDIT_NAME";
             this.Contract_CreditName.Name = "Contract_CreditName";
             this.Contract_CreditName.OptionsColumn.FixedWidth = true;
@@ -1168,7 +1258,7 @@
             this.Contract_Notes.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.Contract_Notes.Visible = true;
             this.Contract_Notes.VisibleIndex = 13;
-            this.Contract_Notes.Width = 35;
+            this.Contract_Notes.Width = 67;
             // 
             // RepositoryItemPictureEdit
             // 
@@ -1188,7 +1278,7 @@
             this.Contract_ExtendMountCount.OptionsColumn.FixedWidth = true;
             this.Contract_ExtendMountCount.Visible = true;
             this.Contract_ExtendMountCount.VisibleIndex = 14;
-            this.Contract_ExtendMountCount.Width = 60;
+            this.Contract_ExtendMountCount.Width = 59;
             // 
             // Contract_Note
             // 
@@ -1353,7 +1443,17 @@
             this.Contract_SpecialAttention.UnboundType = DevExpress.Data.UnboundColumnType.Object;
             this.Contract_SpecialAttention.Visible = true;
             this.Contract_SpecialAttention.VisibleIndex = 15;
-            this.Contract_SpecialAttention.Width = 50;
+            this.Contract_SpecialAttention.Width = 44;
+            // 
+            // Contract_Category_Id
+            // 
+            this.Contract_Category_Id.Caption = "Contract_Category_Id";
+            this.Contract_Category_Id.FieldName = "CNAME_ID";
+            this.Contract_Category_Id.Name = "Contract_Category_Id";
+            this.Contract_Category_Id.OptionsColumn.FixedWidth = true;
+            this.Contract_Category_Id.Visible = true;
+            this.Contract_Category_Id.VisibleIndex = 16;
+            this.Contract_Category_Id.Width = 70;
             // 
             // ToolTipController
             // 
@@ -1362,22 +1462,19 @@
             // CustomerSplitter
             // 
             this.CustomerSplitter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CustomerSplitter.Location = new System.Drawing.Point(0, 339);
-            this.CustomerSplitter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CustomerSplitter.Location = new System.Drawing.Point(0, 331);
             this.CustomerSplitter.Name = "CustomerSplitter";
-            this.CustomerSplitter.Size = new System.Drawing.Size(1457, 6);
+            this.CustomerSplitter.Size = new System.Drawing.Size(1054, 5);
             this.CustomerSplitter.TabIndex = 56;
             this.CustomerSplitter.TabStop = false;
             // 
             // HostageGridControl
             // 
             this.HostageGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HostageGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HostageGridControl.Location = new System.Drawing.Point(0, 345);
+            this.HostageGridControl.Location = new System.Drawing.Point(0, 336);
             this.HostageGridControl.MainView = this.HostageGridView;
-            this.HostageGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HostageGridControl.Name = "HostageGridControl";
-            this.HostageGridControl.Size = new System.Drawing.Size(1457, 616);
+            this.HostageGridControl.Size = new System.Drawing.Size(1054, 300);
             this.HostageGridControl.TabIndex = 64;
             this.HostageGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HostageGridView});
@@ -1499,7 +1596,6 @@
             // 
             // PopupMenu
             // 
-            this.PopupMenu.ItemLinks.Add(this.NewContractBarButton);
             this.PopupMenu.ItemLinks.Add(this.EditContractBarButton);
             this.PopupMenu.ItemLinks.Add(this.DeleteContractBarButton);
             this.PopupMenu.ItemLinks.Add(this.PaymentBarButton);
@@ -1547,11 +1643,10 @@
             this.SearchDockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right;
             this.SearchDockPanel.ID = new System.Guid("99581240-50ef-4aec-af27-b0cdfdd8ddf8");
             this.SearchDockPanel.Image = ((System.Drawing.Image)(resources.GetObject("SearchDockPanel.Image")));
-            this.SearchDockPanel.Location = new System.Drawing.Point(1457, 179);
-            this.SearchDockPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SearchDockPanel.Location = new System.Drawing.Point(1054, 143);
             this.SearchDockPanel.Name = "SearchDockPanel";
             this.SearchDockPanel.OriginalSize = new System.Drawing.Size(322, 200);
-            this.SearchDockPanel.Size = new System.Drawing.Size(322, 782);
+            this.SearchDockPanel.Size = new System.Drawing.Size(322, 493);
             this.SearchDockPanel.Text = "Ətraflı axtar";
             this.SearchDockPanel.ClosedPanel += new DevExpress.XtraBars.Docking.DockPanelEventHandler(this.SearchDockPanel_ClosedPanel);
             // 
@@ -1595,20 +1690,18 @@
             this.dockPanel1_Container.Controls.Add(this.InterestLabel);
             this.dockPanel1_Container.Controls.Add(this.PeriodValue);
             this.dockPanel1_Container.Controls.Add(this.PeriodLabel);
-            this.dockPanel1_Container.Location = new System.Drawing.Point(7, 27);
-            this.dockPanel1_Container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dockPanel1_Container.Location = new System.Drawing.Point(5, 23);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
-            this.dockPanel1_Container.Size = new System.Drawing.Size(310, 750);
+            this.dockPanel1_Container.Size = new System.Drawing.Size(313, 466);
             this.dockPanel1_Container.TabIndex = 0;
             // 
             // CancelCheck
             // 
             this.CancelCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CancelCheck.Location = new System.Drawing.Point(126, 420);
-            this.CancelCheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CancelCheck.Location = new System.Drawing.Point(108, 341);
             this.CancelCheck.Name = "CancelCheck";
             this.CancelCheck.Properties.Caption = "Ləğv edilmişlər";
-            this.CancelCheck.Size = new System.Drawing.Size(219, 20);
+            this.CancelCheck.Size = new System.Drawing.Size(188, 19);
             this.CancelCheck.TabIndex = 128;
             this.CancelCheck.TabStop = false;
             this.CancelCheck.ToolTip = "Müqavilə müddəti ilə sığorta müddəti bərabər olan sığortalar";
@@ -1617,11 +1710,10 @@
             // NotSpecialAttentionCheck
             // 
             this.NotSpecialAttentionCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NotSpecialAttentionCheck.Location = new System.Drawing.Point(126, 392);
-            this.NotSpecialAttentionCheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NotSpecialAttentionCheck.Location = new System.Drawing.Point(108, 318);
             this.NotSpecialAttentionCheck.Name = "NotSpecialAttentionCheck";
             this.NotSpecialAttentionCheck.Properties.Caption = "Xüsusi nəzarətdə olmayanlar";
-            this.NotSpecialAttentionCheck.Size = new System.Drawing.Size(219, 20);
+            this.NotSpecialAttentionCheck.Size = new System.Drawing.Size(188, 19);
             this.NotSpecialAttentionCheck.TabIndex = 127;
             this.NotSpecialAttentionCheck.TabStop = false;
             this.NotSpecialAttentionCheck.ToolTip = "Müqavilə müddəti ilə sığorta müddəti bərabər olan sığortalar";
@@ -1631,21 +1723,19 @@
             // 
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl4.Appearance.Options.UseForeColor = true;
-            this.labelControl4.Location = new System.Drawing.Point(350, 337);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Location = new System.Drawing.Point(300, 274);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(13, 16);
+            this.labelControl4.Size = new System.Drawing.Size(12, 13);
             this.labelControl4.TabIndex = 211;
             this.labelControl4.Text = "ay";
             // 
             // SpecialAttentionCheck
             // 
             this.SpecialAttentionCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SpecialAttentionCheck.Location = new System.Drawing.Point(126, 364);
-            this.SpecialAttentionCheck.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SpecialAttentionCheck.Location = new System.Drawing.Point(108, 296);
             this.SpecialAttentionCheck.Name = "SpecialAttentionCheck";
             this.SpecialAttentionCheck.Properties.Caption = "Xüsusi nəzarətdə olanlar";
-            this.SpecialAttentionCheck.Size = new System.Drawing.Size(219, 20);
+            this.SpecialAttentionCheck.Size = new System.Drawing.Size(188, 19);
             this.SpecialAttentionCheck.TabIndex = 128;
             this.SpecialAttentionCheck.TabStop = false;
             this.SpecialAttentionCheck.ToolTip = "Müqavilə müddəti ilə sığorta müddəti bərabər olan sığortalar";
@@ -1655,10 +1745,9 @@
             // 
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl7.Appearance.Options.UseForeColor = true;
-            this.labelControl7.Location = new System.Drawing.Point(232, 337);
-            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl7.Location = new System.Drawing.Point(199, 274);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(5, 16);
+            this.labelControl7.Size = new System.Drawing.Size(4, 13);
             this.labelControl7.TabIndex = 208;
             this.labelControl7.Text = "-";
             // 
@@ -1669,8 +1758,7 @@
             0,
             0,
             0});
-            this.ToEntendMountCount.Location = new System.Drawing.Point(246, 334);
-            this.ToEntendMountCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ToEntendMountCount.Location = new System.Drawing.Point(211, 271);
             this.ToEntendMountCount.Name = "ToEntendMountCount";
             this.ToEntendMountCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1680,18 +1768,17 @@
             0,
             0,
             0});
-            this.ToEntendMountCount.Size = new System.Drawing.Size(98, 22);
+            this.ToEntendMountCount.Size = new System.Drawing.Size(84, 20);
             this.ToEntendMountCount.TabIndex = 206;
             this.ToEntendMountCount.EditValueChanged += new System.EventHandler(this.ToEntendMountCount_EditValueChanged);
             // 
             // CarNumberText
             // 
-            this.CarNumberText.Location = new System.Drawing.Point(126, 304);
-            this.CarNumberText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarNumberText.Location = new System.Drawing.Point(108, 247);
             this.CarNumberText.Name = "CarNumberText";
             this.CarNumberText.Properties.NullValuePrompt = "Nömrəni daxil edin";
             this.CarNumberText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.CarNumberText.Size = new System.Drawing.Size(219, 22);
+            this.CarNumberText.Size = new System.Drawing.Size(188, 20);
             this.CarNumberText.TabIndex = 12;
             this.CarNumberText.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
@@ -1702,8 +1789,7 @@
             0,
             0,
             0});
-            this.FromEntendMountCount.Location = new System.Drawing.Point(126, 334);
-            this.FromEntendMountCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FromEntendMountCount.Location = new System.Drawing.Point(108, 271);
             this.FromEntendMountCount.Name = "FromEntendMountCount";
             this.FromEntendMountCount.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1713,25 +1799,23 @@
             0,
             0,
             0});
-            this.FromEntendMountCount.Size = new System.Drawing.Size(98, 22);
+            this.FromEntendMountCount.Size = new System.Drawing.Size(84, 20);
             this.FromEntendMountCount.TabIndex = 205;
             this.FromEntendMountCount.EditValueChanged += new System.EventHandler(this.FromEntendMountCount_EditValueChanged);
             // 
             // EntendMountCountLabel
             // 
-            this.EntendMountCountLabel.Location = new System.Drawing.Point(7, 337);
-            this.EntendMountCountLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EntendMountCountLabel.Location = new System.Drawing.Point(6, 274);
             this.EntendMountCountLabel.Name = "EntendMountCountLabel";
-            this.EntendMountCountLabel.Size = new System.Drawing.Size(102, 16);
+            this.EntendMountCountLabel.Size = new System.Drawing.Size(83, 13);
             this.EntendMountCountLabel.TabIndex = 206;
             this.EntendMountCountLabel.Text = "Uzadılma müddəti";
             // 
             // CarNumberLabel
             // 
-            this.CarNumberLabel.Location = new System.Drawing.Point(7, 307);
-            this.CarNumberLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CarNumberLabel.Location = new System.Drawing.Point(6, 249);
             this.CarNumberLabel.Name = "CarNumberLabel";
-            this.CarNumberLabel.Size = new System.Drawing.Size(93, 16);
+            this.CarNumberLabel.Size = new System.Drawing.Size(75, 13);
             this.CarNumberLabel.TabIndex = 208;
             this.CarNumberLabel.Text = "Maşının nömrəsi";
             // 
@@ -1743,31 +1827,28 @@
             this.BClear.Appearance.Options.UseFont = true;
             this.BClear.Appearance.Options.UseForeColor = true;
             this.BClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BClear.Location = new System.Drawing.Point(115, 797);
-            this.BClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BClear.Location = new System.Drawing.Point(102, 364);
             this.BClear.Name = "BClear";
-            this.BClear.Size = new System.Drawing.Size(114, 28);
+            this.BClear.Size = new System.Drawing.Size(98, 23);
             this.BClear.TabIndex = 228;
             this.BClear.Text = "Təmizlə";
             this.BClear.Click += new System.EventHandler(this.BClear_Click);
             // 
             // CommitmentText
             // 
-            this.CommitmentText.Location = new System.Drawing.Point(126, 274);
-            this.CommitmentText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CommitmentText.Location = new System.Drawing.Point(108, 223);
             this.CommitmentText.Name = "CommitmentText";
             this.CommitmentText.Properties.NullValuePrompt = "Adı daxil edin";
             this.CommitmentText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.CommitmentText.Size = new System.Drawing.Size(219, 22);
+            this.CommitmentText.Size = new System.Drawing.Size(188, 20);
             this.CommitmentText.TabIndex = 11;
             this.CommitmentText.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // CommitmentLabel
             // 
-            this.CommitmentLabel.Location = new System.Drawing.Point(7, 277);
-            this.CommitmentLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CommitmentLabel.Location = new System.Drawing.Point(6, 225);
             this.CommitmentLabel.Name = "CommitmentLabel";
-            this.CommitmentLabel.Size = new System.Drawing.Size(49, 16);
+            this.CommitmentLabel.Size = new System.Drawing.Size(42, 13);
             this.CommitmentLabel.TabIndex = 206;
             this.CommitmentLabel.Text = "Ötürülüb";
             // 
@@ -1777,29 +1858,26 @@
             this.BSearch.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.BSearch.Appearance.Options.UseFont = true;
             this.BSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BSearch.Location = new System.Drawing.Point(237, 797);
-            this.BSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BSearch.Location = new System.Drawing.Point(206, 364);
             this.BSearch.Name = "BSearch";
-            this.BSearch.Size = new System.Drawing.Size(114, 28);
+            this.BSearch.Size = new System.Drawing.Size(98, 23);
             this.BSearch.TabIndex = 227;
             this.BSearch.Text = "Axtar";
             this.BSearch.Click += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(232, 187);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Location = new System.Drawing.Point(199, 152);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(5, 16);
+            this.labelControl1.Size = new System.Drawing.Size(4, 13);
             this.labelControl1.TabIndex = 226;
             this.labelControl1.Text = "-";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(233, 217);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Location = new System.Drawing.Point(200, 176);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(5, 16);
+            this.labelControl2.Size = new System.Drawing.Size(4, 13);
             this.labelControl2.TabIndex = 78;
             this.labelControl2.Text = "-";
             // 
@@ -1807,11 +1885,10 @@
             // 
             this.ToDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ToDateValue.EditValue = null;
-            this.ToDateValue.Location = new System.Drawing.Point(246, 184);
-            this.ToDateValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ToDateValue.Location = new System.Drawing.Point(211, 150);
             this.ToDateValue.Name = "ToDateValue";
             this.ToDateValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions7, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalendarı aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalendarı aç")});
             this.ToDateValue.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.ToDateValue.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
@@ -1820,16 +1897,15 @@
             this.ToDateValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.ToDateValue.Properties.NullValuePrompt = "dd.mm.yyyy";
             this.ToDateValue.Properties.NullValuePromptShowForEmptyValue = true;
-            this.ToDateValue.Size = new System.Drawing.Size(99, 22);
+            this.ToDateValue.Size = new System.Drawing.Size(85, 20);
             this.ToDateValue.TabIndex = 7;
             this.ToDateValue.EditValueChanged += new System.EventHandler(this.FromDateValue_EditValueChanged);
             // 
             // AmountLabel
             // 
-            this.AmountLabel.Location = new System.Drawing.Point(7, 217);
-            this.AmountLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AmountLabel.Location = new System.Drawing.Point(6, 176);
             this.AmountLabel.Name = "AmountLabel";
-            this.AmountLabel.Size = new System.Drawing.Size(90, 16);
+            this.AmountLabel.Size = new System.Drawing.Size(75, 13);
             this.AmountLabel.TabIndex = 78;
             this.AmountLabel.Text = "Məbləğ intervalı";
             // 
@@ -1837,11 +1913,10 @@
             // 
             this.FromDateValue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FromDateValue.EditValue = null;
-            this.FromDateValue.Location = new System.Drawing.Point(126, 184);
-            this.FromDateValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FromDateValue.Location = new System.Drawing.Point(108, 150);
             this.FromDateValue.Name = "FromDateValue";
             this.FromDateValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalendarı aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalendarı aç")});
             this.FromDateValue.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.FromDateValue.Properties.DisplayFormat.FormatString = "dd.MM.yyyy";
@@ -1850,160 +1925,147 @@
             this.FromDateValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.FromDateValue.Properties.NullValuePrompt = "dd.mm.yyyy";
             this.FromDateValue.Properties.NullValuePromptShowForEmptyValue = true;
-            this.FromDateValue.Size = new System.Drawing.Size(99, 22);
+            this.FromDateValue.Size = new System.Drawing.Size(85, 20);
             this.FromDateValue.TabIndex = 6;
             this.FromDateValue.EditValueChanged += new System.EventHandler(this.FromDateValue_EditValueChanged);
             // 
             // DateLabel
             // 
-            this.DateLabel.Location = new System.Drawing.Point(7, 187);
-            this.DateLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DateLabel.Location = new System.Drawing.Point(6, 152);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(76, 16);
+            this.DateLabel.Size = new System.Drawing.Size(61, 13);
             this.DateLabel.TabIndex = 225;
             this.DateLabel.Text = "Verilmə tarixi";
             // 
             // ToAmountValue
             // 
             this.ToAmountValue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ToAmountValue.Location = new System.Drawing.Point(245, 214);
-            this.ToAmountValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ToAmountValue.Location = new System.Drawing.Point(210, 174);
             this.ToAmountValue.MenuManager = this.ContractRibbon;
             this.ToAmountValue.Name = "ToAmountValue";
             this.ToAmountValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalkulyatoru aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalkulyatoru aç")});
             this.ToAmountValue.Properties.DisplayFormat.FormatString = "n2";
             this.ToAmountValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ToAmountValue.Properties.EditFormat.FormatString = "n2";
             this.ToAmountValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.ToAmountValue.Properties.NullValuePrompt = "0.00";
             this.ToAmountValue.Properties.NullValuePromptShowForEmptyValue = true;
-            this.ToAmountValue.Size = new System.Drawing.Size(100, 22);
+            this.ToAmountValue.Size = new System.Drawing.Size(86, 20);
             this.ToAmountValue.TabIndex = 9;
             this.ToAmountValue.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // FromAmountValue
             // 
             this.FromAmountValue.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FromAmountValue.Location = new System.Drawing.Point(126, 214);
-            this.FromAmountValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FromAmountValue.Location = new System.Drawing.Point(108, 174);
             this.FromAmountValue.MenuManager = this.ContractRibbon;
             this.FromAmountValue.Name = "FromAmountValue";
             this.FromAmountValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalkulyatoru aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Ellipsis, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Kalkulyatoru aç")});
             this.FromAmountValue.Properties.DisplayFormat.FormatString = "n2";
             this.FromAmountValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.FromAmountValue.Properties.EditFormat.FormatString = "n2";
             this.FromAmountValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.FromAmountValue.Properties.NullValuePrompt = "0.00";
             this.FromAmountValue.Properties.NullValuePromptShowForEmptyValue = true;
-            this.FromAmountValue.Size = new System.Drawing.Size(100, 22);
+            this.FromAmountValue.Size = new System.Drawing.Size(86, 20);
             this.FromAmountValue.TabIndex = 8;
             this.FromAmountValue.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // NoteText
             // 
-            this.NoteText.Location = new System.Drawing.Point(126, 244);
-            this.NoteText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NoteText.Location = new System.Drawing.Point(108, 198);
             this.NoteText.Name = "NoteText";
             this.NoteText.Properties.NullValuePrompt = "Qeydi daxil edin";
             this.NoteText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.NoteText.Size = new System.Drawing.Size(219, 22);
+            this.NoteText.Size = new System.Drawing.Size(188, 20);
             this.NoteText.TabIndex = 10;
             this.NoteText.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // NoteLabel
             // 
-            this.NoteLabel.Location = new System.Drawing.Point(7, 247);
-            this.NoteLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NoteLabel.Location = new System.Drawing.Point(6, 201);
             this.NoteLabel.Name = "NoteLabel";
-            this.NoteLabel.Size = new System.Drawing.Size(44, 16);
+            this.NoteLabel.Size = new System.Drawing.Size(38, 13);
             this.NoteLabel.TabIndex = 77;
             this.NoteLabel.Text = "Qeydlər";
             // 
             // ContractCodeText
             // 
-            this.ContractCodeText.Location = new System.Drawing.Point(126, 34);
-            this.ContractCodeText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ContractCodeText.Location = new System.Drawing.Point(108, 28);
             this.ContractCodeText.Name = "ContractCodeText";
             this.ContractCodeText.Properties.NullValuePrompt = "Kodu daxil edin";
             this.ContractCodeText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.ContractCodeText.Size = new System.Drawing.Size(98, 22);
+            this.ContractCodeText.Size = new System.Drawing.Size(84, 20);
             this.ContractCodeText.TabIndex = 1;
             this.ContractCodeText.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // ContractCodeLabel
             // 
-            this.ContractCodeLabel.Location = new System.Drawing.Point(7, 37);
-            this.ContractCodeLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ContractCodeLabel.Location = new System.Drawing.Point(6, 30);
             this.ContractCodeLabel.Name = "ContractCodeLabel";
-            this.ContractCodeLabel.Size = new System.Drawing.Size(98, 16);
+            this.ContractCodeLabel.Size = new System.Drawing.Size(82, 13);
             this.ContractCodeLabel.TabIndex = 69;
             this.ContractCodeLabel.Text = "Müqavilənin kodu";
             // 
             // CreditNameLabel
             // 
-            this.CreditNameLabel.Location = new System.Drawing.Point(7, 157);
-            this.CreditNameLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CreditNameLabel.Location = new System.Drawing.Point(6, 128);
             this.CreditNameLabel.Name = "CreditNameLabel";
-            this.CreditNameLabel.Size = new System.Drawing.Size(73, 16);
+            this.CreditNameLabel.Size = new System.Drawing.Size(61, 13);
             this.CreditNameLabel.TabIndex = 122;
             this.CreditNameLabel.Text = "Lizinqin növü";
             // 
             // CurrencyLabel
             // 
-            this.CurrencyLabel.Location = new System.Drawing.Point(7, 127);
-            this.CurrencyLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CurrencyLabel.Location = new System.Drawing.Point(6, 103);
             this.CurrencyLabel.Name = "CurrencyLabel";
-            this.CurrencyLabel.Size = new System.Drawing.Size(42, 16);
+            this.CurrencyLabel.Size = new System.Drawing.Size(36, 13);
             this.CurrencyLabel.TabIndex = 121;
             this.CurrencyLabel.Text = "Valyuta";
             // 
             // CreditNameComboBox
             // 
             this.CreditNameComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CreditNameComboBox.Location = new System.Drawing.Point(126, 154);
-            this.CreditNameComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CreditNameComboBox.Location = new System.Drawing.Point(108, 125);
             this.CreditNameComboBox.Name = "CreditNameComboBox";
             this.CreditNameComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç")});
             this.CreditNameComboBox.Properties.NullValuePrompt = "Lizingin növünü seçin";
             this.CreditNameComboBox.Properties.NullValuePromptShowForEmptyValue = true;
-            this.CreditNameComboBox.Size = new System.Drawing.Size(219, 22);
+            this.CreditNameComboBox.Size = new System.Drawing.Size(188, 20);
             this.CreditNameComboBox.TabIndex = 5;
             this.CreditNameComboBox.EditValueChanged += new System.EventHandler(this.CreditNameComboBox_EditValueChanged);
             // 
             // CustomerNameText
             // 
-            this.CustomerNameText.Location = new System.Drawing.Point(126, 4);
-            this.CustomerNameText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CustomerNameText.Location = new System.Drawing.Point(108, 3);
             this.CustomerNameText.Name = "CustomerNameText";
             this.CustomerNameText.Properties.NullValuePrompt = "Adı daxil edin";
             this.CustomerNameText.Properties.NullValuePromptShowForEmptyValue = true;
-            this.CustomerNameText.Size = new System.Drawing.Size(219, 22);
+            this.CustomerNameText.Size = new System.Drawing.Size(188, 20);
             this.CustomerNameText.TabIndex = 0;
             this.CustomerNameText.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // CurrencyComboBox
             // 
             this.CurrencyComboBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CurrencyComboBox.Location = new System.Drawing.Point(126, 124);
-            this.CurrencyComboBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CurrencyComboBox.Location = new System.Drawing.Point(108, 101);
             this.CurrencyComboBox.Name = "CurrencyComboBox";
             this.CurrencyComboBox.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç")});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, true, false, editorButtonImageOptions6, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), "Siyahını aç")});
             this.CurrencyComboBox.Properties.NullValuePrompt = "Valyutaları seçin";
             this.CurrencyComboBox.Properties.NullValuePromptShowForEmptyValue = true;
-            this.CurrencyComboBox.Size = new System.Drawing.Size(219, 22);
+            this.CurrencyComboBox.Size = new System.Drawing.Size(188, 20);
             this.CurrencyComboBox.TabIndex = 4;
             this.CurrencyComboBox.EditValueChanged += new System.EventHandler(this.CurrencyComboBox_EditValueChanged);
             // 
             // CustomerNameLabel
             // 
-            this.CustomerNameLabel.Location = new System.Drawing.Point(7, 7);
-            this.CustomerNameLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CustomerNameLabel.Location = new System.Drawing.Point(6, 6);
             this.CustomerNameLabel.Name = "CustomerNameLabel";
-            this.CustomerNameLabel.Size = new System.Drawing.Size(80, 16);
+            this.CustomerNameLabel.Size = new System.Drawing.Size(66, 13);
             this.CustomerNameLabel.TabIndex = 75;
             this.CustomerNameLabel.Text = "Müştərinin adı";
             // 
@@ -2011,10 +2073,9 @@
             // 
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl6.Appearance.Options.UseForeColor = true;
-            this.labelControl6.Location = new System.Drawing.Point(231, 97);
-            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Location = new System.Drawing.Point(198, 79);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(13, 16);
+            this.labelControl6.Size = new System.Drawing.Size(12, 13);
             this.labelControl6.TabIndex = 120;
             this.labelControl6.Text = "ay";
             // 
@@ -2025,8 +2086,7 @@
             0,
             0,
             0});
-            this.InterestValue.Location = new System.Drawing.Point(126, 64);
-            this.InterestValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InterestValue.Location = new System.Drawing.Point(108, 52);
             this.InterestValue.Name = "InterestValue";
             this.InterestValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2036,7 +2096,7 @@
             0,
             0,
             0});
-            this.InterestValue.Size = new System.Drawing.Size(98, 22);
+            this.InterestValue.Size = new System.Drawing.Size(84, 20);
             this.InterestValue.TabIndex = 2;
             this.InterestValue.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
@@ -2044,19 +2104,17 @@
             // 
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.Maroon;
             this.labelControl5.Appearance.Options.UseForeColor = true;
-            this.labelControl5.Location = new System.Drawing.Point(231, 67);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Location = new System.Drawing.Point(198, 54);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(12, 16);
+            this.labelControl5.Size = new System.Drawing.Size(11, 13);
             this.labelControl5.TabIndex = 118;
             this.labelControl5.Text = "%";
             // 
             // InterestLabel
             // 
-            this.InterestLabel.Location = new System.Drawing.Point(7, 67);
-            this.InterestLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InterestLabel.Location = new System.Drawing.Point(6, 54);
             this.InterestLabel.Name = "InterestLabel";
-            this.InterestLabel.Size = new System.Drawing.Size(43, 16);
+            this.InterestLabel.Size = new System.Drawing.Size(35, 13);
             this.InterestLabel.TabIndex = 117;
             this.InterestLabel.Text = "İllik faiz";
             // 
@@ -2067,8 +2125,7 @@
             0,
             0,
             0});
-            this.PeriodValue.Location = new System.Drawing.Point(126, 94);
-            this.PeriodValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PeriodValue.Location = new System.Drawing.Point(108, 76);
             this.PeriodValue.Name = "PeriodValue";
             this.PeriodValue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -2078,31 +2135,41 @@
             0,
             0,
             0});
-            this.PeriodValue.Size = new System.Drawing.Size(98, 22);
+            this.PeriodValue.Size = new System.Drawing.Size(84, 20);
             this.PeriodValue.TabIndex = 3;
             this.PeriodValue.EditValueChanged += new System.EventHandler(this.CustomerNameText_EditValueChanged);
             // 
             // PeriodLabel
             // 
-            this.PeriodLabel.Location = new System.Drawing.Point(7, 97);
-            this.PeriodLabel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PeriodLabel.Location = new System.Drawing.Point(6, 79);
             this.PeriodLabel.Name = "PeriodLabel";
-            this.PeriodLabel.Size = new System.Drawing.Size(42, 16);
+            this.PeriodLabel.Size = new System.Drawing.Size(36, 13);
             this.PeriodLabel.TabIndex = 119;
             this.PeriodLabel.Text = "Müddət";
             // 
+            // NewContractBarButton
+            // 
+            this.NewContractBarButton.Caption = "Yeni";
+            this.NewContractBarButton.CloseRadialMenuOnItemClick = true;
+            this.NewContractBarButton.Id = 1;
+            this.NewContractBarButton.ImageOptions.Image = global::CRS.Properties.Resources.contract_add_32;
+            this.NewContractBarButton.ItemShortcut = new DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N));
+            this.NewContractBarButton.Name = "NewContractBarButton";
+            this.NewContractBarButton.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.NewContractBarButton.ShowItemShortcut = DevExpress.Utils.DefaultBoolean.True;
+            this.NewContractBarButton.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.NewContractBarButton_ItemClick);
+            // 
             // FContracts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1779, 961);
+            this.ClientSize = new System.Drawing.Size(1376, 636);
             this.Controls.Add(this.HostageGridControl);
             this.Controls.Add(this.CustomerSplitter);
             this.Controls.Add(this.ContractsGridControl);
             this.Controls.Add(this.SearchDockPanel);
             this.Controls.Add(this.ContractRibbon);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FContracts";
             this.Ribbon = this.ContractRibbon;
             this.Text = "Müqavilələrin siyahısı";
@@ -2295,5 +2362,17 @@
         private DevExpress.XtraEditors.CheckEdit SpecialAttentionCheck;
         private DevExpress.XtraBars.BarButtonItem CancelBarButton;
         private DevExpress.XtraEditors.CheckEdit CancelCheck;
+        private DevExpress.XtraBars.BarSubItem NewBarSubItem;
+        private DevExpress.XtraBars.BarButtonItem NewCarOrObjectBarButton;
+        private DevExpress.XtraBars.BarButtonItem NewPawnshopBarButton;
+        private DevExpress.XtraBars.BarSubItem EditBarSubItem;
+        private DevExpress.XtraBars.BarButtonItem EditCarOrObjectBarButton;
+        private DevExpress.XtraBars.BarButtonItem EditPawnshopBarButton;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem DeleteContractBarButton1;
+        private DevExpress.XtraBars.BarButtonItem DeleteContractBarButton2;
+        private DevExpress.XtraBars.BarButtonItem DeleteContractBarButto;
+        private DevExpress.XtraGrid.Columns.GridColumn Contract_Category_Id;
+        private DevExpress.XtraBars.BarButtonItem EditContractBarButto;
     }
 }

@@ -3737,5 +3737,121 @@ namespace CRS.Class
             if (File.Exists(fileName))
                 view.RestoreLayoutFromXml(fileName);
         }
+
+
+        public static void InsertContractOperationJournal(string date, double amount, double commission, string contractid, string amount_account, string commission_account)
+        {
+            using (OracleConnection connection = new OracleConnection())
+            {
+                OracleTransaction transaction = null;
+                OracleCommand command = null;
+                try
+                {
+                    if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
+                    {
+                        connection.ConnectionString = GlobalFunctions.GetConnectionString();
+                        connection.Open();
+                    }
+                    transaction = connection.BeginTransaction();
+                    command = connection.CreateCommand();
+                    command.Transaction = transaction;
+                    command.CommandText = "CRS_USER.PROC_CONTRACT_OPERATION";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("P_DATE", OracleDbType.Varchar2).Value = date;
+                    command.Parameters.Add("P_AMOUNT", OracleDbType.Double).Value = amount;
+                    command.Parameters.Add("P_COMMISSION", OracleDbType.Double).Value = commission;
+                    command.Parameters.Add("P_CONTRACT_ID", OracleDbType.Int32).Value = int.Parse(contractid);
+                    command.Parameters.Add("P_AMOUNT_ACCOUNT", OracleDbType.Varchar2).Value = amount_account;
+                    command.Parameters.Add("P_COMMISSION_ACCOUNT", OracleDbType.Varchar2).Value = commission_account;
+                    command.Parameters.Add("P_USED_USER_ID", OracleDbType.Int32).Value = GlobalVariables.V_UserID;
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch (Exception exx)
+                {
+                    LogWrite("Müqavilənin mühasibat əməliyyatları bazaya daxil edilmədi.", command.CommandText, GlobalVariables.V_UserName, "GlobalProcedures", MethodBase.GetCurrentMethod().Name, exx);
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    command.Dispose();
+                    connection.Dispose();
+                }
+            }
+        }
+
+        public static void ContractClosedDay(DateTime startDate, int contractID)
+        {
+            using (OracleConnection connection = new OracleConnection())
+            {
+                OracleTransaction transaction = null;
+                OracleCommand command = null;
+                try
+                {
+                    if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
+                    {
+                        connection.ConnectionString = GlobalFunctions.GetConnectionString();
+                        connection.Open();
+                    }
+                    transaction = connection.BeginTransaction();
+                    command = connection.CreateCommand();
+                    command.Transaction = transaction;
+                    command.CommandText = "CRS_USER.PROC_CONTRACT_CLOSED_DAY";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("P_START_DATE", GlobalFunctions.ConvertObjectToOracleDBType(startDate)).Value = startDate;
+                    command.Parameters.Add("P_CONTRACT_ID", GlobalFunctions.ConvertObjectToOracleDBType(contractID)).Value = contractID;
+                    command.Parameters.Add("P_USED_USER_ID", GlobalFunctions.ConvertObjectToOracleDBType(GlobalVariables.V_UserID)).Value = GlobalVariables.V_UserID;
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch (Exception exx)
+                {
+                    LogWrite("Gün bağlanılmadı.", command.CommandText, GlobalVariables.V_UserName, "GlobalProcedures", MethodBase.GetCurrentMethod().Name, exx);
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    command.Dispose();
+                    connection.Dispose();
+                }
+            }
+        }
+
+        public static void ClosedDay(DateTime startDate, DateTime endDate)
+        {
+            using (OracleConnection connection = new OracleConnection())
+            {
+                OracleTransaction transaction = null;
+                OracleCommand command = null;
+                try
+                {
+                    if (connection.State == ConnectionState.Closed || connection.State == ConnectionState.Broken)
+                    {
+                        connection.ConnectionString = GlobalFunctions.GetConnectionString();
+                        connection.Open();
+                    }
+                    transaction = connection.BeginTransaction();
+                    command = connection.CreateCommand();
+                    command.Transaction = transaction;
+                    command.CommandText = "CRS_USER.PROC_CLOSED_DAY";
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.Add("P_START_DATE", GlobalFunctions.ConvertObjectToOracleDBType(startDate)).Value = startDate;
+                    command.Parameters.Add("P_END_DATE", GlobalFunctions.ConvertObjectToOracleDBType(endDate)).Value = endDate;
+                    command.Parameters.Add("P_USED_USER_ID", GlobalFunctions.ConvertObjectToOracleDBType(GlobalVariables.V_UserID)).Value = GlobalVariables.V_UserID;
+                    command.ExecuteNonQuery();
+                    transaction.Commit();
+                }
+                catch (Exception exx)
+                {
+                    LogWrite("Gün bağlanılmadı.", command.CommandText, GlobalVariables.V_UserName, "GlobalProcedures", MethodBase.GetCurrentMethod().Name, exx);
+                    transaction.Rollback();
+                }
+                finally
+                {
+                    command.Dispose();
+                    connection.Dispose();
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,68 @@
+
+Log Entry : 20:46:56 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  CalculatedLeasingTotal
+  
+   ShowMessage: Lizinq Portfeli hesablanmadı.
+   Exception Message: ORA-04063: package body "CRS_USER.TOTALS" has errors
+ORA-06512: at "CRS_USER.PROC_LEASING_TOTAL", line 19
+ORA-06512: at line 1
+   SQL Text      :  PROC_LEASING_TOTAL
+-------------------------------------------------
++
+Log Entry : 20:57:41 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 21:10:06 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 21:18:38 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 21:20:38 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------
+
+Log Entry : 22:34:14 6 noyabr 2021, şənbə
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FillLookUpEdit
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-00942: table or view does not exist
+   SQL Text      :  SELECT ID,NAME FROM CRS_USER.LOAN_OFFICER WHERE 1 = 1 ORDER BY NAME
+-------------------------------------------------

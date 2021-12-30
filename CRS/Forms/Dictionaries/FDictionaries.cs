@@ -23,11 +23,41 @@ namespace CRS.Forms
         }
         public int ViewSelectedTabIndex = 0, HostageSelectedTabIndex = 0, FundSelectedTabIndex = 0, CashAppointmentSelectedTabIndex;
         public string TransactionType, StatusWhere = null;
-        string PhoneID, StatusID, SeriesID, IssuingID, BirthplaceID, CreditTypeID, CreditNameID, CompanyID, CurrencyID, CarBrandID, CarTypeID, CarColorID, CarModelID, CarBanTypeID, OperationID,
-                BankID, AppointmentID, CountryID, FundsSourceID, FundsSourceNameID, FounderID, CashOtherAppointmentID, PositionID, PersonnelID, InsuranceRateID, KindShipID, ContractEvaluateID;
+        string PhoneID,
+            StatusID,
+            SeriesID,
+            IssuingID,
+            BirthplaceID,
+            CreditTypeID,
+            PawnTypeID,
+            CurrencyID,
+            BankID,
+            AppointmentID,
+            CountryID,
+            goldTypeID,
+            CashOtherAppointmentID,
+            KindShipID,
+            ContractEvaluateID,
+            AppraiserID,
+            EyebrowsID,
+            FundsSourceID,
+            LoanOfficerID,
+            CarBrandID,
+            CarBanTypeID,
+            CarColorID,
+            CarTypeID,
+            CarModelID,
+            Credit1ClassID,
+            creditClassID,
+            creditStatusID,
+            creditPurposeID,
+            collateralTypeID,
+            typeCreditID,
+            typeDocumentID
+            ;
 
         bool FormStatus = false;
-        int topindex, old_row_id, contractEvaluateIsDeleted;
+        int topindex, old_row_id, contractEvaluateIsDeleted, old_row_num;
 
         public delegate void DoEvent(int index);
         public event DoEvent RefreshList;
@@ -44,22 +74,12 @@ namespace CRS.Forms
                 BirthplaceTab.Visible = GlobalVariables.Birthplace;
                 BirthplaceTab.Visible = GlobalVariables.Birthplace;
                 CreditTypeTab.Visible = GlobalVariables.CreditType;
-                CreditNameTab.Visible = GlobalVariables.CreditName;
                 CurrencyTab.Visible = GlobalVariables.Currency;
-                HostageTab.Visible = GlobalVariables.Hostage;
-                BanksTab.Visible = GlobalVariables.Bank;
-                BankOperationTab.Visible = GlobalVariables.BankOperation;
                 CountriesTab.Visible = GlobalVariables.Countries;
-                PositionTab.Visible = GlobalVariables.Positions;
-                InsuranceCompanyTab.Visible = InsuranceRateTab.Visible = GlobalVariables.Insurance;
             }
 
             BackstageViewControl.SelectedTabIndex = ViewSelectedTabIndex;
-            HostageBackstageViewControl.SelectedTabIndex = HostageSelectedTabIndex;
-            FundsBackstageViewControl.SelectedTabIndex = FundSelectedTabIndex;
-            CashAppointmentBackstageViewControl.SelectedTabIndex = CashAppointmentSelectedTabIndex;
             LoadPhoneDescriptionDataGridView();
-            LoadCarColorDataGridView();
             FormStatus = true;
             if (TransactionType == "E")
             {
@@ -81,79 +101,108 @@ namespace CRS.Forms
                         LoadBirthplaceDataGridView();
                         break;
                     case 5:
-                        LoadCreditTypeDataGridView();
+                        LoadCreditStatus();
                         break;
-                    case 6:
-                        LoadCreditNameDataGridView();
-                        break;
+                    
                     case 7:
                         LoadCurrencyDataGridView();
                         break;
-                    case 10:
-                        LoadPersonnelDataGridView();
-                        break;
-                    case 11:
-                        LoadBanksDataGridView();
-                        break;
-                    case 12:
-                        LoadBankAppointmentDataGridView();
-                        break;
-                    case 13:
+                    
+                    case 8:
                         LoadCountriesDataGridView();
                         break;
-                    case 15:
-                        LoadFoundersDataGridView();
-                        break;
-                    case 16:
-                        LoadPositionsDataGridView();
-                        break;
-                    case 17:
+                    case 9:
                         LoadKindshipRateDataGridView();
                         break;
-                    case 18:
+                    case 10:
                         LoadContractEvaluateDataGridView();
+                        break;
+                    case 11:
+                        LoadDocumentType();
+                        break;
+                    case 12:
+                        LoadLoanOfficerDataGridView();
+                        break;
+                    case 13:
+                        LoadEyebrowsDataGridView();
+                        break;
+                    case 14:
+                        LoadPawnTypeDataGridView();
+                        break;
+                    //case 15:
+                    //    LoadAppointmentDataGridView();
+                    //    break;
+                    case 15:
+                        LoadCarColorDataGridView();
+                        break;
+                    
+                    case 16:
+                        LoadCarModelDataGridView();
+                        break;
+                    case 17:
+                        LoadCarTypeDataGridView();
+                        break;
+                    case 18:
+                        LoadCarBrandDataGridView();
+                        break;
+                    case 19:
+                        LoadCarBanTypeDataGridView();
                         break;
                 }
 
-                switch (HostageBackstageViewControl.SelectedTabIndex)
+                switch (CreditParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadCreditTypeDataGridView();
+                        break;
+                    case 1:
+                        LoadTypeCredit();
+                        break;
+                    case 2:
+                        LoadCreditPurpose();
+                        break;
+                    case 3:
+                        LoadCreditClass();
+                        break;
+                    case 4:
+                        LoadCreditStatus();
+                        break;
+                    case 5:
+                        LoadCollateralType();
+                        break;
+                }
+
+
+                switch (PawnParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadEyebrowsDataGridView();
+                        break;
+                    case 1:
+                        LoadGoldType();
+                        break;
+                    case 2:
+                        LoadPawnTypeDataGridView();
+                        break;
+
+                }
+
+                switch (LizingParametrBackstageViewControl.SelectedTabIndex)
                 {
                     case 0:
                         LoadCarBrandDataGridView();
                         break;
                     case 1:
-                        LoadCarTypeDataGridView();
+                        LoadCarModelDataGridView();
                         break;
                     case 2:
-                        LoadCarColorDataGridView();
+                        LoadCarTypeDataGridView();
                         break;
                     case 3:
-                        LoadCarModelDataGridView();
+                        LoadCarColorDataGridView();
                         break;
                     case 4:
                         LoadCarBanTypeDataGridView();
-                        break;
-                    case 6:
-                        LoadInsuranceCompanyDataGridView();
-                        break;
-                    case 7:
-                        LoadInsuranceRateDataGridView();
-                        break;
-                }
-
-                switch (FundsBackstageViewControl.SelectedTabIndex)
-                {
-                    case 0:
-                        LoadFundsSourceDataGridView();
-                        break;
-                    case 1:
-                        LoadFundsSourceNameDataGridView();
-                        break;
-                }
-
-                switch (CashAppointmentBackstageViewControl.SelectedTabIndex)
-                {
-                    case 0:
-                        LoadCashOtherAppointmentDataGridView();
                         break;
                 }
             }
@@ -176,7 +225,7 @@ namespace CRS.Forms
 
         private void LoadPhoneDescriptionDataGridView()
         {
-            string s = "SELECT 1 SS,ID,DESCRIPTION_AZ,DESCRIPTION_EN,DESCRIPTION_RU,USED_USER_ID FROM CRS_USER.PHONE_DESCRIPTIONS ORDER BY DESCRIPTION_AZ ASC";
+            string s = "SELECT 1 SS,ID,DESCRIPTION_AZ,USED_USER_ID FROM CRS_USER.PHONE_DESCRIPTIONS ORDER BY DESCRIPTION_AZ ASC";
 
             PhoneGridControl.DataSource = GlobalFunctions.GenerateDataTable(s);
             DeletePhoneBarButton.Enabled = EditPhoneBarButton.Enabled = (PhoneGridView.RowCount > 0);
@@ -262,452 +311,54 @@ namespace CRS.Forms
 
         private void LoadCreditTypeDataGridView()
         {
-            string s = null;
-            try
-            {
-                switch (GlobalVariables.SelectedLanguage)
-                {
-                    case "AZ":
-                        s = "SELECT 1 SS,CT.ID,CN.NAME,TO_CHAR(CT.CALC_DATE,'DD.MM.YYYY') CALC_DATE,CT.CODE,CT.TERM||' ay',CT.INTEREST||' %',CT.NOTE,CT.USED_USER_ID FROM CRS_USER.CREDIT_TYPE CT,CRS_USER.CREDIT_NAMES CN WHERE CT.NAME_ID = CN.ID ORDER BY CN.NAME, CT.CALC_DATE DESC";
-                        break;
-                    case "EN":
-                        s = "SELECT 1 SS,CT.ID,CN.NAME_EN,TO_CHAR(CT.CALC_DATE,'DD.MM.YYYY') CALC_DATE,CT.CODE,CT.TERM||' ay',CT.INTEREST||' %',CT.NOTE,CT.USED_USER_ID FROM CRS_USER.CREDIT_TYPE CT,CRS_USER.CREDIT_NAMES CN WHERE CT.NAME_ID = CN.ID ORDER BY CN.NAME, CT.CALC_DATE DESC";
-                        break;
-                    case "RU":
-                        s = "SELECT 1 SS,CT.ID,CN.NAME_RU,TO_CHAR(CT.CALC_DATE,'DD.MM.YYYY') CALC_DATE,CT.CODE,CT.TERM||' ay',CT.INTEREST||' %',CT.NOTE,CT.USED_USER_ID FROM CRS_USER.CREDIT_TYPE CT,CRS_USER.CREDIT_NAMES CN WHERE CT.NAME_ID = CN.ID ORDER BY CN.NAME, CT.CALC_DATE DESC";
-                        break;
-                }
+            string s = $@"SELECT CT.ID,
+                                 CN.NAME,
+                                 CT.CALC_DATE,
+                                 CT.TERM,
+                                 CT.INTEREST,
+                                 CT.NOTE,
+                                 CT.USED_USER_ID,
+                                 CC.NAME CATEGORY_NAME,
+                                 CT.PENALTY_PERCENT,
+                                 CT.COMMISSION
+                            FROM CRS_USER.CREDIT_TYPE CT, CRS_USER.CREDIT_NAMES CN, CRS_USER.CREDIT_CATEGORY CC
+                           WHERE CT.NAME_ID = CN.ID 
+                             AND CN.CREDIT_CATEGORY_ID = CC.ID
+                        ORDER BY CN.NAME, CT.CALC_DATE DESC";
 
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditTypeDataGridView");
+            DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditTypeDataGridView", "Kreditin rekvizitləri yüklənmədi.");
 
-                CreditTypeGridControl.DataSource = dt;
-                CreditTypeGridView.PopulateColumns();
-                CreditTypeGridView.Columns[0].Visible = false;
-                CreditTypeGridView.Columns[0].Caption = "S/s";
-                CreditTypeGridView.Columns[1].Visible = false;
-                CreditTypeGridView.Columns[2].Caption = "Növün adı";
-                CreditTypeGridView.Columns[3].Caption = "Tarix";
-                CreditTypeGridView.Columns[4].Caption = "Kodu";
-                CreditTypeGridView.Columns[5].Caption = "Müddəti";
-                CreditTypeGridView.Columns[6].Caption = "İllik faizi";
-                CreditTypeGridView.Columns[7].Caption = "Qeyd";
-                CreditTypeGridView.Columns[8].Visible = false;
+            CreditTypeGridControl.DataSource = dt;
 
-                CreditTypeGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditTypeGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CreditTypeGridView.Columns[3].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditTypeGridView.Columns[3].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CreditTypeGridView.Columns[4].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditTypeGridView.Columns[4].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CreditTypeGridView.Columns[5].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditTypeGridView.Columns[5].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CreditTypeGridView.Columns[6].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditTypeGridView.Columns[6].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-
-                CreditTypeGridView.Columns[2].GroupIndex = 0;
-
-                if (CreditTypeGridView.RowCount > 0)
-                {
-                    DeleteCreditTypeBarButton.Enabled = true;
-                    EditCreditTypeBarButton.Enabled = true;
-                    CreditTypeGridView.Columns[3].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                }
-                else
-                    DeleteCreditTypeBarButton.Enabled = EditCreditTypeBarButton.Enabled = false;
-                CreditTypeGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Kreditin növləri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
+            DeleteCreditTypeBarButton.Enabled = EditCreditTypeBarButton.Enabled = (CreditTypeGridView.RowCount > 0);
         }
 
-        private void LoadCreditNameDataGridView()
+        private void LoadPawnTypeDataGridView()
         {
-            string s = "SELECT 1 SS,ID,NAME,NAME_EN,NAME_RU,NOTE,USED_USER_ID FROM CRS_USER.CREDIT_NAMES ORDER BY NAME ASC";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditNameDataGridView");
+            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.PAWN_TYPE ORDER BY NAME";
+            PawnTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadPawnTypeDataGridView", "Girova qoyulan əşyaların siyahısı yüklənmədi.");
 
-                CreditNameGridControl.DataSource = dt;
-                CreditNameGridView.PopulateColumns();
-
-                CreditNameGridView.Columns[0].Caption = "S/s";
-                CreditNameGridView.Columns[1].Visible = false;
-                CreditNameGridView.Columns[2].Caption = "Lizinqin adı (AZ)";
-                CreditNameGridView.Columns[3].Caption = "Lizinqin adı (EN)";
-                CreditNameGridView.Columns[4].Caption = "Lizinqin adı (RU)";
-                CreditNameGridView.Columns[5].Caption = "Qeyd";
-                CreditNameGridView.Columns[6].Visible = false;
-
-                CreditNameGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CreditNameGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CreditNameGridView.RowCount > 0)
-                {
-                    DeleteCreditNameBarButton.Enabled = EditCreditNameBarButton.Enabled = true;
-                    CreditNameGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                }
-                else
-                    DeleteCreditNameBarButton.Enabled = EditCreditNameBarButton.Enabled = false;
-
-                CreditNameGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Kreditin adları cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
+            DeletePawnTypeBarButton.Enabled = EditPawnTypeBarButton.Enabled = PawnTypeGridView.RowCount > 0;
         }
 
         private void LoadCurrencyDataGridView()
         {
             string s = "SELECT 1 SS,ID,CODE,VALUE,NAME,SHORT_NAME,SMALL_NAME,NOTE,USED_USER_ID FROM CRS_USER.CURRENCY ORDER BY ORDER_ID";
-            try
+
+            DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCurrencyDataGridView", "Valyutalar yüklənmədi.");
+
+            CurrencyGridControl.DataSource = dt;
+
+            if (CurrencyGridView.RowCount > 0)
             {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCurrencyDataGridView");
+                DeleteCurrencyBarButton.Enabled = EditCurrencyBarButton.Enabled = true;
+                if (CurrencyGridView.FocusedRowHandle == 0)
+                    UpCurrencyBarButton.Enabled = false;
 
-                CurrencyGridControl.DataSource = dt;
-                CurrencyGridView.PopulateColumns();
-
-                CurrencyGridView.Columns[0].Caption = "S/s";
-                CurrencyGridView.Columns[1].Visible = false;
-                CurrencyGridView.Columns[2].Caption = "Valyutanın kodu";
-                CurrencyGridView.Columns[3].Caption = "Dəyəri";
-                CurrencyGridView.Columns[4].Caption = "Valyutanın adı";
-                CurrencyGridView.Columns[5].Caption = "Valyutanın qısa adı";
-                CurrencyGridView.Columns[6].Caption = "Ən kiçik ölçü vahidi";
-                CurrencyGridView.Columns[7].Caption = "Qeyd";
-                CurrencyGridView.Columns[8].Visible = false;
-                //TextAligment
-                CurrencyGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CurrencyGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CurrencyGridView.Columns[2].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CurrencyGridView.Columns[2].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                CurrencyGridView.Columns[3].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CurrencyGridView.Columns[3].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CurrencyGridView.RowCount > 0)
-                {
-                    DeleteCurrencyBarButton.Enabled = EditCurrencyBarButton.Enabled = true;
-                    CurrencyGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CurrencyGridView.FocusedRowHandle == 0)
-                        UpCurrencyBarButton.Enabled = false;
-
-                    DownCurrencyBarButton.Enabled = (CurrencyGridView.RowCount > 1);
-                }
-                else
-                    DeleteCurrencyBarButton.Enabled = EditCurrencyBarButton.Enabled = UpCurrencyBarButton.Enabled = DownCurrencyBarButton.Enabled = false;
-                CurrencyGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Valyutalar yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadBanksDataGridView()
-        {
-            string s = $@"SELECT 1 SS,
-                                         B.ID,
-                                         B.LONG_NAME,
-                                         B.CODE,
-                                         B.SHORT_NAME,                                         
-                                         B.SWIFT,
-                                         B.VOEN,
-                                         S.STATUS_NAME,
-                                         B.USED_USER_ID,
-                                         B.STATUS_ID,
-                                         B.IS_USED
-                                    FROM CRS_USER.BANKS B, CRS_USER.STATUS S
-                                   WHERE B.STATUS_ID = S.ID
-                                ORDER BY ORDER_ID";
-
-            BanksGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadBanksDataGridView", "Bankların siyahısı yüklənmədi");
-
-            if (BanksGridView.RowCount > 0)
-                DeleteBankBarButton.Enabled = EditBankBarButton.Enabled = true;
-            else
-                DeleteBankBarButton.Enabled =
-                    EditBankBarButton.Enabled =
-                    UpBankBarButton.Enabled =
-                    DownBankBarButton.Enabled = false;
-        }
-
-        private void LoadCarBrandDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_BRANDS ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarBrandDataGridView");
-
-                BrandGridControl.DataSource = dt;
-                BrandGridView.PopulateColumns();
-
-                BrandGridView.Columns[0].Caption = "S/s";
-                BrandGridView.Columns[1].Visible = false;
-                BrandGridView.Columns[2].Caption = "Markanın adı";
-                BrandGridView.Columns[3].Caption = "Qeyd";
-                BrandGridView.Columns[4].Visible = false;
-
-                BrandGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                BrandGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                for (int i = 0; i < BrandGridView.Columns.Count; i++)
-                {
-                    BrandGridView.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                    BrandGridView.Columns[i].AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                }
-
-                if (BrandGridView.RowCount > 0)
-                {
-                    DeleteCarBrandBarButton.Enabled = EditCarBrandBarButton.Enabled = true;
-                    BrandGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (BrandGridView.FocusedRowHandle == 0)
-                        UpCarBrandBarButton.Enabled = false;
-
-                    DownCarBrandBarButton.Enabled = (BrandGridView.RowCount > 1);
-                }
-                else
-                    DeleteCarBrandBarButton.Enabled = EditCarBrandBarButton.Enabled = UpCarBrandBarButton.Enabled = DownCarBrandBarButton.Enabled = false;
-                BrandGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Markalar cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadCarTypeDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_TYPES ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarTypeDataGridView");
-
-                CarTypeGridControl.DataSource = dt;
-                CarTypeGridView.PopulateColumns();
-
-                CarTypeGridView.Columns[0].Caption = "S/s";
-                CarTypeGridView.Columns[1].Visible = false;
-                CarTypeGridView.Columns[2].Caption = "Tipin adı";
-                CarTypeGridView.Columns[3].Caption = "Qeyd";
-                CarTypeGridView.Columns[4].Visible = false;
-
-                CarTypeGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CarTypeGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CarTypeGridView.RowCount > 0)
-                {
-                    DeleteCarTypeBarButton.Enabled = true;
-                    EditCarTypeBarButton.Enabled = true;
-                    CarTypeGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CarTypeGridView.FocusedRowHandle == 0)
-                        UpCarTypeBarButton.Enabled = false;
-
-                    DownCarTypeBarButton.Enabled = (CarTypeGridView.RowCount > 1);
-                }
-                else
-                    DeleteCarTypeBarButton.Enabled = EditCarTypeBarButton.Enabled = UpCarTypeBarButton.Enabled = DownCarTypeBarButton.Enabled = false;
-
-                CarTypeGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Avtomonillərin tipləri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadCarColorDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_COLORS ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarColorDataGridView");
-
-                CarColorGridControl.DataSource = dt;
-                CarColorGridView.PopulateColumns();
-
-                CarColorGridView.Columns[0].Caption = "S/s";
-                CarColorGridView.Columns[1].Visible = false;
-                CarColorGridView.Columns[2].Caption = "Rəngin adı";
-                CarColorGridView.Columns[3].Caption = "Qeyd";
-                CarColorGridView.Columns[4].Visible = false;
-
-                CarColorGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CarColorGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CarColorGridView.RowCount > 0)
-                {
-                    DeleteCarColorBarButton.Enabled = true;
-                    EditCarColorBarButton.Enabled = true;
-                    CarColorGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CarColorGridView.FocusedRowHandle == 0)
-                        UpCarColorBarButton.Enabled = false;
-                    if (CarColorGridView.RowCount > 1)
-                        DownCarColorBarButton.Enabled = true;
-                    else
-                        DownCarColorBarButton.Enabled = false;
-                }
-                else
-                    DeleteCarColorBarButton.Enabled = EditCarColorBarButton.Enabled = UpCarColorBarButton.Enabled = DownCarColorBarButton.Enabled = false;
-
-                CarColorGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Avtomonillərin rəngləri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadCarModelDataGridView()
-        {
-            string s = "SELECT 1 SS,M.ID,B.NAME,M.NAME,M.NOTE,M.USED_USER_ID FROM CRS_USER.CAR_BRANDS B,CRS_USER.CAR_MODELS M WHERE B.ID = M.BRAND_ID ORDER BY M.ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarModelDataGridView");
-
-                CarModelGridControl.DataSource = dt;
-                CarModelGridView.PopulateColumns();
-
-                CarModelGridView.Columns[0].Caption = "S/s";
-                CarModelGridView.Columns[1].Visible = false;
-                CarModelGridView.Columns[2].Caption = "Markanın adı";
-                CarModelGridView.Columns[3].Caption = "Modelin adı";
-                CarModelGridView.Columns[4].Caption = "Qeyd";
-                CarModelGridView.Columns[5].Visible = false;
-
-                CarModelGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CarModelGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CarModelGridView.RowCount > 0)
-                {
-                    DeleteCarModelBarButton.Enabled = true;
-                    EditCarModelBarButton.Enabled = true;
-                    CarModelGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CarModelGridView.FocusedRowHandle == 0)
-                        UpCarModelBarButton.Enabled = false;
-                    if (CarModelGridView.RowCount > 1)
-                        DownCarModelBarButton.Enabled = true;
-                    else
-                        DownCarModelBarButton.Enabled = false;
-                }
-                else
-                    DeleteCarModelBarButton.Enabled = EditCarModelBarButton.Enabled = UpCarModelBarButton.Enabled = DownCarModelBarButton.Enabled = false;
-                CarModelGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Modellər cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadCarBanTypeDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_BAN_TYPES ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarBanTypeDataGridView");
-
-                CarBanTypeGridControl.DataSource = dt;
-                CarBanTypeGridView.PopulateColumns();
-
-                CarBanTypeGridView.Columns[0].Caption = "S/s";
-                CarBanTypeGridView.Columns[1].Visible = false;
-                CarBanTypeGridView.Columns[2].Caption = "Ban tipin adı";
-                CarBanTypeGridView.Columns[3].Caption = "Qeyd";
-                CarBanTypeGridView.Columns[4].Visible = false;
-
-                CarBanTypeGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CarBanTypeGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (CarBanTypeGridView.RowCount > 0)
-                {
-                    DeleteBanTypeBarButton.Enabled = true;
-                    EditBanTypeBarButton.Enabled = true;
-                    CarBanTypeGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CarBanTypeGridView.FocusedRowHandle == 0)
-                        UpBanTypeBarButton.Enabled = false;
-                    DownBanTypeBarButton.Enabled = (CarBanTypeGridView.RowCount > 1);
-                }
-                else
-                    DeleteBanTypeBarButton.Enabled = EditBanTypeBarButton.Enabled = UpBanTypeBarButton.Enabled = DownBanTypeBarButton.Enabled = false;
-                CarBanTypeGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Avtomonillərin ban tipləri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadInsuranceCompanyDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,ADDRESS,ADDRESS_DESCRIPTION,PHONE_NUMBER,FAX,NOTE,USED_USER_ID FROM CRS_USER.INSURANCE_COMPANY ORDER BY NAME";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadInsuranceCompanyDataGridView");
-
-                InsuranceCompanyGridControl.DataSource = dt;
-                InsuranceCompanyGridView.PopulateColumns();
-
-                InsuranceCompanyGridView.Columns[0].Caption = "S/s";
-                InsuranceCompanyGridView.Columns[1].Visible = false;
-                InsuranceCompanyGridView.Columns[2].Caption = "Şirkətin adı";
-                InsuranceCompanyGridView.Columns[3].Caption = "Ünvanı";
-                InsuranceCompanyGridView.Columns[4].Caption = "Ünvanın təsviri";
-                InsuranceCompanyGridView.Columns[5].Caption = "Telefon";
-                InsuranceCompanyGridView.Columns[6].Caption = "Faks";
-                InsuranceCompanyGridView.Columns[7].Caption = "Qeyd";
-                InsuranceCompanyGridView.Columns[8].Visible = false;
-
-                InsuranceCompanyGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                InsuranceCompanyGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-
-                if (InsuranceCompanyGridView.RowCount > 0)
-                {
-                    DeleteInsuranceCompanyBarButton.Enabled = EditInsuranceCompanyBarButton.Enabled = true;
-                    InsuranceCompanyGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                }
-                else
-                    DeleteInsuranceCompanyBarButton.Enabled = EditInsuranceCompanyBarButton.Enabled = false;
-
-                InsuranceCompanyGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Sığorta şirkətləri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadInsuranceRateDataGridView()
-        {
-            string s = $@"SELECT 1 SS,
-                                     ID,
-                                     RATE,
-                                     UNCONDITIONAL_AMOUNT,
-                                     NOTE,
-                                     USED_USER_ID
-                                FROM CRS_USER.INSURANCE_RATE
-                            ORDER BY ORDER_ID";
-
-
-            DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadInsuranceRateDataGridView", "Sığortanın faizləri cədvələ yüklənmədi.");
-
-            InsuranceRateGridControl.DataSource = dt;
-
-            if (InsuranceRateGridView.RowCount > 0)
-            {
-                DeleteInsuranceRateBarButton.Enabled =
-                    EditInsuranceRateBarButton.Enabled = true;
-
-                if (InsuranceRateGridView.FocusedRowHandle == 0)
-                    UpInsuranceRateBarButton.Enabled = false;
-
-                DownInsuranceRateBarButton.Enabled = (InsuranceRateGridView.RowCount > 1);
+                DownCurrencyBarButton.Enabled = (CurrencyGridView.RowCount > 1);
             }
             else
-                DeleteInsuranceRateBarButton.Enabled = EditInsuranceRateBarButton.Enabled = UpInsuranceRateBarButton.Enabled = DownInsuranceRateBarButton.Enabled = false;
+                DeleteCurrencyBarButton.Enabled = EditCurrencyBarButton.Enabled = UpCurrencyBarButton.Enabled = DownCurrencyBarButton.Enabled = false;
         }
 
         private void LoadCountriesDataGridView()
@@ -756,321 +407,6 @@ namespace CRS.Forms
             }
         }
 
-        private void LoadBankAppointmentDataGridView()
-        {
-            string s = null;
-            try
-            {
-                switch (GlobalVariables.SelectedLanguage)
-                {
-                    case "AZ":
-                        s = $@"SELECT 1 SS,
-                                     BA.ID,         
-                                     OT.TYPE_AZ OPERATION_TYPE_NAME,
-                                     AT.NAME APPOINTMENT_TYPE_NAME,
-                                     BA.NAME APPOINTMENT_NAME,
-                                     BA.NOTE,
-                                     BA.USED_USER_ID
-                                FROM CRS_USER.BANK_APPOINTMENTS BA, CRS_USER.OPERATION_TYPES OT,CRS_USER.APPOINTMENT_TYPE AT
-                               WHERE BA.OPERATION_TYPE_ID = OT.ID AND BA.APPOINTMENT_TYPE_ID = AT.ID
-                            ORDER BY BA.OPERATION_TYPE_ID, BA.NAME";
-                        break;
-                    case "EN":
-                        s = "SELECT 1 SS,BA.ID,OT.TYPE_EN OPERATION_TYPE_NAME,BA.NAME_EN APPOINTMENT_NAME,BA.NOTE,BA.USED_USER_ID FROM CRS_USER.BANK_APPOINTMENTS BA,CRS_USER.OPERATION_TYPES OT WHERE BA.OPERATION_TYPE_ID = OT.ID ORDER BY NAME ASC";
-                        break;
-                    case "RU":
-                        s = "SELECT 1 SS,BA.ID,OT.TYPE_RU OPERATION_TYPE_NAME,BA.NAME_RU APPOINTMENT_NAME,BA.NOTE,BA.USED_USER_ID FROM CRS_USER.BANK_APPOINTMENTS BA,CRS_USER.OPERATION_TYPES OT WHERE BA.OPERATION_TYPE_ID = OT.ID ORDER BY NAME ASC";
-                        break;
-                }
-
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadBankAppointmentDataGridView");
-
-                AppointmentsGridControl.DataSource = dt;
-                AppointmentsGridView.PopulateColumns();
-
-                AppointmentsGridView.Columns[0].Visible = false;
-                AppointmentsGridView.Columns[0].Caption = "S/s";
-                AppointmentsGridView.Columns["ID"].Visible = false;
-                AppointmentsGridView.Columns["OPERATION_TYPE_NAME"].Caption = "Əməliyyatın adı";
-                AppointmentsGridView.Columns["APPOINTMENT_TYPE_NAME"].Caption = "Təyinatın növü";
-                AppointmentsGridView.Columns["APPOINTMENT_NAME"].Caption = "Təyinatın adı";
-                AppointmentsGridView.Columns["NOTE"].Caption = "Qeyd";
-                AppointmentsGridView.Columns["USED_USER_ID"].Visible = false;
-
-                AppointmentsGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                AppointmentsGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (AppointmentsGridView.RowCount > 0)
-                {
-                    DeleteAppointmentBarButton.Enabled = true;
-                    EditAppointmentBarButton.Enabled = true;
-                    AppointmentsGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                }
-                else
-                {
-                    DeleteAppointmentBarButton.Enabled = false;
-                    EditAppointmentBarButton.Enabled = false;
-                }
-
-                AppointmentsGridView.Columns["OPERATION_TYPE_NAME"].GroupIndex = 0;
-                AppointmentsGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Bank əməliyyatlarının təyinatları cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadFundsSourceDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.FUNDS_SOURCES ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadFundsSourceDataGridView");
-
-                FundsSourcesGridControl.DataSource = dt;
-                FundsSourcesGridView.PopulateColumns();
-
-                FundsSourcesGridView.Columns[0].Caption = "S/s";
-                FundsSourcesGridView.Columns[1].Visible = false;
-                FundsSourcesGridView.Columns[2].Caption = "Mənbə";
-                FundsSourcesGridView.Columns[3].Caption = "Qeyd";
-                FundsSourcesGridView.Columns[4].Visible = false;
-
-                FundsSourcesGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                FundsSourcesGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (FundsSourcesGridView.RowCount > 0)
-                {
-                    DeleteFundsSourceBarButton.Enabled = true;
-                    EditFundsSourceBarButton.Enabled = true;
-                    FundsSourcesGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (FundsSourcesGridView.FocusedRowHandle == 0)
-                        UpFundsSourceBarButton.Enabled = false;
-                    if (FundsSourcesGridView.RowCount > 1)
-                        DownFundsSourceBarButton.Enabled = true;
-                    else
-                        DownFundsSourceBarButton.Enabled = false;
-                }
-                else
-                {
-                    DeleteFundsSourceBarButton.Enabled = false;
-                    EditFundsSourceBarButton.Enabled = false;
-                    UpFundsSourceBarButton.Enabled = false;
-                    DownFundsSourceBarButton.Enabled = false;
-                }
-                FundsSourcesGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Vəsaitlərin mənbələri cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadFundsSourceNameDataGridView()
-        {
-            string s = "SELECT 1 SS,SN.ID,S.NAME,SN.NAME,SN.NOTE,SN.USED_USER_ID FROM CRS_USER.FUNDS_SOURCES_NAME SN,CRS_USER.FUNDS_SOURCES S WHERE SN.SOURCE_ID = S.ID ORDER BY SN.ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadFundsSourceNameDataGridView");
-
-                FundsSourcesNameGridControl.DataSource = dt;
-                FundsSourcesNameGridView.PopulateColumns();
-
-                FundsSourcesNameGridView.Columns[0].Caption = "S/s";
-                FundsSourcesNameGridView.Columns[1].Visible = false;
-                FundsSourcesNameGridView.Columns[2].Caption = "Mənbə";
-                FundsSourcesNameGridView.Columns[3].Caption = "Mənbəyin adı";
-                FundsSourcesNameGridView.Columns[4].Caption = "Qeyd";
-                FundsSourcesNameGridView.Columns[5].Visible = false;
-
-                FundsSourcesNameGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                FundsSourcesNameGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                if (FundsSourcesNameGridView.RowCount > 0)
-                {
-                    DeleteFundsSourceNameBarButton.Enabled = true;
-                    EditFundsSourceNameBarButton.Enabled = true;
-                    FundsSourcesNameGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (FundsSourcesNameGridView.FocusedRowHandle == 0)
-                        UpFundsSourceNameBarButton.Enabled = false;
-                    if (FundsSourcesNameGridView.RowCount > 1)
-                        DownFundsSourceNameBarButton.Enabled = true;
-                    else
-                        DownFundsSourceNameBarButton.Enabled = false;
-                }
-                else
-                {
-                    DeleteFundsSourceNameBarButton.Enabled = false;
-                    EditFundsSourceNameBarButton.Enabled = false;
-                    UpFundsSourceNameBarButton.Enabled = false;
-                    DownFundsSourceNameBarButton.Enabled = false;
-                }
-                FundsSourcesNameGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Vəsaitlərin mənbələrinin adı cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadCashOtherAppointmentDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CASH_APPOINTMENTS ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s);
-
-                CashOtherAppointmentGridControl.DataSource = dt;
-                CashOtherAppointmentGridView.PopulateColumns();
-
-                CashOtherAppointmentGridView.Columns[0].Caption = "S/s";
-                CashOtherAppointmentGridView.Columns[1].Visible = false;
-                CashOtherAppointmentGridView.Columns[2].Caption = "Təyinatın adı";
-                CashOtherAppointmentGridView.Columns[3].Caption = "Qeyd";
-                CashOtherAppointmentGridView.Columns[4].Visible = false;
-
-                CashOtherAppointmentGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                CashOtherAppointmentGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                for (int i = 0; i < CashOtherAppointmentGridView.Columns.Count; i++)
-                {
-                    CashOtherAppointmentGridView.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                    CashOtherAppointmentGridView.Columns[i].AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                }
-
-                if (CashOtherAppointmentGridView.RowCount > 0)
-                {
-                    DeleteCashOtherAppointmentBarButton.Enabled = true;
-                    EditCashOtherAppointmentBarButton.Enabled = true;
-                    CashOtherAppointmentGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (CashOtherAppointmentGridView.FocusedRowHandle == 0)
-                        UpCashOtherAppointmentBarButton.Enabled = false;
-                    if (CashOtherAppointmentGridView.RowCount > 1)
-                        DownCashOtherAppointmentBarButton.Enabled = true;
-                    else
-                        DownCashOtherAppointmentBarButton.Enabled = false;
-                }
-                else
-                {
-                    DeleteCashOtherAppointmentBarButton.Enabled = false;
-                    EditCashOtherAppointmentBarButton.Enabled = false;
-                    UpCashOtherAppointmentBarButton.Enabled = false;
-                    DownCashOtherAppointmentBarButton.Enabled = false;
-                }
-                CashOtherAppointmentGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Kassanın digər ödənişlərinin təyinatları cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadPersonnelDataGridView()
-        {
-            string s = null;
-            try
-            {
-                s = $@"SELECT 1 SS,
-                             P.ID,
-                             P.SURNAME || ' ' || P.NAME || ' ' || P.PATRONYMIC FULLNAME,
-                             PO.POSITION_NAME,
-                             S.STATUS_NAME,
-                             P.NOTE,
-                             P.USED_USER_ID,
-                             P.STATUS_ID
-                        FROM CRS_USER.PERSONNEL P,
-                             CRS_USER.V_PERSONNEL_LAST_POSITION PO,
-                             CRS_USER.STATUS S
-                       WHERE P.STATUS_ID = S.ID AND P.ID = PO.PERSONNEL_ID(+)
-                    ORDER BY P.SURNAME";
-
-                DataTable dt = GlobalFunctions.GenerateDataTable(s);
-
-                PersonnelGridControl.DataSource = dt;
-                PersonnelGridView.PopulateColumns();
-
-                PersonnelGridView.Columns[0].Caption = "S/s";
-                PersonnelGridView.Columns[1].Visible = false;
-                PersonnelGridView.Columns[2].Caption = "Soyadı, adı, atasının adı";
-                PersonnelGridView.Columns[3].Caption = "Vəzifəsi";
-                PersonnelGridView.Columns[4].Caption = "Statusu";
-                PersonnelGridView.Columns[5].Caption = "Qeyd";
-                PersonnelGridView.Columns[6].Visible = false;
-                PersonnelGridView.Columns[7].Visible = false;
-
-                //TextAligment
-                PersonnelGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                PersonnelGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;                
-
-                if (PersonnelGridView.RowCount > 0)
-                {
-                    DeletePersonnelBarButton.Enabled = EditPersonnelBarButton.Enabled = true;
-                    PersonnelGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                }
-                else                
-                    DeletePersonnelBarButton.Enabled = EditPersonnelBarButton.Enabled = false;                
-
-                PersonnelGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("İşçilərin siyahısı yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
-        private void LoadPositionsDataGridView()
-        {
-            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.POSITIONS ORDER BY ORDER_ID";
-            try
-            {
-                DataTable dt = GlobalFunctions.GenerateDataTable(s);
-
-                PositionGridControl.DataSource = dt;
-                PositionGridView.PopulateColumns();
-
-                PositionGridView.Columns[0].Caption = "S/s";
-                PositionGridView.Columns[1].Visible = false;
-                PositionGridView.Columns[2].Caption = "Vəzifənin adı";
-                PositionGridView.Columns[3].Caption = "Qeyd";
-                PositionGridView.Columns[4].Visible = false;
-
-                PositionGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                PositionGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                for (int i = 0; i < PositionGridView.Columns.Count; i++)
-                {
-                    PositionGridView.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                    PositionGridView.Columns[i].AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                }
-
-                if (PositionGridView.RowCount > 0)
-                {
-                    DeletePositionBarButton.Enabled = true;
-                    EditPositionBarButton.Enabled = true;
-                    PositionGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    if (PositionGridView.FocusedRowHandle == 0)
-                        UpPositionBarButton.Enabled = false;
-                    if (PositionGridView.RowCount > 1)
-                        DownPositionBarButton.Enabled = true;
-                    else
-                        DownPositionBarButton.Enabled = false;
-                }
-                else
-                {
-                    DeletePositionBarButton.Enabled = false;
-                    EditPositionBarButton.Enabled = false;
-                    UpPositionBarButton.Enabled = false;
-                    DownPositionBarButton.Enabled = false;
-                }
-                PositionGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Vəzifələr cədvələ yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
-            }
-        }
-
         private void LoadKindshipRateDataGridView()
         {
             string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.KINDSHIP_RATE ORDER BY ORDER_ID";
@@ -1086,6 +422,157 @@ namespace CRS.Forms
             ContractEvaluateGridControl.DataSource = GlobalFunctions.GenerateDataTable(s);
             DeleteContractEvaluateBarButton.Enabled = EditContractEvaluateBarButton.Enabled = (ContractEvaluateGridView.RowCount > 0);
         }
+
+        private void LoadAppraiserDataGridView()
+        {
+            string s = "SELECT ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.APPRAISER ORDER BY NAME";
+
+            AppraiserGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadAppraiserDataGridView", "Qiymətləndiricilərin siyahısı yüklənmədi.");
+            DeleteAppraiserBarButton.Enabled = EditAppraiserBarButton.Enabled = (AppraiserGridView.RowCount > 0);
+        }
+
+        private void LoadEyebrowsDataGridView()
+        {
+            string s = "SELECT ID,NAME,NOTE,DECODE(IS_DEDUCTION, 1, 'Bəli', 'Xeyr') DEDUCTION,USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE ORDER BY NAME";
+
+            EyebrowsGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadEyebrowsDataGridView", "Qaşın növlərinin siyahısı yüklənmədi.");
+            DeleteEyebrowsBarButton.Enabled = EditEyebrowsBarButton.Enabled = (EyebrowsGridView.RowCount > 0);
+        }
+
+        private void LoadLoanOfficerDataGridView()
+        {
+            string s = "SELECT ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.LOAN_OFFICER ORDER BY NAME";
+
+            LoanOfficerGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadLoanOfficerDataGridView", "Kredit mütəxəssislərinin siyahısı yüklənmədi.");
+            DeleteLoanOfficerBarButton.Enabled = EditLoanOfficerBarButton.Enabled = (LoanOfficerGridView.RowCount > 0);
+        }
+
+        private void LoadCarBrandDataGridView()
+        {
+            string s = "SELECT ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_BRANDS ORDER BY ORDER_ID";
+
+            BrandGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarBrandDataGridView", "Markalar cədvələ yüklənmədi.");
+
+            if (BrandGridView.RowCount > 0)
+            {
+                DeleteCarBrandBarButton.Enabled = EditCarBrandBarButton.Enabled = true;
+                if (BrandGridView.FocusedRowHandle == 0)
+                    UpCarBrandBarButton.Enabled = false;
+
+                DownCarBrandBarButton.Enabled = (BrandGridView.RowCount > 1);
+            }
+            else
+                DeleteCarBrandBarButton.Enabled = EditCarBrandBarButton.Enabled = UpCarBrandBarButton.Enabled = DownCarBrandBarButton.Enabled = false;
+        }
+
+
+        private void LoadCarModelDataGridView()
+        {
+            string s = "SELECT 1 SS,M.ID,B.NAME BNAME,M.NAME MNAME,M.NOTE,M.USED_USER_ID FROM CRS_USER.CAR_BRANDS B,CRS_USER.CAR_MODELS M WHERE B.ID = M.BRAND_ID ORDER BY M.ORDER_ID";
+
+            CarModelGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarModelDataGridView", "Modellər cədvələ yüklənmədi.");
+
+
+            if (CarModelGridView.RowCount > 0)
+            {
+                DeleteCarModelBarButton.Enabled = true;
+                EditCarModelBarButton.Enabled = true;
+
+                if (CarModelGridView.FocusedRowHandle == 0)
+                    UpCarModelBarButton.Enabled = false;
+                if (CarModelGridView.RowCount > 1)
+                    DownCarModelBarButton.Enabled = true;
+                else
+                    DownCarModelBarButton.Enabled = false;
+            }
+            else
+                DeleteCarModelBarButton.Enabled = EditCarModelBarButton.Enabled = UpCarModelBarButton.Enabled = DownCarModelBarButton.Enabled = false;
+
+        }
+
+        private void LoadCarTypeDataGridView()
+        {
+            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_TYPES ORDER BY ORDER_ID";
+
+            CarTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarTypeDataGridView", "Avtomonillərin tipləri cədvələ yüklənmədi.");
+
+
+
+            if (CarTypeGridView.RowCount > 0)
+            {
+                DeleteCarTypeBarButton.Enabled = true;
+                EditCarTypeBarButton.Enabled = true;
+                if (CarTypeGridView.FocusedRowHandle == 0)
+                    UpCarTypeBarButton.Enabled = false;
+
+                DownCarTypeBarButton.Enabled = (CarTypeGridView.RowCount > 1);
+            }
+            else
+                DeleteCarTypeBarButton.Enabled = EditCarTypeBarButton.Enabled = UpCarTypeBarButton.Enabled = DownCarTypeBarButton.Enabled = false;
+
+
+
+        }
+
+        private void LoadCarColorDataGridView()
+        {
+            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_COLORS ORDER BY ORDER_ID";
+
+            CarColorGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarColorDataGridView", "Avtomonillərin rəngləri cədvələ yüklənmədi.");
+
+
+            if (CarColorGridView.RowCount > 0)
+            {
+                DeleteCarColorBarButton.Enabled = true;
+                EditCarColorBarButton.Enabled = true;
+                if (CarColorGridView.FocusedRowHandle == 0)
+                    UpCarColorBarButton.Enabled = false;
+                if (CarColorGridView.RowCount > 1)
+                    DownCarColorBarButton.Enabled = true;
+                else
+                    DownCarColorBarButton.Enabled = false;
+            }
+            else
+                DeleteCarColorBarButton.Enabled = EditCarColorBarButton.Enabled = UpCarColorBarButton.Enabled = DownCarColorBarButton.Enabled = false;
+
+
+        }
+
+        private void LoadCarBanTypeDataGridView()
+        {
+            string s = "SELECT 1 SS,ID,NAME,NOTE,USED_USER_ID FROM CRS_USER.CAR_BAN_TYPES ORDER BY ORDER_ID";
+
+            CarBanTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCarBanTypeDataGridView");
+
+
+            if (CarBanTypeGridView.RowCount > 0)
+            {
+                DeleteBanTypeBarButton.Enabled = true;
+                EditBanTypeBarButton.Enabled = true;
+                if (CarBanTypeGridView.FocusedRowHandle == 0)
+                    UpBanTypeBarButton.Enabled = false;
+                DownBanTypeBarButton.Enabled = (CarBanTypeGridView.RowCount > 1);
+            }
+            else
+                DeleteBanTypeBarButton.Enabled = EditBanTypeBarButton.Enabled = UpBanTypeBarButton.Enabled = DownBanTypeBarButton.Enabled = false;
+
+        }
+
+        //private void LoadAppointmentDataGridView()
+        //{
+        //    string s = $@"SELECT CA.ID,
+        //                       CA.NAME,
+        //                       OT.TYPE_AZ OPERATION_TYPE_NAME,
+        //                       CA.ORDER_ID,
+        //                       CA.NOTE,
+        //                       CA.USED_USER_ID
+        //                  FROM CRS_USER.CASH_APPOINTMENTS CA, CRS_USER.OPERATION_TYPES OT
+        //                 WHERE CA.OPERATION_TYPE_ID = OT.ID
+        //                ORDER BY CA.NAME";
+
+        //    AppointmentGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadAppointmentDataGridView", "Kassa təyinatlarının siyahısı yüklənmədi.");
+        //    DeleteAppointmentBarButton.Enabled = EditAppointmentBarButton.Enabled = (AppointmentGridView.RowCount > 0);
+        //}
 
         private void BackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
         {
@@ -1109,47 +596,71 @@ namespace CRS.Forms
                         LoadBirthplaceDataGridView();
                         break;
                     case 5:
-                        LoadCreditTypeDataGridView();
+                        LoadCreditStatus();
                         break;
-                    case 6:
-                        LoadCreditNameDataGridView();
-                        break;
+                    //case 6:
+                    //    LoadPawnTypeDataGridView();
+                    //    break;
                     case 7:
                         LoadCurrencyDataGridView();
                         break;
+                    
                     case 8:
-                        LoadCarBrandDataGridView();
-                        break;
-                    case 9:
-                        LoadCashOtherAppointmentDataGridView();
-                        break;
-                    case 10:
-                        LoadPersonnelDataGridView();
-                        break;
-                    case 11:
-                        LoadBanksDataGridView();
-                        break;
-                    case 12:
-                        LoadBankAppointmentDataGridView();
-                        break;
-                    case 13:
                         LoadCountriesDataGridView();
                         break;
-                    case 14:
-                        LoadFundsSourceDataGridView();
-                        break;
-                    case 15:
-                        LoadFoundersDataGridView();
-                        break;
-                    case 16:
-                        LoadPositionsDataGridView();
-                        break;
-                    case 17:
+                    case 9:
                         LoadKindshipRateDataGridView();
                         break;
-                    case 18:
+                    case 10:
                         LoadContractEvaluateDataGridView();
                         break;
+                    case 11:
+                        LoadDocumentType();
+                        break;
+                    case 12:
+                        LoadLoanOfficerDataGridView();
+                        break;
+                    case 13:
+                        LoadEyebrowsDataGridView();
+                        break;
+                    case 14:
+                        LoadCarColorDataGridView();
+                        break;
+                    
+                    case 15:
+                        LoadCarModelDataGridView();
+                        break;
+                        
+                        //case 15:
+                    //    LoadAppointmentDataGridView();
+                    //    break;
+                    case 16:
+                        LoadCarTypeDataGridView();
+                        break;
+                    
+                    case 17:
+                        LoadCarBanTypeDataGridView();
+                        break;
+                }
+                switch (CreditParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadCreditTypeDataGridView();
+                        break;
+                }
+
+                switch (PawnParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadEyebrowsDataGridView();
+                        break;
+                }
+                switch (LizingParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadCarBrandDataGridView();
+                        break;
+
                 }
             }
         }
@@ -1397,14 +908,7 @@ namespace CRS.Forms
         {
             if (TransactionType == "E")
             {
-                if (BackstageViewControl.SelectedTabIndex != 8 && BackstageViewControl.SelectedTabIndex != 9 && BackstageViewControl.SelectedTabIndex != 14)
-                    this.RefreshList(BackstageViewControl.SelectedTabIndex);
-                else if (BackstageViewControl.SelectedTabIndex == 8)
-                    this.RefreshList(HostageBackstageViewControl.SelectedTabIndex);
-                else if (BackstageViewControl.SelectedTabIndex == 9)
-                    this.RefreshList(CashAppointmentBackstageViewControl.SelectedTabIndex);
-                else if (BackstageViewControl.SelectedTabIndex == 14)
-                    this.RefreshList(FundsBackstageViewControl.SelectedTabIndex);
+                this.RefreshList(BackstageViewControl.SelectedTabIndex);
             }
         }
 
@@ -1525,73 +1029,23 @@ namespace CRS.Forms
             GlobalProcedures.GridRowCellStyleForBlock(CreditTypeGridView, e);
         }
 
-        private void CreditNameGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(CreditNameGridView, CreditNamePopupMenu, e);
-        }
-
         private void CreditNameGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
         {
-            DataRow row = CreditNameGridView.GetFocusedDataRow();
-            if (row != null)
-                CreditNameID = row["ID"].ToString();
+
         }
 
-        void RefreshCreditName()
-        {
-            LoadCreditNameDataGridView();
-        }
 
-        private void LoadFCreditNameAddEdit(string transaction, string NameID)
+        private void LoadFPawnTypeAddEdit(string transaction, string NameID)
         {
-            topindex = CreditNameGridView.TopRowIndex;
-            old_row_id = CreditNameGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCreditNameAddEdit fse = new Forms.Dictionaries.FCreditNameAddEdit();
+            topindex = PawnTypeGridView.TopRowIndex;
+            old_row_id = PawnTypeGridView.FocusedRowHandle;
+            Dictionaries.FPawnTypeAddEdit fse = new Dictionaries.FPawnTypeAddEdit();
             fse.TransactionName = transaction;
-            fse.NameID = NameID;
-            fse.RefreshCreditNameDataGridView += new Forms.Dictionaries.FCreditNameAddEdit.DoEvent(RefreshCreditName);
+            fse.PawnTypeID = NameID;
+            fse.RefreshDataGridView += new Dictionaries.FPawnTypeAddEdit.DoEvent(LoadPawnTypeDataGridView);
             fse.ShowDialog();
-            CreditNameGridView.TopRowIndex = topindex;
-            CreditNameGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewCreditNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCreditNameAddEdit("INSERT", null);
-        }
-
-        private void EditCreditNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCreditNameAddEdit("EDIT", CreditNameID);
-        }
-
-        private void RefreshCreditNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCreditNameDataGridView();
-        }
-
-        private void CreditNameGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCreditNameBarButton.Enabled)
-                LoadFCreditNameAddEdit("EDIT", CreditNameID);
-        }
-
-        private void DeleteCreditNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            if ((CreditNameID == "1") || (CreditNameID == "5") || (CreditNameID == "6"))
-                XtraMessageBox.Show("Proqram seçilmiş lizinq adı əsasında işlədiyi üçün bu adı silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                if (GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.CREDIT_TYPE WHERE NAME_ID = " + CreditNameID) == 0)
-                {
-                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kreditin adını silmək istəyirsiniz?", "Kreditin adının silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
-                        GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CREDIT_NAMES WHERE ID = " + CreditNameID, "Kreditin adı silinmədi.", this.Name + "/DeleteCreditNameBarButton_ItemClick");
-                }
-                else
-                    XtraMessageBox.Show("Seçilmiş lizinqin adı bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                LoadCreditNameDataGridView();
-            }
+            PawnTypeGridView.TopRowIndex = topindex;
+            PawnTypeGridView.FocusedRowHandle = old_row_id;
         }
 
         private void CurrencyGridView_MouseUp(object sender, MouseEventArgs e)
@@ -1652,217 +1106,6 @@ namespace CRS.Forms
         {
             if (EditCurrencyBarButton.Enabled)
                 LoadFCurrencyAddEdit("EDIT", CurrencyID);
-        }
-
-        private void BrandGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(BrandGridView, CarBrandPopupMenu, e);
-        }
-
-        private void BrandGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(BrandGridView, e);
-        }
-
-        private void BrandGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = BrandGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CarBrandID = row["ID"].ToString();
-                UpCarBrandBarButton.Enabled = !(BrandGridView.FocusedRowHandle == 0);
-                DownCarBrandBarButton.Enabled = !(BrandGridView.FocusedRowHandle == BrandGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshCarBrand()
-        {
-            LoadCarBrandDataGridView();
-        }
-
-        private void LoadFCarBrandAddEdit(string transaction, string BrandID)
-        {
-            topindex = BrandGridView.TopRowIndex;
-            old_row_id = BrandGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCarBrandAddEdit fp = new Forms.Dictionaries.FCarBrandAddEdit();
-            fp.TransactionName = transaction;
-            fp.BrandID = BrandID;
-            fp.RefreshCarBrandDataGridView += new Forms.Dictionaries.FCarBrandAddEdit.DoEvent(RefreshCarBrand);
-            fp.ShowDialog();
-            BrandGridView.TopRowIndex = topindex;
-            BrandGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void HostageBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
-        {
-            if (FormStatus)
-            {
-                switch (HostageBackstageViewControl.SelectedTabIndex)
-                {
-                    case 0:
-                        LoadCarBrandDataGridView();
-                        break;
-                    case 1:
-                        LoadCarTypeDataGridView();
-                        break;
-                    case 2:
-                        LoadCarColorDataGridView();
-                        break;
-                    case 3:
-                        LoadCarModelDataGridView();
-                        break;
-                    case 4:
-                        LoadCarBanTypeDataGridView();
-                        break;
-                    case 6:
-                        LoadInsuranceCompanyDataGridView();
-                        break;
-                    case 7:
-                        LoadInsuranceRateDataGridView();
-                        break;
-                }
-            }
-        }
-
-        private void NewCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarBrandAddEdit("INSERT", null);
-        }
-
-        private void EditCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarBrandAddEdit("EDIT", CarBrandID);
-        }
-
-        private void RefreshCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCarBrandDataGridView();
-        }
-
-        private void BrandGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCarBrandBarButton.Enabled)
-                LoadFCarBrandAddEdit("EDIT", CarBrandID);
-        }
-
-        private void CarTypeGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(CarTypeGridView, CarTypePopupMenu, e);
-        }
-
-        private void CarTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = CarTypeGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CarTypeID = row["ID"].ToString();
-                UpCarTypeBarButton.Enabled = !(CarTypeGridView.FocusedRowHandle == 0);
-                DownCarTypeBarButton.Enabled = !(CarTypeGridView.FocusedRowHandle == CarTypeGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshCarType()
-        {
-            LoadCarTypeDataGridView();
-        }
-
-        private void LoadFCarTypeAddEdit(string transaction, string TypeID)
-        {
-            topindex = CarTypeGridView.TopRowIndex;
-            old_row_id = CarTypeGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCarTypeAddEdit fp = new Forms.Dictionaries.FCarTypeAddEdit();
-            fp.TransactionName = transaction;
-            fp.TypeID = TypeID;
-            fp.RefreshCarTypeDataGridView += new Forms.Dictionaries.FCarTypeAddEdit.DoEvent(RefreshCarType);
-            fp.ShowDialog();
-            CarTypeGridView.TopRowIndex = topindex;
-            CarTypeGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarTypeAddEdit("INSERT", null);
-        }
-
-        private void EditCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarTypeAddEdit("EDIT", CarTypeID);
-        }
-
-        private void CarTypeGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCarTypeBarButton.Enabled)
-                LoadFCarTypeAddEdit("EDIT", CarTypeID);
-        }
-
-        private void RefreshCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCarTypeDataGridView();
-        }
-
-        private void CarColorGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(CarColorGridView, CarColorPopupMenu, e);
-        }
-
-        private void CarColorGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(CarColorGridView, e);
-        }
-
-        private void CarTypeGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(CarTypeGridView, e);
-        }
-
-        private void CarColorGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = CarColorGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CarColorID = row["ID"].ToString();
-                UpCarColorBarButton.Enabled = !(CarColorGridView.FocusedRowHandle == 0);
-                DownCarColorBarButton.Enabled = !(CarColorGridView.FocusedRowHandle == CarColorGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshCarColor()
-        {
-            LoadCarColorDataGridView();
-        }
-
-        private void LoadFCarColorAddEdit(string transaction, string ColorID)
-        {
-            topindex = CarColorGridView.TopRowIndex;
-            old_row_id = CarColorGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCarColorAddEdit fp = new Forms.Dictionaries.FCarColorAddEdit();
-            fp.TransactionName = transaction;
-            fp.ColorID = ColorID;
-            fp.RefreshCarColorDataGridView += new Forms.Dictionaries.FCarColorAddEdit.DoEvent(RefreshCarColor);
-            fp.ShowDialog();
-            CarColorGridView.TopRowIndex = topindex;
-            CarColorGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarColorAddEdit("INSERT", null);
-        }
-
-        private void EditCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarColorAddEdit("EDIT", CarColorID);
-        }
-
-        private void RefreshCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCarColorDataGridView();
-        }
-
-        private void CarColorGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCarColorBarButton.Enabled)
-                LoadFCarColorAddEdit("EDIT", CarColorID);
         }
 
         private void DeleteCardSeries()
@@ -1946,7 +1189,7 @@ namespace CRS.Forms
 
         private void CreditNameGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
         {
-            GlobalProcedures.GridRowCellStyleForBlock(CreditNameGridView, e);
+            GlobalProcedures.GridRowCellStyleForBlock(PawnTypeGridView, e);
         }
 
         private void DeleteBirthplace()
@@ -2019,198 +1262,6 @@ namespace CRS.Forms
             LoadCurrencyDataGridView();
         }
 
-        private void DeleteBrand()
-        {
-            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE BRAND_ID = " + CarBrandID);
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş markanı silmək istəyirsiniz?", "Markanın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_BRANDS WHERE ID = " + CarBrandID, "Marka silinmədi.", this.Name + "/DeleteBrand");
-                }
-            }
-            else
-                XtraMessageBox.Show("Seçilmiş marka bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeleteCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int BrandUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_BRANDS WHERE ID = " + CarBrandID);
-            if (BrandUsedUserID >= 0)
-            {
-                if (GlobalVariables.V_UserID != BrandUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == BrandUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş marka hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş markanın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteBrand();
-            }
-            else
-                DeleteBrand();
-            LoadCarBrandDataGridView();
-        }
-
-        private void DeleteType()
-        {
-            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE TYPE_ID = " + CarTypeID);
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş tipi silmək istəyirsiniz?", "Tipin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_TYPES WHERE ID = " + CarTypeID, "Tip silinmədi.", this.Name + "/DeleteType");
-                }
-            }
-            else
-                XtraMessageBox.Show("Seçilmiş tip bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeleteCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int TypeUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_TYPES WHERE ID = " + CarTypeID);
-            if (TypeUsedUserID >= 0)
-            {
-                if (GlobalVariables.V_UserID != TypeUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == TypeUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş tip hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş tipin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteType();
-            }
-            else
-                DeleteType();
-            LoadCarTypeDataGridView();
-        }
-
-        private void DeleteColor()
-        {
-            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE COLOR_ID = " + CarColorID);
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş rəngi silmək istəyirsiniz?", "Rəngin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_COLORS WHERE ID = " + CarColorID, "Rəng silinmədi.", this.Name + "/DeleteColor");
-                }
-            }
-            else
-                XtraMessageBox.Show("Seçilmiş rəng bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeleteCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int ColorUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_COLORS WHERE ID = " + CarColorID);
-            if (ColorUsedUserID >= 0)
-            {
-                if (GlobalVariables.V_UserID != ColorUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == ColorUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş rəng hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş rəngin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteColor();
-            }
-            else
-                DeleteColor();
-            LoadCarColorDataGridView();
-        }
-
-        private void CarModelGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(CarModelGridView, CarModelPopupMenu, e);
-        }
-
-        private void CarModelGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(CarModelGridView, e);
-        }
-
-        private void CarModelGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = CarModelGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CarModelID = row["ID"].ToString();
-                UpCarModelBarButton.Enabled = !(CarModelGridView.FocusedRowHandle == 0);
-                DownCarModelBarButton.Enabled = !(CarModelGridView.FocusedRowHandle == CarModelGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshCarModel()
-        {
-            LoadCarModelDataGridView();
-        }
-
-        private void LoadFCarModelAddEdit(string transaction, string ModelID)
-        {
-            topindex = CarModelGridView.TopRowIndex;
-            old_row_id = CarModelGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCarModelAddEdit fp = new Forms.Dictionaries.FCarModelAddEdit();
-            fp.TransactionName = transaction;
-            fp.ModelID = ModelID;
-            fp.RefreshCarModelDataGridView += new Forms.Dictionaries.FCarModelAddEdit.DoEvent(RefreshCarModel);
-            fp.ShowDialog();
-            CarModelGridView.TopRowIndex = topindex;
-            CarModelGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarModelAddEdit("INSERT", null);
-        }
-
-        private void EditCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarModelAddEdit("EDIT", CarModelID);
-        }
-
-        private void CarModelGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCarModelBarButton.Enabled)
-                LoadFCarModelAddEdit("EDIT", CarModelID);
-        }
-
-        private void RefreshCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCarModelDataGridView();
-        }
-
-        private void DeleteModel()
-        {
-            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE MODEL_ID = " + CarModelID);
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş modeli silmək istəyirsiniz?", "Modelin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_MODELS WHERE ID = " + CarModelID, "Model silinmədi.", this.Name + "/DeleteModel");
-                }
-            }
-            else
-                XtraMessageBox.Show("Seçilmiş model bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeleteCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int ModelUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_MODELS WHERE ID = " + CarModelID);
-            if (ModelUsedUserID >= 0)
-            {
-                if (GlobalVariables.V_UserID != ModelUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == ModelUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş model hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş modelin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteModel();
-            }
-            else
-                DeleteModel();
-            LoadCarModelDataGridView();
-        }
-
         private void DeleteCreditType()
         {
             int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.CONTRACTS WHERE CREDIT_TYPE_ID = {CreditTypeID}", this.Name + "/DeleteCreditType");
@@ -2218,7 +1269,7 @@ namespace CRS.Forms
             {
                 DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş parametri silmək istəyirsiniz?", "Lizinq növünün parametrinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
-                    GlobalProcedures.ExecuteProcedureWithParametr("CRS_USER.PROC_DELETE_CREDIT_TYPE", "P_TYPE_ID", CreditTypeID, "Lizinq növünün parametri silinmədi.");                    
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CREDIT_TYPE WHERE ID = {CreditTypeID}", "Lizinq növünün parametri silinmədi.", this.Name + "/DeleteCreditType");
             }
             else
                 XtraMessageBox.Show("Seçilmiş parametr bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -2242,209 +1293,25 @@ namespace CRS.Forms
             LoadCreditTypeDataGridView();
         }
 
-        private void BanTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        private void LoadCreditClass()
         {
-            GlobalProcedures.GridMouseUpForPopupMenu(CarBanTypeGridView, BanTypePopupMenu, e);
-        }
+            string s = "SELECT ID,NAME,CODE,USED_USER_ID,ORDER_ID FROM CRS_USER.CREDIT_CLASS ORDER BY ORDER_ID";
 
-        private void CarBanTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = CarBanTypeGridView.GetFocusedDataRow();
-            if (row != null)
+            CreditClassGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditClass", "Kreditin təsnifatının siyahısı yüklənmədi.");
+
+            if (CreditClassGridView.RowCount > 0)
             {
-                CarBanTypeID = row["ID"].ToString();
-                UpBanTypeBarButton.Enabled = !(CarBanTypeGridView.FocusedRowHandle == 0);
-                DownBanTypeBarButton.Enabled = !(CarBanTypeGridView.FocusedRowHandle == CarBanTypeGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshCarBanType()
-        {
-            LoadCarBanTypeDataGridView();
-        }
-
-        private void LoadFCarBanTypeAddEdit(string transaction, string TypeID)
-        {
-            topindex = CarBanTypeGridView.TopRowIndex;
-            old_row_id = CarBanTypeGridView.FocusedRowHandle;
-            Forms.Dictionaries.FCarBanTypeAddEdit fp = new Forms.Dictionaries.FCarBanTypeAddEdit();
-            fp.TransactionName = transaction;
-            fp.TypeID = TypeID;
-            fp.RefreshCarBanTypeDataGridView += new Forms.Dictionaries.FCarBanTypeAddEdit.DoEvent(RefreshCarBanType);
-            fp.ShowDialog();
-            CarBanTypeGridView.TopRowIndex = topindex;
-            CarBanTypeGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarBanTypeAddEdit("INSERT", null);
-        }
-
-        private void EditBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCarBanTypeAddEdit("EDIT", CarBanTypeID);
-        }
-
-        private void CarBanTypeGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditBanTypeBarButton.Enabled)
-                LoadFCarBanTypeAddEdit("EDIT", CarBanTypeID);
-        }
-
-        private void DeleteCarBanType()
-        {
-            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE BAN_TYPE_ID = {CarBanTypeID}", this.Name + "/DeleteCarBanType");
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş ban tipini silmək istəyirsiniz?", "Ban tipinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CAR_BAN_TYPES WHERE ID = {CarBanTypeID}", "Ban tipi silinmədi.", this.Name + "/DeleteCarBanType");
-                }
+                DeleteCreditClassBarButton.Enabled =
+                    EditCreditClassBarButton.Enabled = true;
+                UpCreditClassBarButton.Enabled = !(CreditClassGridView.FocusedRowHandle == 0);
+                DownCreditClassBarButton.Enabled = (CreditClassGridView.RowCount > 1);
             }
             else
-                XtraMessageBox.Show("Seçilmiş ban tipi bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeleteBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int CarBanTypeUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CAR_BAN_TYPES WHERE ID = {CarBanTypeID}", this.Name + "/DeleteBanTypeBarButton_ItemClick");
-            if (CarBanTypeUsedUserID >= 0)
             {
-                if (GlobalVariables.V_UserID != CarBanTypeUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == CarBanTypeUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş ban tipi hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş ban tipinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteCarBanType();
-            }
-            else
-                DeleteCarBanType();
-            LoadCarBanTypeDataGridView();
-        }
-
-        private void RefreshBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCarBanTypeDataGridView();
-        }
-
-        private void CarBanTypeGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(CarBanTypeGridView, e);
-        }
-
-        private void BanksGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = BanksGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                BankID = row["ID"].ToString();
-                UpBankBarButton.Enabled = !(BanksGridView.FocusedRowHandle == 0);
-                DownBankBarButton.Enabled = !(BanksGridView.FocusedRowHandle == BanksGridView.RowCount - 1);
-            }
-            //LoadBranhesDataGridView();
-        }
-
-        void RefreshBanks()
-        {
-            LoadBanksDataGridView();
-        }
-
-        private void LoadFBankAddEdit(string transaction, string id)
-        {
-            topindex = BanksGridView.TopRowIndex;
-            old_row_id = BanksGridView.FocusedRowHandle;
-            Forms.Dictionaries.FBankAddEdit fb = new Forms.Dictionaries.FBankAddEdit();
-            fb.BankID = id;
-            fb.TransactionName = transaction;
-            fb.RefreshBanksDataGridView += new Forms.Dictionaries.FBankAddEdit.DoEvent(RefreshBanks);
-            fb.ShowDialog();
-            BanksGridView.TopRowIndex = topindex;
-            BanksGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFBankAddEdit("INSERT", null);
-        }
-
-        private void EditBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFBankAddEdit("EDIT", BankID);
-        }
-
-        private void BanksGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditBankBarButton.Enabled)
-                LoadFBankAddEdit("EDIT", BankID);
-        }
-
-        private void RefreshBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadBanksDataGridView();
-        }
-
-        private void BanksGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(BanksGridView, e);
-            GlobalProcedures.GridRowCellStyleForClose(8, BanksGridView, e);
-        }
-
-        private void BanksGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(BanksGridView, BanksPopupMenu, e);
-        }
-
-        private void LoadFoundersDataGridView()
-        {
-            string s = null;
-            try
-            {
-                s = "SELECT 1 SS,ID,FULLNAME,NOTE,USED_USER_ID FROM CRS_USER.FOUNDERS ORDER BY ORDER_ID";
-
-                FoundersGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadFoundersDataGridView");
-                FoundersGridView.PopulateColumns();
-
-                FoundersGridView.Columns[0].Caption = "S/s";
-                FoundersGridView.Columns[1].Visible = false;
-                FoundersGridView.Columns[2].Caption = "Soyadı, adı, atasının adı";
-                FoundersGridView.Columns[3].Caption = "Qeyd";
-                FoundersGridView.Columns[4].Visible = false;
-
-                //TextAligment
-                FoundersGridView.Columns[0].AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                FoundersGridView.Columns[0].AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-
-                //HeaderAligment
-                for (int i = 0; i < FoundersGridView.Columns.Count; i++)
-                {
-                    FoundersGridView.Columns[i].AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-                    FoundersGridView.Columns[i].AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-                }
-
-                if (FoundersGridView.RowCount > 0)
-                {
-                    DeleteFounderBarButton.Enabled =
-                        EditFounderBarButton.Enabled = true;
-                    FoundersGridView.Columns[0].SummaryItem.SetSummary(DevExpress.Data.SummaryItemType.Count, "{0:n0}");
-                    UpFounderBarButton.Enabled = !(FoundersGridView.FocusedRowHandle == 0);
-                    DownFounderBarButton.Enabled = (FoundersGridView.RowCount > 1);
-                }
-                else
-                {
-                    DeleteFounderBarButton.Enabled =
-                        EditFounderBarButton.Enabled =
-                        UpFounderBarButton.Enabled =
-                        DownFounderBarButton.Enabled = false;
-                }
-
-                FoundersGridView.BestFitColumns();
-            }
-            catch (Exception exx)
-            {
-                GlobalProcedures.LogWrite("Təsisçilərin siyahısı yüklənmədi.", s, GlobalVariables.V_UserName, this.Name, this.GetType().FullName + "/" + System.Reflection.MethodBase.GetCurrentMethod().Name, exx);
+                DeleteCreditClassBarButton.Enabled =
+                    EditCreditClassBarButton.Enabled =
+                    UpCreditClassBarButton.Enabled =
+                    DownCreditClassBarButton.Enabled = false;
             }
         }
 
@@ -2456,94 +1323,6 @@ namespace CRS.Forms
         private void RefreshPhoneBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             LoadPhoneDescriptionDataGridView();
-        }
-
-        private void AppointmentsGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(AppointmentsGridView, AppointmentPopupMenu, e);
-        }
-
-        void RefreshAppointment()
-        {
-            LoadBankAppointmentDataGridView();
-        }
-
-        private void LoadFAppointmentAddEdit(string transaction, string appointmentid)
-        {
-            topindex = AppointmentsGridView.TopRowIndex;
-            old_row_id = AppointmentsGridView.FocusedRowHandle;
-            Forms.Dictionaries.FAppointmentAddEdit fp = new Forms.Dictionaries.FAppointmentAddEdit();
-            fp.TransactionName = transaction;
-            fp.AppointmentID = appointmentid;
-            fp.RefreshAppointmentsDataGridView += new Forms.Dictionaries.FAppointmentAddEdit.DoEvent(RefreshAppointment);
-            fp.ShowDialog();
-            AppointmentsGridView.TopRowIndex = topindex;
-            AppointmentsGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFAppointmentAddEdit("INSERT", null);
-        }
-
-        private void AppointmentsGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = AppointmentsGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                AppointmentID = row["ID"].ToString();
-            }
-        }
-
-        private void EditAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFAppointmentAddEdit("EDIT", AppointmentID);
-        }
-
-        private void RefreshAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadBankAppointmentDataGridView();
-        }
-
-        private void AppointmentsGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditAppointmentBarButton.Enabled)
-                LoadFAppointmentAddEdit("EDIT", AppointmentID);
-        }
-
-        private void DeleteAppointment()
-        {
-            if (Convert.ToInt32(AppointmentID) == 7 || Convert.ToInt32(AppointmentID) == 4 || Convert.ToInt32(AppointmentID) == 3 || Convert.ToInt32(AppointmentID) == 8 || Convert.ToInt32(AppointmentID) == 15 || Convert.ToInt32(AppointmentID) == 18 || Convert.ToInt32(AppointmentID) == 19)
-                XtraMessageBox.Show("Sistemin hesablamaları seçilmiş təyinatın üzərində qurulduğu üçün bu təyinatı silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                int AppointmentUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.BANK_APPOINTMENTS WHERE ID = " + AppointmentID);
-                if (AppointmentUsedUserID < 0)
-                {
-                    int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.BANK_OPERATIONS WHERE APPOINTMENT_ID = " + AppointmentID);
-                    if (a == 0)
-                    {
-                        DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş təyinatı silmək istəyirsiniz?", "Təyinatın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.BANK_APPOINTMENTS WHERE ID = " + AppointmentID, "Təyinat silinmədi.", this.Name + "/DeleteAppointment");
-                        }
-                    }
-                    else
-                        XtraMessageBox.Show("Seçilmiş təyinat bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == AppointmentUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş təyinat hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş təyinatın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        private void DeleteAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteAppointment();
-            LoadBankAppointmentDataGridView();
         }
 
         private void UpCardIssuingBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -2705,86 +1484,6 @@ namespace CRS.Forms
             BirthplaceGridView.FocusedRowHandle = orderid - 1;
         }
 
-        private void DownCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_BRANDS", CarBrandID, "down", out orderid);
-            LoadCarBrandDataGridView();
-            BrandGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void UpCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_BRANDS", CarBrandID, "up", out orderid);
-            LoadCarBrandDataGridView();
-            BrandGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void UpCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_TYPES", CarTypeID, "up", out orderid);
-            LoadCarTypeDataGridView();
-            CarTypeGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_TYPES", CarTypeID, "down", out orderid);
-            LoadCarTypeDataGridView();
-            CarTypeGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void UpCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_COLORS", CarColorID, "up", out orderid);
-            LoadCarColorDataGridView();
-            CarColorGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_COLORS", CarColorID, "down", out orderid);
-            LoadCarColorDataGridView();
-            CarColorGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void UpCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_MODELS", CarModelID, "up", out orderid);
-            LoadCarModelDataGridView();
-            CarModelGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_MODELS", CarModelID, "down", out orderid);
-            LoadCarModelDataGridView();
-            CarModelGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void UpBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_BAN_TYPES", CarBanTypeID, "up", out orderid);
-            LoadCarBanTypeDataGridView();
-            CarBanTypeGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CAR_BAN_TYPES", CarBanTypeID, "down", out orderid);
-            LoadCarBanTypeDataGridView();
-            CarBanTypeGridView.FocusedRowHandle = orderid - 1;
-        }
-
         private void DeleteBank()
         {
             int BankUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.BANKS WHERE ID = {BankID}", this.Name + "/DeleteBank");
@@ -2795,7 +1494,9 @@ namespace CRS.Forms
                 {
                     DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş bankı silmək istəyirsiniz?", "Bankın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
-                        GlobalProcedures.ExecuteProcedureWithParametr("CRS_USER.PROC_DELETE_BANK", "P_BANK_ID", BankID, "Bank silinmədi.");
+                    {
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.BANKS WHERE ID = {BankID}", "Bank silinmədi.", this.Name + "/DeleteBank");
+                    }
                 }
                 else
                     XtraMessageBox.Show("Seçilmiş bank bazada istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -2807,672 +1508,31 @@ namespace CRS.Forms
             }
         }
 
-        private void DeleteBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteBank();
-            LoadBanksDataGridView();
-        }
-
-        private void AppointmentsGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(AppointmentsGridView, e);
-        }
-
         private void CreditTypeGridView_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
         {
             GlobalProcedures.GridCustomDrawFooterCell("CALC_DATE", "Center", e);
         }
 
-        private void FundsSourcesGridView_MouseUp(object sender, MouseEventArgs e)
+        private void DeleteCreditClass()
         {
-            GlobalProcedures.GridMouseUpForPopupMenu(FundsSourcesGridView, FundsSourcesPopupMenu, e);
-        }
-
-        private void FundsSourcesNameGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(FundsSourcesNameGridView, FundsSourcesNamePopupMenu, e);
-        }
-
-        void RefreshFundsSources()
-        {
-            LoadFundsSourceDataGridView();
-        }
-
-        private void LoadFFundsSourceAddEdit(string transaction, string sourceid)
-        {
-            topindex = FundsSourcesGridView.TopRowIndex;
-            old_row_id = FundsSourcesGridView.FocusedRowHandle;
-            Dictionaries.FFundsSourceAddEdit fp = new Dictionaries.FFundsSourceAddEdit();
-            fp.TransactionName = transaction;
-            fp.SourceID = sourceid;
-            fp.RefreshSourceDataGridView += new Dictionaries.FFundsSourceAddEdit.DoEvent(RefreshFundsSources);
-            fp.ShowDialog();
-            FundsSourcesGridView.TopRowIndex = topindex;
-            FundsSourcesGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFundsSourceAddEdit("INSERT", null);
-        }
-
-        private void RefreshFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFundsSourceDataGridView();
-        }
-
-        private void FundsSourcesGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = FundsSourcesGridView.GetFocusedDataRow();
-            if (row != null)
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CREDIT_CLASS WHERE ID = {creditClassID}", this.Name + "/DeleteCreditClass");
+            if (UsedUserID < 0)
             {
-                FundsSourceID = row["ID"].ToString();
-                UpFundsSourceBarButton.Enabled = !(FundsSourcesGridView.FocusedRowHandle == 0);
-                DownFundsSourceBarButton.Enabled = !(FundsSourcesGridView.FocusedRowHandle == FundsSourcesGridView.RowCount - 1);
-            }
-        }
-
-        private void EditFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFundsSourceAddEdit("EDIT", FundsSourceID);
-        }
-
-        private void FundsSourcesGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditFundsSourceBarButton.Enabled)
-                LoadFFundsSourceAddEdit("EDIT", FundsSourceID);
-        }
-
-        private void UpFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FUNDS_SOURCES", FundsSourceID, "up", out orderid);
-            LoadFundsSourceDataGridView();
-            FundsSourcesGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FUNDS_SOURCES", FundsSourceID, "down", out orderid);
-            LoadFundsSourceDataGridView();
-            FundsSourcesGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void FundsSourcesNameGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = FundsSourcesNameGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                FundsSourceNameID = row["ID"].ToString();
-                UpFundsSourceNameBarButton.Enabled = !(FundsSourcesNameGridView.FocusedRowHandle == 0);
-                DownFundsSourceNameBarButton.Enabled = !(FundsSourcesNameGridView.FocusedRowHandle == FundsSourcesNameGridView.RowCount - 1);
-            }
-        }
-
-        void RefreshFundsSourcesName()
-        {
-            LoadFundsSourceNameDataGridView();
-        }
-
-        private void LoadFFundsSourceNameAddEdit(string transaction, string sourceid)
-        {
-            topindex = FundsSourcesNameGridView.TopRowIndex;
-            old_row_id = FundsSourcesNameGridView.FocusedRowHandle;
-            Forms.Dictionaries.FFundsSourceNameAddEdit fp = new Forms.Dictionaries.FFundsSourceNameAddEdit();
-            fp.TransactionName = transaction;
-            fp.SourceID = sourceid;
-            fp.RefreshSourceNameDataGridView += new Forms.Dictionaries.FFundsSourceNameAddEdit.DoEvent(RefreshFundsSourcesName);
-            fp.ShowDialog();
-            FundsSourcesNameGridView.TopRowIndex = topindex;
-            FundsSourcesNameGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFundsSourceNameAddEdit("INSERT", null);
-        }
-
-        private void RefreshFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFundsSourceNameDataGridView();
-        }
-
-        private void EditFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFundsSourceNameAddEdit("EDIT", FundsSourceNameID);
-        }
-
-        private void FundsSourcesNameGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditFundsSourceNameBarButton.Enabled)
-                LoadFFundsSourceNameAddEdit("EDIT", FundsSourceNameID);
-        }
-
-        private void UpFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FUNDS_SOURCES_NAME", FundsSourceNameID, "up", out orderid);
-            LoadFundsSourceNameDataGridView();
-            FundsSourcesNameGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FUNDS_SOURCES_NAME", FundsSourceNameID, "down", out orderid);
-            LoadFundsSourceNameDataGridView();
-            FundsSourcesNameGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void FundsBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
-        {
-            if (FormStatus)
-            {
-                switch (FundsBackstageViewControl.SelectedTabIndex)
-                {
-                    case 0:
-                        LoadFundsSourceDataGridView();
-                        break;
-                    case 1:
-                        LoadFundsSourceNameDataGridView();
-                        break;
-                }
-            }
-        }
-
-        private void DeleteFundsSource()
-        {
-            if (Convert.ToInt32(FundsSourceID) == 6 || Convert.ToInt32(FundsSourceID) == 10)
-                XtraMessageBox.Show("Sistem seçilmiş mənbə üzərində qurulduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                int FundsSourceUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.FUNDS_SOURCES WHERE ID = {FundsSourceID}", this.Name + "/DeleteFundsSource");
-                if (FundsSourceUsedUserID <= 0)
-                {
-                    int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.FUNDS_CONTRACTS WHERE FUNDS_SOURCE_ID = {FundsSourceID}", this.Name + "/DeleteFundsSource");
-                    if (a == 0)
-                    {
-                        DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş mənbəni silmək istəyirsiniz?", "Mənbənin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dialogResult == DialogResult.Yes)
-                        {
-                            GlobalProcedures.ExecuteTwoQuery($@"DELETE FROM CRS_USER.FUNDS_SOURCES WHERE ID = {FundsSourceID}",
-                                                             $@"DELETE FROM CRS_USER.FUNDS_SOURCES_NAME WHERE SOURCE_ID = {FundsSourceID}",
-                                                                "Mənbə silinmədi.",
-                                                                this.Name + "/DeleteFundsSource");
-                        }
-                    }
-                    else
-                        XtraMessageBox.Show("Seçilmiş mənbə bazada cəlb olunmuş vəsaitlərdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == FundsSourceUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş mənbə hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş mənbənin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        private void DeleteFundsSourceBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteFundsSource();
-            LoadFundsSourceDataGridView();
-        }
-
-        private void DeleteFundsSourceName()
-        {
-            int FundsSourceNameUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.FUNDS_SOURCES_NAME WHERE ID = {FundsSourceNameID}", this.Name + "/DeleteFundsSourceName");
-            if (FundsSourceNameUsedUserID <= 0)
-            {
-                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.FUNDS_CONTRACTS WHERE FUNDS_SOURCE_NAME_ID = {FundsSourceNameID}", this.Name + "/DeleteFundsSourceName");
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {creditClassID}", this.Name + "/DeleteCreditClass");
                 if (a == 0)
                 {
-                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş mənbəyin adını silmək istəyirsiniz?", "Mənbəyin adının silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kredit təsnifatını silmək istəyirsiniz?", "Kredit təsnifatının silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (dialogResult == DialogResult.Yes)
-                    {
-                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.FUNDS_SOURCES_NAME WHERE ID = {FundsSourceNameID}",
-                                                            "Mənbənin adı silinmədi.",
-                                                            this.Name + "/DeleteFundsSourceName");
-                    }
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CREDIT_CLASS WHERE ID = {creditClassID}", "Kredit təsnifatı silinmədi.", this.Name + "/DeleteCreditClass");
                 }
                 else
-                    XtraMessageBox.Show("Seçilmiş mənbəyin adı bazada cəlb olunmuş vəsaitlərdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    XtraMessageBox.Show("Seçilmiş kredit təsnifatı bazada istifadə olunduğu üçün bu təsnifatı silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == FundsSourceNameUsedUserID).FULLNAME;
-                XtraMessageBox.Show("Seçilmiş mənbəyin adı hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş mənbəyin adının hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş kredit təsnifatı hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş kredit təsnifatının hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void DeleteFundsSourceNameBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteFundsSourceName();
-            LoadFundsSourceNameDataGridView();
-        }
-
-        private void FoundersGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(FoundersGridView, FoundersPopupMenu, e);
-        }
-
-        void RefreshFounder()
-        {
-            LoadFoundersDataGridView();
-        }
-
-        private void LoadFFounderAddEdit(string transaction, string founderid)
-        {
-            topindex = FoundersGridView.TopRowIndex;
-            old_row_id = FoundersGridView.FocusedRowHandle;
-            Dictionaries.FFounderAddEdit ffae = new Dictionaries.FFounderAddEdit();
-            ffae.TransactionName = transaction;
-            ffae.FounderID = founderid;
-            ffae.RefreshFoundersDataGridView += new Dictionaries.FFounderAddEdit.DoEvent(RefreshFounder);
-            ffae.ShowDialog();
-            FoundersGridView.TopRowIndex = topindex;
-            FoundersGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFounderAddEdit("INSERT", null);
-        }
-
-        private void RefreshFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFoundersDataGridView();
-        }
-
-        private void FoundersGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = FoundersGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                FounderID = row["ID"].ToString();
-                UpFounderBarButton.Enabled = !(FoundersGridView.FocusedRowHandle == 0);
-                DownFounderBarButton.Enabled = !(FoundersGridView.FocusedRowHandle == FoundersGridView.RowCount - 1);
-            }
-        }
-
-        private void EditFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFFounderAddEdit("EDIT", FounderID);
-        }
-
-        private void FoundersGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditFounderBarButton.Enabled)
-                LoadFFounderAddEdit("EDIT", FounderID);
-        }
-
-        private void DeleteFounder()
-        {
-            int FounderUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.FOUNDERS WHERE ID = {FounderID}", this.Name + "/DeleteFounder");
-            if (FounderUsedUserID < 0)
-            {
-                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.FOUNDER_CONTRACTS WHERE FOUNDER_ID = {FounderID}", this.Name + "/DeleteFounder");
-                if (a == 0)
-                {
-                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş təsisçini silmək istəyirsiniz?", "Təsisçinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
-                        GlobalProcedures.ExecuteProcedureWithParametr("CRS_USER.PROC_FOUNDER_DELETE", "P_FOUNDER_ID", int.Parse(FounderID), "Təsisçi silinmədi.");
-                }
-                else
-                    XtraMessageBox.Show("Seçilmiş təsisçi bazada müqavilələrdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == FounderUsedUserID).FULLNAME;
-                XtraMessageBox.Show("Seçilmiş təsisçi hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş təsisçinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void DeleteFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteFounder();
-            LoadFoundersDataGridView();
-        }
-
-        private void UpFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FOUNDERS", FounderID, "up", out orderid);
-            LoadFoundersDataGridView();
-            FoundersGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownFounderBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("FOUNDERS", FounderID, "down", out orderid);
-            LoadFoundersDataGridView();
-            FoundersGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void CashOtherAppointmentGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(CashOtherAppointmentGridView, CashOtherAppointmentPopupMenu, e);
-        }
-
-        private void FoundersGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(FoundersGridView, e);
-        }
-
-        private void FundsSourcesGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(FundsSourcesGridView, e);
-        }
-
-        private void FundsSourcesNameGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(FundsSourcesNameGridView, e);
-        }
-
-        void RefreshCashAppointment()
-        {
-            LoadCashOtherAppointmentDataGridView();
-        }
-
-        private void LoadFCashOtherAppointmentAddEdit(string transaction, string id)
-        {
-            topindex = CashOtherAppointmentGridView.TopRowIndex;
-            old_row_id = CashOtherAppointmentGridView.FocusedRowHandle;
-            Dictionaries.FCashOtherAppointmentAddEdit fp = new Dictionaries.FCashOtherAppointmentAddEdit();
-            fp.TransactionName = transaction;
-            fp.ID = id;
-            fp.RefreshAppointmentDataGridView += new Dictionaries.FCashOtherAppointmentAddEdit.DoEvent(RefreshCashAppointment);
-            fp.ShowDialog();
-            CashOtherAppointmentGridView.TopRowIndex = topindex;
-            CashOtherAppointmentGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCashOtherAppointmentAddEdit("INSERT", null);
-        }
-
-        private void CashAppointmentBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
-        {
-            if (FormStatus)
-            {
-                switch (CashAppointmentBackstageViewControl.SelectedTabIndex)
-                {
-                    case 0:
-                        LoadCashOtherAppointmentDataGridView();
-                        break;
-                }
-            }
-        }
-
-        private void EditCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFCashOtherAppointmentAddEdit("EDIT", CashOtherAppointmentID);
-        }
-
-        private void CashOtherAppointmentGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = CashOtherAppointmentGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CashOtherAppointmentID = row["ID"].ToString();
-                UpCashOtherAppointmentBarButton.Enabled = !(CashOtherAppointmentGridView.FocusedRowHandle == 0);
-                DownCashOtherAppointmentBarButton.Enabled = !(CashOtherAppointmentGridView.FocusedRowHandle == CashOtherAppointmentGridView.RowCount - 1);
-            }
-        }
-
-        private void RefreshCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadCashOtherAppointmentDataGridView();
-        }
-
-        private void UpCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CASH_APPOINTMENTS", CashOtherAppointmentID, "up", out orderid);
-            LoadCashOtherAppointmentDataGridView();
-            CashOtherAppointmentGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CASH_APPOINTMENTS", CashOtherAppointmentID, "down", out orderid);
-            LoadCashOtherAppointmentDataGridView();
-            CashOtherAppointmentGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void CashOtherAppointmentGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditCashOtherAppointmentBarButton.Enabled)
-                LoadFCashOtherAppointmentAddEdit("EDIT", CashOtherAppointmentID);
-        }
-
-        private void CashOtherAppointmentGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(CashOtherAppointmentGridView, e);
-        }
-
-        private void DeleteCashOtherAppointment()
-        {
-            int AppointmentUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CASH_APPOINTMENTS WHERE TYPE = 1 AND ID = {CashOtherAppointmentID}");
-            if (AppointmentUsedUserID < 0)
-            {
-                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM (SELECT CASH_APPOINTMENT_ID FROM CRS_USER.CASH_EXPENSES_OTHER_PAYMENT UNION SELECT CASH_APPOINTMENT_ID FROM CRS_USER.CASH_OTHER_PAYMENT) WHERE CASH_APPOINTMENT_ID = " + CashOtherAppointmentID);
-                if (a == 0)
-                {
-                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş təyinatı silmək istəyirsiniz?", "Təyinatın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CASH_APPOINTMENTS WHERE TYPE = 1 AND ID = {CashOtherAppointmentID}", "Təyinat silinmədi.", this.Name + "/DeleteCashOtherAppointment");
-                    }
-                }
-                else
-                    XtraMessageBox.Show("Seçilmiş təyinat bazada kassa əməliyyatlarında istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == AppointmentUsedUserID).FULLNAME;
-                XtraMessageBox.Show("Seçilmiş təyinat hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş təyinatın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void DeleteCashOtherAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeleteCashOtherAppointment();
-            LoadCashOtherAppointmentDataGridView();
-        }
-
-        void RefreshPositions()
-        {
-            LoadPositionsDataGridView();
-        }
-
-        private void LoadFPositionAddEdit(string transaction, string id)
-        {
-            topindex = PositionGridView.TopRowIndex;
-            old_row_id = PositionGridView.FocusedRowHandle;
-            Dictionaries.FPositionAddEdit fp = new Dictionaries.FPositionAddEdit();
-            fp.TransactionName = transaction;
-            fp.PositionID = id;
-            fp.RefreshPositionDataGridView += new Dictionaries.FPositionAddEdit.DoEvent(RefreshPositions);
-            fp.ShowDialog();
-            PositionGridView.TopRowIndex = topindex;
-            PositionGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewPositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFPositionAddEdit("INSERT", null);
-        }
-
-        private void PositionGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = PositionGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                PositionID = row["ID"].ToString();
-                UpPositionBarButton.Enabled = !(PositionGridView.FocusedRowHandle == 0);
-                DownPositionBarButton.Enabled = !(PositionGridView.FocusedRowHandle == PositionGridView.RowCount - 1);
-            }
-        }
-
-        private void EditPositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFPositionAddEdit("EDIT", PositionID);
-        }
-
-        private void PositionGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditPositionBarButton.Enabled)
-                LoadFPositionAddEdit("EDIT", PositionID);
-        }
-
-        private void RefreshPositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadPositionsDataGridView();
-        }
-
-        private void UpPositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("POSITIONS", PositionID, "up", out orderid);
-            LoadPositionsDataGridView();
-            PositionGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownPositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("POSITIONS", PositionID, "down", out orderid);
-            LoadPositionsDataGridView();
-            PositionGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DeletePosition()
-        {
-            int PositionUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.POSITIONS WHERE ID = {PositionID}");
-            if (PositionUsedUserID < 0)
-            {
-                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PERSONNEL WHERE POSITION_ID = {PositionID}");
-                if (a == 0)
-                {
-                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş vəzifəni silmək istəyirsiniz?", "Vəzifənin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (dialogResult == DialogResult.Yes)
-                    {
-                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.POSITIONS WHERE ID = {PositionID}", "Vəzifə silinmədi.", this.Name + "/DeletePosition");
-                    }
-                }
-                else
-                    XtraMessageBox.Show("Seçilmiş vəzifə bazada işçilərin siyahısında istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == PositionUsedUserID).FULLNAME;
-                XtraMessageBox.Show("Seçilmiş vəzifə hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş vəzifənin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void DeletePositionBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            DeletePosition();
-            LoadPositionsDataGridView();
-        }
-
-        private void PositionGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(PositionGridView, PositionPopupMenu, e);
-        }
-
-        private void PositionGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(PositionGridView, e);
-        }
-
-        private void PersonnelGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(PersonnelGridView, PersonnelPopupMenu, e);
-        }
-
-        void RefreshPersonnel()
-        {
-            LoadPersonnelDataGridView();
-        }
-
-        private void LoadFPersonnelAddEdit(string transaction, string personnel_id)
-        {
-            topindex = PersonnelGridView.TopRowIndex;
-            old_row_id = PersonnelGridView.FocusedRowHandle;
-            Dictionaries.FPersonnelAddEdit fcae = new Dictionaries.FPersonnelAddEdit();
-            fcae.TransactionName = transaction;
-            fcae.PersonnelID = personnel_id;
-            fcae.RefreshPersonnelDataGridView += new Dictionaries.FPersonnelAddEdit.DoEvent(RefreshPersonnel);
-            fcae.ShowDialog();
-            PersonnelGridView.TopRowIndex = topindex;
-            PersonnelGridView.FocusedRowHandle = old_row_id;
-        }
-
-        private void NewPersonnelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFPersonnelAddEdit("INSERT", null);
-        }
-
-        private void PersonnelGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = PersonnelGridView.GetFocusedDataRow();
-            if (row != null)
-                PersonnelID = row["ID"].ToString();
-        }
-
-        private void EditPersonnelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFPersonnelAddEdit("EDIT", PersonnelID);
-        }
-
-        private void PersonnelGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditPersonnelBarButton.Enabled)
-                LoadFPersonnelAddEdit("EDIT", PersonnelID);
-        }
-
-        private void RefreshPersonnelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadPersonnelDataGridView();
-        }
-
-        private void DeletePersonnel()
-        {
-            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.CASH_SALARY WHERE PERSONNEL_ID = {PersonnelID}");
-            if (a == 0)
-            {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş işçinin məlumatlarını silmək istəyirsiniz?", "İşçininnin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    GlobalProcedures.ExecuteProcedureWithParametr("CRS_USER.PROC_PERSONNEL_DELETE", "P_PERSONNEL_ID", PersonnelID, "İşçinin məlumatları silinmədi.");
-                }
-            }
-            else
-                XtraMessageBox.Show("Seçilmiş işçiyə əmək haqqı ödənildiyi üçün onun məlumatlarını silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void DeletePersonnelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int PersonnelUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.PERSONNEL WHERE ID = {PersonnelID}");
-            if ((PersonnelUsedUserID == -1) || (GlobalVariables.V_UserID == PersonnelUsedUserID))
-                DeletePersonnel();
-            else
-            {
-                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == PersonnelUsedUserID).FULLNAME;
-                XtraMessageBox.Show("Seçilmiş işçinin məlumatları " + used_user_name + " tərəfindən istifadə edilir. Onun məlumatlarını silmək olmaz.", "Seçilmiş işçinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            LoadPersonnelDataGridView();
-        }
-
-        private void PersonnelGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(PersonnelGridView, e);
-            GlobalProcedures.GridRowCellStyleForClose(16, PersonnelGridView, e);
         }
 
         private void PhoneGridView_ColumnFilterChanged(object sender, EventArgs e)
@@ -3548,11 +1608,6 @@ namespace CRS.Forms
             DeleteCreditTypeBarButton.Enabled = EditCreditTypeBarButton.Enabled = (CreditTypeGridView.RowCount > 0);
         }
 
-        private void CreditNameGridView_ColumnFilterChanged(object sender, EventArgs e)
-        {
-            DeleteCreditNameBarButton.Enabled = EditCreditNameBarButton.Enabled = (CreditNameGridView.RowCount > 0);
-        }
-
         private void CurrencyGridView_ColumnFilterChanged(object sender, EventArgs e)
         {
             if (CurrencyGridView.RowCount > 0)
@@ -3572,27 +1627,6 @@ namespace CRS.Forms
             }
         }
 
-        private void PersonnelGridView_ColumnFilterChanged(object sender, EventArgs e)
-        {
-            DeletePersonnelBarButton.Enabled = EditPersonnelBarButton.Enabled = (PersonnelGridView.RowCount > 0);
-        }
-
-        private void UpBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("BANKS", BankID, "up", out orderid);
-            LoadBanksDataGridView();
-            BanksGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DownBankBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("BANKS", BankID, "down", out orderid);
-            LoadBanksDataGridView();
-            BanksGridView.FocusedRowHandle = orderid - 1;
-        }
-
         private void BirthplaceSortBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             GlobalProcedures.SortTableByName("CRS_USER.BIRTHPLACE");
@@ -3609,128 +1643,6 @@ namespace CRS.Forms
         {
             GlobalProcedures.SortTableByName("CRS_USER.CARD_SERIES");
             LoadCardSeriesDataGridView();
-        }
-
-        private void BanksGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            int rowIndex = e.ListSourceRowIndex;
-            if (Convert.ToInt32(BanksGridView.GetListSourceRowCellValue(rowIndex, "IS_USED")) == 1)
-                e.Value = Properties.Resources.check_16;
-            //else
-            //    e.Value = null;
-        }
-
-        private void RefreshInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadInsuranceRateDataGridView();
-        }
-
-        void RefreshInsuranceRate()
-        {
-            LoadInsuranceRateDataGridView();
-        }
-
-        private void LoadFInsuranceRateAddEdit(string transaction, string rateID)
-        {
-            Dictionaries.FInsuranceRateAddEdit fr = new Dictionaries.FInsuranceRateAddEdit();
-            fr.TransactionName = transaction;
-            fr.RateID = rateID;
-            fr.RefreshInsuranceRateDataGridView += new Dictionaries.FInsuranceRateAddEdit.DoEvent(RefreshInsuranceRate);
-            fr.ShowDialog();
-        }
-
-        private void EditInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFInsuranceRateAddEdit("EDIT", InsuranceRateID);
-        }
-
-        private void InsuranceRateGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = InsuranceRateGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                InsuranceRateID = row["ID"].ToString();
-                UpInsuranceRateBarButton.Enabled = !(InsuranceRateGridView.FocusedRowHandle == 0);
-                DownInsuranceRateBarButton.Enabled = !(InsuranceRateGridView.FocusedRowHandle == InsuranceRateGridView.RowCount - 1);
-            }
-        }
-
-        private void UpInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("INSURANCE_RATE", InsuranceRateID, "up", out orderid);
-            LoadInsuranceRateDataGridView();
-            InsuranceRateGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void DeleteInsuranceRate()
-        {
-            DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş sığorta dərəcəsini silmək istəyirsiniz?", "Sığorta dərəcəsinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.INSURANCE_RATE WHERE ID = {InsuranceRateID}", "Model silinmədi.", this.Name + "/DeleteInsuranceRate");
-            }
-        }
-
-        private void DeleteInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int InsuranceRateUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.INSURANCE_RATE WHERE ID = {InsuranceRateID}");
-            if (InsuranceRateUsedUserID >= 0)
-            {
-                if (GlobalVariables.V_UserID != InsuranceRateUsedUserID)
-                {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == InsuranceRateUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş sığorta dərəcəsi hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş sığorta dərəcəsinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                else
-                    DeleteInsuranceRate();
-            }
-            else
-                DeleteInsuranceRate();
-            LoadInsuranceRateDataGridView();
-        }
-
-        private void InsuranceRateGridView_MouseUp(object sender, MouseEventArgs e)
-        {
-            GlobalProcedures.GridMouseUpForPopupMenu(InsuranceRateGridView, InsuranceRatePopupMenu, e);
-        }
-
-        private void DownInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("INSURANCE_RATE", InsuranceRateID, "down", out orderid);
-            LoadInsuranceRateDataGridView();
-            InsuranceRateGridView.FocusedRowHandle = orderid - 1;
-        }
-
-        private void InsuranceRateGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditInsuranceRateBarButton.Enabled)
-                LoadFInsuranceRateAddEdit("EDIT", InsuranceRateID);
-        }
-
-        private void InsuranceRateGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(InsuranceRateGridView, e);
-        }
-
-        private void InsuranceRateGridView_ColumnFilterChanged(object sender, EventArgs e)
-        {
-            if (InsuranceRateGridView.RowCount > 0)
-            {
-                DeleteInsuranceRateBarButton.Enabled =
-                    EditInsuranceRateBarButton.Enabled = true;
-                if (InsuranceRateGridView.FocusedRowHandle == 0)
-                    UpInsuranceRateBarButton.Enabled = false;
-                DownInsuranceRateBarButton.Enabled = (InsuranceRateGridView.RowCount > 1);
-            }
-            else
-            {
-                DeleteInsuranceRateBarButton.Enabled =
-                    EditInsuranceRateBarButton.Enabled =
-                    UpInsuranceRateBarButton.Enabled =
-                    DownInsuranceRateBarButton.Enabled = false;
-            }
         }
 
         private void KindshipRateGridView_MouseUp(object sender, MouseEventArgs e)
@@ -3790,7 +1702,7 @@ namespace CRS.Forms
 
         private void DeleteContractEvaluate()
         {
-            if(contractEvaluateIsDeleted == 1)
+            if (contractEvaluateIsDeleted == 1)
             {
                 GlobalProcedures.ShowWarningMessage("Seçilmiş qiymətləndirmə baza əhəmiyyətli olduğu üçün silinə bilməz.");
                 return;
@@ -3949,7 +1861,643 @@ namespace CRS.Forms
             }
             else
                 DeleteKindShip();
-            LoadKindshipRateDataGridView();            
+            LoadKindshipRateDataGridView();
+        }
+
+        private void PawnTypeGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            GlobalProcedures.GenerateAutoRowNumber(sender, PawnType_SS, e);
+        }
+
+        private void NewPawnTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFPawnTypeAddEdit("INSERT", null);
+        }
+
+        private void EditPawnTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFPawnTypeAddEdit("EDIT", PawnTypeID);
+        }
+
+        private void DeletePawnTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.PAWN WHERE PAWN_TYPE_ID = " + PawnTypeID) == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş əşyanı silmək istəyirsiniz?", "Əşyanın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.PAWN_TYPE WHERE ID = " + PawnTypeID, "Əşya silinmədi.", this.Name + "/DeletePawnTypeBarButton_ItemClick");
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş əşya girovlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            LoadPawnTypeDataGridView();
+        }
+
+        private void RefreshPawnTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadPawnTypeDataGridView();
+        }
+
+        private void PawnTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditPawnTypeBarButton.Enabled)
+                LoadFPawnTypeAddEdit("EDIT", PawnTypeID);
+        }
+
+        private void PawnTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(PawnTypeGridView, PawnTypePopupMenu, e);
+        }
+
+        private void PawnTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            DeletePawnTypeBarButton.Enabled = EditPawnTypeBarButton.Enabled = (PawnTypeGridView.RowCount > 0);
+        }
+
+        private void PawnTypeGridView_CustomDrawFooterCell(object sender, FooterCellCustomDrawEventArgs e)
+        {
+            GlobalProcedures.GridCustomDrawFooterCell(PawnType_SS, "Center", e);
+        }
+
+        //private void CreditClassGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        //{
+        //    GlobalProcedures.GenerateAutoRowNumber(sender, SS, e);
+        //}
+
+        private void CreditClassGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CreditClassGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                creditClassID = row["ID"].ToString();
+                UpCreditClassBarButton.Enabled = !(CreditClassGridView.FocusedRowHandle == 0);
+                DownCreditClassBarButton.Enabled = !(CreditClassGridView.FocusedRowHandle == CreditClassGridView.RowCount - 1);
+            }
+        }
+
+        private void CreditClassGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CreditClassGridView, CreditClassPopupMenu, e);
+        }
+
+        private void NewAppraiserBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFAppraiserAddEdit("INSERT", null);
+        }
+
+        private void EditAppraiserBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFAppraiserAddEdit("EDIT", AppraiserID);
+        }
+
+        private void AppraiserGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditAppraiserBarButton.Enabled)
+                LoadFAppraiserAddEdit("EDIT", AppraiserID);
+        }
+
+        private void RefreshAppraiserBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadAppraiserDataGridView();
+        }
+
+        private void AppraiserGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            GlobalProcedures.GenerateAutoRowNumber(sender, Appraiser_SS, e);
+        }
+
+        private void DeleteAppraiserBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.APPRAISER WHERE ID = {AppraiserID}");
+            if (UsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != UsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş qiymətləndirici hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş qiymətləndirici hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteAppraiser();
+            }
+            else
+                DeleteAppraiser();
+            LoadAppraiserDataGridView();
+        }
+
+        void DeleteAppraiser()
+        {
+            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.CONTRACTS WHERE APPRAISER_ID = {AppraiserID}");
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş qiymətləndiricini silmək istəyirsiniz?", "Qiymətləndiricinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.APPRAISER WHERE ID = {AppraiserID}", "Qiymətləndirici silinmədi.", this.Name + "/DeleteAppraiser");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş qiymətləndirici müqavilələrdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void AppraiserGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(AppraiserGridView, AppraiserPopupMenu, e);
+        }
+
+        private void AppraiserGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = AppraiserGridView.GetFocusedDataRow();
+            if (row != null)
+                AppraiserID = row["ID"].ToString();
+        }
+
+        private void AppraiserGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            DeleteAppraiserBarButton.Enabled = EditAppraiserBarButton.Enabled = (AppraiserGridView.RowCount > 0);
+        }
+
+        private void EyebrowsGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            GlobalProcedures.GenerateAutoRowNumber(sender, Eyebrows_SS, e);
+        }
+
+        private void EyebrowsGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(EyebrowsGridView, EyebrowsPopupMenu, e);
+        }
+
+        private void RefreshEyebrowsBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadEyebrowsDataGridView();
+        }
+
+        private void NewEyebrowsBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFEyebrowsAddEdit("INSERT", null);
+        }
+
+        private void EyebrowsGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = EyebrowsGridView.GetFocusedDataRow();
+            if (row != null)
+                EyebrowsID = row["ID"].ToString();
+        }
+
+        private void EditEyebrowsBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFEyebrowsAddEdit("EDIT", EyebrowsID);
+        }
+
+        private void EyebrowsGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditEyebrowsBarButton.Enabled)
+                LoadFEyebrowsAddEdit("EDIT", EyebrowsID);
+        }
+
+        private void LoanOfficerGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = LoanOfficerGridView.GetFocusedDataRow();
+            if (row != null)
+                LoanOfficerID = row["ID"].ToString();
+        }
+
+        private void NewLoanOfficerBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFLoanOfficerAddEdit("INSERT", null);
+        }
+
+        private void LoadFLoanOfficerAddEdit(string transaction, string id)
+        {
+            topindex = LoanOfficerGridView.TopRowIndex;
+            old_row_id = LoanOfficerGridView.FocusedRowHandle;
+            Dictionaries.FLoanOfficerAddEdit fa = new Dictionaries.FLoanOfficerAddEdit();
+            fa.TransactionName = transaction;
+            fa.ID = id;
+            fa.RefreshDataGridView += new Dictionaries.FLoanOfficerAddEdit.DoEvent(LoadLoanOfficerDataGridView);
+            fa.ShowDialog();
+            LoanOfficerGridView.TopRowIndex = topindex;
+            LoanOfficerGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditLoanOfficerBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFLoanOfficerAddEdit("EDIT", LoanOfficerID);
+        }
+
+        private void LoanOfficerGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditLoanOfficerBarButton.Enabled)
+                LoadFLoanOfficerAddEdit("EDIT", LoanOfficerID);
+        }
+
+        private void LoanOfficerGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            GlobalProcedures.GenerateAutoRowNumber(sender, LoanOfficer_SS, e);
+        }
+
+        private void LoanOfficerGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(LoanOfficerGridView, LoanOfficerPopupMenu, e);
+        }
+
+        private void DeleteLoanOfficerBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.LOAN_OFFICER WHERE ID = {LoanOfficerID}");
+            if (UsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != UsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş mütəxəssiz hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş mütəxəssisin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteLoanOfficer();
+            }
+            else
+                DeleteLoanOfficer();
+            LoadLoanOfficerDataGridView();
+        }
+
+        void DeleteLoanOfficer()
+        {
+            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.CONTRACTS WHERE LOAN_OFFICER_ID = {LoanOfficerID}");
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kredit mütəxəssisini silmək istəyirsiniz?", "Kredit mütəxəssisinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.LOAN_OFFICER WHERE ID = {LoanOfficerID}", "Kredit mütəxəssisi silinmədi.", this.Name + "/DeleteLoanOfficer");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş kredit mütəxəssisi müqavilələrdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        //private void NewAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    LoadFAppointmentAddEdit("INSERT", null);
+        //}
+
+        //private void LoadFAppointmentAddEdit(string transaction, string id)
+        //{
+        //    topindex = AppointmentGridView.TopRowIndex;
+        //    old_row_id = AppointmentGridView.FocusedRowHandle;
+        //    Dictionaries.FAppointmentAddEdit fap = new Dictionaries.FAppointmentAddEdit();
+        //    fap.TransactionName = transaction;
+        //    fap.ID = id;
+        //    fap.RefreshDataGridView += new Dictionaries.FAppointmentAddEdit.DoEvent(LoadAppointmentDataGridView);
+        //    fap.ShowDialog();
+        //    AppointmentGridView.TopRowIndex = topindex;
+        //    AppointmentGridView.FocusedRowHandle = old_row_id;
+        //}
+
+        //private void EditAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    LoadFAppointmentAddEdit("EDIT", AppointmentID);
+        //}
+
+        //private void RefreshAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    LoadAppointmentDataGridView();
+        //}
+
+        //private void AppointmentGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        //{
+        //    DataRow row = AppointmentGridView.GetFocusedDataRow();
+        //    if (row != null)
+        //        AppointmentID = row["ID"].ToString();
+        //}
+
+        //private void AppointmentGridView_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    GlobalProcedures.GridMouseUpForPopupMenu(AppointmentGridView, AppointmentPopupMenu, e);
+        //}
+
+        //private void AppointmentGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        //{
+        //    GlobalProcedures.GenerateAutoRowNumber(sender, Appointment_SS, e);
+        //}
+
+        //private void DeleteAppointmentBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CASH_APPOINTMENTS WHERE ID = {AppointmentID}");
+        //    if (UsedUserID >= 0)
+        //    {
+        //        if (GlobalVariables.V_UserID != UsedUserID)
+        //        {
+        //            string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+        //            XtraMessageBox.Show("Seçilmiş təyinat hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş təyinatın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        }
+        //        else
+        //            DeleteAppointment();
+        //    }
+        //    else
+        //        DeleteAppointment();
+        //    LoadAppointmentDataGridView();
+        //}
+
+        void DeleteAppointment()
+        {
+            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.CASH_OPERATIONS WHERE CASH_APPOİNTMENT_ID = {AppointmentID}");
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş təyinatı silmək istəyirsiniz?", "Təyinatın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CASH_APPOINTMENTS WHERE ID = {AppointmentID}", "Tətinatın silinmədi.", this.Name + "/DeleteAppointment");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş təyinat kassada istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+        private void CreditParametrBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+            if (FormStatus)
+            {
+                switch (CreditParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadCreditTypeDataGridView();
+                        break;
+                    case 1:
+                        LoadTypeCredit();
+                        break;
+                    case 2:
+                        LoadCreditPurpose();
+                        break;
+                    case 3:
+                        LoadCreditClass();
+                        break;
+                    case 4:
+                        LoadCreditStatus();
+                        break;
+                    case 5:
+                        LoadCollateralType();
+                        break;
+                }
+}
+}
+    private void PawnParametrBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+            if(FormStatus)
+            {
+                switch (PawnParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadEyebrowsDataGridView();
+                        break;
+                    case 1:
+                        LoadGoldType();
+                        break;
+                    case 2:
+                        LoadPawnTypeDataGridView();
+                        break;
+                    case 3:
+                        LoadAppraiserDataGridView();
+                        break;
+                }
+            }
+        }
+        private void LizingParametrBackstageViewControl_SelectedTabChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+            if (FormStatus)
+            {
+                switch (LizingParametrBackstageViewControl.SelectedTabIndex)
+                {
+                    case 0:
+                        LoadCarBrandDataGridView();
+                        break;
+                    case 1:
+                        LoadCarModelDataGridView();
+                        break;
+                    case 2:
+                        LoadCarTypeDataGridView();
+                        break;
+                    case 3:
+                        LoadCarColorDataGridView();
+                        break;
+                    case 4:
+                        LoadCarBanTypeDataGridView();
+                        break;
+                }
+            }
+        }
+
+        
+
+    private void BrandGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(BrandGridView, CarBrandPopupMenu, e);
+        }
+
+        private void RefreshCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCarBrandDataGridView();
+        }
+
+        private void RefreshCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCarModelDataGridView();
+        }
+
+        private void RefreshCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCarTypeDataGridView();
+        }
+
+        private void RefreshBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCarBanTypeDataGridView();
+        }
+
+        private void RefreshCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCarColorDataGridView();
+        }
+        private void backstageViewTabItem12_SelectedChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
+        {
+
+        }
+
+        private void backstageViewClientControl18_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BrandGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CarModelGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void AppointmentGridView_DoubleClick(object sender, EventArgs e)
+        //{
+        //    if (EditAppointmentBarButton.Enabled)
+        //        LoadFAppointmentAddEdit("EDIT", AppointmentID);
+        //}               
+
+        private void RefreshLoanOfficerBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadLoanOfficerDataGridView();
+        }
+
+        private void EyebrowsGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteEyebrowsBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.EYEBROWS_TYPE WHERE ID = {EyebrowsID}");
+            if (UsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != UsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş qaşın növü hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş qaşın növünün hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteEyebrows();
+            }
+            else
+                DeleteEyebrows();
+            LoadEyebrowsDataGridView();
+        }
+
+        private void CurrencyGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
+        {
+            GlobalProcedures.GenerateAutoRowNumber(sender, Currency_SS, e);
+        }        
+
+        void DeleteEyebrows()
+        {
+            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE EYEBROWS_TYPE_ID = {EyebrowsID}");
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş qaşın növünü silmək istəyirsiniz?", "Qaşın növünün silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.EYEBROWS_TYPE WHERE ID = {EyebrowsID}", "Qaşın növü silinmədi.", this.Name + "/DeleteEyebrows");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş qaşın növü müqavilələrdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void LoadFEyebrowsAddEdit(string transaction, string id)
+        {
+            topindex = EyebrowsGridView.TopRowIndex;
+            old_row_id = EyebrowsGridView.FocusedRowHandle;
+            Dictionaries.FEyebrowsAddEdit fa = new Dictionaries.FEyebrowsAddEdit();
+            fa.TransactionName = transaction;
+            fa.ID = id;
+            fa.RefreshDataGridView += new Dictionaries.FEyebrowsAddEdit.DoEvent(LoadEyebrowsDataGridView);
+            fa.ShowDialog();
+            EyebrowsGridView.TopRowIndex = topindex;
+            EyebrowsGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void LoadFAppraiserAddEdit(string transaction, string id)
+        {
+            topindex = AppraiserGridView.TopRowIndex;
+            old_row_id = AppraiserGridView.FocusedRowHandle;
+            Dictionaries.FAppraiserAddEdit fa = new Dictionaries.FAppraiserAddEdit();
+            fa.TransactionName = transaction;
+            fa.ID = id;
+            fa.RefreshDataGridView += new Dictionaries.FAppraiserAddEdit.DoEvent(LoadAppraiserDataGridView);
+            fa.ShowDialog();
+            AppraiserGridView.TopRowIndex = topindex;
+            AppraiserGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void CreditClassGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (CreditClassGridView.RowCount > 0)
+            {
+                DeleteCreditClassBarButton.Enabled =
+                    EditCreditClassBarButton.Enabled = true;
+                if (CreditClassGridView.FocusedRowHandle == 0)
+                    UpCreditClassBarButton.Enabled = false;
+                DownCreditClassBarButton.Enabled = (CreditClassGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCreditClassBarButton.Enabled =
+                    EditCreditClassBarButton.Enabled =
+                    UpCreditClassBarButton.Enabled =
+                    DownCreditClassBarButton.Enabled = false;
+            }
+        }
+
+        private void CreditClassGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CreditClassGridView, e);
+        }
+
+        private void NewCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditClassAddEdit("INSERT", null);
+        }
+
+        private void LoadFCreditClassAddEdit(string transaction, string id)
+        {
+            topindex = CreditClassGridView.TopRowIndex;
+            old_row_id = CreditClassGridView.FocusedRowHandle;
+            Dictionaries.FCreditClassAddEdit fg = new Dictionaries.FCreditClassAddEdit();
+            fg.TransactionName = transaction;
+            fg.CreditClassID = id;
+            fg.RefreshDataGridView += new Dictionaries.FCreditClassAddEdit.DoEvent(LoadCreditClass);
+            fg.ShowDialog();
+            CreditClassGridView.TopRowIndex = topindex;
+            CreditClassGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditClassAddEdit("EDIT", creditClassID);
+        }
+
+        private void CreditClassGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCreditClassBarButton.Enabled)
+                LoadFCreditClassAddEdit("EDIT", creditClassID);
+        }
+
+        private void RefreshCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCreditClass();
+        }
+
+        private void UpCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CREDIT_CLASS", creditClassID, "up", out orderid);
+            LoadCreditClass();
+            CreditClassGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CREDIT_CLASS", creditClassID, "down", out orderid);
+            LoadCreditClass();
+            CreditClassGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteCreditClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteCreditClass();
+            LoadCreditClass();
+        }
+
+        private void PawnTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = PawnTypeGridView.GetFocusedDataRow();
+            if (row != null)
+                PawnTypeID = row["ID"].ToString();
         }
 
         private void KindshipRateGridView_DoubleClick(object sender, EventArgs e)
@@ -3966,21 +2514,6 @@ namespace CRS.Forms
         private void EditContractEvaluateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             LoadFContractEvaluateAddEdit("EDIT", ContractEvaluateID);
-        }
-
-        private void AddInsuranceRateBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFInsuranceRateAddEdit("INSERT", null);
-        }
-
-        private void BanksGridView_ColumnFilterChanged(object sender, EventArgs e)
-        {
-            DeleteBankBarButton.Enabled = EditBankBarButton.Enabled = (BanksGridView.RowCount > 0);
-        }
-
-        private void AppointmentsGridView_ColumnFilterChanged(object sender, EventArgs e)
-        {
-            DeleteAppointmentBarButton.Enabled = EditAppointmentBarButton.Enabled = (AppointmentsGridView.RowCount > 0);
         }
 
         private void CountriesGridView_ColumnFilterChanged(object sender, EventArgs e)
@@ -4002,42 +2535,118 @@ namespace CRS.Forms
             }
         }
 
-        private void FoundersGridView_ColumnFilterChanged(object sender, EventArgs e)
+        private void UpCurrencyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (FoundersGridView.RowCount > 0)
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CURRENCY", CurrencyID, "up", out orderid);
+            LoadCurrencyDataGridView();
+            CurrencyGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCurrencyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CURRENCY", CurrencyID, "down", out orderid);
+            LoadCurrencyDataGridView();
+            CurrencyGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void BrandGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = BrandGridView.GetFocusedDataRow();
+            if (row != null)
             {
-                DeleteFounderBarButton.Enabled =
-                    EditFounderBarButton.Enabled = true;
-                if (FoundersGridView.FocusedRowHandle == 0)
-                    UpFounderBarButton.Enabled = false;
-                DownFounderBarButton.Enabled = (FoundersGridView.RowCount > 1);
-            }
-            else
-            {
-                DeleteFounderBarButton.Enabled =
-                    EditFounderBarButton.Enabled =
-                    UpFounderBarButton.Enabled =
-                    DownFounderBarButton.Enabled = false;
+                CarBrandID = row["ID"].ToString();
+                UpCarBrandBarButton.Enabled = !(BrandGridView.FocusedRowHandle == 0);
+                DownCarBrandBarButton.Enabled = !(BrandGridView.FocusedRowHandle == BrandGridView.RowCount - 1);
             }
         }
 
-        private void PositionGridView_ColumnFilterChanged(object sender, EventArgs e)
+
+        void RefreshCarBrand()
         {
-            if (PositionGridView.RowCount > 0)
+            LoadCarBrandDataGridView();
+        }
+
+        private void LoadFCarBrandAddEdit(string transaction, string BrandID)
+        {
+            topindex = BrandGridView.TopRowIndex;
+            old_row_id = BrandGridView.FocusedRowHandle;
+            Forms.Dictionaries.FCarBrandAddEdit fp = new Forms.Dictionaries.FCarBrandAddEdit();
+            fp.TransactionName = transaction;
+            fp.BrandID = BrandID;
+            fp.RefreshCarBrandDataGridView += new Forms.Dictionaries.FCarBrandAddEdit.DoEvent(RefreshCarBrand);
+            fp.ShowDialog();
+            BrandGridView.TopRowIndex = topindex;
+            BrandGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void NewCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarBrandAddEdit("INSERT", null);
+        }
+
+        private void EditCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarBrandAddEdit("EDIT", CarBrandID);
+        }
+
+       
+
+        private void BrandGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCarBrandBarButton.Enabled)
+                LoadFCarBrandAddEdit("EDIT", CarBrandID);
+        }
+
+
+        private void DeleteBrand()
+        {
+            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE BRAND_ID = " + CarBrandID);
+            if (a == 0)
             {
-                DeletePositionBarButton.Enabled =
-                    EditPositionBarButton.Enabled = true;
-                if (PositionGridView.FocusedRowHandle == 0)
-                    UpPositionBarButton.Enabled = false;
-                DownPositionBarButton.Enabled = (PositionGridView.RowCount > 1);
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş markanı silmək istəyirsiniz?", "Markanın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_BRANDS WHERE ID = " + CarBrandID, "Marka silinmədi.", this.Name + "/DeleteBrand");
+                }
             }
             else
+                XtraMessageBox.Show("Seçilmiş marka bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int BrandUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_BRANDS WHERE ID = " + CarBrandID);
+            if (BrandUsedUserID >= 0)
             {
-                DeletePositionBarButton.Enabled =
-                    EditPositionBarButton.Enabled =
-                    UpPositionBarButton.Enabled =
-                    DownPositionBarButton.Enabled = false;
+                if (GlobalVariables.V_UserID != BrandUsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == BrandUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş marka hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş markanın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteBrand();
             }
+            else
+                DeleteBrand();
+            LoadCarBrandDataGridView();
+        }
+
+        private void DownCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_BRANDS", CarBrandID, "down", out orderid);
+            LoadCarBrandDataGridView();
+            BrandGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void UpCarBrandBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_BRANDS", CarBrandID, "up", out orderid);
+            LoadCarBrandDataGridView();
+            BrandGridView.FocusedRowHandle = orderid - 1;
         }
 
         private void BrandGridView_ColumnFilterChanged(object sender, EventArgs e)
@@ -4059,6 +2668,112 @@ namespace CRS.Forms
             }
         }
 
+        //////////
+        private void CarTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CarTypeGridView, CarTypePopupMenu, e);
+        }
+
+        private void CarTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CarTypeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                CarTypeID = row["ID"].ToString();
+                UpCarTypeBarButton.Enabled = !(CarTypeGridView.FocusedRowHandle == 0);
+                DownCarTypeBarButton.Enabled = !(CarTypeGridView.FocusedRowHandle == CarTypeGridView.RowCount - 1);
+            }
+        }
+
+        void RefreshCarType()
+        {
+            LoadCarTypeDataGridView();
+        }
+
+        private void LoadFCarTypeAddEdit(string transaction, string TypeID)
+        {
+            topindex = CarTypeGridView.TopRowIndex;
+            old_row_id = CarTypeGridView.FocusedRowHandle;
+            Forms.Dictionaries.FCarTypeAddEdit fp = new Forms.Dictionaries.FCarTypeAddEdit();
+            fp.TransactionName = transaction;
+            fp.TypeID = TypeID;
+            fp.RefreshCarTypeDataGridView += new Forms.Dictionaries.FCarTypeAddEdit.DoEvent(RefreshCarType);
+            fp.ShowDialog();
+            CarTypeGridView.TopRowIndex = topindex;
+            CarTypeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void NewCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarTypeAddEdit("INSERT", null);
+        }
+
+        private void EditCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarTypeAddEdit("EDIT", CarTypeID);
+        }
+
+        private void CarTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCarTypeBarButton.Enabled)
+                LoadFCarTypeAddEdit("EDIT", CarTypeID);
+        }
+
+       
+
+        private void CarTypeGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CarTypeGridView, e);
+        }
+
+        private void DeleteType()
+        {
+            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE TYPE_ID = " + CarTypeID);
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş tipi silmək istəyirsiniz?", "Tipin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_TYPES WHERE ID = " + CarTypeID, "Tip silinmədi.", this.Name + "/DeleteType");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş tip bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int TypeUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_TYPES WHERE ID = " + CarTypeID);
+            if (TypeUsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != TypeUsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == TypeUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş tip hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş tipin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteType();
+            }
+            else
+                DeleteType();
+            LoadCarTypeDataGridView();
+        }
+
+        private void UpCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_TYPES", CarTypeID, "up", out orderid);
+            LoadCarTypeDataGridView();
+            CarTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCarTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_TYPES", CarTypeID, "down", out orderid);
+            LoadCarTypeDataGridView();
+            CarTypeGridView.FocusedRowHandle = orderid - 1;
+        }
         private void CarTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
         {
             if (CarTypeGridView.RowCount > 0)
@@ -4076,6 +2791,119 @@ namespace CRS.Forms
                     UpCarTypeBarButton.Enabled =
                     DownCarTypeBarButton.Enabled = false;
             }
+        }
+        //////////////////////////////
+        private void CarColorGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CarColorGridView, CarColorPopupMenu, e);
+        }
+
+        private void CarColorGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CarColorGridView, e);
+        }
+
+        private void CarColorGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CarColorGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                CarColorID = row["ID"].ToString();
+                UpCarColorBarButton.Enabled = !(CarColorGridView.FocusedRowHandle == 0);
+                DownCarColorBarButton.Enabled = !(CarColorGridView.FocusedRowHandle == CarColorGridView.RowCount - 1);
+            }
+        }
+
+        void RefreshCarColor()
+        {
+            LoadCarColorDataGridView();
+        }
+
+        private void LoadFCarColorAddEdit(string transaction, string ColorID)
+        {
+            topindex = CarColorGridView.TopRowIndex;
+            old_row_id = CarColorGridView.FocusedRowHandle;
+            Forms.Dictionaries.FCarColorAddEdit fp = new Forms.Dictionaries.FCarColorAddEdit();
+            fp.TransactionName = transaction;
+            fp.ColorID = ColorID;
+            fp.RefreshCarColorDataGridView += new Forms.Dictionaries.FCarColorAddEdit.DoEvent(RefreshCarColor);
+            fp.ShowDialog();
+            CarColorGridView.TopRowIndex = topindex;
+            CarColorGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void NewCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarColorAddEdit("INSERT", null);
+        }
+
+        private void EditCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarColorAddEdit("EDIT", CarColorID);
+        }
+
+       
+
+        private void CarColorGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCarColorBarButton.Enabled)
+                LoadFCarColorAddEdit("EDIT", CarColorID);
+        }
+
+
+
+        private void DeleteColor()
+        {
+            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE COLOR_ID = " + CarColorID);
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş rəngi silmək istəyirsiniz?", "Rəngin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_COLORS WHERE ID = " + CarColorID, "Rəng silinmədi.", this.Name + "/DeleteColor");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş rəng bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int ColorUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_COLORS WHERE ID = " + CarColorID);
+            if (ColorUsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != ColorUsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == ColorUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş rəng hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş rəngin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteColor();
+            }
+            else
+                DeleteColor();
+            LoadCarColorDataGridView();
+        }
+
+        private void CarTypeGridControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_COLORS", CarColorID, "up", out orderid);
+            LoadCarColorDataGridView();
+            CarColorGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCarColorBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_COLORS", CarColorID, "down", out orderid);
+            LoadCarColorDataGridView();
+            CarColorGridView.FocusedRowHandle = orderid - 1;
         }
 
         private void CarColorGridView_ColumnFilterChanged(object sender, EventArgs e)
@@ -4096,6 +2924,113 @@ namespace CRS.Forms
                     DownCarColorBarButton.Enabled = false;
             }
         }
+        ////////////////////////
+        private void CarModelGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CarModelGridView, CarModelPopupMenu, e);
+        }
+
+        private void CarModelGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CarModelGridView, e);
+        }
+
+        private void CarModelGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CarModelGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                CarModelID = row["ID"].ToString();
+                UpCarModelBarButton.Enabled = !(CarModelGridView.FocusedRowHandle == 0);
+                DownCarModelBarButton.Enabled = !(CarModelGridView.FocusedRowHandle == CarModelGridView.RowCount - 1);
+            }
+        }
+
+        void RefreshCarModel()
+        {
+            LoadCarModelDataGridView();
+        }
+
+        private void LoadFCarModelAddEdit(string transaction, string ModelID)
+        {
+            topindex = CarModelGridView.TopRowIndex;
+            old_row_id = CarModelGridView.FocusedRowHandle;
+            Forms.Dictionaries.FCarModelAddEdit fp = new Forms.Dictionaries.FCarModelAddEdit();
+            fp.TransactionName = transaction;
+            fp.ModelID = ModelID;
+            fp.RefreshCarModelDataGridView += new Forms.Dictionaries.FCarModelAddEdit.DoEvent(RefreshCarModel);
+            fp.ShowDialog();
+            CarModelGridView.TopRowIndex = topindex;
+            CarModelGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void NewCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarModelAddEdit("INSERT", null);
+        }
+
+        private void EditCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarModelAddEdit("EDIT", CarModelID);
+        }
+
+        private void CarModelGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCarModelBarButton.Enabled)
+                LoadFCarModelAddEdit("EDIT", CarModelID);
+        }
+
+       
+
+        private void DeleteModel()
+        {
+            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE MODEL_ID = " + CarModelID);
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş modeli silmək istəyirsiniz?", "Modelin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_MODELS WHERE ID = " + CarModelID, "Model silinmədi.", this.Name + "/DeleteModel");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş model bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int ModelUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_MODELS WHERE ID = " + CarModelID);
+            if (ModelUsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != ModelUsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == ModelUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş model hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş modelin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteModel();
+            }
+            else
+                DeleteModel();
+            LoadCarModelDataGridView();
+        }
+
+        private void UpCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_MODELS", CarModelID, "up", out orderid);
+            LoadCarModelDataGridView();
+            CarModelGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCarModelBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_MODELS", CarModelID, "down", out orderid);
+            LoadCarModelDataGridView();
+            CarModelGridView.FocusedRowHandle = orderid - 1;
+        }
+
 
         private void CarModelGridView_ColumnFilterChanged(object sender, EventArgs e)
         {
@@ -4116,6 +3051,115 @@ namespace CRS.Forms
             }
         }
 
+        ///////////////////////
+        private void BanTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CarBanTypeGridView, BanTypePopupMenu, e);
+        }
+
+        private void CarBanTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CarBanTypeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                CarBanTypeID = row["ID"].ToString();
+                UpBanTypeBarButton.Enabled = !(CarBanTypeGridView.FocusedRowHandle == 0);
+                DownBanTypeBarButton.Enabled = !(CarBanTypeGridView.FocusedRowHandle == CarBanTypeGridView.RowCount - 1);
+            }
+        }
+
+        void RefreshCarBanType()
+        {
+            LoadCarBanTypeDataGridView();
+        }
+
+        private void LoadFCarBanTypeAddEdit(string transaction, string TypeID)
+        {
+            topindex = CarBanTypeGridView.TopRowIndex;
+            old_row_id = CarBanTypeGridView.FocusedRowHandle;
+            Forms.Dictionaries.FCarBanTypeAddEdit fp = new Forms.Dictionaries.FCarBanTypeAddEdit();
+            fp.TransactionName = transaction;
+            fp.TypeID = TypeID;
+            fp.RefreshCarBanTypeDataGridView += new Forms.Dictionaries.FCarBanTypeAddEdit.DoEvent(RefreshCarBanType);
+            fp.ShowDialog();
+            CarBanTypeGridView.TopRowIndex = topindex;
+            CarBanTypeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void NewBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarBanTypeAddEdit("INSERT", null);
+        }
+
+        private void EditBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCarBanTypeAddEdit("EDIT", CarBanTypeID);
+        }
+
+        private void CarBanTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditBanTypeBarButton.Enabled)
+                LoadFCarBanTypeAddEdit("EDIT", CarBanTypeID);
+        }
+
+        private void DeleteCarBanType()
+        {
+            int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE BAN_TYPE_ID = {CarBanTypeID}", this.Name + "/DeleteCarBanType");
+            if (a == 0)
+            {
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş ban tipini silmək istəyirsiniz?", "Ban tipinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CAR_BAN_TYPES WHERE ID = {CarBanTypeID}", "Ban tipi silinmədi.", this.Name + "/DeleteCarBanType");
+                }
+            }
+            else
+                XtraMessageBox.Show("Seçilmiş ban tipi bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void DeleteBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int CarBanTypeUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CAR_BAN_TYPES WHERE ID = {CarBanTypeID}", this.Name + "/DeleteBanTypeBarButton_ItemClick");
+            if (CarBanTypeUsedUserID >= 0)
+            {
+                if (GlobalVariables.V_UserID != CarBanTypeUsedUserID)
+                {
+                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == CarBanTypeUsedUserID).FULLNAME;
+                    XtraMessageBox.Show("Seçilmiş ban tipi hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş ban tipinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    DeleteCarBanType();
+            }
+            else
+                DeleteCarBanType();
+            LoadCarBanTypeDataGridView();
+        }
+
+       
+
+        private void CarBanTypeGridView_RowCellStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CarBanTypeGridView, e);
+        }
+
+
+
+        private void UpBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_BAN_TYPES", CarBanTypeID, "up", out orderid);
+            LoadCarBanTypeDataGridView();
+            CarBanTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownBanTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CAR_BAN_TYPES", CarBanTypeID, "down", out orderid);
+            LoadCarBanTypeDataGridView();
+            CarBanTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
         private void CarBanTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
         {
             if (CarBanTypeGridView.RowCount > 0)
@@ -4134,175 +3178,1074 @@ namespace CRS.Forms
                     DownBanTypeBarButton.Enabled = false;
             }
         }
+        ///////
+        ///
+        //private void NewCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    OpenFCreditPurposeAddEdit("INSERT", null);
+        //}
+        //private void OpenFCreditPurposeAddEdit(string transaction, int? purposeID)
+        //{
+        //    old_row_num = CreditPurposeGridView.FocusedRowHandle;
+        //    topindex = CreditPurposeGridView.TopRowIndex;
+        //    FCreditPurposeAddEdit fc = new FCreditPurposeAddEdit();
+        //    fc.TransactionName = transaction;
+        //    fc.PurposeID = purposeID;
+        //    fc.RefreshList += new FCreditPurposeAddEdit.DoEvent(LoadCreditPurpose);
+        //    fc.ShowDialog();
+        //    CreditPurposeGridView.FocusedRowHandle = old_row_num;
+        //    CreditPurposeGridView.TopRowIndex = topindex;
+        //}
+        //private void LoadCreditPurpose()
+        //{
+        //    List<CreditPurpose> lstPurpose = SqliteDataAccess.LoadCreditPurpose(null);
+        //    CreditPurposeGridControl.DataSource = lstPurpose;
+        //    EditCreditPurposeBarButton.Enabled = DeleteCreditPurposeBarButton.Enabled = (lstPurpose.Count > 0);
+        //}
 
-        private void FundsSourcesGridView_ColumnFilterChanged(object sender, EventArgs e)
+        ///////////////////
+        ///
+
+        //void RefreshCredit1Class()
+        //{
+        //    LoadCredit1ClassDataGridView();
+        //}
+
+
+        //private void Credit1ClassGridView_ColumnFilterChanged(object sender, EventArgs e)
+        //{
+        //    if (Credit1ClassGridView.RowCount > 0)
+        //    {
+        //        DeleteCredit1ClassBarButton.Enabled =
+        //            EditCredit1ClassBarButton.Enabled = true;
+        //        if (Credit1ClassGridView.FocusedRowHandle == 0)
+        //            UpCredit1ClassBarButton.Enabled = false;
+        //        DownCredit1ClassBarButton.Enabled = (Credit1ClassGridView.RowCount > 1);
+        //    }
+        //    else
+        //    {
+        //        DeleteCredit1ClassBarButton.Enabled =
+        //            EditCredit1ClassBarButton.Enabled =
+        //            UpCredit1ClassBarButton.Enabled =
+        //            DownCredit1ClassBarButton.Enabled = false;
+        //    }
+        //}
+
+
+        //private void Credit1ClassGridView_DoubleClick(object sender, EventArgs e)
+        //{
+        //    if (EditCredit1ClassBarButton.Enabled)
+        //        LoadFCredit1ClassAddEdit("EDIT", Credit1ClassID);
+        //}
+
+
+
+
+        private void NewCredit1ClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (FundsSourcesGridView.RowCount > 0)
-            {
-                DeleteFundsSourceBarButton.Enabled =
-                    EditFundsSourceBarButton.Enabled = true;
-                if (FundsSourcesGridView.FocusedRowHandle == 0)
-                    UpFundsSourceBarButton.Enabled = false;
-                DownFundsSourceBarButton.Enabled = (FundsSourcesGridView.RowCount > 1);
-            }
-            else
-            {
-                DeleteFundsSourceBarButton.Enabled =
-                    EditFundsSourceBarButton.Enabled =
-                    UpFundsSourceBarButton.Enabled =
-                    DownFundsSourceBarButton.Enabled = false;
-            }
+            LoadFCredit1ClassAddEdit("INSERT", null);
         }
 
-        private void FundsSourcesNameGridView_ColumnFilterChanged(object sender, EventArgs e)
+        private void EditCredit1ClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if (FundsSourcesNameGridView.RowCount > 0)
-            {
-                DeleteFundsSourceNameBarButton.Enabled =
-                    EditFundsSourceNameBarButton.Enabled = true;
-                if (FundsSourcesNameGridView.FocusedRowHandle == 0)
-                    UpFundsSourceNameBarButton.Enabled = false;
-                DownFundsSourceNameBarButton.Enabled = (FundsSourcesNameGridView.RowCount > 1);
-            }
-            else
-            {
-                DeleteFundsSourceNameBarButton.Enabled =
-                    EditFundsSourceNameBarButton.Enabled =
-                    UpFundsSourceNameBarButton.Enabled =
-                    DownFundsSourceNameBarButton.Enabled = false;
-            }
+            LoadFCredit1ClassAddEdit("EDIT", Credit1ClassID);
         }
 
-        private void CashOtherAppointmentGridView_ColumnFilterChanged(object sender, EventArgs e)
+
+
+        //private void DeleteCredit1ClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    int Credit1ClassUsedUserID = GlobalFunctions.GetID("SELECT USED_USER_ID FROM CRS_USER.CAR_COLORS WHERE ID = " + Credit1ClassID);
+        //    if (Credit1ClassUsedUserID >= 0)
+        //    {
+        //        if (GlobalVariables.V_UserID != Credit1ClassUsedUserID)
+        //        {
+        //            string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == Credit1ClassUsedUserID).FULLNAME;
+        //            XtraMessageBox.Show("Seçilmiş rəng hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün onu silmək olmaz.", "Seçilmiş rəngin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        }
+        //        else
+        //            DeleteCredit1Class();
+        //    }
+        //    else
+        //        DeleteCredit1Class();
+        //    LoadCredit1ClassDataGridView();
+        //}
+
+
+
+        //private void RefreshCredit1ClassBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        //{
+        //    LoadCredit1ClassDataGridView();
+        //}
+
+
+
+
+        //private void Credit1ClassGridView_MouseUp(object sender, MouseEventArgs e)
+        //{
+        //    GlobalProcedures.GridMouseUpForPopupMenu(Credit1ClassGridView, Credit1ClassPopupMenu, e);
+        //}
+
+
+
+
+
+
+
+
+
+
+        private void LoadFCredit1ClassAddEdit(string transaction, string Credit1ClassID)
         {
-            if (CashOtherAppointmentGridView.RowCount > 0)
-            {
-                DeleteCashOtherAppointmentBarButton.Enabled =
-                    EditCashOtherAppointmentBarButton.Enabled = true;
-                if (CashOtherAppointmentGridView.FocusedRowHandle == 0)
-                    UpCashOtherAppointmentBarButton.Enabled = false;
-                DownCashOtherAppointmentBarButton.Enabled = (CashOtherAppointmentGridView.RowCount > 1);
-            }
-            else
-                DeleteCashOtherAppointmentBarButton.Enabled = EditCashOtherAppointmentBarButton.Enabled = UpCashOtherAppointmentBarButton.Enabled = DownCashOtherAppointmentBarButton.Enabled = false;
+            //topindex = Credit1ClassGridView.TopRowIndex;
+            //old_row_id = Credit1ClassGridView.FocusedRowHandle;
+            //Forms.Dictionaries.FCredit1ClassAddEdit fp = new Forms.Dictionaries.FCredit1ClassAddEdit();
+            //fp.TransactionName = transaction;
+            //fp.Credit1ClassID = Credit1ClassID;
+            //fp.RefreshCredit1ClassDataGridView += new Forms.Dictionaries.FCredit1ClassAddEdit.DoEvent(RefreshCredit1Class);
+            //fp.ShowDialog();
+            //Credit1ClassGridView.TopRowIndex = topindex;
+            //Credit1ClassGridView.FocusedRowHandle = old_row_id;
         }
 
-        private void UpCurrencyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CURRENCY", CurrencyID, "up", out orderid);
-            LoadCurrencyDataGridView();
-            CurrencyGridView.FocusedRowHandle = orderid - 1;
-        }
 
-        private void DownCurrencyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            int orderid;
-            GlobalProcedures.ChangeOrderID("CURRENCY", CurrencyID, "down", out orderid);
-            LoadCurrencyDataGridView();
-            CurrencyGridView.FocusedRowHandle = orderid - 1;
-        }
 
-        private void CardSeriesTab_SelectedChanged(object sender, DevExpress.XtraBars.Ribbon.BackstageViewItemEventArgs e)
-        {
+        //private void Credit1ClassGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        //{
+        //    DataRow row = Credit1ClassGridView.GetFocusedDataRow();
+        //    if (row != null)
+        //    {
+        //        Credit1ClassID = row["ID"].ToString();
+        //        UpCredit1ClassBarButton.Enabled = !(Credit1ClassGridView.FocusedRowHandle == 0);
+        //        DownCredit1ClassBarButton.Enabled = !(Credit1ClassGridView.FocusedRowHandle == Credit1ClassGridView.RowCount - 1);
+        //    }
+        //}
 
-        }
+            
 
-        private void RefreshInsuranceCompanyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadInsuranceCompanyDataGridView();
-        }
+        //private void LoadCredit1ClassDataGridView()
+        //{
+        //    string s = "SELECT 1 SS,ID,NAME,CODE FROM CRS_USER.CREDIT_CLASS ORDER BY ORDER_ID";
 
-        void RefreshCompany()
-        {
-            LoadInsuranceCompanyDataGridView();
-        }
+        //    Credit1ClassGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCredit1ClassDataGridView", " Kreditlərin təsnifatı cədvələ yüklənmədi.");
 
-        private void LoadFInsuranceCompanyAddEdit(string transaction, string CompanyID)
-        {
-            topindex = InsuranceCompanyGridView.TopRowIndex;
-            old_row_id = InsuranceCompanyGridView.FocusedRowHandle;
-            Forms.Dictionaries.FInsuranceCompanyAddEdit fse = new Forms.Dictionaries.FInsuranceCompanyAddEdit();
-            fse.TransactionName = transaction;
-            fse.CompanyID = CompanyID;
-            fse.RefreshInsuranceCompanyDataGridView += new Forms.Dictionaries.FInsuranceCompanyAddEdit.DoEvent(RefreshCompany);
-            fse.ShowDialog();
-            InsuranceCompanyGridView.TopRowIndex = topindex;
-            InsuranceCompanyGridView.FocusedRowHandle = old_row_id;
-        }
 
-        private void NewInsuranceCompanybarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFInsuranceCompanyAddEdit("INSERT", null);
-        }
+        //    if (Credit1ClassGridView.RowCount > 0)
+        //    {
+        //        DeleteCredit1ClassBarButton.Enabled = true;
+        //        EditCredit1ClassBarButton.Enabled = true;
+        //        if (Credit1ClassGridView.FocusedRowHandle == 0)
+        //            UpCredit1ClassBarButton.Enabled = false;
+        //        if (Credit1ClassGridView.RowCount > 1)
+        //            DownCredit1ClassBarButton.Enabled = true;
+        //        else
+        //            DownCredit1ClassBarButton.Enabled = false;
+        //    }
+        //    else
+        //        DeleteCredit1ClassBarButton.Enabled = EditCredit1ClassBarButton.Enabled = UpCredit1ClassBarButton.Enabled = DownCredit1ClassBarButton.Enabled = false;
 
-        private void InsuranceCompanyGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
-        {
-            DataRow row = InsuranceCompanyGridView.GetFocusedDataRow();
-            if (row != null)
-            {
-                CompanyID = row["ID"].ToString();
-            }
-        }
 
-        private void EditInsuranceCompanyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            LoadFInsuranceCompanyAddEdit("EDIT", CompanyID);
-        }
+        //}
 
-        private void InsuranceCompanyGridView_DoubleClick(object sender, EventArgs e)
-        {
-            if (EditInsuranceCompanyBarButton.Enabled)
-                LoadFInsuranceCompanyAddEdit("EDIT", CompanyID);
-        }
 
-        private void InsuranceCompanyGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
-        {
-            GlobalProcedures.GridRowCellStyleForBlock(InsuranceCompanyGridView, e);
-        }
 
-        private void InsuranceCompanyGridView_ColumnFilterChanged(object sender, EventArgs e)
+        /////////////////////////
+        private void DeleteCredit1Class()
         {
-            DeleteInsuranceCompanyBarButton.Enabled = EditInsuranceCompanyBarButton.Enabled = (InsuranceCompanyGridView.RowCount > 0);
-        }
-
-        private void DeleteInsuranceCompany()
-        {
-            int a = GlobalFunctions.GetCount("SELECT COUNT (*) FROM (SELECT COMPANY_ID FROM CRS_USER.INSURANCES WHERE COMPANY_ID = " + CompanyID + " UNION ALL " +
-                                                                       "SELECT DISTINCT COMPANY_ID FROM CRS_USER_TEMP.INSURANCES_TEMP WHERE COMPANY_ID = " + CompanyID + ")");
+            int a = GlobalFunctions.GetCount("SELECT COUNT(*) FROM CRS_USER.HOSTAGE_CAR WHERE COLOR_ID = " + Credit1ClassID);
             if (a == 0)
             {
-                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş şirkəti silmək istəyirsiniz?", "Şirkətin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş rəngi silmək istəyirsiniz?", "Rəngin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.INSURANCE_COMPANY WHERE ID = " + CompanyID, "Şirkət silinmədi.");
+                    GlobalProcedures.ExecuteQuery("DELETE FROM CRS_USER.CAR_COLORS WHERE ID = " + Credit1ClassID, "Rəng silinmədi.", this.Name + "/DeleteCredit1Class");
                 }
             }
             else
-                XtraMessageBox.Show("Seçilmiş şirkət bazada müqavilələrdə istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                XtraMessageBox.Show("Seçilmiş rəng bazada digər məlumatlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void DeleteInsuranceCompanyBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        /////////////////////////////////////
+        /////////////////////////////////
+        ///////////////////////////
+        /////GoldType
+        ///
+
+        private void LoadGoldType()
         {
-            int CompanyUsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.INSURANCE_COMPANY WHERE ID = {CompanyID}");
-            if (CompanyUsedUserID >= 0)
+            string s = "SELECT ID,NAME,NOTE,COEFFICIENT,AMOUNT,USED_USER_ID,ORDER_ID FROM CRS_USER.GOLD_TYPE ORDER BY ORDER_ID";
+
+            GoldTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadGoldType", "Qızılın əyyarlarının siyahısı yüklənmədi.");
+
+            if (GoldTypeGridView.RowCount > 0)
             {
-                if (GlobalVariables.V_UserID != CompanyUsedUserID)
+                DeleteGoldTypeBarButton.Enabled =
+                    EditGoldTypeBarButton.Enabled = true;
+                UpGoldTypeBarButton.Enabled = !(GoldTypeGridView.FocusedRowHandle == 0);
+                DownGoldTypeBarButton.Enabled = (GoldTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteGoldTypeBarButton.Enabled =
+                    EditGoldTypeBarButton.Enabled =
+                    UpGoldTypeBarButton.Enabled =
+                    DownGoldTypeBarButton.Enabled = false;
+            }
+        }
+
+
+        private void DeleteGoldType()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.GOLD_TYPE WHERE ID = {goldTypeID}", this.Name + "/DeleteGoldType");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {goldTypeID}", this.Name + "/DeleteGoldType");
+                if (a == 0)
                 {
-                    string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == CompanyUsedUserID).FULLNAME;
-                    XtraMessageBox.Show("Seçilmiş şirkət hal-hazırda " + used_user_name + " tərəfindən istifadə olunduğu üçün bu təsviri silmək olmaz.", "Seçilmiş şirkətin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş əyyarı silmək istəyirsiniz?", "Əyyarın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.GOLD_TYPE WHERE ID = {goldTypeID}", "Əyyar silinmədi.", this.Name + "/DeleteGoldType");
                 }
                 else
-                    DeleteInsuranceCompany();
+                    XtraMessageBox.Show("Seçilmiş əyyar girovlarda istifadə olunduğu üçün silinə bilməz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
-                DeleteInsuranceCompany();
-            LoadInsuranceCompanyDataGridView();
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş əyyar hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş əyyarın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void InsuranceCompanyGridView_MouseUp(object sender, MouseEventArgs e)
+
+        private void GoldTypeGridView_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
         {
-            GlobalProcedures.GridMouseUpForPopupMenu(InsuranceCompanyGridView, InsuranceCompanyPopupMenu, e);
+            GlobalProcedures.GenerateAutoRowNumber(sender, GoldType_SS, e);
         }
+
+        private void GoldTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = GoldTypeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                goldTypeID = row["ID"].ToString();
+                UpGoldTypeBarButton.Enabled = !(GoldTypeGridView.FocusedRowHandle == 0);
+                DownGoldTypeBarButton.Enabled = !(GoldTypeGridView.FocusedRowHandle == GoldTypeGridView.RowCount - 1);
+            }
+        }
+
+        private void GoldTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(GoldTypeGridView, GoldTypePopupMenu, e);
+        }
+
+
+
+        private void GoldTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (GoldTypeGridView.RowCount > 0)
+            {
+                DeleteGoldTypeBarButton.Enabled =
+                    EditGoldTypeBarButton.Enabled = true;
+                if (GoldTypeGridView.FocusedRowHandle == 0)
+                    UpGoldTypeBarButton.Enabled = false;
+                DownGoldTypeBarButton.Enabled = (GoldTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteGoldTypeBarButton.Enabled =
+                    EditGoldTypeBarButton.Enabled =
+                    UpGoldTypeBarButton.Enabled =
+                    DownGoldTypeBarButton.Enabled = false;
+            }
+        }
+
+
+        private void GoldTypeGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(GoldTypeGridView, e);
+        }
+
+        private void NewGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFGoldTypeAddEdit("INSERT", null);
+        }
+
+        private void LoadFGoldTypeAddEdit(string transaction, string id)
+        {
+            topindex = GoldTypeGridView.TopRowIndex;
+            old_row_id = GoldTypeGridView.FocusedRowHandle;
+            Dictionaries.FGoldTypeAddEdit fg = new Dictionaries.FGoldTypeAddEdit();
+            fg.TransactionName = transaction;
+            fg.GoldTypeID = id;
+            fg.RefreshDataGridView += new Dictionaries.FGoldTypeAddEdit.DoEvent(LoadGoldType);
+            fg.ShowDialog();
+            GoldTypeGridView.TopRowIndex = topindex;
+            GoldTypeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFGoldTypeAddEdit("EDIT", goldTypeID);
+        }
+
+        private void GoldTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditGoldTypeBarButton.Enabled)
+                LoadFGoldTypeAddEdit("EDIT", goldTypeID);
+        }
+
+        private void RefreshGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadGoldType();
+        }
+
+        private void UpGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("GOLD_TYPE", goldTypeID, "up", out orderid);
+            LoadGoldType();
+            GoldTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("GOLD_TYPE", goldTypeID, "down", out orderid);
+            LoadGoldType();
+            GoldTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteGoldTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteGoldType();
+            LoadGoldType();
+        }
+
+        ////////////////////////////////////
+        ///CreditPurporse
+        ///
+
+        private void LoadCreditPurpose()
+        {
+            string s = "SELECT ID,NAME,CODE,USED_USER_ID,ORDER_ID FROM CRS_USER.CREDIT_PURPOSE ORDER BY ORDER_ID";
+
+            CreditPurposeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditPurpose", "Kreditin təyinatının siyahısı yüklənmədi.");
+
+            if (CreditPurposeGridView.RowCount > 0)
+            {
+                DeleteCreditPurposeBarButton.Enabled =
+                    EditCreditPurposeBarButton.Enabled = true;
+                UpCreditPurposeBarButton.Enabled = !(CreditPurposeGridView.FocusedRowHandle == 0);
+                DownCreditPurposeBarButton.Enabled = (CreditPurposeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCreditPurposeBarButton.Enabled =
+                    EditCreditPurposeBarButton.Enabled =
+                    UpCreditPurposeBarButton.Enabled =
+                    DownCreditPurposeBarButton.Enabled = false;
+            }
+        }
+
+        private void DeleteCreditPurpose()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CREDIT_PURPOSE WHERE ID = {creditPurposeID}", this.Name + "/DeleteCreditPurpose");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {creditPurposeID}", this.Name + "/DeleteCreditPurpose");
+                if (a == 0)
+                {
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kredit təyinatını silmək istəyirsiniz?", "Kredit təyinatının silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CREDIT_PURPOSE WHERE ID = {creditPurposeID}", "Kredit təyinatı silinmədi.", this.Name + "/DeleteCreditPurpose");
+                }
+                else
+                    XtraMessageBox.Show("Seçilmiş kredit təyinatı bazada istifadə olunduğu üçün bu təyinatı silmək olmaz..", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş kredit təyinatı hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş kredit təyinatının hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void CreditPurposeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CreditPurposeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                creditPurposeID = row["ID"].ToString();
+                UpCreditPurposeBarButton.Enabled = !(CreditPurposeGridView.FocusedRowHandle == 0);
+                DownCreditPurposeBarButton.Enabled = !(CreditPurposeGridView.FocusedRowHandle == CreditPurposeGridView.RowCount - 1);
+            }
+        }
+
+        private void CreditPurposeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CreditPurposeGridView, CreditPurposePopupMenu, e);
+        }
+        private void CreditPurposeGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (CreditPurposeGridView.RowCount > 0)
+            {
+                DeleteCreditPurposeBarButton.Enabled =
+                    EditCreditPurposeBarButton.Enabled = true;
+                if (CreditPurposeGridView.FocusedRowHandle == 0)
+                    UpCreditPurposeBarButton.Enabled = false;
+                DownCreditPurposeBarButton.Enabled = (CreditPurposeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCreditPurposeBarButton.Enabled =
+                    EditCreditPurposeBarButton.Enabled =
+                    UpCreditPurposeBarButton.Enabled =
+                    DownCreditPurposeBarButton.Enabled = false;
+            }
+        }
+
+        private void CreditPurposeGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CreditPurposeGridView, e);
+        }
+
+        private void NewCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditPurposeAddEdit("INSERT", null);
+        }
+
+        private void LoadFCreditPurposeAddEdit(string transaction, string id)
+        {
+            topindex = CreditPurposeGridView.TopRowIndex;
+            old_row_id = CreditPurposeGridView.FocusedRowHandle;
+            Dictionaries.FCreditPurposeAddEdit fg = new Dictionaries.FCreditPurposeAddEdit();
+            fg.TransactionName = transaction;
+            fg.CreditPurposeID = id;
+            fg.RefreshDataGridView += new Dictionaries.FCreditPurposeAddEdit.DoEvent(LoadCreditPurpose);
+            fg.ShowDialog();
+            CreditPurposeGridView.TopRowIndex = topindex;
+            CreditPurposeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditPurposeAddEdit("EDIT", creditPurposeID);
+        }
+
+        private void CreditPurposeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCreditPurposeBarButton.Enabled)
+                LoadFCreditPurposeAddEdit("EDIT", creditPurposeID);
+        }
+
+        private void RefreshCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCreditPurpose();
+        }
+
+        private void UpCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CREDIT_PURPOSE", creditPurposeID, "up", out orderid);
+            LoadCreditPurpose();
+            CreditPurposeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CREDIT_PURPOSE", creditPurposeID, "down", out orderid);
+            LoadCreditPurpose();
+            CreditPurposeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteCreditPurposeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteCreditPurpose();
+            LoadCreditPurpose();
+        }
+
+
+        ////////////////////////
+        ///CreditStatus
+        ///
+        private void LoadCreditStatus()
+        {
+            string s = "SELECT ID,NAME,CODE,USED_USER_ID,ORDER_ID FROM CRS_USER.CREDIT_STATUS ORDER BY ORDER_ID";
+
+            CreditStatusGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCreditStatus", "Kredit statusunun siyahısı yüklənmədi.");
+
+            if (CreditStatusGridView.RowCount > 0)
+            {
+                DeleteCreditStatusBarButton.Enabled =
+                    EditCreditStatusBarButton.Enabled = true;
+                UpCreditStatusBarButton.Enabled = !(CreditStatusGridView.FocusedRowHandle == 0);
+                DownCreditStatusBarButton.Enabled = (CreditStatusGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCreditStatusBarButton.Enabled =
+                    EditCreditStatusBarButton.Enabled =
+                    UpCreditStatusBarButton.Enabled =
+                    DownCreditStatusBarButton.Enabled = false;
+            }
+        }
+
+        private void DeleteCreditStatus()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.CREDIT_STATUS WHERE ID = {creditStatusID}", this.Name + "/DeleteCreditStatus");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {creditStatusID}", this.Name + "/DeleteCreditStatus");
+                if (a == 0)
+                {
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kredit statusunu silmək istəyirsiniz?", "Kredit statusu silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.CREDIT_STATUS WHERE ID = {creditStatusID}", "Kredit statusu silinmədi.", this.Name + "/DeleteCreditStatus");
+                }
+                else
+                    XtraMessageBox.Show("Seçilmiş kredit statusu bazada istifadə olunduğu üçün bu statusu silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş kredit statusu hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş kredit statusunun hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void CreditStatusGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CreditStatusGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                creditStatusID = row["ID"].ToString();
+                UpCreditStatusBarButton.Enabled = !(CreditStatusGridView.FocusedRowHandle == 0);
+                DownCreditStatusBarButton.Enabled = !(CreditStatusGridView.FocusedRowHandle == CreditStatusGridView.RowCount - 1);
+            }
+        }
+
+        private void CreditStatusGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CreditStatusGridView, CreditStatusPopupMenu, e);
+        }
+        private void CreditStatusGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (CreditStatusGridView.RowCount > 0)
+            {
+                DeleteCreditStatusBarButton.Enabled =
+                    EditCreditStatusBarButton.Enabled = true;
+                if (CreditStatusGridView.FocusedRowHandle == 0)
+                    UpCreditStatusBarButton.Enabled = false;
+                DownCreditStatusBarButton.Enabled = (CreditStatusGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCreditStatusBarButton.Enabled =
+                    EditCreditStatusBarButton.Enabled =
+                    UpCreditStatusBarButton.Enabled =
+                    DownCreditStatusBarButton.Enabled = false;
+            }
+        }
+
+        private void CreditStatusGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CreditStatusGridView, e);
+        }
+
+        private void NewCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditStatusAddEdit("INSERT", null);
+        }
+
+        private void LoadFCreditStatusAddEdit(string transaction, string id)
+        {
+            topindex = CreditStatusGridView.TopRowIndex;
+            old_row_id = CreditStatusGridView.FocusedRowHandle;
+            Dictionaries.FCreditStatusAddEdit fg = new Dictionaries.FCreditStatusAddEdit();
+            fg.TransactionName = transaction;
+            fg.CreditStatusID = id;
+            fg.RefreshDataGridView += new Dictionaries.FCreditStatusAddEdit.DoEvent(LoadCreditStatus);
+            fg.ShowDialog();
+            CreditStatusGridView.TopRowIndex = topindex;
+            CreditStatusGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCreditStatusAddEdit("EDIT", creditStatusID);
+        }
+
+        private void CreditStatusGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCreditStatusBarButton.Enabled)
+                LoadFCreditStatusAddEdit("EDIT", creditStatusID);
+        }
+
+        private void RefreshCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCreditStatus();
+        }
+
+        private void UpCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void DownCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("CREDIT_STATUS", creditStatusID, "down", out orderid);
+            LoadCreditStatus();
+            CreditStatusGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteCreditStatusBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteCreditStatus();
+            LoadCreditStatus();
+        }
+
+        ///////////////////////
+        ///CollateralType
+        ///
+        /// 
+
+        private void LoadCollateralType()
+        {
+            string s = "SELECT ID,NAME,CODE,USED_USER_ID,ORDER_ID FROM CRS_USER.COLLATERALL_TYPE ORDER BY ORDER_ID";
+
+            CollateralTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadCollateralType", "Seçilmiş təminatın siyahısı yüklənmədi.");
+
+            if (CollateralTypeGridView.RowCount > 0)
+            {
+                DeleteCollateralTypeBarButton.Enabled =
+                    EditCollateralTypeBarButton.Enabled = true;
+                UpCollateralTypeBarButton.Enabled = !(CollateralTypeGridView.FocusedRowHandle == 0);
+                DownCollateralTypeBarButton.Enabled = (CollateralTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCollateralTypeBarButton.Enabled =
+                    EditCollateralTypeBarButton.Enabled =
+                    UpCollateralTypeBarButton.Enabled =
+                    DownCollateralTypeBarButton.Enabled = false;
+            }
+        }
+
+        private void DeleteCollateralType()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.COLLATERALL_TYPE WHERE ID = {collateralTypeID}", this.Name + "/DeleteCollateralType");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {collateralTypeID}", this.Name + "/DeleteCollateralType");
+                if (a == 0)
+                {
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş təminatı silmək istəyirsiniz?", "Təminatın silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.COLLATERALL_TYPE WHERE ID = {collateralTypeID}", "Təminat silinmədi.", this.Name + "/DeleteCollateralType");
+                }
+                else
+                    XtraMessageBox.Show("Seçilmiş təminat bazada istifadə olunduğu üçün bu təminatı silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş təminat " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş təminatın hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void CollateralTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = CollateralTypeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                collateralTypeID = row["ID"].ToString();
+                UpCollateralTypeBarButton.Enabled = !(CollateralTypeGridView.FocusedRowHandle == 0);
+                DownCollateralTypeBarButton.Enabled = !(CollateralTypeGridView.FocusedRowHandle == CollateralTypeGridView.RowCount - 1);
+            }
+        }
+
+        private void CollateralTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(CollateralTypeGridView, CollateralTypePopupMenu, e);
+        }
+        private void CollateralTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (CollateralTypeGridView.RowCount > 0)
+            {
+                DeleteCollateralTypeBarButton.Enabled =
+                    EditCollateralTypeBarButton.Enabled = true;
+                if (CollateralTypeGridView.FocusedRowHandle == 0)
+                    UpCollateralTypeBarButton.Enabled = false;
+                DownCollateralTypeBarButton.Enabled = (CollateralTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteCollateralTypeBarButton.Enabled =
+                    EditCollateralTypeBarButton.Enabled =
+                    UpCollateralTypeBarButton.Enabled =
+                    DownCollateralTypeBarButton.Enabled = false;
+            }
+        }
+
+        private void CollateralTypeGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(CollateralTypeGridView, e);
+        }
+
+        private void NewCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCollateralTypeAddEdit("INSERT", null);
+        }
+
+        private void LoadFCollateralTypeAddEdit(string transaction, string id)
+        {
+            topindex = CollateralTypeGridView.TopRowIndex;
+            old_row_id = CollateralTypeGridView.FocusedRowHandle;
+            Dictionaries.FCollateralTypeAddEdit fg = new Dictionaries.FCollateralTypeAddEdit();
+            fg.TransactionName = transaction;
+            fg.CollateralTypeID = id;
+            fg.RefreshDataGridView += new Dictionaries.FCollateralTypeAddEdit.DoEvent(LoadCollateralType);
+            fg.ShowDialog();
+            CollateralTypeGridView.TopRowIndex = topindex;
+            CollateralTypeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFCollateralTypeAddEdit("EDIT", collateralTypeID);
+        }
+
+        private void CollateralTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditCollateralTypeBarButton.Enabled)
+                LoadFCollateralTypeAddEdit("EDIT", collateralTypeID);
+        }
+
+        private void RefreshCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadCollateralType();
+        }
+
+        private void UpCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("COLLATERALL_TYPE", collateralTypeID, "up", out orderid);
+            LoadCollateralType();
+            CollateralTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("COLLATERALL_TYPE", collateralTypeID, "down", out orderid);
+            LoadCollateralType();
+            CollateralTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteCollateralTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteCollateralType();
+            LoadCollateralType();
+        }
+
+        ///////////////////////
+        ///TypeCredit
+        ///
+
+        private void LoadTypeCredit()
+        {
+            string s = "SELECT ID,NAME,CODE,USED_USER_ID,ORDER_ID FROM CRS_USER.TYPE_CREDIT ORDER BY ORDER_ID";
+
+            TypeCreditGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadTypeCredit", "Kreditin siyahısı yüklənmədi.");
+
+            if (TypeCreditGridView.RowCount > 0)
+            {
+                DeleteTypeCreditBarButton.Enabled =
+                    EditTypeCreditBarButton.Enabled = true;
+                UpTypeCreditBarButton.Enabled = !(TypeCreditGridView.FocusedRowHandle == 0);
+                DownTypeCreditBarButton.Enabled = (TypeCreditGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteTypeCreditBarButton.Enabled =
+                    EditTypeCreditBarButton.Enabled =
+                    UpTypeCreditBarButton.Enabled =
+                    DownTypeCreditBarButton.Enabled = false;
+            }
+        }
+
+        private void DeleteTypeCredit()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.TYPE_CREDIT WHERE ID = {typeCreditID}", this.Name + "/DeleteTypeCredit");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {typeCreditID}", this.Name + "/DeleteTypeCredit");
+                if (a == 0)
+                {
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş kredit tipini silmək istəyirsiniz?", "Kredit tipinin silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.TYPE_CREDIT WHERE ID = {typeCreditID}", "Kredit tipi silinmədi.", this.Name + "/DeleteTypeCredit");
+                }
+                else
+                    XtraMessageBox.Show("Seçilmiş kredit tipi bazada istifadə olunduğu üçün bu tipi silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş kredit tipi hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş kredit tipinin hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void TypeCreditGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = TypeCreditGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                typeCreditID = row["ID"].ToString();
+                UpTypeCreditBarButton.Enabled = !(TypeCreditGridView.FocusedRowHandle == 0);
+                DownTypeCreditBarButton.Enabled = !(TypeCreditGridView.FocusedRowHandle == TypeCreditGridView.RowCount - 1);
+            }
+        }
+
+        private void TypeCreditGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(TypeCreditGridView, TypeCreditPopupMenu, e);
+        }
+        private void TypeCreditGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (TypeCreditGridView.RowCount > 0)
+            {
+                DeleteTypeCreditBarButton.Enabled =
+                    EditTypeCreditBarButton.Enabled = true;
+                if (TypeCreditGridView.FocusedRowHandle == 0)
+                    UpTypeCreditBarButton.Enabled = false;
+                DownTypeCreditBarButton.Enabled = (TypeCreditGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteTypeCreditBarButton.Enabled =
+                    EditTypeCreditBarButton.Enabled =
+                    UpTypeCreditBarButton.Enabled =
+                    DownTypeCreditBarButton.Enabled = false;
+            }
+        }
+
+        private void TypeCreditGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(TypeCreditGridView, e);
+        }
+
+        private void NewTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFTypeCreditAddEdit("INSERT", null);
+        }
+
+        private void LoadFTypeCreditAddEdit(string transaction, string id)
+        {
+            topindex = TypeCreditGridView.TopRowIndex;
+            old_row_id = TypeCreditGridView.FocusedRowHandle;
+            Dictionaries.FTypeCreditAddEdit fg = new Dictionaries.FTypeCreditAddEdit();
+            fg.TransactionName = transaction;
+            fg.TypeCreditID = id;
+            fg.RefreshDataGridView += new Dictionaries.FTypeCreditAddEdit.DoEvent(LoadTypeCredit);
+            fg.ShowDialog();
+            TypeCreditGridView.TopRowIndex = topindex;
+            TypeCreditGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFTypeCreditAddEdit("EDIT", typeCreditID);
+        }
+
+        private void TypeCreditGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditTypeCreditBarButton.Enabled)
+                LoadFTypeCreditAddEdit("EDIT", typeCreditID);
+        }
+
+        private void RefreshTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadTypeCredit();
+        }
+
+        private void UpTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("TYPE_CREDIT", typeCreditID, "up", out orderid);
+            LoadTypeCredit();
+            TypeCreditGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("TYPE_CREDIT", typeCreditID, "down", out orderid);
+            LoadTypeCredit();
+            TypeCreditGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteTypeCreditBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteTypeCredit();
+            LoadTypeCredit();
+        }
+
+        ///////////////////////////
+        ///DocumentType
+        ///
+
+        private void LoadDocumentType()
+        {
+            string s = "SELECT ID,NAME,PTTRN,USED_USER_ID,ORDER_ID FROM CRS_USER.TYPE_DOCUMENT ORDER BY ORDER_ID";
+
+            DocumentTypeGridControl.DataSource = GlobalFunctions.GenerateDataTable(s, this.Name + "/LoadDocumentType", "Sənədin növlərinin siyahısı yüklənmədi.");
+
+            if (DocumentTypeGridView.RowCount > 0)
+            {
+                DeleteDocumentTypeBarButton.Enabled =
+                    EditDocumentTypeBarButton.Enabled = true;
+                UpDocumentTypeBarButton.Enabled = !(DocumentTypeGridView.FocusedRowHandle == 0);
+                DownDocumentTypeBarButton.Enabled = (DocumentTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteDocumentTypeBarButton.Enabled =
+                    EditDocumentTypeBarButton.Enabled =
+                    UpDocumentTypeBarButton.Enabled =
+                    DownDocumentTypeBarButton.Enabled = false;
+            }
+        }
+
+        private void DeleteDocumentType()
+        {
+            int UsedUserID = GlobalFunctions.GetID($@"SELECT USED_USER_ID FROM CRS_USER.TYPE_DOCUMENT WHERE ID = {typeDocumentID}", this.Name + "/DeleteDocumentType");
+            if (UsedUserID < 0)
+            {
+                int a = GlobalFunctions.GetCount($@"SELECT COUNT(*) FROM CRS_USER.PAWN WHERE GOLD_TYPE_ID = {typeDocumentID}", this.Name + "/DeleteDocumentType");
+                if (a == 0)
+                {
+                    DialogResult dialogResult = XtraMessageBox.Show("Seçilmiş sənəd növünü silmək istəyirsiniz?", "Sənəd növünün silinməsi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialogResult == DialogResult.Yes)
+                        GlobalProcedures.ExecuteQuery($@"DELETE FROM CRS_USER.TYPE_DOCUMENT WHERE ID = {typeDocumentID}", "Sənəd növü silinmədi.", this.Name + "/DeleteDocumentType");
+                }
+                else
+                    XtraMessageBox.Show("Seçilmiş sənəd növü bazada istifadə olunduğu üçün bu təminatı silmək olmaz.", "Xəbərdarlıq", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                string used_user_name = GlobalVariables.lstUsers.Find(u => u.ID == UsedUserID).FULLNAME;
+                XtraMessageBox.Show("Seçilmiş sənəd növü hal-hazırda " + used_user_name + " tərəfindən istifadə ediliyi üçün silinə bilməz.", "Seçilmiş sənəd növünün hal-hazırkı statusu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+
+
+        private void DocumentTypeGridView_FocusedRowObjectChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowObjectChangedEventArgs e)
+        {
+            DataRow row = DocumentTypeGridView.GetFocusedDataRow();
+            if (row != null)
+            {
+                typeDocumentID = row["ID"].ToString();
+                UpDocumentTypeBarButton.Enabled = !(DocumentTypeGridView.FocusedRowHandle == 0);
+                DownDocumentTypeBarButton.Enabled = !(DocumentTypeGridView.FocusedRowHandle == DocumentTypeGridView.RowCount - 1);
+            }
+        }
+
+        private void DocumentTypeGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            GlobalProcedures.GridMouseUpForPopupMenu(DocumentTypeGridView, DocumentTypePopupMenu, e);
+        }
+        private void DocumentTypeGridView_ColumnFilterChanged(object sender, EventArgs e)
+        {
+            if (DocumentTypeGridView.RowCount > 0)
+            {
+                DeleteDocumentTypeBarButton.Enabled =
+                    EditDocumentTypeBarButton.Enabled = true;
+                if (DocumentTypeGridView.FocusedRowHandle == 0)
+                    UpDocumentTypeBarButton.Enabled = false;
+                DownDocumentTypeBarButton.Enabled = (DocumentTypeGridView.RowCount > 1);
+            }
+            else
+            {
+                DeleteDocumentTypeBarButton.Enabled =
+                    EditDocumentTypeBarButton.Enabled =
+                    UpDocumentTypeBarButton.Enabled =
+                    DownDocumentTypeBarButton.Enabled = false;
+            }
+        }
+
+        private void DocumentTypeGridView_RowCellStyle(object sender, RowCellStyleEventArgs e)
+        {
+            GlobalProcedures.GridRowCellStyleForBlock(DocumentTypeGridView, e);
+        }
+
+        private void NewDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFDocumentTypeAddEdit("INSERT", null);
+        }
+
+        private void LoadFDocumentTypeAddEdit(string transaction, string id)
+        {
+            topindex = DocumentTypeGridView.TopRowIndex;
+            old_row_id = DocumentTypeGridView.FocusedRowHandle;
+            Dictionaries.FDocumentTypeAddEdit fg = new Dictionaries.FDocumentTypeAddEdit();
+            fg.TransactionName = transaction;
+            fg.DocumentTypeID = id;
+            fg.RefreshDataGridView += new Dictionaries.FDocumentTypeAddEdit.DoEvent(LoadDocumentType);
+            fg.ShowDialog();
+            DocumentTypeGridView.TopRowIndex = topindex;
+            DocumentTypeGridView.FocusedRowHandle = old_row_id;
+        }
+
+        private void EditDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadFDocumentTypeAddEdit("EDIT", typeDocumentID);
+        }
+
+        private void DocumentTypeGridView_DoubleClick(object sender, EventArgs e)
+        {
+            if (EditDocumentTypeBarButton.Enabled)
+                LoadFDocumentTypeAddEdit("EDIT", typeDocumentID);
+        }
+
+        private void RefreshDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            LoadDocumentType();
+        }
+
+        private void UpDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("TYPE_DOCUMENT", typeDocumentID, "up", out orderid);
+            LoadDocumentType();
+            DocumentTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DownDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int orderid;
+            GlobalProcedures.ChangeOrderID("TYPE_DOCUMENT", typeDocumentID, "down", out orderid);
+            LoadDocumentType();
+            DocumentTypeGridView.FocusedRowHandle = orderid - 1;
+        }
+
+        private void DeleteDocumentTypeBarButton_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            DeleteDocumentType();
+            LoadDocumentType();
+        }
+
+
+
+
     }
 }

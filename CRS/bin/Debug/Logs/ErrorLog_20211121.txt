@@ -1,0 +1,541 @@
+
+Log Entry : 04:36:54 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-25156: old style outer join (+) cannot be used with ANSI joins
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             CT.CODE || C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT
+                     INNER JOIN CRS_USER.CONTRACTS C
+                     ON CT.ID = C.CREDIT_TYPE_ID ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE     C.CREDIT_TYPE_ID = CT.ID
+                             AND C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 04:40:02 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  GenerateDataTable : FContracts/LoadContractsDataGridView
+  
+   ShowMessage: DataTable yaradılmadı.
+   Exception Message: ORA-25156: old style outer join (+) cannot be used with ANSI joins
+   SQL Text      :  SELECT 1 SS,
+                             C.ID,
+                             CU.FULLNAME CUSTOMERFULLNAME,
+                             CT.CODE || C.CODE CONTRACT_CODE,
+                             CN.NAME CREDIT_NAME,
+                             COM.COMMITMENT_NAME COMMITMENT,
+                             C.START_DATE,
+                             C.END_DATE,
+                             (CASE
+                                 WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD || ' ay'
+                                 ELSE CT.TERM || ' ay'
+                              END)
+                                PERIOD,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST || ' %'
+                                 ELSE CT.INTEREST || ' %'
+                              END)
+                                INTEREST,
+                             C.GRACE_PERIOD || ' ay' GRACE,
+                             C.AMOUNT,
+                             CUR.CODE CURRENCY_CODE,
+                             C.USED_USER_ID,
+                             C.CUSTOMER_ID,
+                             C.SELLER_ID,
+                             C.IS_COMMIT,
+                             C.STATUS_ID,
+                             ST.STATUS_NAME,
+                             CN.ID CREDIT_NAME_ID,
+                             TRIM (C.NOTE) CONTRACT_NOTE,
+                             C.NOTE_CHANGE_USER,
+                             TO_CHAR (C.NOTE_CHANGE_DATE, 'DD.MM.YYYY HH24:MI:SS AM')
+                                NOTE_CHANGE_DATE,
+                             (CASE
+                                 WHEN C.CHECK_INTEREST > -1 THEN C.CHECK_INTEREST
+                                 ELSE CT.INTEREST
+                              END)
+                                INT_INTEREST,
+                             (CASE WHEN C.CHECK_PERIOD > 0 THEN C.CHECK_PERIOD ELSE CT.TERM END)
+                                INT_PERIOD,
+                             C.NOTE NOTES,
+                             CT.ID CREDIT_TYPE_ID,
+                             ROW_NUMBER () OVER (ORDER BY CT.CODE || C.CODE DESC) ROW_NUM,
+                             (CASE WHEN C.LIQUID_TYPE = 0 THEN C.IS_EXPENSES ELSE 1 END)
+                                IS_EXPENSES,
+                             C.SELLER_TYPE_ID,
+                             C.CUSTOMER_TYPE_ID,
+                             C.PARENT_ID,
+                             COM.PERSON_TYPE_ID COMMITMENT_PERSON_TYPE_ID,
+                             CU.CODE CUSTOMER_CODE,
+                             CU.CUSTOMER_NAME,
+                             NVL(COM.ID,0) COMMITMENT_ID,
+                             H.CAR_NUMBER,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT||' ay',  NULL) EXTEND_MOUNT_COUNT,
+                             NVL2(CE.MONTH_COUNT, CE.MONTH_COUNT,  0) INT_EXTEND_MOUNT_COUNT,
+                             C.IS_SPECIAL_ATTENTION
+                        FROM CRS_USER.CREDIT_TYPE CT
+                     INNER JOIN CRS_USER.CONTRACTS C
+                     ON CT.ID = C.CREDIT_TYPE_ID ,
+                             CRS_USER.CREDIT_NAMES CN,
+                             CRS_USER.CURRENCY CUR,
+                             CRS_USER.STATUS ST,
+                             CRS_USER.V_CUSTOMERS CU,
+                             CRS_USER.V_CONTRACT_COMMITMENTS COM,
+                             CRS_USER.HOSTAGE_CAR H,
+                             CRS_USER.V_LAST_CONTRACT_EXTEND CE
+                       WHERE    C.CUSTOMER_ID = CU.ID
+                             AND C.CUSTOMER_TYPE_ID = CU.PERSON_TYPE_ID
+                             AND C.ID = COM.CONTRACT_ID(+)
+                             AND CT.NAME_ID = CN.ID
+                             AND C.CURRENCY_ID = CUR.ID
+                             AND C.STATUS_ID = ST.ID
+                             AND C.ID = H.CONTRACT_ID(+)
+                             AND C.ID = CE.CONTRACT_ID(+)
+                              AND C.STATUS_ID = 5
+                    ORDER BY CT.CODE || C.CODE DESC
+-------------------------------------------------
+
+Log Entry : 14:13:59 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  CalculatedLeasingTotal
+  
+   ShowMessage: Lizinq Portfeli hesablanmadı.
+   Exception Message: ORA-04063: package body "CRS_USER.TOTALS" has errors
+ORA-06512: at "CRS_USER.PROC_LEASING_TOTAL", line 19
+ORA-06512: at line 1
+   SQL Text      :  PROC_LEASING_TOTAL
+-------------------------------------------------
+
+Log Entry : 14:58:07 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  ExecuteQuery/FPawnAddEdit/Insert
+  
+   ShowMessage: Girov temp cədvələ daxil edilmədi.
+   Exception Message: ORA-01438: value larger than specified precision allowed for this column
+   SQL Text      :  UPDATE CRS_USER_TEMP.PAWN_TEMP SET PAWN_TYPE_ID = 1,
+                                                                COUNT = 3,
+                                                                GOLD_TYPE_ID = 1,
+                                                                WEIGHT = 1000,
+                                                                CWEIGHT = 1000,                                                                
+                                                                EYEBROWS_WEIGHT = 400,
+                                                                EYEBROWS_AMOUNT = 200,   
+                                                                EYEBROWS_TYPE_ID = 1,
+                                                                NOTE = '',
+                                                                AMOUNT = 1.43,
+                                                                GOLD_AMOUNT = 1430.00, 
+                                                                TOTAL_AMOUNT = 1630.00, 
+                                                                IS_LOM_AMOUNT_AUTOMATIC = 1,
+                                                                LOM_AMOUNT_COEFFICIENT = 0.70,
+                                                                IS_CHANGE = 1
+                           WHERE ID = 11
+-------------------------------------------------
+
+Log Entry : 14:58:46 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ExecuteFourQuery
+  
+   ShowMessage: Müqavilə bazaya daxil edilmədi.
+   Exception Message: ORA-00917: missing comma
+   SQL Text      :  sql_text1 = INSERT INTO CRS_USER.CONTRACTS(ID,
+                                                                                  CODE,
+                                                                                  CUSTOMER_ID,
+                                                                                  CREDIT_TYPE_ID,
+                                                                                  START_DATE,
+                                                                                  END_DATE,
+                                                                                  GRACE_PERIOD,
+                                                                                  AMOUNT,
+                                                                                  FIFD,
+                                                                                  COMMISSION,
+                                                                                  CURRENCY_ID,   
+                                                                                  CUSTOMER_CARDS_ID,
+                                                                                  MONTHLY_AMOUNT,
+                                                                                  CHECK_PERIOD,
+                                                                                  PAYMENT_TYPE,
+                                                                                  CHECK_INTEREST,  
+                                                                                  CURRENCY_RATE,
+                                                                                  CUSTOMER_TYPE_ID,
+                                                                                  PARENT_ID,
+                                                                                  APPRAISER_ID,
+                                                                                  LOAN_OFFICER_ID,
+                                                                                  CONTRACT_ACCOUNT,
+                                                                                  CUSTOMER_CONTRACT_NUMBER,
+                                                                                  COMMISSION_ACCOUNT,
+                                                                                  AMOUNT_ACCOUNT,
+                                                                                  INSERT_USER
+                                                                                   CNAME_ID)
+                                                    VALUES(400,
+                                                            '00164/21',
+                                                            279,
+                                                            1,
+                                                            TO_DATE('21.11.2021','DD/MM/YYYY'),
+                                                            TO_DATE('21.11.2024','DD/MM/YYYY'),
+                                                            0,
+                                                            1000,                  
+                                                            28.00,
+                                                            0,
+                                                            1,                                                                                                                      
+                                                            262,
+                                                            41.36,
+                                                            0,
+                                                            0,
+                                                            -1,                                                         
+                                                            0,                                                            
+                                                            1,
+                                                            NULL,
+                                                            1,
+                                                            1,
+                                                            '100168001',
+                                                            1,
+                                                            '10010100000000',
+                                                            '15010100000000',
+                                                            11,
+                                                              7),
+ sql_text2 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21110,
+                                                                         'Ssuda hesabı',
+                                                                         21110 || 100168001,
+                                                                            'Ssuda hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text3 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21112,
+                                                                         'Faiz hesabı',
+                                                                         21112 || 100168001,
+                                                                            'Faiz hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text4 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         41010,
+                                                                         'Cari hesab',
+                                                                         41010 || 100168001,
+                                                                            'Cari hesab - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')')
+-------------------------------------------------
+
+Log Entry : 15:01:20 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ExecuteFourQuery
+  
+   ShowMessage: Müqavilə bazaya daxil edilmədi.
+   Exception Message: ORA-00917: missing comma
+   SQL Text      :  sql_text1 = INSERT INTO CRS_USER.CONTRACTS(ID,
+                                                                                  CODE,
+                                                                                  CUSTOMER_ID,
+                                                                                  CREDIT_TYPE_ID,
+                                                                                  START_DATE,
+                                                                                  END_DATE,
+                                                                                  GRACE_PERIOD,
+                                                                                  AMOUNT,
+                                                                                  FIFD,
+                                                                                  COMMISSION,
+                                                                                  CURRENCY_ID,   
+                                                                                  CUSTOMER_CARDS_ID,
+                                                                                  MONTHLY_AMOUNT,
+                                                                                  CHECK_PERIOD,
+                                                                                  PAYMENT_TYPE,
+                                                                                  CHECK_INTEREST,  
+                                                                                  CURRENCY_RATE,
+                                                                                  CUSTOMER_TYPE_ID,
+                                                                                  PARENT_ID,
+                                                                                  APPRAISER_ID,
+                                                                                  LOAN_OFFICER_ID,
+                                                                                  CONTRACT_ACCOUNT,
+                                                                                  CUSTOMER_CONTRACT_NUMBER,
+                                                                                  COMMISSION_ACCOUNT,
+                                                                                  AMOUNT_ACCOUNT,
+                                                                                  INSERT_USER
+                                                                                   CNAME_ID)
+                                                    VALUES(401,
+                                                            '00164/21',
+                                                            277,
+                                                            1,
+                                                            TO_DATE('21.11.2021','DD/MM/YYYY'),
+                                                            TO_DATE('21.11.2024','DD/MM/YYYY'),
+                                                            0,
+                                                            200,                  
+                                                            28.00,
+                                                            0,
+                                                            1,                                                                                                                      
+                                                            261,
+                                                            8.27,
+                                                            0,
+                                                            0,
+                                                            -1,                                                         
+                                                            0,                                                            
+                                                            1,
+                                                            NULL,
+                                                            1,
+                                                            1,
+                                                            '100167002',
+                                                            2,
+                                                            '15010100000000',
+                                                            '15010100000000',
+                                                            11,
+                                                              7),
+ sql_text2 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21110,
+                                                                         'Ssuda hesabı',
+                                                                         21110 || 100167002,
+                                                                            'Ssuda hesabı - '
+                                                                         || 'Ggdgd Hhdhd Hdhdhhd'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text3 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21112,
+                                                                         'Faiz hesabı',
+                                                                         21112 || 100167002,
+                                                                            'Faiz hesabı - '
+                                                                         || 'Ggdgd Hhdhd Hdhdhhd'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text4 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         41010,
+                                                                         'Cari hesab',
+                                                                         41010 || 100167002,
+                                                                            'Cari hesab - '
+                                                                         || 'Ggdgd Hhdhd Hdhdhhd'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')')
+-------------------------------------------------
+
+Log Entry : 15:12:54 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalFunctions
+   ProcedureName =  ExecuteFourQuery
+  
+   ShowMessage: Müqavilə bazaya daxil edilmədi.
+   Exception Message: ORA-00904: "CNAME_ID": invalid identifier
+   SQL Text      :  sql_text1 = INSERT INTO CRS_USER.CONTRACTS(ID,
+                                                                                  CODE,
+                                                                                  CUSTOMER_ID,
+                                                                                  CREDIT_TYPE_ID,
+                                                                                  START_DATE,
+                                                                                  END_DATE,
+                                                                                  GRACE_PERIOD,
+                                                                                  AMOUNT,
+                                                                                  FIFD,
+                                                                                  COMMISSION,
+                                                                                  CURRENCY_ID,   
+                                                                                  CUSTOMER_CARDS_ID,
+                                                                                  MONTHLY_AMOUNT,
+                                                                                  CHECK_PERIOD,
+                                                                                  PAYMENT_TYPE,
+                                                                                  CHECK_INTEREST,  
+                                                                                  CURRENCY_RATE,
+                                                                                  CUSTOMER_TYPE_ID,
+                                                                                  PARENT_ID,
+                                                                                  APPRAISER_ID,
+                                                                                  LOAN_OFFICER_ID,
+                                                                                  CONTRACT_ACCOUNT,
+                                                                                  CUSTOMER_CONTRACT_NUMBER,
+                                                                                  COMMISSION_ACCOUNT,
+                                                                                  AMOUNT_ACCOUNT,
+                                                                                  INSERT_USER,
+                                                                                   CNAME_ID)
+                                                    VALUES(402,
+                                                            '00164/21',
+                                                            279,
+                                                            1,
+                                                            TO_DATE('21.11.2021','DD/MM/YYYY'),
+                                                            TO_DATE('21.11.2024','DD/MM/YYYY'),
+                                                            0,
+                                                            300,                  
+                                                            28.00,
+                                                            0,
+                                                            1,                                                                                                                      
+                                                            262,
+                                                            12.41,
+                                                            0,
+                                                            0,
+                                                            -1,                                                         
+                                                            0,                                                            
+                                                            1,
+                                                            NULL,
+                                                            1,
+                                                            1,
+                                                            '100168001',
+                                                            1,
+                                                            '10010100000000',
+                                                            '15010100000000',
+                                                            11,
+                                                              7),
+ sql_text2 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21110,
+                                                                         'Ssuda hesabı',
+                                                                         21110 || 100168001,
+                                                                            'Ssuda hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text3 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         21112,
+                                                                         'Faiz hesabı',
+                                                                         21112 || 100168001,
+                                                                            'Faiz hesabı - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')'),
+ sql_text4 = INSERT INTO CRS_USER.ACCOUNTING_PLAN (ID,
+                                                                                             ACCOUNT_NUMBER,
+                                                                                             ACCOUNT_NAME,
+                                                                                             SUB_ACCOUNT,
+                                                                                             SUB_ACCOUNT_NAME)
+                                                               VALUES (CRS_USER.ACCOUNTING_PLAN_SEQUENCE.NEXTVAL,
+                                                                         41010,
+                                                                         'Cari hesab',
+                                                                         41010 || 100168001,
+                                                                            'Cari hesab - '
+                                                                         || 'Tur İbra Gerta'
+                                                                         || ' ('
+                                                                         || '00164/21'
+                                                                         || ')')
+-------------------------------------------------
+
+Log Entry : 15:18:21 21 noyabr 2021, bazar
+  
+   UserName =  Admin
+   FormName =  GlobalProcedures
+   ProcedureName =  CalculatedLeasingTotal
+  
+   ShowMessage: Lizinq Portfeli hesablanmadı.
+   Exception Message: ORA-04063: package body "CRS_USER.TOTALS" has errors
+ORA-06512: at "CRS_USER.PROC_LEASING_TOTAL", line 19
+ORA-06512: at line 1
+   SQL Text      :  PROC_LEASING_TOTAL
+-------------------------------------------------
